@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Apache a mod_python pro webový framework Django - Jestřáblog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Apache a mod_python pro webový framework Django"/>
+            <meta property="og:url" content="http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django"/>
+            <meta property="og:description" content="Tento tutoriál stručně popisuje postup, jak nainstalovat, nastavit a zprovoznit webový server Apache 2.2 s modulem mod_python na systému GNU/Linux Ubuntu 9.10. Dále popisuje postup, jak nainstalovat databázi MySQL, webový framework Django a zprovoznit je na webovém serveru Apache. Na závěr je ukázán příklad vytvoření nového Django ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://blog.petrnohejl.cz/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://blog.petrnohejl.cz/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://blog.petrnohejl.cz/" class="navbar-brand">
+Jestřáblog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://blog.petrnohejl.cz/pages/o-mne">
+                             O mně
+                          </a></li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/akce.html">Akce</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://blog.petrnohejl.cz/category/informacni-technologie.html">Informační technologie</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/jestrabi-svet.html">Jestřábí svět</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/kultura.html">Kultura</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/ostatni.html">Ostatní</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/rady-a-napady.html">Rady a nápady</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/vareni.html">Vaření</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.petrnohejl.cz/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django"
+                       rel="bookmark"
+                       title="Permalink to Apache a mod_python pro webový framework Django">
+                        Apache a mod_python pro webový framework Django
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2011-02-09T00:00:00"> 9.2.2011</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Tento tutoriál stručně popisuje postup, jak nainstalovat, nastavit a
+zprovoznit webový server Apache 2.2 s modulem mod_python na systému
+GNU/Linux Ubuntu 9.10. Dále popisuje postup, jak nainstalovat databázi
+MySQL, webový framework Django a zprovoznit je na webovém serveru
+Apache. Na závěr je ukázán příklad vytvoření nového Django projektu a
+spuštění na serveru Apache. Tutoriál byl napsán v rámci 2. projektu do
+předmětu
+<abbr title="Přenos dat, počítačové sítě a protokoly">PDS</abbr>, který
+jsem absolvoval v letním semestru 2010.</p>
+<h2 id="uvod">Úvod</h2>
+<p><a href="http://www.apache.org/">Apache HTTP Server</a> je nejrozšířenější softwarový webový server s
+otevřeným kódem pro GNU/Linux, BSD, Solaris, Mac OS X, Microsoft Windows
+a další platformy. V současné době dodává prohlížečům na celém světě
+většinu internetových stránek. Výhody Apache: výkon a spolehlivost,
+široké možnosti, open source. [1]</p>
+<p><a href="http://www.modpython.org/">Mod_python</a> je modul pro webový server Apache, který na serveru
+umožňuje spouštění skriptů, napsaných v jazyce Python.</p>
+<p><a href="http://www.djangoproject.com/">Django</a> je vyspělý webový framework napsaný v jazyce Python, který
+podporuje rychlý vývoj a čisté, pragmatické konstrukce.</p>
+<h2 id="instalace-apache">Instalace Apache</h2>
+<p>Instalaci serveru Apache 2.2 provedeme spuštěním připraveného dávkového
+skriptu <em>install_apache.sh</em>. Skript byl napsán pro operační systém
+GNU/Linux Ubuntu 9.10 a na jiných systémech není zaručena jeho
+funkčnost. Všechny skripty a příkazy je potřeba spouštět jako admin
+(příkazem sudo). Pro správnou instalaci je nutné mít na disku dostatek
+místa (minimálně 50 MB). Dále je potřeba mít správně nainstalován ANSI-C
+kompilátor, nástroj make a další potřebné utility, používané
+v instalačním skriptu.</p>
+<div class="highlight"><pre><span class="c">#! /bin/bash</span>
+<span class="c">#skript: install_apache.sh</span>
+<span class="c">#popis: davkovy skript pro instalaci serveru Apache na OS GNU/Linux Ubuntu 9.10</span>
+<span class="c">#autor: Petr Nohejl (xnohej00)</span>
+
+<span class="c">#promenne</span>
+<span class="nv">MIRROR</span><span class="o">=</span>http://ftp.sh.cvut.cz/MIRRORS/apache/httpd/httpd-2.2.15.tar.gz
+<span class="nv">VERSION</span><span class="o">=</span>httpd-2.2.15
+<span class="nv">TEMP</span><span class="o">=</span>APACHE_INSTALL <span class="c">#pozor, tento adresar se nakonci skriptu maze!</span>
+
+<span class="nb">cd</span>
+sudo mkdir <span class="nv">$TEMP</span>
+<span class="nb">cd</span> <span class="nv">$TEMP</span>
+sudo wget <span class="nv">$MIRROR</span>
+sudo gzip -d <span class="nv">$VERSION</span>.tar.gz
+sudo tar xvf <span class="nv">$VERSION</span>.tar
+<span class="nb">cd</span> <span class="nv">$VERSION</span>
+./configure --prefix<span class="o">=</span>/usr/local/apache2 --enable-rewrite<span class="o">=</span>shared --enable-speling<span class="o">=</span>shared --with-mpm<span class="o">=</span>prefork
+sudo make
+sudo make install
+<span class="nb">cd</span>
+sudo rm -rf <span class="nv">$TEMP</span>
+</pre></div>
+
+
+<p>Skript nejdříve vytvoří pracovní adresář a do něj stáhne (z internetu)
+pomocí nástroje <em>wget</em> zkomprimovaný instalační balíček. Ten rozbalí
+pomocí nástrojů <em>gzip</em> a <em>tar</em>. Dále spustí konfigurační skript
+<em>configure</em>, který připraví projekt ke kompilaci a vytvoří soubor
+<em>Makefile</em>. Konfigurace trvá delší dobu, a proto je třeba být trpělivý.
+Dále se projekt zkompiluje pomocí příkazu <em>make</em> a nainstaluje pomocí
+příkazu <em>make install</em>. Tyto operace rovněž trvají delší čas. Nakonec
+skript vymaže pracovní adresář. Pokud chcete mít nad vším vlastní
+kontrolu, je lepší instalovat server ručně (bez použití dávkového
+skriptu) a řídit se postupem, popsaným výše.</p>
+<p>Při spouštění konfiguračního skriptu máme možnost nastavit mnoho
+parametrů. Pomocí přepínače <em>--prefix</em> nastavíme adresář, kam bude
+server nainstalován. Pomocí přepínače <em>--enable</em> můžeme nainstalovat
+volitelné moduly. Příznak <em>shared</em> značí, že modul je dynamicky sdílený
+(DSO). Pokud nainstalujeme nějaký modul s příznakem <em>shared</em>,
+automaticky se zapne podpora DSO (jinak ji musíme v případě potřeby
+explicitně zapnout příkazem <em>--enable-so</em> při konfiguraci). Přepínač
+<em>--with-mpm</em> nastavuje model procesů serveru. Parametrů existuje daleko
+více. Pro více informací o instalaci Apache navštivte dokumentaci:
+<a href="http://httpd.apache.org/docs/2.2/install.html">http://httpd.apache.org/docs/2.2/install.html</a>.</p>
+<h2 id="konfigurace-apache">Konfigurace Apache</h2>
+<p>Po úspěšné instalaci je potřeba Apache správně nakonfigurovat.
+Konfigurační soubor s nastavením serveru se nachází v adresáři
+/usr/local/apache2/conf/httpd.conf. Soubor otevřeme v libovolném
+textovém editoru:</p>
+<div class="highlight"><pre>sudo gedit /usr/local/apache2/conf/httpd.conf
+</pre></div>
+
+
+<p>Nastavíme proměnnou <em>Listen</em> (na jakém portu a IP se bude naslouchat),
+odkomentujeme řádek se <em>ServerName</em> a nastavíme název serveru, nastavíme
+proměnnou DocumentRoot (kořenový adresář webových dokumentů). Dále
+můžeme nastavovat i další parametry serveru. Pro více informací o
+konfiguraci serveru navštivte dokumentaci:
+<a href="http://httpd.apache.org/docs/2.2/mod/directives.html">http://httpd.apache.org/docs/2.2/mod/directives.html</a>. Příklad změn v
+konfiguračním souboru pro základní nastavení:</p>
+<div class="highlight"><pre>Listen 127.0.0.1:666
+ServerName www.example.com:80
+DocumentRoot <span class="s2">&quot;/usr/local/apache2/htdocs&quot;</span>
+</pre></div>
+
+
+<p>Po každé změně konfiguračního souboru je nutné server restartovat.</p>
+<h2 id="spusteni-serveru">Spuštění serveru</h2>
+<p>Pokud jsme server správně nainstalovali a nakonfigurovali, můžeme jej
+spustit a otestovat správnou funkčnost:</p>
+<div class="highlight"><pre>sudo /usr/local/apache2/bin/apachectl –k start
+firefox http://127.0.0.1:666/
+sudo /usr/local/apache2/bin/apachectl –k restart
+sudo /usr/local/apache2/bin/apachectl –k stop
+</pre></div>
+
+
+<p>Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat nápis "It
+works!".</p>
+<p><img alt="Spuštění serveru Apache" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-01.jpg" /></p>
+<h2 id="instalace-a-konfigurace-mod95python">Instalace a konfigurace mod_python</h2>
+<p>Nyní nainstalujeme pro Apache modul mod_python. Před vlastní instalací
+modulu je potřeba mít správně nainstalován Python (minimálně verzi 2.3),
+balíček Python dev a samozřejmě Apache. Mod_python vyžaduje podporu DSO
+(Dynamic Shared Object), kterou lze nastavit při instalaci (konfiguraci)
+Apache. Instalaci mod_python můžeme provést buď pomocí utility
+<em>apt-get</em>, nebo si můžeme modul stáhnout z internetu, sestavit a
+nainstalovat. Druhá možnost je poněkud komplikovaná a proto zvolíme
+jednodušší cestu s pomocí <em>apt-get</em>, která udělá vše potřebné za nás.</p>
+<div class="highlight"><pre>sudo apt-get install libapache2-mod-python
+</pre></div>
+
+
+<p>Po úspěšné instalaci modulu budeme muset opět upravit konfigurační
+soubor serveru:</p>
+<div class="highlight"><pre>sudo gedit /usr/local/apache2/conf/httpd.conf
+</pre></div>
+
+
+<p>Přidáme příkaz <em>LoadModule</em> na správné místo v souboru (viz komentáře
+v konfiguračním souboru) pro načtení modulu a poté přidáme další příkazy
+pro nastavení handleru pro následné testování serveru (např. na konec
+konfiguračního souboru). Nezapomeneme provést restart serveru, aby se
+znovu načetl konfigurační soubor.</p>
+<div class="highlight"><pre><span class="nb">LoadModule</span> python_module <span class="sx">/usr/lib/apache2/modules/mod_python.so</span>
+
+<span class="nt">&lt;Location</span> <span class="s">/mpinfo</span><span class="nt">&gt;</span>
+    <span class="nb">SetHandler</span> mod_python
+    <span class="nb">PythonHandler</span> mod_python.testhandler
+<span class="nt">&lt;/Location&gt;</span>
+
+<span class="nt">&lt;Directory</span> <span class="s">/usr/local/apache2/htdocs/test</span><span class="nt">&gt;</span> 
+    <span class="nb">AddHandler</span> mod_python .py
+    <span class="nb">PythonHandler</span> mptest 
+    <span class="nb">PythonDebug</span> <span class="k">On</span> 
+<span class="nt">&lt;/Directory&gt;</span>
+</pre></div>
+
+
+<p>Nyní můžeme vyzkoušet ladící výpis serveru:</p>
+<div class="highlight"><pre>firefox http://127.0.0.1:666/mpinfo
+</pre></div>
+
+
+<p>Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat ladící výpis.</p>
+<p><img alt="Ladící výpis mod_python" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-02.jpg" /></p>
+<p>Dále si vytvoříme testovací skript <em>mptest.py</em> v jazyce Python:</p>
+<div class="highlight"><pre>sudo mkdir /usr/local/apache2/htdocs/test
+sudo gedit /usr/local/apache2/htdocs/test/mptest.py
+</pre></div>
+
+
+<p>Do skriptu <em>mptest.py</em> uložíme následující kód:</p>
+<div class="highlight"><pre><span class="kn">from</span> <span class="nn">mod_python</span> <span class="kn">import</span> <span class="n">apache</span>
+<span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="n">req</span><span class="p">):</span>
+    <span class="n">req</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s">&#39;text/plain&#39;</span>
+    <span class="n">req</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Hello World! I am Python.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">apache</span><span class="o">.</span><span class="n">OK</span>
+</pre></div>
+
+
+<p>A nakonec spustíme testovací skript:</p>
+<div class="highlight"><pre>firefox http://127.0.0.1:666/test/mptest.py
+</pre></div>
+
+
+<p>Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat nápis "Hello
+World! I am Python.".</p>
+<p><img alt="Hello Python" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-04.jpg" /></p>
+<h2 id="zakladni-konfigurace-publisher-handler">Základní konfigurace Publisher Handler</h2>
+<p>Publisher Handler je standardní mod_python handler pro zobrazování
+webových stránek. V předchozí kapitole jsme si v konfiguračním souboru
+Apache nastavili jednoduchý handler, který odchytává URL končící na
+<em>.py</em> ve složce <em>test</em> a spouští skript (handler) <em>mptest.py</em>. Pokud
+chceme mít více handlerů, použijeme pokročilejší handler Publisher.
+V konfiguračním souboru Apache nastavíme (předešlý handler z předchozí
+kapitoly zakomentujeme):</p>
+<div class="highlight"><pre><span class="nt">&lt;Directory</span> <span class="s">/usr/local/apache2/htdocs</span><span class="nt">&gt;</span> 
+    <span class="nb">AddHandler</span> mod_python .py
+    <span class="nb">PythonHandler</span> mod_python.publisher 
+    <span class="nb">PythonDebug</span> <span class="k">On</span> 
+<span class="nt">&lt;/Directory&gt;</span>
+</pre></div>
+
+
+<p>Restartujeme server pro znovunačtení konfigurace. Dále si vytvoříme
+jednoduchou dynamickou webovou stránku v Pythonu (jednoduchá
+kalkulačka). Vytvoříme si novou složku a dva zdrojové soubory:</p>
+<div class="highlight"><pre>sudo mkdir /usr/local/apache2/htdocs/form
+sudo gedit /usr/local/apache2/htdocs/form/index.html
+sudo gedit /usr/local/apache2/htdocs/form/form.py
+</pre></div>
+
+
+<p>Do souboru <em>index.html</em> uložíme následující kód:</p>
+<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>    
+    <span class="nt">&lt;h1&gt;</span>Calculator<span class="nt">&lt;/h1&gt;</span>    
+    <span class="nt">&lt;p&gt;</span>Enter two numbers:<span class="nt">&lt;/p&gt;</span>                  
+    <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;form.py/msg&quot;</span> <span class="na">method=</span><span class="s">&quot;POST&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;num1&quot;</span><span class="nt">&gt;</span> + 
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;num2&quot;</span><span class="nt">&gt;</span> =<span class="nt">&lt;br&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;calculate&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/form&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</pre></div>
+
+
+<p>Do skriptu <em>form.py</em> uložíme následující kód:</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">msg</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="c"># make sure the user provided all the parameters</span>
+    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">num1</span> <span class="ow">and</span> <span class="n">num2</span><span class="p">):</span> <span class="k">return</span> <span class="s">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;Missing some parametre!&lt;/p&gt;&lt;/html&gt;&quot;</span>
+    <span class="c"># provide feedback to the user</span>
+    <span class="k">try</span><span class="p">:</span> <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">num2</span><span class="p">)</span>
+    <span class="k">except</span><span class="p">:</span> <span class="k">return</span> <span class="s">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;Invalid parametres!&lt;/p&gt;&lt;/html&gt;&quot;</span>    
+    <span class="k">return</span> <span class="s">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;&lt;/p&gt;&lt;/html&gt;&quot;</span>
+</pre></div>
+
+
+<p>Nakonec zobrazíme web v prohlížeči:</p>
+<div class="highlight"><pre>firefox http://127.0.0.1:666/form/
+</pre></div>
+
+
+<p>Pokud je vše v pořádku, měl by se nám v prohlížeči zobrazit formulář s
+nadpisem "Calculator".</p>
+<p><img alt="Calculator" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-03.jpg" /></p>
+<p>Pro více informací o konfiguraci mod_python navštivte dokumentaci:
+<a href="http://www.modpython.org/live/current/doc-html/modpython.html">http://www.modpython.org/live/current/doc-html/modpython.html</a>.</p>
+<h2 id="instalace-mysql-serveru">Instalace MySQL serveru</h2>
+<p>Pro práci s webovým frameworkem Django budeme potřebovat databázi.
+Nainstalujeme MySQL server pomocí nástroje <em>apt-get</em> a podporu MySQL pro
+Python. Alternativně můžeme použít jiné databáze (např. SQLite).</p>
+<div class="highlight"><pre>sudo apt-get install mysql-server python-mysqldb
+</pre></div>
+
+
+<h2 id="instalace-frameworku-django-a-vytvoreni-projektu">Instalace frameworku Django a vytvoření projektu</h2>
+<p>Pro instalaci budeme potřebovat program SVN. Ten můžeme případně
+nainstalovat pomocí programu <em>apt-get</em>.</p>
+<div class="highlight"><pre>sudo apt-get install subversion
+</pre></div>
+
+
+<p>Nainstalujeme vývojovou verzi Djanga z SVN repozitáře:</p>
+<div class="highlight"><pre><span class="nb">cd</span>
+svn co http://code.djangoproject.com/svn/django/trunk/ django_src
+</pre></div>
+
+
+<p>Nyní vytvoříme symbolický odkaz na Django, aby jej systém mohl najít a
+mohl s ním pracovat. Nejprve si zjistíme, kde se nachází adresář
+<em>site-packages</em>, a potom vyvoříme samotný odkaz (místo "YOUR-DIR"
+doplňte řetězec z předchozího příkazu <em>python -c</em>):</p>
+<div class="highlight"><pre>python -c <span class="s2">&quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&quot;</span>
+sudo ln -s <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/django_src/django YOUR-DIR/django
+sudo cp ~/django_src/django/bin/django-admin.py /usr/local/bin
+</pre></div>
+
+
+<p>Dále si vytvoříme několik adresářů, které bude Django používat:</p>
+<div class="highlight"><pre><span class="nb">cd</span>
+mkdir django_projects
+mkdir django_templates
+mkdir media
+</pre></div>
+
+
+<p>Poté vytvoříme symbolické odkazy na media (css, javascript atd.):</p>
+<div class="highlight"><pre><span class="nb">cd</span> /usr/local/apache2/htdocs
+sudo ln -s  ~/media media
+sudo ln -s ~/django_src/django/contrib/admin/media admin_media
+</pre></div>
+
+
+<p>Nyní už můžeme vytvořit nový Django projekt standardním způsobem
+(postup, jak vytvořit Django projekt není součástí tohoto tutoriálu).</p>
+<div class="highlight"><pre><span class="nb">cd</span> ~/django_projects
+django-admin.py startproject mysite
+</pre></div>
+
+
+<p>Django vyzkoušíme na projektu <em>Mysite</em>, který zobrazuje ankety <em>Polls</em>.
+Projekt najdete v tutoriálu na oficiálních stránkách Djanga:
+<a href="http://docs.djangoproject.com/en/dev/intro/tutorial01/">http://docs.djangoproject.com/en/dev/intro/tutorial01/</a>. Uložíme jej do
+složky <em>django_projects</em> a následně vyzkoušíme, zda jej Apache zobrazí.
+Pokud v Django projektu používáme SQLite (jako v našem ukázkovém
+projektu <em>Mysite</em>), musíme povolit zápis do souboru. V nastavení Django
+projektu <em>settings.py</em> nezapomeneme správně nastavit připojení k
+databázi (případně cestu k sqlite), proměnnou <em>TEMPLATE_DIRS</em> a media
+(místo "USER-NAME" doplňte vaše systémové uživatelské jméno).</p>
+<div class="highlight"><pre><span class="n">DATABASE_NAME</span> <span class="o">=</span> <span class="s">&#39;/home/USER-NAME/django_projects/mysite/sqlite3.db&#39;</span>
+<span class="n">MEDIA_ROOT</span> <span class="o">=</span> <span class="s">&#39;/media/&#39;</span>
+<span class="n">ADMIN_MEDIA_PREFIX</span> <span class="o">=</span> <span class="s">&#39;/admin_media/&#39;</span>
+<span class="n">TEMPLATE_DIRS</span> <span class="o">=</span> <span class="p">(</span> <span class="s">&#39;/home/USER-NAME/django_projects/mysite/mytemplates&#39;</span> <span class="p">)</span>
+</pre></div>
+
+
+<p>Upravíme konfigurační soubor serveru a nastavíme handler pro Django
+(předešlý handler z předchozí kapitoly zakomentujeme, místo "USER-NAME"
+doplňte vaše systémové uživatelské jméno):</p>
+<div class="highlight"><pre><span class="nt">&lt;Location</span> <span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+    <span class="nb">SetHandler</span> python-program
+    <span class="nb">PythonHandler</span> django.core.handlers.modpython
+    <span class="nb">SetEnv</span> DJANGO_SETTINGS_MODULE mysite.settings
+    <span class="nb">PythonDebug</span> <span class="k">On</span>
+    <span class="nb">PythonPath</span> <span class="s2">&quot;[&#39;/home/USER-NAME/django_projects&#39;] + sys.path&quot;</span>
+<span class="nt">&lt;/Location&gt;</span>
+
+<span class="nt">&lt;Location</span> <span class="s">&quot;/media&quot;</span><span class="nt">&gt;</span>
+    <span class="nb">SetHandler</span> <span class="k">None</span>
+<span class="nt">&lt;/Location&gt;</span>
+
+<span class="nt">&lt;Location</span> <span class="s">&quot;/admin_media&quot;</span><span class="nt">&gt;</span>
+    <span class="nb">SetHandler</span> <span class="k">None</span>
+<span class="nt">&lt;/Location&gt;</span>
+
+<span class="nt">&lt;LocationMatch</span> <span class="s">&quot;\.(jpg|gif|png)$&quot;</span><span class="nt">&gt;</span>
+    <span class="nb">SetHandler</span> <span class="k">None</span>
+<span class="nt">&lt;/LocationMatch&gt;</span>
+</pre></div>
+
+
+<p>Po provedení restartu serveru by měl Django projekt začít fungovat.
+Projekt zobrazíme v prohlížeči (login i heslo do administrace je
+"admin"):</p>
+<div class="highlight"><pre>firefox http://127.0.0.1:666/polls/
+firefox http://127.0.0.1:666/polls/1/
+firefox http://127.0.0.1:666/polls/1/results/
+firefox http://127.0.0.1:666/polls/1/vote/
+firefox http://127.0.0.1:666/admin/
+</pre></div>
+
+
+<p><img alt="Django admin" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-05.jpg" /></p>
+<h2 id="literatura">Literatura</h2>
+<p>[1] Apache HTTP Server In Wikipedia : the free encyclopedia [online].
+St. Petersburg (Florida) : Wikipedia Foundation,\
+ [cit. 2010-04-24]. Dostupné z WWW:
+http://cs.wikipedia.org/wiki/Apache_HTTP_Server.</p>
+<p>[2] The Apache Software Foundation [online]. 2010-04-24 [cit.
+2010-04-24]. Apache HTTP Server Version 2.2 Documentation. Dostupné z
+WWW: http://httpd.apache.org/docs/2.2/.</p>
+<p>[3] Mod_python Apache/Python Integration [online]. 2010-04-24 [cit.
+2010-04-24]. Mod_python Manual. Dostupné z WWW:
+http://www.modpython.org/live/current/doc-html/modpython.html.</p>
+<p>[4] The Django framework [online]. 2010-04-24 [cit. 2010-04-24]. How
+to use Django with Apache and mod_python. Dostupné z WWW:
+http://docs.djangoproject.com/en/dev/howto/deployment/modpython/.</p>
+<p>[5] Jeff Baier [online]. 2010-04-26 [cit. 2010-04-26]. Nstalling
+Django on an Ubuntu Linux Server. Dostupné z WWW:
+http://jeffbaier.com/articles/installing-django-on-an-ubuntu-linux-server/.</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'petrnohejl'; // required: replace example with your forum shortname
+            var disqus_identifier = 'apache-a-mod_python-pro-webovy-framework-django';
+            var disqus_url = 'http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django';
+            var disqus_config = function () {
+                this.language = "cs";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="http://twitter.com/petrnohejl"><i
+                            class="fa fa-twitter-square fa-lg"></i> Twitter
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.linkedin.com/in/petrnohejl"><i
+                            class="fa fa-linkedin-square fa-lg"></i> LinkedIn
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/petrnohejl"><i
+                            class="fa fa-github-square fa-lg"></i> GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.facebook.com/petr.nohejl"><i
+                            class="fa fa-facebook-square fa-lg"></i> Facebook
+                    </a></li>
+                  </ul>
+                </li>
+
+
+
+                <li class="list-group-item"><a href="http://blog.petrnohejl.cz/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group" id="tags">
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://petrnohejl.cz/" target="_blank">
+                Petr Nohejl
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://janie.jestrab.net/" target="_blank">
+                Blog Janie Milíčové
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://honzajavorek.cz/blog" target="_blank">
+                Javorové lístky
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jarmart.cz/" target="_blank">
+                JarmArt
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://terezka.8bit.cz/" target="_blank">
+                Terezčin BlogHýsek
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://pavca.8bit.cz/" target="_blank">
+                Pavčin blog
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.zuzikovakultura.blogspot.com/" target="_blank">
+                Zuzejkova kultura
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.bakinovyzazitky.blogspot.com/" target="_blank">
+                Bakinovy zážitky
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2013 Petr Nohejl
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://blog.petrnohejl.cz/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://blog.petrnohejl.cz/theme/js/respond.min.js"></script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'petrnohejl'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-XXXX-YYYY']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+</html>

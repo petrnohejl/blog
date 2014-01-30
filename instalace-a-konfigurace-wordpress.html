@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>Instalace a konfigurace Wordpress - Jestřáblog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="Instalace a konfigurace Wordpress"/>
+            <meta property="og:url" content="http://blog.petrnohejl.cz/instalace-a-konfigurace-wordpress"/>
+            <meta property="og:description" content="Jedna známá potřebovala vyrobit web a požádala mě o jeho realizaci. Pro její potřeby se skvěle hodí blogovací systém. Zvolil jsem Wordpress, protože už s ním mám nějaké zkušenosti. Myslím, že to je pěkně udělaný software a jeho výhoda je, že je open source. Rozhodl jsem se sepsat podrobný návod ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://blog.petrnohejl.cz/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://blog.petrnohejl.cz/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://blog.petrnohejl.cz/" class="navbar-brand">
+Jestřáblog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://blog.petrnohejl.cz/pages/o-mne">
+                             O mně
+                          </a></li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/akce.html">Akce</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://blog.petrnohejl.cz/category/informacni-technologie.html">Informační technologie</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/jestrabi-svet.html">Jestřábí svět</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/kultura.html">Kultura</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/ostatni.html">Ostatní</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/rady-a-napady.html">Rady a nápady</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/vareni.html">Vaření</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.petrnohejl.cz/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.petrnohejl.cz/instalace-a-konfigurace-wordpress"
+                       rel="bookmark"
+                       title="Permalink to Instalace a konfigurace Wordpress">
+                        Instalace a konfigurace Wordpress
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2012-12-16T00:00:00"> 16.12.2012</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>Jedna známá potřebovala vyrobit web a požádala mě o jeho realizaci. Pro
+její potřeby se skvěle hodí blogovací systém. Zvolil jsem Wordpress,
+protože už s ním mám nějaké zkušenosti. Myslím, že to je pěkně udělaný
+software a jeho výhoda je, že je open source. Rozhodl jsem se sepsat
+podrobný návod/tutoriál, jak rychle nainstalovat a bezpečně nastavit
+blogovací systém Wordpress. Postup instalace píšu hlavně pro vlastní
+potřeby - určitě se ještě bude v budoucnu hodit.</p>
+<h2 id="instalace-krok-za-krokem">Instalace krok za krokem</h2>
+<ol>
+<li><a href="http://wordpress.org/download/">Stáhneme</a> nejnovější originální verzi Wordpress (bez překladů).</li>
+<li>Zkopírujeme všechny soubory na server.</li>
+<li>Vytvoříme novou databázi v phpMyAdmin. Zvolíme porovnání
+    <em>utf8_general_ci</em>.</li>
+<li>Spustíme instalaci v prohlížeči na adrese <em>/wp-admin/setup-config.php</em>.</li>
+<li>Vyplníme přístupy k databázi a nastavíme prefix v názvu databázových
+    tabulek. Prefix by neměl být z bezpečnostních důvodů "wp_".</li>
+<li>Pokud nejde konfigurační soubor <em>wp-config.php</em> vytvořit automaticky,
+    zkopírujeme konfiguraci do souboru <em>wp-config.php</em> manuálně a nahrajeme
+    na server. Instalátor nastaví konfiguraci databáze, prefix a
+    bezpečnostní klíče.</li>
+<li>Pokračujeme v instalaci na adrese <em>/wp-admin/install.php</em>.</li>
+<li>Vyplníme základní údaje a vytvoříme administrátorský účet. Uživatelské
+    jméno administrátora by nemělo být z bezpečnostních důvodů "admin".
+    Spustíme instalaci.</li>
+<li>Nyní nastavíme další parametry v <a href="#konfiguracni-soubor-wp-configphp">konfiguračním souboru <em>wp-config.php</em></a>:<ol>
+<li>Ujistíme se, že máme vyplněny bezpečnostní klíče. Pokud ne, můžeme
+    je <a href="https://api.wordpress.org/secret-key/1.1/salt/">vygenerovat</a>.</li>
+<li>Nastavíme jazyk (instalaci jazyka provedeme později).</li>
+<li>Vypneme vytváření revizí.</li>
+<li>Pokud jsme v minulosti vytvořili nějaké revize, můžeme je <a href="#odstraneni-revizi-z-databaze">smazat z databáze pomocí SQL příkazu</a> (<a href="http://blog.andreineculau.com/2008/07/delete-wordpress-26-revisions/">zdroj</a>).</li>
+<li>Vypneme automatické ukládání.</li>
+</ol>
+</li>
+<li>Smažeme z adresáře <em>/wp-content/plugins</em> nepotřebné pluginy. Např. Hello Dolly.</li>
+<li>Smažeme z adresáře <em>/wp-content/themes</em> nepotřebné šablony.</li>
+<li>Stáhneme <a href="http://www.separatista.net/">češtinu pro Wordpress</a>:<ol>
+<li>Stáhneme češtinu pro samotný Wordpress a příslušné soubory
+    zkopírujeme do adresáře <em>/wp-content/languages</em>.</li>
+<li>Stáhneme češtinu pro vybranou šablonu a příslušné soubory
+    zkopírujeme do adresáře <em>languages</em> v adresáři se šablonou.</li>
+<li>Aktuální verzi češtiny lze také stáhnout z <a href="http://translate.wordpress.org/projects/wp/dev">GlotPress</a>. Název
+    hlavního souboru s češtinou by měl být "cs_CZ", administrace
+    "admin-cs_CZ", města "continents-cities-cs_CZ". Nahrát bychom měli
+    soubory ve formátu ".po" a ".mo".</li>
+</ol>
+</li>
+<li>Přihlásíme se v administraci <em>/wp-admin</em> a nastavíme:<ol>
+<li>Vzhled - vybereme šablonu a nastavíme její parametry. Pokud nechceme
+    použít některou z oficiálních šablon, můžeme stáhnout z internetu
+    jinou.</li>
+<li>Uživatelé - vytvoříme uživatele (redaktory).</li>
+<li>Nastavení - obecné nastavení blogu.</li>
+</ol>
+</li>
+<li>V Nastavení - trvalé odkazy - nakonfigurujeme <em>.htaccess</em> soubor. <a href="#soubor-htaccess">Vygenerovaný kód</a> zkopírujeme na server do souboru <em>/.htaccess</em>.</li>
+<li>Volitelně můžeme použít <a href="#soubor-htaccess-pro-adresar-admin"><em>.htaccess</em> a <em>.htpasswd</em></a> v adresáři
+    <em>wp-admin</em> pro zvýšení bezpečnosti. Přístup do administrace potom bude
+    2x zaheslován. Soubor <em>.htpasswd</em> lze vygenerovat <a href="http://www.htaccesstools.com/htpasswd-generator/">zde</a>. Více na
+    <a href="http://www.websitedefender.com/wordpress-security/htaccess-files-wordpress-security/">websitedefender.com</a>.</li>
+<li>Nainstalujeme, aktivujeme a nastavíme pluginy:<ol>
+<li><a href="http://wordpress.org/extend/plugins/akismet/">Akismet</a></li>
+<li><a href="http://wordpress.org/extend/plugins/bad-behavior/">Bad Behavior</a></li>
+<li><a href="http://wordpress.org/extend/plugins/simple-google-analytics/">Simple Google Analytics</a></li>
+<li><a href="http://wordpress.org/extend/plugins/sociable/">Sociable</a></li>
+<li><a href="http://wordpress.org/extend/plugins/comment-reply-notification/">Comment Reply Notification</a></li>
+<li><a href="http://wordpress.org/extend/plugins/resize-image-after-upload/">Resize Image After Upload</a></li>
+<li>Případně místo předchozího <a href="http://wordpress.org/extend/plugins/resize-images-before-upload/">Resize images before upload</a></li>
+<li><a href="http://wordpress.org/extend/plugins/simple-lightbox/">Simple Lightbox</a></li>
+</ol>
+</li>
+<li>Vytvoříme účet na Google Analytics a nastavíme v pluginu UA kód.</li>
+<li>Vytvoříme na serveru adresář <em>/wp-content/uploads</em>.</li>
+<li>Nastavíme práva souborů a složek webu na serveru pomocí příkazů <em>chmod</em>,
+    <em>chown</em>, <em>chgrp</em>. Pro hromadné nastavení lze použít <a href="https://github.com/petrnohejl/Unix-Scripts/blob/master/permissions.sh">skript</a>.</li>
+<li>V případě potřeby <a href="#manualni-upravy-wordpressu">ručně upravíme</a> šablony/pluginy a uložíme si
+    provedené změny pro případ aktualizace na novější verze dané
+    šablony/pluginu.</li>
+<li>V případě vydání aktualizace Wordpressu postupujeme podle <a href="http://codex.wordpress.org/Upgrading_WordPress">instrukcí</a>.</li>
+<li>Vytvoříme základní strukturu webu: kategorie, stránky, homepage, články.</li>
+</ol>
+<h2 id="konfiguracni-soubor-wp-configphp">Konfigurační soubor wp-config.php</h2>
+<div class="highlight"><pre><span class="x">define(&#39;WPLANG&#39;, &#39;cs_CZ&#39;); // language</span>
+<span class="x">define(&#39;WP_POST_REVISIONS&#39;, 0); // disable revisions</span>
+<span class="x">define(&#39;AUTOSAVE_INTERVAL&#39;, 86400 ); // disable autosave by long interval (in seconds)</span>
+</pre></div>
+
+
+<h2 id="odstraneni-revizi-z-databaze">Odstranění revizí z databáze</h2>
+<div class="highlight"><pre><span class="k">DELETE</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span>
+<span class="k">FROM</span> <span class="n">wp_posts</span> <span class="n">a</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">wp_term_relationships</span> <span class="n">b</span> <span class="k">ON</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">ID</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">object_id</span><span class="p">)</span>
+<span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">wp_postmeta</span> <span class="n">c</span> <span class="k">ON</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">ID</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">post_id</span><span class="p">)</span>
+<span class="k">WHERE</span> <span class="n">a</span><span class="p">.</span><span class="n">post_type</span> <span class="o">=</span> <span class="s1">&#39;revision&#39;</span>
+</pre></div>
+
+
+<h2 id="soubor-htaccess">Soubor .htaccess</h2>
+<div class="highlight"><pre><span class="nb">Options</span> -Indexes
+
+<span class="nb">RewriteEngine</span> <span class="k">On</span>
+<span class="nb">RewriteBase</span> /
+<span class="nb">RewriteRule</span> ^index\.php$ - [L]
+<span class="nb">RewriteCond</span> %{REQUEST_FILENAME} !-f
+<span class="nb">RewriteCond</span> %{REQUEST_FILENAME} !-d
+<span class="nb">RewriteRule</span> . <span class="sx">/index.php</span> [L]
+</pre></div>
+
+
+<h2 id="soubor-htaccess-pro-adresar-admin">Soubor .htaccess pro adresář admin</h2>
+<p>Soubor <em>.htaccess</em>:</p>
+<div class="highlight"><pre><span class="nb">AuthUserFile</span> <span class="sx">/home/www/com_example/www/wp-admin/.htpasswd</span>
+<span class="nb">AuthType</span> Basic
+<span class="nb">AuthName</span> <span class="s2">&quot;Access to Wordpress admin&quot;</span>
+<span class="nb">Order</span> Deny,Allow
+<span class="nb">Deny</span> from <span class="k">all</span>
+<span class="nb">Require</span> valid-user
+<span class="nb">Satisfy</span> <span class="k">any</span>
+</pre></div>
+
+
+<p>Soubor <em>.htpasswd</em>, obsahující login "test", heslo "test":</p>
+<div class="highlight"><pre>test:$apr1$YGH0twy8$JeDHWGMP41wXRaxTFgqtr1
+</pre></div>
+
+
+<h2 id="manualni-upravy-wordpressu">Manuální úpravy Wordpressu</h2>
+<p>Úprava souboru <em>functions.php</em> v šabloně twentyeleven, která odstraní z
+hlavního menu v administraci některé položky pro redaktory (pro admina
+jsou zachovány):</p>
+<div class="highlight"><pre><span class="x">// remove unnecessary menus</span>
+<span class="x">// http://wordpress.stackexchange.com/questions/9505/hide-admin-menus-per-role-in-wordpress#answer-9581</span>
+<span class="x">function remove_menus()</span>
+<span class="x">{</span>
+<span class="x">    global $menu;</span>
+<span class="x">    global $current_user;</span>
+<span class="x">    get_currentuserinfo();</span>
+
+<span class="x">    if($current_user-&amp;gt;user_level &amp;lt; 10)</span>
+<span class="x">    {</span>
+<span class="x">        $restricted = array(</span>
+<span class="x">                            __(&#39;Appearance&#39;),</span>
+<span class="x">                            __(&#39;Plugins&#39;),</span>
+<span class="x">                            __(&#39;Users&#39;),</span>
+<span class="x">                            __(&#39;Tools&#39;),</span>
+<span class="x">                            __(&#39;Settings&#39;),</span>
+<span class="x">        );</span>
+<span class="x">        end ($menu);</span>
+<span class="x">        while (prev($menu)){</span>
+<span class="x">            $value = explode(&#39; &#39;,$menu[key($menu)][0]);</span>
+<span class="x">            if(in_array($value[0] != NULL?$value[0]:&quot;&quot; , $restricted)){unset($menu[key($menu)]);}</span>
+<span class="x">        }// end while</span>
+
+<span class="x">    }// end if</span>
+<span class="x">}</span>
+<span class="x">add_action(&#39;admin_menu&#39;, &#39;remove_menus&#39;);</span>
+</pre></div>
+
+
+<p>Úprava souboru <em>style.css</em> v šabloně twentyeleven, která zmenší a
+přeuspořádá hlavičku webu:</p>
+<div class="highlight"><pre><span class="nf">#page</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">1em</span> <span class="k">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#site-title</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="m">20px</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#site-description</span> <span class="p">{</span>
+    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
+    <span class="k">clear</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
+    <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
+    <span class="k">line-height</span><span class="o">:</span> <span class="m">36px</span><span class="p">;</span>
+    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="m">0</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
+
+<span class="p">}</span>
+<span class="nf">#site-title</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#branding</span> <span class="nf">#searchform</span> <span class="p">{</span>
+    <span class="k">top</span><span class="o">:</span> <span class="m">22px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nf">#branding</span> <span class="nt">img</span> <span class="p">{</span>
+    <span class="k">clear</span><span class="o">:</span> <span class="k">both</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>Úprava souboru <em>comment-reply-notification.php</em> v pluginu Comment Reply
+Notification, která počeští checkbox ve formuláři:</p>
+<div class="highlight"><pre>function addreplyidformfield(){
+    if($this-&gt;options[&#39;mail_notify&#39;] === &#39;parent_check&#39;)
+        echo &#39;<span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">id=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">value=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">checked=</span><span class="s">&quot;checked&quot;</span> <span class="na">style=</span><span class="s">&quot;width: auto;&quot;</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">&quot;comment_mail_notify&quot;</span><span class="nt">&gt;</span>&#39; . __(&#39;Upozornit e-mailem, pokud sem někdo přidá nový komentář&#39;, &#39;comment-reply-notification&#39;) . &#39;<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>&#39;;
+    elseif($this-&gt;options[&#39;mail_notify&#39;] === &#39;parent_uncheck&#39;)
+        echo &#39;<span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">id=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">value=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">style=</span><span class="s">&quot;width: auto;&quot;</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">&quot;comment_mail_notify&quot;</span><span class="nt">&gt;</span>&#39; . __(&#39;Upozornit e-mailem, pokud sem někdo přidá nový komentář&#39;, &#39;comment-reply-notification&#39;) . &#39;<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>&#39;;
+    else{}
+}
+</pre></div>
+
+
+<p>Úprava souboru <em>class.resize.php</em> v pluginu Resize Image After Upload,
+která změní kompresní poměr obrázků:</p>
+<div class="highlight"><pre><span class="x">function saveImage($numQuality = 75){</span>
+<span class="x">...</span>
+</pre></div>
+
+
+<p>Úprava souboru <em>sociable.css</em> v pluginu Sociable, která opraví rozhozený
+layout u Facebook tlačítka:</p>
+<div class="highlight"><pre><span class="nf">#Facebook_Counter</span> <span class="nt">iframe</span> <span class="p">{</span>
+    <span class="k">width</span><span class="o">:</span><span class="m">128px</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'petrnohejl'; // required: replace example with your forum shortname
+            var disqus_identifier = 'instalace-a-konfigurace-wordpress';
+            var disqus_url = 'http://blog.petrnohejl.cz/instalace-a-konfigurace-wordpress';
+            var disqus_config = function () {
+                this.language = "cs";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="http://twitter.com/petrnohejl"><i
+                            class="fa fa-twitter-square fa-lg"></i> Twitter
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.linkedin.com/in/petrnohejl"><i
+                            class="fa fa-linkedin-square fa-lg"></i> LinkedIn
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/petrnohejl"><i
+                            class="fa fa-github-square fa-lg"></i> GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.facebook.com/petr.nohejl"><i
+                            class="fa fa-facebook-square fa-lg"></i> Facebook
+                    </a></li>
+                  </ul>
+                </li>
+
+
+
+                <li class="list-group-item"><a href="http://blog.petrnohejl.cz/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group" id="tags">
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://petrnohejl.cz/" target="_blank">
+                Petr Nohejl
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://janie.jestrab.net/" target="_blank">
+                Blog Janie Milíčové
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://honzajavorek.cz/blog" target="_blank">
+                Javorové lístky
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jarmart.cz/" target="_blank">
+                JarmArt
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://terezka.8bit.cz/" target="_blank">
+                Terezčin BlogHýsek
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://pavca.8bit.cz/" target="_blank">
+                Pavčin blog
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.zuzikovakultura.blogspot.com/" target="_blank">
+                Zuzejkova kultura
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.bakinovyzazitky.blogspot.com/" target="_blank">
+                Bakinovy zážitky
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2013 Petr Nohejl
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://blog.petrnohejl.cz/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://blog.petrnohejl.cz/theme/js/respond.min.js"></script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'petrnohejl'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-XXXX-YYYY']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+</html>

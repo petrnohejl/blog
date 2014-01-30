@@ -1,0 +1,1063 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feed.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2013-03-22T00:00:00+01:00</updated><entry><title>Rok 2012</title><link href="http://blog.petrnohejl.cz/rok-2012" rel="alternate"></link><updated>2013-03-22T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2013-03-22:rok-2012</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;Stal jsem se OSVČ, zřídil si živnost a začal se profesionálně
+    věnovat vývoji mobilních aplikací. Ukončil jsem doktorské studium na
+    &lt;a href="http://www.fit.vutbr.cz/"&gt;FIT&lt;/a&gt; &lt;a href="http://www.vutbr.cz/"&gt;VUT&lt;/a&gt;, jelikož mě to nebavilo. Ukončil jsem po 3.5 letech
+    spolupráci se společností &lt;a href="https://www.avito.cz/"&gt;Avito&lt;/a&gt; a navázal novou spolupráci s
+    firmou &lt;a href="http://www.ulikeit.cz"&gt;uLikeIT&lt;/a&gt;. Nechal jsem si vyrobit nové logo a vizitky.&lt;/li&gt;
+&lt;li&gt;Ve spolupráci s APM Company jsme rozjeli zbrusu novou verzi
+    &lt;a href="http://slevolapka.cz"&gt;Slevolapky&lt;/a&gt;, kterou pohání vlastní agregátor. Během několika
+    měsíců jsme společně s ostatními kolegy vyprodukovali nové mobilní
+    aplikace pro Android, iOS, Windows Phone, Symbian/Meego. Se
+    Slevolapkou jsme se zúčastnili několika soutěží a vyhráli jsme první
+    místo na GUG Camp Google IO Extended Prague 2012 a další první místo
+    na soutěži &lt;a href="http://www.mediar.cz/osmou-prehlidku-mobilnich-aplikaci-appparade-vyhral-inteligentni-lapac-slev-slevolapka/"&gt;AppParade #8&lt;/a&gt;, kterou pořádá Médiář.cz.&lt;/li&gt;
+&lt;li&gt;Vyprodukoval jsem několik nových mobilních appek: &lt;a href="https://play.google.com/store/apps/details?id=net.jestrab.slevolapka"&gt;Slevolapka&lt;/a&gt;
+    (inteligentní lapač slev), &lt;a href="https://github.com/petrnohejl/Zitkino-Android"&gt;Žít Kino&lt;/a&gt; (program kin), &lt;a href="https://play.google.com/store/apps/details?id=cz.axunet.bazartip"&gt;Bazar Tip&lt;/a&gt;
+    (vyhledávač inzerátů, pro firmu Axunet), &lt;a href="https://play.google.com/store/apps/details?id=cz.itesco.tesco"&gt;Tesco&lt;/a&gt; (nabídka produktů
+    a služeb, pro firmu uLikeIT s.r.o), &lt;a href="https://play.google.com/store/apps/details?id=com.gamedatingapp.thegame"&gt;The Game&lt;/a&gt; (seznamování formou
+    hry, pro firmu uLikeIT s.r.o), &lt;a href="https://play.google.com/store/apps/details?id=cz.slevomat"&gt;Slevomat&lt;/a&gt; (slevový server, pro
+    firmu uLikeIT s.r.o), Alimpex (komplexní e-shop v tabletu, pro firmu
+    uLikeIT s.r.o).&lt;/li&gt;
+&lt;li&gt;Začal jsem si tvořit sadu šablon a nástrojů pro Android vývoj:
+    &lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities"&gt;Android Templates And Utilities&lt;/a&gt;. Jedná se o open source projekt.&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://speakerdeck.com/petrnohejl/jak-vyrobit-aplikaci-pro-android"&gt;Přednášel&lt;/a&gt; jsem na Android hackatonu (Android Dev Camp 2012).&lt;/li&gt;
+&lt;li&gt;Navštívil jsem několik IT konferencí. Účastnil jsem se setkání
+    mobilních vývojářů &lt;a href="https://twitter.com/zitbrmo"&gt;BrMo&lt;/a&gt;, Pythoní sraz &lt;a href="https://twitter.com/naPyVo"&gt;PyVo&lt;/a&gt;, &lt;a href="http://www.starcubeshow.cz/"&gt;Starcube Show&lt;/a&gt;, &lt;a href="http://www.mdevcamp.cz/"&gt;mDevCamp&lt;/a&gt;, Google IO Extended, &lt;a href="http://www.devfest.cz/"&gt;DevFest&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Oslavili jsme &lt;a href="http://janie.jestrab.net/gaudeamus-igitur/"&gt;Janči promoci&lt;/a&gt; u Orla v Kroměříži. Afterpárty byla
+    u tetičky na zahradě.&lt;/li&gt;
+&lt;li&gt;Účastnil jsem se několika mega párty: Káti 30tiny, grilování na
+    Lesné, Míši narozky v Krasoňově, FIT sraz, Vánoční besídka u Milíčů,
+    &lt;a href="http://janie.jestrab.net/silvestr-v-ostrave/"&gt;Silvestr v Ostravě&lt;/a&gt; a několik herních sessions. S uLikeIT jsem
+    byl v lanovém centru, na letní gril párty a akci sněz a vypij co
+    můžeš za 3 hodiny.&lt;/li&gt;
+&lt;li&gt;Zúčastnil jsem se Společenského večera (plesu) v Příbrami a &lt;a href="http://janie.jestrab.net/ples-esf-3-3-2012-divadlo-husa-na-provazku/"&gt;plesu ESF&lt;/a&gt; v Brně v divadle Husa na provázku. Navštívili jsme tradiční
+    &lt;a href="http://janie.jestrab.net/filmovy-festival-fi-17-5-2012-brno/"&gt;filmový festival FI MUNI&lt;/a&gt;. Také jsme byli na &lt;a href="http://janie.jestrab.net/muzejni-noc-19-5-2012-brno/"&gt;Brněnské muzejní noci&lt;/a&gt; a Ignis Brunensis. Na podzim jsme opět zkoušeli kvalifikaci
+    do šifrovací hry Tmou, ale bohužel jsme se nedostali dál.&lt;/li&gt;
+&lt;li&gt;Navštívil jsem několik koncertů: Poletíme na Musilce, &lt;a href="http://janie.jestrab.net/robert-balzar-trio-28-10-2012-brno/"&gt;Robert Balzar Trio&lt;/a&gt; v Alterně, &lt;a href="http://janie.jestrab.net/rudy-linka-trio-18-11-2012-brno/"&gt;Rudy Linka Trio&lt;/a&gt; v Alterně, Štěpán Rak,
+    &lt;a href="http://janie.jestrab.net/javory-8-12-2012-brno/"&gt;Javory&lt;/a&gt; na Vánočních trzích na výstavišti.&lt;/li&gt;
+&lt;li&gt;Byli jsme s Jančou na &lt;a href="http://janie.jestrab.net/pojd-ukazu-ti-cestu-rajem-vol-1/"&gt;dovolené v Českém Ráji&lt;/a&gt;. Navštívili jsme
+    nejromantičtější město světa &lt;a href="http://janie.jestrab.net/category/francouzske-toulky/"&gt;Paříž&lt;/a&gt;. Byli jsme si &lt;a href="http://janie.jestrab.net/lyzovacka-na-moninci/"&gt;zalyžovat na Monínci&lt;/a&gt;. Dále jsme uspořádali několik menších výletů: na
+    &lt;a href="http://janie.jestrab.net/prvni-jarni-vylet-na-babu/"&gt;Babu&lt;/a&gt;, do &lt;a href="http://janie.jestrab.net/cyklovylet-do-rajhradu/"&gt;Rajhradu na kole&lt;/a&gt;, do &lt;a href="http://janie.jestrab.net/vylet-do-lednice/"&gt;Lednice&lt;/a&gt; vlakem, &lt;a href="http://janie.jestrab.net/v-korycanech/"&gt;do Koryčan za Frantou&lt;/a&gt;, do &lt;a href="http://janie.jestrab.net/vylet-do-tisnova/"&gt;Tišnova na rozhlednu a klášter&lt;/a&gt; a do
+    &lt;a href="http://janie.jestrab.net/po-stopach-bitvy-u-slavkova/"&gt;Slavkova na muzeum&lt;/a&gt; o té slavné bitvě.&lt;/li&gt;
+&lt;li&gt;Také jsme navštívili nově zrekonstruovanou &lt;a href="http://janie.jestrab.net/ve-vile-tugendhat/"&gt;vilu Tugendhat&lt;/a&gt; a
+    veletrh Mobitex, kde jsme si vyhlídli nový &lt;a href="http://www.meuble.sk/"&gt;nábytek&lt;/a&gt; do obýváku.&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://janie.jestrab.net/kterak-jsme-malovali-zed/"&gt;Namalovali jsme zeď&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Pořídil jsem si novou zrcadlovku, o kterou jsme málem přišli v
+    pařížském metru. Máme novou &lt;a href="http://www.sedackyphase.cz/"&gt;sedačku&lt;/a&gt;, sedací pytel a koberec v
+    obýváku. Rovněž jsem si pořídil nové lyže a židli &lt;a href="http://www.zdravotni-zidle.cz"&gt;Spinalis&lt;/a&gt; pro
+    zdravé sezení.&lt;/li&gt;
+&lt;li&gt;Těsně před dovolenou nám odtahli auto kvůli blokovému čištění.&lt;/li&gt;
+&lt;li&gt;Dosáhl jsem jubilea 400 kešek.&lt;/li&gt;
+&lt;li&gt;Začali jsme cvičit Milíčjógu s Péťou.&lt;/li&gt;
+&lt;li&gt;Objevil jsem nový seriál a knihu Game of Thrones.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Vánoční polévka z rybích vnitřností</title><link href="http://blog.petrnohejl.cz/vanocni-polevka-z-rybich-vnitrnosti" rel="alternate"></link><updated>2013-01-15T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2013-01-15:vanocni-polevka-z-rybich-vnitrnosti</id><summary type="html">&lt;p&gt;Vánoce jsou sice už pryč, ale to nevadí, protože polévka z rybích
+vnitřností se dá uvařit i v létě. Pravdou ale je, že nechutná tak
+výborně jako o těch Vánocích. Recept na tuto polévku jsem získal od
+maminky, která jí má zase od babičky. Takže je to takový rodinný recept.
+Polévku vaříme pravidelně vždy na Štědrý den a řadím jí mezi svoje
+nejoblíbenější. Poprvé jsem jí vařil o loňských Vánocích, ale nebyla
+stoprocentní, protože v ní chybělo mlíčí. Letos už jsem jí uvařil se
+vším všudy a docela se povedla. Měli jsme štěstí na vnitřnosti. &lt;a href="http://www.rybarna.cz/"&gt;Paní Šopíková&lt;/a&gt; s neznámým myslivcem nám nabídli podpultové zboží, které
+bylo určeno k zamražení. Pojďme si tedy říct, co budeme při vaření
+potřebovat na 4 porce polévky:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 mrkev&lt;/li&gt;
+&lt;li&gt;1 kořenová petržel&lt;/li&gt;
+&lt;li&gt;1 cibule&lt;/li&gt;
+&lt;li&gt;1 menší kousek celeru&lt;/li&gt;
+&lt;li&gt;1 menší kousek póru&lt;/li&gt;
+&lt;li&gt;kadeřavá petržel&lt;/li&gt;
+&lt;li&gt;200-400 g kapřích vnitřností - jikry a mlíčí&lt;/li&gt;
+&lt;li&gt;veka&lt;/li&gt;
+&lt;li&gt;hladká mouka&lt;/li&gt;
+&lt;li&gt;máslo&lt;/li&gt;
+&lt;li&gt;voda&lt;/li&gt;
+&lt;li&gt;sůl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nejprve nadrobno pokrájíme všechnu zeleninu, tedy mrkev, petržel,
+cibuli, celer a pórek. Vložíme do hrnce, přilijeme trochu vody, aby byla
+zelenina ponořená, osolíme a dáme vařit. Vody nalijeme opravdu málo,
+protože jí později ještě budeme dolévat spolu s vnitřnostmi. Polévka se
+celkem bude vařit cca 30-45 minut. Během vaření je dobré hrnec občas
+promíchat.&lt;/p&gt;
+&lt;p&gt;Ve zvlášť kastrůlku několikrát opereme rybí vnitřnosti. Poté přidáme
+vodu, osolíme, dáme vařit cca na 10 minut a mícháme, aby se nám
+vnitřnosti nepřipálily. Vnitřnosti se při vaření srazí a voda zbělá.
+Mlíčí zbělá a jikry zežloutnou. Když jsou vnitřnosti uvařené, lehce
+ochutnáme, jestli není voda hořká kvůli vyteklé žluči. Pokud je to v
+pořádku, nalijeme vnitřnosti i s vodou do polévky a rozdrtíme hrudky s
+mlíčím a jikrami lžící. Nejlepší je rozdrtit to ještě v tom kastrůlku.&lt;/p&gt;
+&lt;p&gt;Připravíme si na pánvi jíšku. Smícháme kus másla s cca 2-4 lžícemi
+mouky. Následně přidáme jíšku do polévky, převaříme a promícháme.
+Ochutnáme výsledný pokrm a případně ještě dochutíme běžnými kuchyňskými
+ochucovadly. Nakonec osmažíme nakrájenou veku na pánvičce s máslem.
+Dáváme zvýšený pozor, aby se nespálila. Vznikne nám křupavá houstička.&lt;/p&gt;
+&lt;p&gt;Polévka je hotová a my můžeme servírovat s osmaženou houstičkou a trsem
+kadeřavé petrželky. Až se polévka uleží, bude ještě lepší. Dobrou chuť!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vánoční polévka z rybích vnitřností" src="http://blog.petrnohejl.cz/images/vanocni-polevka-z-rybich-vnitrnosti.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Instalace a konfigurace Wordpress</title><link href="http://blog.petrnohejl.cz/instalace-a-konfigurace-wordpress" rel="alternate"></link><updated>2012-12-16T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2012-12-16:instalace-a-konfigurace-wordpress</id><summary type="html">&lt;p&gt;Jedna známá potřebovala vyrobit web a požádala mě o jeho realizaci. Pro
+její potřeby se skvěle hodí blogovací systém. Zvolil jsem Wordpress,
+protože už s ním mám nějaké zkušenosti. Myslím, že to je pěkně udělaný
+software a jeho výhoda je, že je open source. Rozhodl jsem se sepsat
+podrobný návod/tutoriál, jak rychle nainstalovat a bezpečně nastavit
+blogovací systém Wordpress. Postup instalace píšu hlavně pro vlastní
+potřeby - určitě se ještě bude v budoucnu hodit.&lt;/p&gt;
+&lt;h2 id="instalace-krok-za-krokem"&gt;Instalace krok za krokem&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://wordpress.org/download/"&gt;Stáhneme&lt;/a&gt; nejnovější originální verzi Wordpress (bez překladů).&lt;/li&gt;
+&lt;li&gt;Zkopírujeme všechny soubory na server.&lt;/li&gt;
+&lt;li&gt;Vytvoříme novou databázi v phpMyAdmin. Zvolíme porovnání
+    &lt;em&gt;utf8_general_ci&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Spustíme instalaci v prohlížeči na adrese &lt;em&gt;/wp-admin/setup-config.php&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Vyplníme přístupy k databázi a nastavíme prefix v názvu databázových
+    tabulek. Prefix by neměl být z bezpečnostních důvodů "wp_".&lt;/li&gt;
+&lt;li&gt;Pokud nejde konfigurační soubor &lt;em&gt;wp-config.php&lt;/em&gt; vytvořit automaticky,
+    zkopírujeme konfiguraci do souboru &lt;em&gt;wp-config.php&lt;/em&gt; manuálně a nahrajeme
+    na server. Instalátor nastaví konfiguraci databáze, prefix a
+    bezpečnostní klíče.&lt;/li&gt;
+&lt;li&gt;Pokračujeme v instalaci na adrese &lt;em&gt;/wp-admin/install.php&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Vyplníme základní údaje a vytvoříme administrátorský účet. Uživatelské
+    jméno administrátora by nemělo být z bezpečnostních důvodů "admin".
+    Spustíme instalaci.&lt;/li&gt;
+&lt;li&gt;Nyní nastavíme další parametry v &lt;a href="#konfiguracni-soubor-wp-configphp"&gt;konfiguračním souboru &lt;em&gt;wp-config.php&lt;/em&gt;&lt;/a&gt;:&lt;ol&gt;
+&lt;li&gt;Ujistíme se, že máme vyplněny bezpečnostní klíče. Pokud ne, můžeme
+    je &lt;a href="https://api.wordpress.org/secret-key/1.1/salt/"&gt;vygenerovat&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Nastavíme jazyk (instalaci jazyka provedeme později).&lt;/li&gt;
+&lt;li&gt;Vypneme vytváření revizí.&lt;/li&gt;
+&lt;li&gt;Pokud jsme v minulosti vytvořili nějaké revize, můžeme je &lt;a href="#odstraneni-revizi-z-databaze"&gt;smazat z databáze pomocí SQL příkazu&lt;/a&gt; (&lt;a href="http://blog.andreineculau.com/2008/07/delete-wordpress-26-revisions/"&gt;zdroj&lt;/a&gt;).&lt;/li&gt;
+&lt;li&gt;Vypneme automatické ukládání.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Smažeme z adresáře &lt;em&gt;/wp-content/plugins&lt;/em&gt; nepotřebné pluginy. Např. Hello Dolly.&lt;/li&gt;
+&lt;li&gt;Smažeme z adresáře &lt;em&gt;/wp-content/themes&lt;/em&gt; nepotřebné šablony.&lt;/li&gt;
+&lt;li&gt;Stáhneme &lt;a href="http://www.separatista.net/"&gt;češtinu pro Wordpress&lt;/a&gt;:&lt;ol&gt;
+&lt;li&gt;Stáhneme češtinu pro samotný Wordpress a příslušné soubory
+    zkopírujeme do adresáře &lt;em&gt;/wp-content/languages&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Stáhneme češtinu pro vybranou šablonu a příslušné soubory
+    zkopírujeme do adresáře &lt;em&gt;languages&lt;/em&gt; v adresáři se šablonou.&lt;/li&gt;
+&lt;li&gt;Aktuální verzi češtiny lze také stáhnout z &lt;a href="http://translate.wordpress.org/projects/wp/dev"&gt;GlotPress&lt;/a&gt;. Název
+    hlavního souboru s češtinou by měl být "cs_CZ", administrace
+    "admin-cs_CZ", města "continents-cities-cs_CZ". Nahrát bychom měli
+    soubory ve formátu ".po" a ".mo".&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Přihlásíme se v administraci &lt;em&gt;/wp-admin&lt;/em&gt; a nastavíme:&lt;ol&gt;
+&lt;li&gt;Vzhled - vybereme šablonu a nastavíme její parametry. Pokud nechceme
+    použít některou z oficiálních šablon, můžeme stáhnout z internetu
+    jinou.&lt;/li&gt;
+&lt;li&gt;Uživatelé - vytvoříme uživatele (redaktory).&lt;/li&gt;
+&lt;li&gt;Nastavení - obecné nastavení blogu.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;V Nastavení - trvalé odkazy - nakonfigurujeme &lt;em&gt;.htaccess&lt;/em&gt; soubor. &lt;a href="#soubor-htaccess"&gt;Vygenerovaný kód&lt;/a&gt; zkopírujeme na server do souboru &lt;em&gt;/.htaccess&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Volitelně můžeme použít &lt;a href="#soubor-htaccess-pro-adresar-admin"&gt;&lt;em&gt;.htaccess&lt;/em&gt; a &lt;em&gt;.htpasswd&lt;/em&gt;&lt;/a&gt; v adresáři
+    &lt;em&gt;wp-admin&lt;/em&gt; pro zvýšení bezpečnosti. Přístup do administrace potom bude
+    2x zaheslován. Soubor &lt;em&gt;.htpasswd&lt;/em&gt; lze vygenerovat &lt;a href="http://www.htaccesstools.com/htpasswd-generator/"&gt;zde&lt;/a&gt;. Více na
+    &lt;a href="http://www.websitedefender.com/wordpress-security/htaccess-files-wordpress-security/"&gt;websitedefender.com&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Nainstalujeme, aktivujeme a nastavíme pluginy:&lt;ol&gt;
+&lt;li&gt;&lt;a href="http://wordpress.org/extend/plugins/akismet/"&gt;Akismet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wordpress.org/extend/plugins/bad-behavior/"&gt;Bad Behavior&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wordpress.org/extend/plugins/simple-google-analytics/"&gt;Simple Google Analytics&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wordpress.org/extend/plugins/sociable/"&gt;Sociable&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wordpress.org/extend/plugins/comment-reply-notification/"&gt;Comment Reply Notification&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wordpress.org/extend/plugins/resize-image-after-upload/"&gt;Resize Image After Upload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Případně místo předchozího &lt;a href="http://wordpress.org/extend/plugins/resize-images-before-upload/"&gt;Resize images before upload&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://wordpress.org/extend/plugins/simple-lightbox/"&gt;Simple Lightbox&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;Vytvoříme účet na Google Analytics a nastavíme v pluginu UA kód.&lt;/li&gt;
+&lt;li&gt;Vytvoříme na serveru adresář &lt;em&gt;/wp-content/uploads&lt;/em&gt;.&lt;/li&gt;
+&lt;li&gt;Nastavíme práva souborů a složek webu na serveru pomocí příkazů &lt;em&gt;chmod&lt;/em&gt;,
+    &lt;em&gt;chown&lt;/em&gt;, &lt;em&gt;chgrp&lt;/em&gt;. Pro hromadné nastavení lze použít &lt;a href="https://github.com/petrnohejl/Unix-Scripts/blob/master/permissions.sh"&gt;skript&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;V případě potřeby &lt;a href="#manualni-upravy-wordpressu"&gt;ručně upravíme&lt;/a&gt; šablony/pluginy a uložíme si
+    provedené změny pro případ aktualizace na novější verze dané
+    šablony/pluginu.&lt;/li&gt;
+&lt;li&gt;V případě vydání aktualizace Wordpressu postupujeme podle &lt;a href="http://codex.wordpress.org/Upgrading_WordPress"&gt;instrukcí&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Vytvoříme základní strukturu webu: kategorie, stránky, homepage, články.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id="konfiguracni-soubor-wp-configphp"&gt;Konfigurační soubor wp-config.php&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;define(&amp;#39;WPLANG&amp;#39;, &amp;#39;cs_CZ&amp;#39;); // language&lt;/span&gt;
+&lt;span class="x"&gt;define(&amp;#39;WP_POST_REVISIONS&amp;#39;, 0); // disable revisions&lt;/span&gt;
+&lt;span class="x"&gt;define(&amp;#39;AUTOSAVE_INTERVAL&amp;#39;, 86400 ); // disable autosave by long interval (in seconds)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="odstraneni-revizi-z-databaze"&gt;Odstranění revizí z databáze&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;DELETE&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;c&lt;/span&gt;
+&lt;span class="k"&gt;FROM&lt;/span&gt; &lt;span class="n"&gt;wp_posts&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;
+&lt;span class="k"&gt;LEFT&lt;/span&gt; &lt;span class="k"&gt;JOIN&lt;/span&gt; &lt;span class="n"&gt;wp_term_relationships&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="k"&gt;ON&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;object_id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;LEFT&lt;/span&gt; &lt;span class="k"&gt;JOIN&lt;/span&gt; &lt;span class="n"&gt;wp_postmeta&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="k"&gt;ON&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post_id&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;WHERE&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;post_type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;revision&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="soubor-htaccess"&gt;Soubor .htaccess&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;Options&lt;/span&gt; -Indexes
+
+&lt;span class="nb"&gt;RewriteEngine&lt;/span&gt; &lt;span class="k"&gt;On&lt;/span&gt;
+&lt;span class="nb"&gt;RewriteBase&lt;/span&gt; /
+&lt;span class="nb"&gt;RewriteRule&lt;/span&gt; ^index\.php$ - [L]
+&lt;span class="nb"&gt;RewriteCond&lt;/span&gt; %{REQUEST_FILENAME} !-f
+&lt;span class="nb"&gt;RewriteCond&lt;/span&gt; %{REQUEST_FILENAME} !-d
+&lt;span class="nb"&gt;RewriteRule&lt;/span&gt; . &lt;span class="sx"&gt;/index.php&lt;/span&gt; [L]
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="soubor-htaccess-pro-adresar-admin"&gt;Soubor .htaccess pro adresář admin&lt;/h2&gt;
+&lt;p&gt;Soubor &lt;em&gt;.htaccess&lt;/em&gt;:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;AuthUserFile&lt;/span&gt; &lt;span class="sx"&gt;/home/www/com_example/www/wp-admin/.htpasswd&lt;/span&gt;
+&lt;span class="nb"&gt;AuthType&lt;/span&gt; Basic
+&lt;span class="nb"&gt;AuthName&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Access to Wordpress admin&amp;quot;&lt;/span&gt;
+&lt;span class="nb"&gt;Order&lt;/span&gt; Deny,Allow
+&lt;span class="nb"&gt;Deny&lt;/span&gt; from &lt;span class="k"&gt;all&lt;/span&gt;
+&lt;span class="nb"&gt;Require&lt;/span&gt; valid-user
+&lt;span class="nb"&gt;Satisfy&lt;/span&gt; &lt;span class="k"&gt;any&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Soubor &lt;em&gt;.htpasswd&lt;/em&gt;, obsahující login "test", heslo "test":&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;test:$apr1$YGH0twy8$JeDHWGMP41wXRaxTFgqtr1
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="manualni-upravy-wordpressu"&gt;Manuální úpravy Wordpressu&lt;/h2&gt;
+&lt;p&gt;Úprava souboru &lt;em&gt;functions.php&lt;/em&gt; v šabloně twentyeleven, která odstraní z
+hlavního menu v administraci některé položky pro redaktory (pro admina
+jsou zachovány):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;// remove unnecessary menus&lt;/span&gt;
+&lt;span class="x"&gt;// http://wordpress.stackexchange.com/questions/9505/hide-admin-menus-per-role-in-wordpress#answer-9581&lt;/span&gt;
+&lt;span class="x"&gt;function remove_menus()&lt;/span&gt;
+&lt;span class="x"&gt;{&lt;/span&gt;
+&lt;span class="x"&gt;    global $menu;&lt;/span&gt;
+&lt;span class="x"&gt;    global $current_user;&lt;/span&gt;
+&lt;span class="x"&gt;    get_currentuserinfo();&lt;/span&gt;
+
+&lt;span class="x"&gt;    if($current_user-&amp;amp;gt;user_level &amp;amp;lt; 10)&lt;/span&gt;
+&lt;span class="x"&gt;    {&lt;/span&gt;
+&lt;span class="x"&gt;        $restricted = array(&lt;/span&gt;
+&lt;span class="x"&gt;                            __(&amp;#39;Appearance&amp;#39;),&lt;/span&gt;
+&lt;span class="x"&gt;                            __(&amp;#39;Plugins&amp;#39;),&lt;/span&gt;
+&lt;span class="x"&gt;                            __(&amp;#39;Users&amp;#39;),&lt;/span&gt;
+&lt;span class="x"&gt;                            __(&amp;#39;Tools&amp;#39;),&lt;/span&gt;
+&lt;span class="x"&gt;                            __(&amp;#39;Settings&amp;#39;),&lt;/span&gt;
+&lt;span class="x"&gt;        );&lt;/span&gt;
+&lt;span class="x"&gt;        end ($menu);&lt;/span&gt;
+&lt;span class="x"&gt;        while (prev($menu)){&lt;/span&gt;
+&lt;span class="x"&gt;            $value = explode(&amp;#39; &amp;#39;,$menu[key($menu)][0]);&lt;/span&gt;
+&lt;span class="x"&gt;            if(in_array($value[0] != NULL?$value[0]:&amp;quot;&amp;quot; , $restricted)){unset($menu[key($menu)]);}&lt;/span&gt;
+&lt;span class="x"&gt;        }// end while&lt;/span&gt;
+
+&lt;span class="x"&gt;    }// end if&lt;/span&gt;
+&lt;span class="x"&gt;}&lt;/span&gt;
+&lt;span class="x"&gt;add_action(&amp;#39;admin_menu&amp;#39;, &amp;#39;remove_menus&amp;#39;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Úprava souboru &lt;em&gt;style.css&lt;/em&gt; v šabloně twentyeleven, která zmenší a
+přeuspořádá hlavičku webu:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nf"&gt;#page&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;margin&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;1em&lt;/span&gt; &lt;span class="k"&gt;auto&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nf"&gt;#site-title&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;float&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;left&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;margin&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;20px&lt;/span&gt; &lt;span class="m"&gt;20px&lt;/span&gt; &lt;span class="m"&gt;20px&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nf"&gt;#site-description&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;float&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;left&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;clear&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;none&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;24px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;font-weight&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;bold&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;line-height&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;36px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;padding&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;margin&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;20px&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="m"&gt;20px&lt;/span&gt; &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nf"&gt;#site-title&lt;/span&gt; &lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;font-size&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;24px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nf"&gt;#branding&lt;/span&gt; &lt;span class="nf"&gt;#searchform&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;top&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="m"&gt;22px&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="nf"&gt;#branding&lt;/span&gt; &lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;clear&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="k"&gt;both&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Úprava souboru &lt;em&gt;comment-reply-notification.php&lt;/em&gt; v pluginu Comment Reply
+Notification, která počeští checkbox ve formuláři:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;function addreplyidformfield(){
+    if($this-&amp;gt;options[&amp;#39;mail_notify&amp;#39;] === &amp;#39;parent_check&amp;#39;)
+        echo &amp;#39;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;checkbox&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;comment_mail_notify&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;comment_mail_notify&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;comment_mail_notify&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;checked=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;checked&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;style=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width: auto;&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&amp;lt;label&lt;/span&gt; &lt;span class="na"&gt;for=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;comment_mail_notify&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&amp;#39; . __(&amp;#39;Upozornit e-mailem, pokud sem někdo přidá nový komentář&amp;#39;, &amp;#39;comment-reply-notification&amp;#39;) . &amp;#39;&lt;span class="nt"&gt;&amp;lt;/label&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&amp;#39;;
+    elseif($this-&amp;gt;options[&amp;#39;mail_notify&amp;#39;] === &amp;#39;parent_uncheck&amp;#39;)
+        echo &amp;#39;&lt;span class="nt"&gt;&amp;lt;p&amp;gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;checkbox&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;comment_mail_notify&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;comment_mail_notify&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;comment_mail_notify&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;style=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width: auto;&amp;quot;&lt;/span&gt; &lt;span class="nt"&gt;/&amp;gt;&amp;lt;label&lt;/span&gt; &lt;span class="na"&gt;for=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;comment_mail_notify&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;&amp;#39; . __(&amp;#39;Upozornit e-mailem, pokud sem někdo přidá nový komentář&amp;#39;, &amp;#39;comment-reply-notification&amp;#39;) . &amp;#39;&lt;span class="nt"&gt;&amp;lt;/label&amp;gt;&amp;lt;/p&amp;gt;&lt;/span&gt;&amp;#39;;
+    else{}
+}
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Úprava souboru &lt;em&gt;class.resize.php&lt;/em&gt; v pluginu Resize Image After Upload,
+která změní kompresní poměr obrázků:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="x"&gt;function saveImage($numQuality = 75){&lt;/span&gt;
+&lt;span class="x"&gt;...&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Úprava souboru &lt;em&gt;sociable.css&lt;/em&gt; v pluginu Sociable, která opraví rozhozený
+layout u Facebook tlačítka:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nf"&gt;#Facebook_Counter&lt;/span&gt; &lt;span class="nt"&gt;iframe&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;width&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;128px&lt;/span&gt; &lt;span class="cp"&gt;!important&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Katalog českých mobilních aplikací</title><link href="http://blog.petrnohejl.cz/katalog-ceskych-mobilnich-aplikaci" rel="alternate"></link><updated>2012-05-22T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2012-05-22:katalog-ceskych-mobilnich-aplikaci</id><summary type="html">&lt;p&gt;Na Android Marketu neustále přibývají nové aplikace. Někdy je docela
+těžké v té záplavě najít kvalitní a funkční kousek. Pro tento účel
+vznikl webový projekt &lt;a href="http://katalogaplikaci.cz/"&gt;Katalog aplikací&lt;/a&gt;. Jedná se o databázi
+mobilních aplikací různých platforem od českých a slovenských vývojářů.
+Díky tomuto webu můžete narazit na zajímavé české projekty, o kterých
+jste třeba vůbec nevěděli.&lt;/p&gt;
+&lt;p&gt;Aplikace jsou v katalogu třízeny podle kategorií, platforem nebo
+oblíbenosti. Jednotlivé aplikace lze komentovat a hodnotit. Velkou
+výhodou pro vývojáře je možnost přidávat do katalogu vlastní aplikace a
+upravovat popis či screenshoty.&lt;/p&gt;
+&lt;p&gt;Díky &lt;a href="http://katalogaplikaci.cz/"&gt;Katalogu aplikací&lt;/a&gt; jsem objevil několik hodně
+zajímavých programů z českých luhů a hájů. Určitě tam také najdete něco,
+co vás zaujme a co jste neznali.&lt;/p&gt;</summary></entry><entry><title>Co přinesl rok 2011</title><link href="http://blog.petrnohejl.cz/co-prinesl-rok-2011" rel="alternate"></link><updated>2012-02-26T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2012-02-26:co-prinesl-rok-2011</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;Po těžké pětileté dřině jsem získal &lt;abbr title="Ing."&gt;tři
+    písmenka&lt;/abbr&gt; před jméno. Úspěšně jsem obhájil svoji &lt;a href="https://market.android.com/details?id=net.jestrab.caramelle"&gt;diplomovou práci&lt;/a&gt; a zakončil magisterské
+    studium na &lt;a href="http://www.fit.vutbr.cz/"&gt;FIT&lt;/a&gt; &lt;a href="http://www.vutbr.cz/"&gt;VUT&lt;/a&gt; v Brně.
+    Promoci jsem oslavil s rodinou u &lt;a href="http://www.cerny-medved.cz/"&gt;Černého medvěda&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Získal jsem několik ocenění za svoji diplomku na téma &lt;em&gt;Rozšířená
+    realita pro platformu Android&lt;/em&gt;. Vyhrál jsem 1. místo na studentské
+    konferenci &lt;a href="http://www.feec.vutbr.cz/EEICT/"&gt;EEICT 2011&lt;/a&gt; v kategorii posterové sekce. Dále jsem
+    získal 3. místo odborné poroty a 5. místo při hlasování veřejnosti
+    na soutěži &lt;a href="http://www.fit.vutbr.cz/events/McFIT/MediaDemo/2011/"&gt;MediaContest Multimedia Demo 2011&lt;/a&gt;. Svoji práci jsem
+    také prezentoval na konferenci &lt;a href="http://www.openmobility.cz/"&gt;Openmobility&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Byl jsem přijat na doktorské studium. Vybral jsem si disertační téma
+    &lt;em&gt;Uživatelská rozhraní se zaměřením na 3D&lt;/em&gt;. Vyzkoušel jsem si, jaké
+    to je vést bakalářskou práci, vést semestrální projekt řeckého
+    studenta, hlídat na půlsemestrální zkoušce, nebo přednášet cvika z
+    Assembleru.&lt;/li&gt;
+&lt;li&gt;Opět jsme se s Jančou stěhovali. Z privátu u výstaviště jsme se
+    přesunuli opodál a snad už na delší dobu. Dostali jsme taky pračku,
+    takže už nebudu muset vozit hadry domů na vyprání :D&lt;/li&gt;
+&lt;li&gt;Navštívil jsem &lt;a href="http://www.google.com/events/developerday/2011/prague/"&gt;Google Developer Day 2011&lt;/a&gt; - velmi zajímavé
+    přednášky nejen o Androidu a luxusní pohoštění. Dále jsem navštívil
+    &lt;a href="http://gds2011.ceske-hry.cz/"&gt;Game Developers Session 2011&lt;/a&gt; - poutavé přednášky o vývoji her.
+    Zúčastnil jsem se několika setkání u &lt;a href="https://twitter.com/#!/napyvo"&gt;Pyva&lt;/a&gt;, jež organizuje Honza
+    Javorek.&lt;/li&gt;
+&lt;li&gt;Nabral jsem mnoho nových zkušeností ve vývoji mobilních aplikací pro
+    Android. Vyvinul jsem &lt;a href="https://market.android.com/details?id=net.jestrab.slevolapka"&gt;Slevolapku&lt;/a&gt; (agregátor slev), &lt;a href="https://market.android.com/details?id=net.jestrab.caramelle"&gt;Caramelle
+    Augmented Reality&lt;/a&gt; (prohlížeč rozšířené reality),
+    &lt;a href="https://market.android.com/details?id=net.skimap"&gt;Ski Map&lt;/a&gt; (lyžařský průvodce, ve spolupráci s Honzou Liškou), GTD
+    (úkolníček napojený na IS Evidio, pro firmu Avito s.r.o), Kenvelo
+    (katalog oblečení, pro firmu Avito s.r.o).&lt;/li&gt;
+&lt;li&gt;Pořídil jsem si nové domény. Jedna z nich je petrnohejl.cz, na které
+    budu mít v budoucnu vlastní "business" prezentaci. Taky jsme se
+    přestěhovali z amerického Hostmonster hostingu zpět do ČR na vlastní
+    VPS.&lt;/li&gt;
+&lt;li&gt;Pořídil jsem si nový penobook, penodisk a dostal jsem (zapůjčen)
+    svůj první tablet.&lt;/li&gt;
+&lt;li&gt;Postavil jsem vesmírnou loď &lt;a href="http://fav.me/d3dqjy4"&gt;Enterprise&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Byli jsme s Jančou na báječné &lt;a href="http://janie.jestrab.net/dovolena-v-krkonosich/"&gt;dovolené v Krkonoších&lt;/a&gt; a pokořili
+    jsme Sněžku. Vyrazili jsme na &lt;a href="http://janie.jestrab.net/v-meste-na-dunaji/"&gt;výlet do Bratislavy&lt;/a&gt;, kde jsem byl
+    prvně. Účasnil jsem se společně s peno clanem lyžovačky v Koutech
+    nad Desnou, s Lázeňákem. Tradičně již potřetí jsme &lt;a href="http://kajolinka.rajce.idnes.cz/31.7.-4.8.2011%2C_Vltava/"&gt;spluli Vltavu&lt;/a&gt;, tentokrát na raftech. V největších hicech jsme vyrazili
+    na &lt;a href="http://janie.jestrab.net/vylet-na-palavu/"&gt;jednodenní tůru po Pálavských kopcích&lt;/a&gt;. Taky jsme byli na
+    &lt;a href="http://janie.jestrab.net/vylet-do-marianskeho-udoli/"&gt;výletě v Mariánském údolí&lt;/a&gt;, kde jsme se rozloučili s naší
+    kámoškou Mendy. Na podzim jsme vyrazili do Valtic na &lt;a href="http://janie.jestrab.net/slavnosti-burcaku-ve-valticich/"&gt;burčákové slavnosti&lt;/a&gt; a cimbál. Janča našla moji vlastní kešku na Makové,
+    když jsme byli na &lt;a href="http://janie.jestrab.net/prazdniny-v-pribrami-v-bodech/"&gt;dovolené v Příbrami&lt;/a&gt;. Uzřel jsem Květnou
+    zahradu na &lt;a href="http://janie.jestrab.net/prazdniny-v-kromerizi-v-bodech/"&gt;prázdninách v Kroměříži&lt;/a&gt;. Navštívil jsem s rodinou
+    pražskou ZOO.&lt;/li&gt;
+&lt;li&gt;Hudební kultura byla velmi slabá. Navštívili jsme jen jeden koncert - &lt;a href="http://janie.jestrab.net/joe-bar-blues-street-hudebni-sklep-brno-30-9-2011/"&gt;Joe Bar Blues Street Band&lt;/a&gt;, ale bylo to super.&lt;/li&gt;
+&lt;li&gt;Taneční kultura byla lepší. Zúčastnili jsme se plesu SU FIT na
+    Semilasse a dechovky v Dělnickém domě, kde tentokrát nebyl Mýdlový
+    děda. Zato jsme našli nového kámoše - leteckého inženýra, který nás
+    pochválil za účast a koupil nám brambůrky.&lt;/li&gt;
+&lt;li&gt;Účastnil jsem se několika oslav, megapárty a akcí různého druhu:
+    PenoFercoBration, Žánkovy narozky na Palačáku, Rychlá rota slaví
+    narozky, Džem session, &lt;a href="http://janie.jestrab.net/sushi-party/"&gt;Sushi párty&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/taje-taje/"&gt;Gurmánský večer v Taji&lt;/a&gt;,
+    kolaudačka u Bakiho, &lt;a href="http://janie.jestrab.net/jak-jsme-vitali-novy-rok/"&gt;Hororový Silvestr&lt;/a&gt;, promoce bratrance Jana
+    Sebastiana.&lt;/li&gt;
+&lt;li&gt;S klukama ze školy jsme se přihlásili do šifrovací hry &lt;a href="http://www.tmou.cz/2011/index"&gt;Tmou&lt;/a&gt;.
+    Kvalifikací jsme prošli na divokou kartu a hru jsme skončili na 5.
+    stage z 16ti, což je myslím úspěch. Ale možná jsme neměli tolik pít.&lt;/li&gt;
+&lt;li&gt;Navštívil jsem interaktivní výstavu &lt;a href="http://janie.jestrab.net/poznavej-se-30-3-2011-brno/"&gt;Poznávej se&lt;/a&gt;, jež organizoval
+    IQ park Liberec. Dále jsem byl na &lt;a href="http://janie.jestrab.net/cetnicke-humoresky-17-12-2011-brno/"&gt;výstavě o Četnických humoreskách&lt;/a&gt;. Navštívil jsem festival cestovatelských filmů Go
+    Kamera a &lt;a href="http://janie.jestrab.net/sport-life-12-11-2011-brno-vystaviste/"&gt;festival Cyklocestování&lt;/a&gt;, kde měli úžasnou přednášku
+    manželé Hervéovi, kteří objeli celou zeměkouli na kole.&lt;/li&gt;
+&lt;li&gt;S Jančou jsme se naučili zacházet s FIMEM a &lt;a href="http://janie.jestrab.net/nausnice-s-androidem-aneb-prvni-fimo-pokus/"&gt;vyrobili jsme Androidí náušnice&lt;/a&gt;. Poslali jsme je do &lt;a href="http://www.svetandroida.cz/vyhlaseni-vitezu-velke-narozeninove-souteze-s-lg-201102"&gt;soutěže na Svět Androida&lt;/a&gt; a
+    umístili se na 7. místě. Úkolem bylo ztvárnit originálním způsobem
+    "Androida". Vyhráli jsme kapacitní stylus.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Sumec dle baštýře Jardy</title><link href="http://blog.petrnohejl.cz/sumec-dle-bastyre-jardy" rel="alternate"></link><updated>2011-09-08T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-09-08:sumec-dle-bastyre-jardy</id><summary type="html">&lt;p&gt;Zdravím všechny čtenáře Jestřáblogu a především všechny kuchařky a
+kuchaře! Po dlouhé době jsem se opět dokopal něco napsat na blog. V
+letním semestru jsem neměl tolik času kvůli diplomce a státnicím, tak se
+to pokusím teď napravit. Jelikož teď mám zase více času, pustil jsem se
+do vaření. Vyrazil jsem na ryby k panu &lt;a href="http://www.rybarna.cz/"&gt;Šopíkovi&lt;/a&gt; a ulovil krásný kus
+sumečka. Janie vygooglila dobrý recept, tak jsem nakoupil suroviny a jal
+se vaření. Ještě bych rád upozornil, že baštýř není člověk, který rád
+baští, nýbrž člověk, starající se o rybníky. Bohužel žádného baštýře
+Jardu neznám, tak jsem si recept pracovně přejmenoval na "Sumec dle
+baštýře Jestřába".&lt;/p&gt;
+&lt;p&gt;Budeme potřebovat následující ingredience:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;3/4 kg sumce&lt;/li&gt;
+&lt;li&gt;10 dkg slaniny&lt;/li&gt;
+&lt;li&gt;2 dl smetany&lt;/li&gt;
+&lt;li&gt;máslo&lt;/li&gt;
+&lt;li&gt;4 rajčata&lt;/li&gt;
+&lt;li&gt;2 papriky&lt;/li&gt;
+&lt;li&gt;2 cibule&lt;/li&gt;
+&lt;li&gt;10 středních brambor&lt;/li&gt;
+&lt;li&gt;koření na ryby&lt;/li&gt;
+&lt;li&gt;bylinky a další koření dle fantazie (provensál, šalvěj, bazalka)&lt;/li&gt;
+&lt;li&gt;mletá paprika&lt;/li&gt;
+&lt;li&gt;mouka&lt;/li&gt;
+&lt;li&gt;sůl&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Nejdříve oloupeme brambory a vcelku je uvaříme do poloměkka. Mezitím
+vymažeme pekáč či zapékací misku máslem. Dále si nakrájíme na kolečka
+rajčata, cibuli a uvařené brambory. Papriku nakrájíme na proužky. Na
+pekáč pokládáme kolečka brambor a na ně místy nějakou zeleninu. Na
+zeleninu položíme naporcované a okořeněné kousky ryby, zabalené v
+anglické slanině. Rybu také nezapomeneme posypat mletou paprikou a
+případně osolíme (není nezbytně nutné, protože koření na ryby je již
+slané). Navrch ještě položíme zbylou zeleninu, lístky šalvěje a kousky
+másla. Sumce pečeme v troubě asi 3/4 hodiny na střední výkon. Před
+koncem pečení zalijeme smetanou, kterou můžeme zahustit moukou. Můžeme
+přidat strouhaný sýr.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sumec dle baštýře Jardy na pekáči" src="http://blog.petrnohejl.cz/images/sumec-dle-bastyre-jardy-01.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Recept je poměrně jednoduchý a jídlo chutná výborně. Výhodou sumce je,
+že nemá vůbec žádné kosti. Já jsem jídlo připravoval ve 2 zapékacích
+miskách a bylo z toho 6 regulérních porcí. Baštýř Jestřáb vám přeje
+dobrou chuť!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Sumeček na talíři" src="http://blog.petrnohejl.cz/images/sumec-dle-bastyre-jardy-02.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Apache a mod_python pro webový framework Django</title><link href="http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django" rel="alternate"></link><updated>2011-02-09T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-02-09:apache-a-mod_python-pro-webovy-framework-django</id><summary type="html">&lt;p&gt;Tento tutoriál stručně popisuje postup, jak nainstalovat, nastavit a
+zprovoznit webový server Apache 2.2 s modulem mod_python na systému
+GNU/Linux Ubuntu 9.10. Dále popisuje postup, jak nainstalovat databázi
+MySQL, webový framework Django a zprovoznit je na webovém serveru
+Apache. Na závěr je ukázán příklad vytvoření nového Django projektu a
+spuštění na serveru Apache. Tutoriál byl napsán v rámci 2. projektu do
+předmětu
+&lt;abbr title="Přenos dat, počítačové sítě a protokoly"&gt;PDS&lt;/abbr&gt;, který
+jsem absolvoval v letním semestru 2010.&lt;/p&gt;
+&lt;h2 id="uvod"&gt;Úvod&lt;/h2&gt;
+&lt;p&gt;&lt;a href="http://www.apache.org/"&gt;Apache HTTP Server&lt;/a&gt; je nejrozšířenější softwarový webový server s
+otevřeným kódem pro GNU/Linux, BSD, Solaris, Mac OS X, Microsoft Windows
+a další platformy. V současné době dodává prohlížečům na celém světě
+většinu internetových stránek. Výhody Apache: výkon a spolehlivost,
+široké možnosti, open source. [1]&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.modpython.org/"&gt;Mod_python&lt;/a&gt; je modul pro webový server Apache, který na serveru
+umožňuje spouštění skriptů, napsaných v jazyce Python.&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://www.djangoproject.com/"&gt;Django&lt;/a&gt; je vyspělý webový framework napsaný v jazyce Python, který
+podporuje rychlý vývoj a čisté, pragmatické konstrukce.&lt;/p&gt;
+&lt;h2 id="instalace-apache"&gt;Instalace Apache&lt;/h2&gt;
+&lt;p&gt;Instalaci serveru Apache 2.2 provedeme spuštěním připraveného dávkového
+skriptu &lt;em&gt;install_apache.sh&lt;/em&gt;. Skript byl napsán pro operační systém
+GNU/Linux Ubuntu 9.10 a na jiných systémech není zaručena jeho
+funkčnost. Všechny skripty a příkazy je potřeba spouštět jako admin
+(příkazem sudo). Pro správnou instalaci je nutné mít na disku dostatek
+místa (minimálně 50 MB). Dále je potřeba mít správně nainstalován ANSI-C
+kompilátor, nástroj make a další potřebné utility, používané
+v instalačním skriptu.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#! /bin/bash&lt;/span&gt;
+&lt;span class="c"&gt;#skript: install_apache.sh&lt;/span&gt;
+&lt;span class="c"&gt;#popis: davkovy skript pro instalaci serveru Apache na OS GNU/Linux Ubuntu 9.10&lt;/span&gt;
+&lt;span class="c"&gt;#autor: Petr Nohejl (xnohej00)&lt;/span&gt;
+
+&lt;span class="c"&gt;#promenne&lt;/span&gt;
+&lt;span class="nv"&gt;MIRROR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://ftp.sh.cvut.cz/MIRRORS/apache/httpd/httpd-2.2.15.tar.gz
+&lt;span class="nv"&gt;VERSION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;httpd-2.2.15
+&lt;span class="nv"&gt;TEMP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;APACHE_INSTALL &lt;span class="c"&gt;#pozor, tento adresar se nakonci skriptu maze!&lt;/span&gt;
+
+&lt;span class="nb"&gt;cd&lt;/span&gt;
+sudo mkdir &lt;span class="nv"&gt;$TEMP&lt;/span&gt;
+&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$TEMP&lt;/span&gt;
+sudo wget &lt;span class="nv"&gt;$MIRROR&lt;/span&gt;
+sudo gzip -d &lt;span class="nv"&gt;$VERSION&lt;/span&gt;.tar.gz
+sudo tar xvf &lt;span class="nv"&gt;$VERSION&lt;/span&gt;.tar
+&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$VERSION&lt;/span&gt;
+./configure --prefix&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/apache2 --enable-rewrite&lt;span class="o"&gt;=&lt;/span&gt;shared --enable-speling&lt;span class="o"&gt;=&lt;/span&gt;shared --with-mpm&lt;span class="o"&gt;=&lt;/span&gt;prefork
+sudo make
+sudo make install
+&lt;span class="nb"&gt;cd&lt;/span&gt;
+sudo rm -rf &lt;span class="nv"&gt;$TEMP&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Skript nejdříve vytvoří pracovní adresář a do něj stáhne (z internetu)
+pomocí nástroje &lt;em&gt;wget&lt;/em&gt; zkomprimovaný instalační balíček. Ten rozbalí
+pomocí nástrojů &lt;em&gt;gzip&lt;/em&gt; a &lt;em&gt;tar&lt;/em&gt;. Dále spustí konfigurační skript
+&lt;em&gt;configure&lt;/em&gt;, který připraví projekt ke kompilaci a vytvoří soubor
+&lt;em&gt;Makefile&lt;/em&gt;. Konfigurace trvá delší dobu, a proto je třeba být trpělivý.
+Dále se projekt zkompiluje pomocí příkazu &lt;em&gt;make&lt;/em&gt; a nainstaluje pomocí
+příkazu &lt;em&gt;make install&lt;/em&gt;. Tyto operace rovněž trvají delší čas. Nakonec
+skript vymaže pracovní adresář. Pokud chcete mít nad vším vlastní
+kontrolu, je lepší instalovat server ručně (bez použití dávkového
+skriptu) a řídit se postupem, popsaným výše.&lt;/p&gt;
+&lt;p&gt;Při spouštění konfiguračního skriptu máme možnost nastavit mnoho
+parametrů. Pomocí přepínače &lt;em&gt;--prefix&lt;/em&gt; nastavíme adresář, kam bude
+server nainstalován. Pomocí přepínače &lt;em&gt;--enable&lt;/em&gt; můžeme nainstalovat
+volitelné moduly. Příznak &lt;em&gt;shared&lt;/em&gt; značí, že modul je dynamicky sdílený
+(DSO). Pokud nainstalujeme nějaký modul s příznakem &lt;em&gt;shared&lt;/em&gt;,
+automaticky se zapne podpora DSO (jinak ji musíme v případě potřeby
+explicitně zapnout příkazem &lt;em&gt;--enable-so&lt;/em&gt; při konfiguraci). Přepínač
+&lt;em&gt;--with-mpm&lt;/em&gt; nastavuje model procesů serveru. Parametrů existuje daleko
+více. Pro více informací o instalaci Apache navštivte dokumentaci:
+&lt;a href="http://httpd.apache.org/docs/2.2/install.html"&gt;http://httpd.apache.org/docs/2.2/install.html&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="konfigurace-apache"&gt;Konfigurace Apache&lt;/h2&gt;
+&lt;p&gt;Po úspěšné instalaci je potřeba Apache správně nakonfigurovat.
+Konfigurační soubor s nastavením serveru se nachází v adresáři
+/usr/local/apache2/conf/httpd.conf. Soubor otevřeme v libovolném
+textovém editoru:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo gedit /usr/local/apache2/conf/httpd.conf
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nastavíme proměnnou &lt;em&gt;Listen&lt;/em&gt; (na jakém portu a IP se bude naslouchat),
+odkomentujeme řádek se &lt;em&gt;ServerName&lt;/em&gt; a nastavíme název serveru, nastavíme
+proměnnou DocumentRoot (kořenový adresář webových dokumentů). Dále
+můžeme nastavovat i další parametry serveru. Pro více informací o
+konfiguraci serveru navštivte dokumentaci:
+&lt;a href="http://httpd.apache.org/docs/2.2/mod/directives.html"&gt;http://httpd.apache.org/docs/2.2/mod/directives.html&lt;/a&gt;. Příklad změn v
+konfiguračním souboru pro základní nastavení:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Listen 127.0.0.1:666
+ServerName www.example.com:80
+DocumentRoot &lt;span class="s2"&gt;&amp;quot;/usr/local/apache2/htdocs&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Po každé změně konfiguračního souboru je nutné server restartovat.&lt;/p&gt;
+&lt;h2 id="spusteni-serveru"&gt;Spuštění serveru&lt;/h2&gt;
+&lt;p&gt;Pokud jsme server správně nainstalovali a nakonfigurovali, můžeme jej
+spustit a otestovat správnou funkčnost:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo /usr/local/apache2/bin/apachectl –k start
+firefox http://127.0.0.1:666/
+sudo /usr/local/apache2/bin/apachectl –k restart
+sudo /usr/local/apache2/bin/apachectl –k stop
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat nápis "It
+works!".&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Spuštění serveru Apache" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-01.jpg" /&gt;&lt;/p&gt;
+&lt;h2 id="instalace-a-konfigurace-mod95python"&gt;Instalace a konfigurace mod_python&lt;/h2&gt;
+&lt;p&gt;Nyní nainstalujeme pro Apache modul mod_python. Před vlastní instalací
+modulu je potřeba mít správně nainstalován Python (minimálně verzi 2.3),
+balíček Python dev a samozřejmě Apache. Mod_python vyžaduje podporu DSO
+(Dynamic Shared Object), kterou lze nastavit při instalaci (konfiguraci)
+Apache. Instalaci mod_python můžeme provést buď pomocí utility
+&lt;em&gt;apt-get&lt;/em&gt;, nebo si můžeme modul stáhnout z internetu, sestavit a
+nainstalovat. Druhá možnost je poněkud komplikovaná a proto zvolíme
+jednodušší cestu s pomocí &lt;em&gt;apt-get&lt;/em&gt;, která udělá vše potřebné za nás.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install libapache2-mod-python
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Po úspěšné instalaci modulu budeme muset opět upravit konfigurační
+soubor serveru:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo gedit /usr/local/apache2/conf/httpd.conf
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Přidáme příkaz &lt;em&gt;LoadModule&lt;/em&gt; na správné místo v souboru (viz komentáře
+v konfiguračním souboru) pro načtení modulu a poté přidáme další příkazy
+pro nastavení handleru pro následné testování serveru (např. na konec
+konfiguračního souboru). Nezapomeneme provést restart serveru, aby se
+znovu načetl konfigurační soubor.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;LoadModule&lt;/span&gt; python_module &lt;span class="sx"&gt;/usr/lib/apache2/modules/mod_python.so&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="s"&gt;/mpinfo&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; mod_python
+    &lt;span class="nb"&gt;PythonHandler&lt;/span&gt; mod_python.testhandler
+&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class="s"&gt;/usr/local/apache2/htdocs/test&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; 
+    &lt;span class="nb"&gt;AddHandler&lt;/span&gt; mod_python .py
+    &lt;span class="nb"&gt;PythonHandler&lt;/span&gt; mptest 
+    &lt;span class="nb"&gt;PythonDebug&lt;/span&gt; &lt;span class="k"&gt;On&lt;/span&gt; 
+&lt;span class="nt"&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nyní můžeme vyzkoušet ladící výpis serveru:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;firefox http://127.0.0.1:666/mpinfo
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat ladící výpis.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Ladící výpis mod_python" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-02.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Dále si vytvoříme testovací skript &lt;em&gt;mptest.py&lt;/em&gt; v jazyce Python:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo mkdir /usr/local/apache2/htdocs/test
+sudo gedit /usr/local/apache2/htdocs/test/mptest.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Do skriptu &lt;em&gt;mptest.py&lt;/em&gt; uložíme následující kód:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;mod_python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;apache&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;handler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content_type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;text/plain&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello World! I am Python.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;apache&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OK&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;A nakonec spustíme testovací skript:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;firefox http://127.0.0.1:666/test/mptest.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat nápis "Hello
+World! I am Python.".&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Hello Python" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-04.jpg" /&gt;&lt;/p&gt;
+&lt;h2 id="zakladni-konfigurace-publisher-handler"&gt;Základní konfigurace Publisher Handler&lt;/h2&gt;
+&lt;p&gt;Publisher Handler je standardní mod_python handler pro zobrazování
+webových stránek. V předchozí kapitole jsme si v konfiguračním souboru
+Apache nastavili jednoduchý handler, který odchytává URL končící na
+&lt;em&gt;.py&lt;/em&gt; ve složce &lt;em&gt;test&lt;/em&gt; a spouští skript (handler) &lt;em&gt;mptest.py&lt;/em&gt;. Pokud
+chceme mít více handlerů, použijeme pokročilejší handler Publisher.
+V konfiguračním souboru Apache nastavíme (předešlý handler z předchozí
+kapitoly zakomentujeme):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class="s"&gt;/usr/local/apache2/htdocs&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; 
+    &lt;span class="nb"&gt;AddHandler&lt;/span&gt; mod_python .py
+    &lt;span class="nb"&gt;PythonHandler&lt;/span&gt; mod_python.publisher 
+    &lt;span class="nb"&gt;PythonDebug&lt;/span&gt; &lt;span class="k"&gt;On&lt;/span&gt; 
+&lt;span class="nt"&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Restartujeme server pro znovunačtení konfigurace. Dále si vytvoříme
+jednoduchou dynamickou webovou stránku v Pythonu (jednoduchá
+kalkulačka). Vytvoříme si novou složku a dva zdrojové soubory:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo mkdir /usr/local/apache2/htdocs/form
+sudo gedit /usr/local/apache2/htdocs/form/index.html
+sudo gedit /usr/local/apache2/htdocs/form/form.py
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Do souboru &lt;em&gt;index.html&lt;/em&gt; uložíme následující kód:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;html&amp;gt;&lt;/span&gt;    
+    &lt;span class="nt"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Calculator&lt;span class="nt"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;    
+    &lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Enter two numbers:&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;                  
+    &lt;span class="nt"&gt;&amp;lt;form&lt;/span&gt; &lt;span class="na"&gt;action=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;form.py/msg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;method=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;POST&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;num1&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; + 
+        &lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;num2&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; =&lt;span class="nt"&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;calculate&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Do skriptu &lt;em&gt;form.py&lt;/em&gt; uložíme následující kód:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="c"&gt;# make sure the user provided all the parameters&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Result&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;Missing some parametre!&amp;lt;/p&amp;gt;&amp;lt;/html&amp;gt;&amp;quot;&lt;/span&gt;
+    &lt;span class="c"&gt;# provide feedback to the user&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Result&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;Invalid parametres!&amp;lt;/p&amp;gt;&amp;lt;/html&amp;gt;&amp;quot;&lt;/span&gt;    
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Result&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;/p&amp;gt;&amp;lt;/html&amp;gt;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nakonec zobrazíme web v prohlížeči:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;firefox http://127.0.0.1:666/form/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Pokud je vše v pořádku, měl by se nám v prohlížeči zobrazit formulář s
+nadpisem "Calculator".&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Calculator" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-03.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Pro více informací o konfiguraci mod_python navštivte dokumentaci:
+&lt;a href="http://www.modpython.org/live/current/doc-html/modpython.html"&gt;http://www.modpython.org/live/current/doc-html/modpython.html&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="instalace-mysql-serveru"&gt;Instalace MySQL serveru&lt;/h2&gt;
+&lt;p&gt;Pro práci s webovým frameworkem Django budeme potřebovat databázi.
+Nainstalujeme MySQL server pomocí nástroje &lt;em&gt;apt-get&lt;/em&gt; a podporu MySQL pro
+Python. Alternativně můžeme použít jiné databáze (např. SQLite).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install mysql-server python-mysqldb
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="instalace-frameworku-django-a-vytvoreni-projektu"&gt;Instalace frameworku Django a vytvoření projektu&lt;/h2&gt;
+&lt;p&gt;Pro instalaci budeme potřebovat program SVN. Ten můžeme případně
+nainstalovat pomocí programu &lt;em&gt;apt-get&lt;/em&gt;.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install subversion
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nainstalujeme vývojovou verzi Djanga z SVN repozitáře:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;
+svn co http://code.djangoproject.com/svn/django/trunk/ django_src
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nyní vytvoříme symbolický odkaz na Django, aby jej systém mohl najít a
+mohl s ním pracovat. Nejprve si zjistíme, kde se nachází adresář
+&lt;em&gt;site-packages&lt;/em&gt;, a potom vyvoříme samotný odkaz (místo "YOUR-DIR"
+doplňte řetězec z předchozího příkazu &lt;em&gt;python -c&lt;/em&gt;):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;python -c &lt;span class="s2"&gt;&amp;quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&amp;quot;&lt;/span&gt;
+sudo ln -s &lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;/django_src/django YOUR-DIR/django
+sudo cp ~/django_src/django/bin/django-admin.py /usr/local/bin
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Dále si vytvoříme několik adresářů, které bude Django používat:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;
+mkdir django_projects
+mkdir django_templates
+mkdir media
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Poté vytvoříme symbolické odkazy na media (css, javascript atd.):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /usr/local/apache2/htdocs
+sudo ln -s  ~/media media
+sudo ln -s ~/django_src/django/contrib/admin/media admin_media
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Nyní už můžeme vytvořit nový Django projekt standardním způsobem
+(postup, jak vytvořit Django projekt není součástí tohoto tutoriálu).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/django_projects
+django-admin.py startproject mysite
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Django vyzkoušíme na projektu &lt;em&gt;Mysite&lt;/em&gt;, který zobrazuje ankety &lt;em&gt;Polls&lt;/em&gt;.
+Projekt najdete v tutoriálu na oficiálních stránkách Djanga:
+&lt;a href="http://docs.djangoproject.com/en/dev/intro/tutorial01/"&gt;http://docs.djangoproject.com/en/dev/intro/tutorial01/&lt;/a&gt;. Uložíme jej do
+složky &lt;em&gt;django_projects&lt;/em&gt; a následně vyzkoušíme, zda jej Apache zobrazí.
+Pokud v Django projektu používáme SQLite (jako v našem ukázkovém
+projektu &lt;em&gt;Mysite&lt;/em&gt;), musíme povolit zápis do souboru. V nastavení Django
+projektu &lt;em&gt;settings.py&lt;/em&gt; nezapomeneme správně nastavit připojení k
+databázi (případně cestu k sqlite), proměnnou &lt;em&gt;TEMPLATE_DIRS&lt;/em&gt; a media
+(místo "USER-NAME" doplňte vaše systémové uživatelské jméno).&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DATABASE_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/home/USER-NAME/django_projects/mysite/sqlite3.db&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;MEDIA_ROOT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/media/&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;ADMIN_MEDIA_PREFIX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/admin_media/&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;TEMPLATE_DIRS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/home/USER-NAME/django_projects/mysite/mytemplates&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Upravíme konfigurační soubor serveru a nastavíme handler pro Django
+(předešlý handler z předchozí kapitoly zakomentujeme, místo "USER-NAME"
+doplňte vaše systémové uživatelské jméno):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; python-program
+    &lt;span class="nb"&gt;PythonHandler&lt;/span&gt; django.core.handlers.modpython
+    &lt;span class="nb"&gt;SetEnv&lt;/span&gt; DJANGO_SETTINGS_MODULE mysite.settings
+    &lt;span class="nb"&gt;PythonDebug&lt;/span&gt; &lt;span class="k"&gt;On&lt;/span&gt;
+    &lt;span class="nb"&gt;PythonPath&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;[&amp;#39;/home/USER-NAME/django_projects&amp;#39;] + sys.path&amp;quot;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;/media&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; &lt;span class="k"&gt;None&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;/admin_media&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; &lt;span class="k"&gt;None&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
+
+&lt;span class="nt"&gt;&amp;lt;LocationMatch&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;\.(jpg|gif|png)$&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; &lt;span class="k"&gt;None&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/LocationMatch&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Po provedení restartu serveru by měl Django projekt začít fungovat.
+Projekt zobrazíme v prohlížeči (login i heslo do administrace je
+"admin"):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;firefox http://127.0.0.1:666/polls/
+firefox http://127.0.0.1:666/polls/1/
+firefox http://127.0.0.1:666/polls/1/results/
+firefox http://127.0.0.1:666/polls/1/vote/
+firefox http://127.0.0.1:666/admin/
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;img alt="Django admin" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-05.jpg" /&gt;&lt;/p&gt;
+&lt;h2 id="literatura"&gt;Literatura&lt;/h2&gt;
+&lt;p&gt;[1] Apache HTTP Server In Wikipedia : the free encyclopedia [online].
+St. Petersburg (Florida) : Wikipedia Foundation,\
+ [cit. 2010-04-24]. Dostupné z WWW:
+http://cs.wikipedia.org/wiki/Apache_HTTP_Server.&lt;/p&gt;
+&lt;p&gt;[2] The Apache Software Foundation [online]. 2010-04-24 [cit.
+2010-04-24]. Apache HTTP Server Version 2.2 Documentation. Dostupné z
+WWW: http://httpd.apache.org/docs/2.2/.&lt;/p&gt;
+&lt;p&gt;[3] Mod_python Apache/Python Integration [online]. 2010-04-24 [cit.
+2010-04-24]. Mod_python Manual. Dostupné z WWW:
+http://www.modpython.org/live/current/doc-html/modpython.html.&lt;/p&gt;
+&lt;p&gt;[4] The Django framework [online]. 2010-04-24 [cit. 2010-04-24]. How
+to use Django with Apache and mod_python. Dostupné z WWW:
+http://docs.djangoproject.com/en/dev/howto/deployment/modpython/.&lt;/p&gt;
+&lt;p&gt;[5] Jeff Baier [online]. 2010-04-26 [cit. 2010-04-26]. Nstalling
+Django on an Ubuntu Linux Server. Dostupné z WWW:
+http://jeffbaier.com/articles/installing-django-on-an-ubuntu-linux-server/.&lt;/p&gt;</summary></entry><entry><title>Pórková polévka</title><link href="http://blog.petrnohejl.cz/porkova-polevka" rel="alternate"></link><updated>2011-01-23T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-01-23:porkova-polevka</id><summary type="html">&lt;p&gt;Zdravím všechny kuchařky a kuchaře. Po delší době opět přicházím s novým
+nenáročným receptem na polévku, který jsem získal od sester Káti a Máti.
+Trochu jsem zaexperimentoval a vylepšil jej o pár vychytávek. Uvaříme si
+pórkovou polévku. Budeme potřebovat následující suroviny:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 velký pór&lt;/li&gt;
+&lt;li&gt;2 cibule&lt;/li&gt;
+&lt;li&gt;několik stroužků česneku&lt;/li&gt;
+&lt;li&gt;2 kostky droždí&lt;/li&gt;
+&lt;li&gt;olej&lt;/li&gt;
+&lt;li&gt;hladká mouka&lt;/li&gt;
+&lt;li&gt;sůl&lt;/li&gt;
+&lt;li&gt;pepř&lt;/li&gt;
+&lt;li&gt;voda&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;V hrnci necháme rozpálit olej a v něm pomalu rozpustíme droždí. Musíme
+dát pozor, aby se nám droždí nepřipálilo. Hrnec jsem tentokrát použil
+menší než obvykle - asi střední velikosti. Vyšlo z něj přibližně 5
+porcí. Až se droždí rozpustí, přidáme nakrájený pór, cibuli a
+orestujeme. Následně do hrnce přilijeme vodu, osolíme, opepříme a
+přidáme nadrcený česnek. Nastavíme vařič na plný výkon a vaříme zhruba
+půl hodiny. Občas nezapomeneme promíchat. Jedinci, co rádi experimentují
+můžou dochutit nějakým kořením, ale na vlastní nebezpečí! Já jsem zkusil
+přidat trochu curry. Až bude polévka uvařená, ochutnáme a pokud je vše v
+pořádku, zahustíme jíškou. Tu si připravíme ve sklenici, do které
+přidáme přibližně 3 lžíce mouky a smícháme s vodou tak, aby se
+nevytvořily cucky. Před aplikací jíšky polévku ochladíme studenou vodou.
+To nám zajistí, že se nebudou tvořit v polévce hrudky. Znovu ochutnáme a
+pokud je vše OK, můžeme podávat.&lt;/p&gt;
+&lt;p&gt;Jako obvykle nezapomeneme polévku uchovávat v chladu – v lednici,
+případně v zimě na balkóně, aby se nám nezkazila. Přeji dobré chutnání!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Pórková polévka" src="http://blog.petrnohejl.cz/images/porkova-polevka.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Ohlédnutí za rokem 2010</title><link href="http://blog.petrnohejl.cz/ohlednuti-za-rokem-2010" rel="alternate"></link><updated>2011-01-07T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-01-07:ohlednuti-za-rokem-2010</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;Přestěhoval jsem se z koleje Pod Palackého vrchem (kde jsem žil
+    skoro 4 roky) na privát na Nerudově. Po 3 měsících potom spolu s
+    Janie na privát u výstaviště.&lt;/li&gt;
+&lt;li&gt;Pořídil jsem si &lt;a href="http://www.android.com/"&gt;Androida&lt;/a&gt; a začal se pro něj učit programovat
+    aplikace.&lt;/li&gt;
+&lt;li&gt;Dostal jsem &lt;a href="http://irokodjembe.com/bubny.htm"&gt;Djembe&lt;/a&gt; a začal se učit na něj hrát.&lt;/li&gt;
+&lt;li&gt;Dostal jsem novou přilbu (největší velikost), ale na kolo nebyl
+    skoro žádný čas.&lt;/li&gt;
+&lt;li&gt;Pořídili jsme si s Janie čajový set na čajové obřady (Kung Fu Cha
+    :)).&lt;/li&gt;
+&lt;li&gt;Zavedl jsem si Penogram - osobní týdenní harmonogram, kde si
+    odškrtávám činnosti, které často nedodržuju a chci dodržovat (např.
+    sport, úklid nebo psaní na blog).&lt;/li&gt;
+&lt;li&gt;Koupil jsem si novou doménu Jestřáb.net a vydal nové penovizitky.&lt;/li&gt;
+&lt;li&gt;Složil jsem zkoušku z
+    &lt;abbr title="Teoretická informatika"&gt;TIN&lt;/abbr&gt;, jednoho z
+    nejtěžších předmětů na FIT. Naopak jsem neudělal
+    &lt;abbr title="Funkcionální a logické programování"&gt;FPR&lt;/abbr&gt;.&lt;/li&gt;
+&lt;li&gt;Podílel jsem se na projektu &lt;a href="http://blog.petrnohejl.cz/projekt-mimikry"&gt;Mimikry&lt;/a&gt;, který se prezentoval na
+    mezinárodní výstavě designu &lt;a href="http://www.designblok.cz"&gt;Designblok&lt;/a&gt; 2010 v Praze.&lt;/li&gt;
+&lt;li&gt;Vybral jsem si diplomovou práci na téma: Rozšířená realita pro
+    platformu Android, zaměřená na leteckou navigaci.&lt;/li&gt;
+&lt;li&gt;Navštívil jsem &lt;a href="http://vyvojari.seznam.cz"&gt;Seznam.cz developers&lt;/a&gt; day - zajímavé přednášky a
+    dobré občerstvení.&lt;/li&gt;
+&lt;li&gt;Účastnil jsem se komparzu při natáčení filmu &lt;a href="http://www.facebook.com/pages/Nezavisly-film-Park/101182066605462"&gt;Park&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Získal jsem novou práci v &lt;a href="http://www.sovanet.cz/"&gt;Sovanet&lt;/a&gt;, kterou jsem po měsíci opustil
+    hlavně kvůli nedostatku času.&lt;/li&gt;
+&lt;li&gt;Přesvědčil jsem se na vlastní kůži, že &lt;a href="http://www.nejnabytek.cz/asko/"&gt;Asko je nejhorší prodejce nábytku&lt;/a&gt;. Vymyslel jsem SOAN (Svaz odpůrců Asko nábytek) a
+    vytvořil web. Posléze jsem musel web včetně domény úplně zrušit pod
+    pohružkou žaloby.&lt;/li&gt;
+&lt;li&gt;Ulovil jsem spoustu kešek a dosáhl jubilea 300 kousků.&lt;/li&gt;
+&lt;li&gt;Objevil jsem svého oblíbeného spisovatele, Roalda Dahla. Jediného
+    oblíbeného spisovatele :D.&lt;/li&gt;
+&lt;li&gt;Získal jsem nové kamarádky z Taiwanu a Hong-Kongu. Po studiích bych
+    tam chtěl vycestovat.&lt;/li&gt;
+&lt;li&gt;Byl jsem s rodinou a Janie v &lt;a href="http://janie.jestrab.net/prazdniny-v-italii/"&gt;Itálii&lt;/a&gt;. Nejdřív u moře v Rosolina
+    Mare, pak v Benátkách, Roveretu a Lago di Garda.&lt;/li&gt;
+&lt;li&gt;Splul jsem Vltavu na pálavě s Janie a kamarádama.&lt;/li&gt;
+&lt;li&gt;Účastnil jsem se několika výletů: do Mikulova za vínem, do
+    &lt;a href="http://janie.jestrab.net/mezinarodni-vylet-do-obran/"&gt;Obřan&lt;/a&gt;, na Hády, na Macochu, do Kroměříže, do Rožnova a na
+    promoce bratrance Jirky na Hluboké.&lt;/li&gt;
+&lt;li&gt;Pořádal jsem &lt;a href="http://janie.jestrab.net/velikonocni-piknik-v-luzankach-vol-2/"&gt;Velikonoční&lt;/a&gt; a Burčákový piknik a dále &lt;a href="http://blog.petrnohejl.cz/zavody-v-kosiku"&gt;Závody v košíku&lt;/a&gt;, které se nakonec kvůli návštěvě policajtů nekonaly.&lt;/li&gt;
+&lt;li&gt;Účastnil jsem se několika legendárních párty: předloňský Silvestr na
+    téma oldies, loňský Silvestr na téma léto, PenoFercoBration v
+    Lékárně, Péťovy narozeniny, Janie narozeniny na Nerudově v crazy
+    oblečení, Míšovy a Zuzejkovy narozeniny s karaoke a bruslením,
+    Žankovy a Cínovy narozky na Palačáku.&lt;/li&gt;
+&lt;li&gt;Navštívil jsem řadu koncertů: Švihadlo, Xavier Baumaxa a Honza
+    Homola, Tokamak, Joe Bar Blues Street, Poletíme?, Cowhill, Louis
+    Pasteur, Panenka vyzutá a další. &lt;a href="http://janie.jestrab.net/joe-bar-blues-street-stara-pekarna-brno-2-9-2010/"&gt;Joe Bar Blues Street&lt;/a&gt; mi dokonce
+    osobně věnovali písničku 'Prašivej pes'.&lt;/li&gt;
+&lt;li&gt;Navštívil jsem několik hudebních festivalů: Čarodějáles v Brně,
+    Realbeat v Žízníkově a &lt;a href="http://janie.jestrab.net/ceske-hrady-cz-rozmberk-nad-vltavou-30-31-7/"&gt;České Hrady v Rožmberku&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Navštívil jsem Muzejní noc v Brně a Praze, Noc vědců v Brně,
+    tradiční festival ohňostrojů &lt;a href="http://www.ignisbrunensis.cz/"&gt;Ignis Brunensis&lt;/a&gt; v Brně, &lt;a href="http://festival.fi.muni.cz/"&gt;filmový
+    festival na FI MUNI&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/medical-fair-19-22-10-brno/"&gt;Medical fair&lt;/a&gt;, výstavu &lt;a href="http://janie.jestrab.net/designblok-praha-5-10-10-2010/"&gt;Designblok&lt;/a&gt; v
+    Praze a výstavu &lt;a href="http://blog.petrnohejl.cz/sangri-la"&gt;Šangri-la&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Účastnil jsem se Maturitního plesu bratrance Ládi v Praze v Národním
+    domě, Plesu SU FIT na Semilasse, Plesu Gymnázia Kroměříž a několika
+    Dechovek s Královopolkou.&lt;/li&gt;
+&lt;li&gt;Byl jsem v kině na trháku roku - &lt;a href="http://www.csfd.cz/film/228329-avatar/"&gt;Avatar&lt;/a&gt; ve 3D.&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Nerealistické videoefekty</title><link href="http://blog.petrnohejl.cz/nerealisticke-videoefekty" rel="alternate"></link><updated>2011-01-05T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-01-05:nerealisticke-videoefekty</id><summary type="html">&lt;p&gt;V tomto článku bych chtěl popsat projekt, na kterém jsem pracoval v
+zimním semestru 2010 spolu s Petrem Panáčkem. Projekt se zabývá
+nerealistickými videoefekty. Text článku je převzat z dokumentace
+projektu pro předmět
+&lt;abbr title="Pokročilá počítačová grafika"&gt;PGP&lt;/abbr&gt;.&lt;/p&gt;
+&lt;h2 id="uvod"&gt;Úvod&lt;/h2&gt;
+&lt;p&gt;Cílem práce bylo nastudovat metody používané v nerealistickém
+zobrazování videa. Hlavním úkolem pak bylo navrhnout a implementovat
+aplikaci realizující vybraný efekt na videosekvenci a zhodnotit možnosti
+metod pro zpracování videa (stabilita mezi framy, plynulost pohybů
+apod.). Nakonec bylo úkolem demonstrovat dosažené výsledky na vhodných
+vstupech a vyhodnotit.&lt;/p&gt;
+&lt;p&gt;V rámci projektu jsme implementovali aplikaci demonstrující 3
+nerealistické video efekty:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Komiksový efekt&lt;/li&gt;
+&lt;li&gt;Malířský efekt&lt;/li&gt;
+&lt;li&gt;Mozaikový efekt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="nerealisticke-videoefekty"&gt;Nerealistické videoefekty&lt;/h2&gt;
+&lt;p&gt;Nerealistické renderování je oblast počítačové grafiky, která se
+zaměřuje na různé metody expresivního vyjádření (vykreslení) digitálního
+obrazu. Jedná se o opačný proces vykreslování realistické grafiky, tedy
+soubor technik vedoucích k výstupu, který nemá charakter
+fotorealistického grafického výstupu. Zpravidla se používá tehdy, kdy je
+potřeba imitovat různé techniky výtvarného umění nebo zvýraznit některé
+rysy zobrazovaného útvaru. Vstupem je videosekvence reálného obrazu,
+pořízená videokamerou, 3D scéna nebo jiná videosekvence. Výstupem filtru
+je vyrenderovaná videosekvence s daným nerealistickým efektem. [1]&lt;/p&gt;
+&lt;p&gt;Příklady některých nerealistických efektů:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Komiks (cartoon, comic)&lt;/li&gt;
+&lt;li&gt;Malířské techniky (painterly rendering)&lt;/li&gt;
+&lt;li&gt;Náčrtky (sketching)&lt;/li&gt;
+&lt;li&gt;Deformace obrazu (liquify)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="komiksovy-efekt"&gt;Komiksový efekt&lt;/h3&gt;
+&lt;p&gt;Komiksový efekt napodobuje kreslený film. Výsledkem je segmentovaný
+obraz s redukovaným rozsahem barev a se zvýrazněnými hranami (obr. 1).&lt;/p&gt;
+&lt;p&gt;Algoritmus pro vykreslování efektu používá metodu shlukování, konkrétně
+algoritmus K-means (viz kapitola Algoritmy pro zpracování efektů). Při
+každém vykreslení snímku nejprve proběhne výpočet počtu shluků. To
+zajišťuje lepší stabilitu obrazu mezi jednotlivými snímky. Počet shluků
+se určuje z barevnosti snímku pomocí histogramu a mění se jen při
+výraznější změně barevnosti.&lt;/p&gt;
+&lt;p&gt;Algoritmus K-means segmentuje pixely obrazu do shluků podle 5 kritérií:
+červená barevná složka, zelená barevná složka, modrá barevná složka,
+pozice na ose x, pozice na ose y. Barva jednotlivých shluků se vypočítá
+z průměru barev všech pixelů daného segmentu.&lt;/p&gt;
+&lt;p&gt;Nakonec se v obraze zvýrazní hrany pomocí Cannyho algoritmu pro detekci
+hran (viz kapitola Algoritmy pro zpracování efektů). Ten najde v obraze
+hrany, rozšíří je pomocí dilatace o určitou velikost a odpovídající
+pixely ve výsledném obraze potom ztmaví o danou hodnotu.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Obr. 1: Ukázka komiksového efektu" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-01.jpg" /&gt;&lt;/p&gt;
+&lt;h3 id="malirsky-efekt"&gt;Malířský efekt&lt;/h3&gt;
+&lt;p&gt;Malířský efekt imituje obraz malovaný štětcem na plátno. Výsledkem je
+obraz složený z menších různobarevných oblastí, připomínající stopy
+štětce (obr. 4).&lt;/p&gt;
+&lt;p&gt;Algoritmus zpracovává každý snímek videa v několika průchodech. V těchto
+průchodech jsou do obrazu zakreslovány čáry o různých tloušťkách,
+přičemž každá čára představuje jeden tah štětcem (obr. 3). Při
+zpracování jednoho snímku je ze všeho nejdříve rozmazán původní obrázek.
+V každém průchodu je poté obrázek překreslen jemnějším štětcem. Kromě
+zmenšování tloušťky štětce je také v každém průchodu zvětšována hustota
+zakreslovaných čar. Jinými slovy, je zmenšován krok průchodu obrazem.
+Jemnější štětce jsou ovšem použity pouze v místech, kde se aktuální
+obraz liší od původního rozmazaného obrazu. Díky tomu je zajištěna vyšší
+stabilita mezi jednotlivými snímky. Překreslování tenčím štětcem tedy
+slouží k odstranění nepřesností v aktuálním obraze. Po použití
+jemnějšího štětce je obraz vždy znovu rozmazán. Rozmazání obrazu se
+provádí pomocí algoritmu Gaussian blur (viz kapitola Algoritmy pro
+zpracování efektů).&lt;/p&gt;
+&lt;p&gt;Směr kreslené čáry je určen kolmicí ke gradientu obrazu. Gradient je
+vypočítán pomocí Sobelova filtru (viz kapitola Algoritmy pro zpracování
+efektů) použitého ve směru osy x a y (obr. 2). Kolmice je poté získána
+pouhým prohozením souřadných os a změnou znaménka jedné osy. Barva čáry
+je vypočítána jako průměrná hodnota mezi počátečním a koncovým bodem
+čáry, přičemž hodnota těchto bodů je brána z původního rozmazaného
+obrazu. [2]&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Obr. 2: Vykreslení čáry" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-02.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Obr. 3: Vykreslování čar v jednotlivých průchodech (postupně zleva doprava)" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-03.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Obr. 4: Ukázka malířského efektu" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-04.jpg" /&gt;&lt;/p&gt;
+&lt;h3 id="mozaikovy-efekt"&gt;Mozaikový efekt&lt;/h3&gt;
+&lt;p&gt;Mozaikový efekt je jednoduchý a často používaný. Obraz napodobuje
+mozaiku. Používá se pro skrytí detailů v obraze. Výsledkem je obraz
+složený z větších jednobarevných čtverců (obr. 5).&lt;/p&gt;
+&lt;p&gt;Algoritmus rozděluje obraz na čtvercové oblasti o určité velikosti. Tyto
+oblasti jsou potom obarveny jednou barvou, vypočtenou z průměru barev
+všech pixelů původní oblasti.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Obr. 5: Ukázka efektu mozaiky" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-05.jpg" /&gt;&lt;/p&gt;
+&lt;h2 id="algoritmy-pro-zpracovani-efektu"&gt;Algoritmy pro zpracování efektů&lt;/h2&gt;
+&lt;h3 id="k-means"&gt;K-means&lt;/h3&gt;
+&lt;p&gt;Algoritmus K-means slouží k segmentaci obrazu. Obraz se skládá z &lt;em&gt;K&lt;/em&gt;
+regionů a každý pixel je klasifikován do jednoho z regionu. Každý region
+je reprezentován středem μi. Pixel je klasifikován do regionu, jehož
+střed je nejblíže (obr. 6).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Obr. 6: Ukázka segmentace podle K-means ve 2D (kříže znázorňují středy regionů μi)" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-06.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Algoritmus K-means:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Náhodně inicializuj středy regionů μi.&lt;/li&gt;
+&lt;li&gt;Klasifikuj pixely xn do regionů.&lt;/li&gt;
+&lt;li&gt;Vypočti nové středy regionů.&lt;/li&gt;
+&lt;li&gt;Opakuj kroky 2 a 3, dokud se středy shluků mění.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="cannyho-hranovy-detektor-a-sobeluv-operator"&gt;Cannyho hranový detektor a Sobelův operátor&lt;/h3&gt;
+&lt;p&gt;Cannyho hranový detektor je algoritmus, který nalezne množinu hran
+v obraze. Využívá Sobelův operátor ve směru &lt;em&gt;X&lt;/em&gt; a &lt;em&gt;Y&lt;/em&gt;, potlačení
+nemaximálních hodnot a prahování s hysterezí. Zvýraznění hran pomocí
+Cannyho algoritmu je vidět například v obr. 1.&lt;/p&gt;
+&lt;p&gt;Sobelův operátor je diskrétní diferenciální operátor, který počítá
+aproximaci gradientu intenzity obrazu. Je založen na konvoluci obrazu
+pomocí filtru v horizontálním a vertikálním směru. Zpravidla používá
+konvoluční matice o velikosti 3x3 (vzorec 1).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vzorec 1: Konvoluční matice Sobelova filtru (A je zdrojový obraz, G je výsledný gradient)" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-07.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Potlačení nemaximálních hodnot (Non-maximum suppression) funguje tak, že
+ve směru gradientu se potlačí pixely, které nejsou lokálním maximem
+(obr. 7). Výsledkem je ztenčení tlustých hran potlačením nemaximálních
+hodnot v černobílém obraze.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Obr. 7: Znázornění pixelů ve směru gradientu" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-08.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;Prahování s histerezí funguje tak, že silné hrany (větší než &lt;em&gt;High&lt;/em&gt;)
+jsou ponechány. Slabé jsou ponechány, pouze pokud jsou spojeny s nějakou
+silnější hranou (obr. 8). Velmi slabé hrany jsou potlačeny (nižší než
+&lt;em&gt;Low&lt;/em&gt;). Obvykle platí: &lt;em&gt;High&lt;/em&gt; = 2-3 * &lt;em&gt;Low&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Obr. 8: Prahování s histerezí" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-09.jpg" /&gt;&lt;/p&gt;
+&lt;h3 id="gaussian-blur"&gt;Gaussian blur&lt;/h3&gt;
+&lt;p&gt;Gaussian blur je často používaný algoritmus v počítačové grafice pro
+redukci šumu a detailů. Funguje na principu konvoluce pomocí Gaussovské
+funkce (vzorec 2). Gaussian blur je filtr s dolní propustí.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Vzorec 2: Dvou dimenzionální Gaussovská funkce" src="http://blog.petrnohejl.cz/images/nerealisticke-videoefekty-10.jpg" /&gt;&lt;/p&gt;
+&lt;h2 id="implementace-aplikace"&gt;Implementace aplikace&lt;/h2&gt;
+&lt;p&gt;Aplikace demonstruje 3 video efekty: komiksový efekt, mozaikový efekt a
+malířský efekt. Vstupem programu je typ efektu a název video souboru ve
+formátu AVI. Výstupem jsou dvě okna, zobrazující video. První ukazuje
+originální obraz, druhé zobrazuje vyrenderovaný obraz, na který byl
+aplikován daný efekt.&lt;/p&gt;
+&lt;p&gt;Program demonstrující výše zmíněné nerealistické efekty je implementován
+v jazyce C/C++, v prostředí Visual Studio 2008. Používá knihovnu OpenCV.
+Pro úspěšné sestavení projektu je nutné mít nainstalovanou tuto knihovnu
+a správně definovány v nastavení projektu knihovny pro linker.&lt;/p&gt;
+&lt;p&gt;Každý efekt je implementován ve vlastní třídě (&lt;em&gt;effectComic&lt;/em&gt;,
+&lt;em&gt;effectPainterly&lt;/em&gt;, &lt;em&gt;effectMosaic&lt;/em&gt;). Na začátku každého zdrojového
+souboru s efektem jsou definovány konstanty, ovlivňující různé
+vlastnosti při výpočtu efektu. Konstanty lze měnit a ovlivňovat tak
+některé parametry efektu. Třída &lt;em&gt;effects&lt;/em&gt; se stará o základní zpracování
+obrazu - načtení videa ze souboru a zobrazení na výstup.&lt;/p&gt;
+&lt;p&gt;Ovládání aplikace:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;VideoEffects.exe -h&lt;/em&gt; - zobrazí nápovědu&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;VideoEffects.exe -c inputVideo&lt;/em&gt; - demonstruje komiksový efekt&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;VideoEffects.exe -p inputVideo&lt;/em&gt; - demonstruje malířský efekt&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;VideoEffects.exe -m inputVideo&lt;/em&gt; - demonstruje mozaikový efekt&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;em&gt;inputVideo&lt;/em&gt; je název vstupního video souboru ve formátu AVI.&lt;/p&gt;
+&lt;h2 id="zaver"&gt;Závěr&lt;/h2&gt;
+&lt;p&gt;Nerealistické vykreslování obrazu může mít různé využití. Používá se
+například v moderních videokamerách pro „umělecké“ efekty, mobilních
+telefonech s fotoaparátem nebo také v programech pro střihání videa.
+Využití může nalézt i v zábavném průmyslu, např. v počítačových hrách
+nebo aplikacích na webu.&lt;/p&gt;
+&lt;p&gt;Díky projektu jsme se naučili metody a principy pro nerealistické
+renderování obrazu. Naučili jsme se nové algoritmy pro zpracování obrazu
+a prohloubili si znalosti v programování aplikací v OpenCV.&lt;/p&gt;
+&lt;p&gt;Zdrojové soubory projektu na &lt;a href="https://github.com/petrnohejl/Non-Realistic-Video-Effects"&gt;github.com&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id="zdroje"&gt;Zdroje&lt;/h2&gt;
+&lt;p&gt;[1] Non-photorealistic rendering. In Wikipedia : the free encyclopedia
+[online]. St. Petersburg (Florida) : Wikipedia Foundation, 9.1.2005,
+last modified on 14.10.2010 [cit. 2010-12-28]. Dostupné z WWW:
+http://en.wikipedia.org/wiki/Non-photorealistic_rendering.&lt;/p&gt;
+&lt;p&gt;[2] HERTZMANN, Aaron; PERLIN, Ken. Painterly rendering : Painterly
+Rendering with Curved Brush Strokes of Multiple Sizes [online]. New
+York University, Media Research Laboratory : 2000 [cit. 2010-12-29].
+Dostupné z WWW: http://mrl.nyu.edu/projects/npr/painterly/.&lt;/p&gt;
+&lt;p&gt;[3] Matlab Central [online]. 27.3.2008 [cit. 2010-12-29]. Efficient
+K-Means Clustering. Dostupné z WWW:
+http://www.mathworks.com/matlabcentral/fileexchange/19344-efficient-k-means-clustering-using-jit.&lt;/p&gt;
+&lt;p&gt;[4] Sobel operator. In Wikipedia : the free encyclopedia [online]. St.
+Petersburg (Florida) : Wikipedia Foundation, 19.2.2004, last modified on
+12.12.2010 [cit. 2010-12-29]. Dostupné z WWW:
+http://en.wikipedia.org/wiki/Sobel_operator.&lt;/p&gt;</summary></entry></feed>

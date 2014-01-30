@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
+<head>
+    <title>ARToolKit – rozšířená realita - Jestřáblog</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <!-- Open Graph tags -->
+            <meta property="og:type" content="article"/>
+            <meta property="og:title" content="ARToolKit – rozšířená realita"/>
+            <meta property="og:url" content="http://blog.petrnohejl.cz/artoolkit"/>
+            <meta property="og:description" content="V tomto článku bych chtěl popsat, co je ARToolKit, jak funguje, co umí, jak se v něm programuje a jak se instaluje. Obsah článku je převzat z mého školního projektu do předmětu GZN. Více o ARToolKit se můžete dozvědět na oficiálních stránkách projektu. Úvod ARToolKit je knihovna, která umožňuje programovat ..."/>
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://blog.petrnohejl.cz/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://blog.petrnohejl.cz/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://blog.petrnohejl.cz/" class="navbar-brand">
+Jestřáblog            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="http://blog.petrnohejl.cz/pages/o-mne">
+                             O mně
+                          </a></li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/akce.html">Akce</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://blog.petrnohejl.cz/category/informacni-technologie.html">Informační technologie</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/jestrabi-svet.html">Jestřábí svět</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/kultura.html">Kultura</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/ostatni.html">Ostatní</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/rady-a-napady.html">Rady a nápady</a>
+                        </li>
+                        <li >
+                            <a href="http://blog.petrnohejl.cz/category/vareni.html">Vaření</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://blog.petrnohejl.cz/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://blog.petrnohejl.cz/artoolkit"
+                       rel="bookmark"
+                       title="Permalink to ARToolKit – rozšířená realita">
+                        ARToolKit – rozšířená realita
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2010-11-15T00:00:00"> 15.11.2010</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <p>V tomto článku bych chtěl popsat, co je ARToolKit, jak funguje, co umí,
+jak se v něm programuje a jak se instaluje. Obsah článku je převzat z
+mého školního projektu do předmětu
+<abbr title="Grafická a zvuková rozhraní a normy">GZN</abbr>. Více o
+ARToolKit se můžete dozvědět na <a href="http://www.hitl.washington.edu/artoolkit/">oficiálních stránkách projektu</a>.</p>
+<h2 id="uvod">Úvod</h2>
+<p>ARToolKit je knihovna, která umožňuje programovat aplikace s rozšířenou
+realitou (augmented reality).  Jedná se o nástroj počítačového vidění,
+který snímá v reálném čase obraz pomocí videokamery a dokáže vypočítat
+pozici, vzdálenost a rotaci kamery vzhledem k daným objektům, které jsou
+označeny speciálními značkami (markers). Výsledkem je reálný obraz
+s dokreslenou virtuální (rozšířenou) realitou ve 3D. 3D objekty se
+obvykle vykreslují na trasovací značky a překrývají je. Trasovacích
+značek může být ve scéně použito více.</p>
+<p>Pro lepší představu uvedeme příklad. Na obrázku 1 níže je modrá
+virtuální krychle, která stojí na skutečné papírové podložce, na které
+je vytištěna speciální trasovací značka s identifikačním symbolem. Obraz
+snímá v reálném čase kamera. Když uživatel posune či otočí značku,
+krychle se pohne s ní. Když uživatel posune značku mimo zorný úhel
+kamery, krychle zmizí.</p>
+<p><img alt="Obr. 1: Modrá krychle se v reálném čase vykresluje na trasovací značku ve skutečném obraze." src="http://blog.petrnohejl.cz/images/artoolkit-01.jpg" /></p>
+<p>V následujícím textu se některé uvedené názvy/cesty k souborům ARToolKit
+vztahují k ukázkovým příkladům pro OS Windows (Visual Basic).</p>
+<h2 id="historie">Historie</h2>
+<p>Knihovnu ARToolKit vyvinul Japonec Dr. Hirokazu Kato z Nara Institute of
+Science and Technology v roce 1999. Vydána byla jako opensource
+Univerzitou ve Washingtonu. Nyní je vývoj pozastaven a poslední dostupná
+verze knihovny je z května 2007.</p>
+<h2 id="co-artoolkit-umi">Co ARToolKit umí?</h2>
+<ul>
+<li>rozpoznávání trasovacích značek</li>
+<li>trasování pozice a rotace kamery metodami počítačového vidění</li>
+<li>kalibrace kamery</li>
+<li>zpracování obrazu v reálném čase</li>
+<li>knihovna zajišťující zpracování videa</li>
+<li>ARToolKit je napsán v jazyce C/C++</li>
+<li>podpora OpenGL, GLUT a VRML (OpenVRML) pro vykreslování virtuálního
+    obrazu</li>
+<li>podpora více OS (Linux, MS Windows, Mac OS X) a mobilních platforem
+    (Android, Symbian, iPhone)</li>
+<li>podpora 3D virtuálních brýlí</li>
+<li>řada nástrojů a příkladů</li>
+<li>mnoho mutací (pro Flash, Silverlight, Virtual machines,
+    OpenSceneGraph atd.)</li>
+</ul>
+<h2 id="jak-artoolkit-funguje">Jak ARToolKit funguje?</h2>
+<h3 id="zakladni-princip">Základní princip</h3>
+<p>Hlavním problémem při vývoji aplikací s rozšířenou realitou je správně
+najít a trasovat zorný úhel pozorovatele (videokamery).  Aplikace
+potřebuje znát přesnou pozici videokamery vůči značkám, aby byla schopna
+určit zorný bod, ze kterého se bude vykreslovat virtuální obraz. Jakmile
+je známa pozice videokamery, která se vypočte podle polohy a natočení
+značek, virtuální kamera může být umístěna do stejného bodu jako ta
+reálná a poté je možno vykreslit 3D modely přesně na místa značek.
+ARToolKit používá pro trasování pozice kamery algoritmy počítačového
+vidění, které jsou schopny počítat rychle v reálném čase. Výsledky jsou
+však závislé na použitém hardware a videokameře.</p>
+<h3 id="faze-zpracovani-obrazu-v-realnem-case">Fáze zpracování obrazu v reálném čase</h3>
+<ol>
+<li>Videokamera sejme snímek a pošle jej počítači ke zpracování.</li>
+<li>Program v počítači zpracuje snímek z videa, převede jej pomocí
+    prahování na černo-bílý obraz a najde v něm všechny černé
+    čtverhranné tvary, které odpovídají vzorům trasovacích značek.</li>
+<li>Pokud jsou nějaké značky detekovány, program vypočítá pozici a
+    rotaci kamery vůči trasovacím značkám.</li>
+<li>Jakmile je známa poloha kamery, virtuální 3D grafika může být
+    vykreslena ze stejné pozice.</li>
+<li>Virtuální grafika je vykreslena přes reálný snímek z videokamery a
+    objekty se zobrazí přesně na místa trasovacích značek.</li>
+</ol>
+<p><img alt="Obr. 2: Fáze zpracování obrazu ARToolKit v reálném čase." src="http://blog.petrnohejl.cz/images/artoolkit-02.jpg" /></p>
+<h3 id="omezeni">Omezení</h3>
+<p>ARToolKit má určitá omezení, které je potřeba při vývoji aplikací
+s rozšířenou realitou brát v úvahu.</p>
+<ul>
+<li>Virtuální objekty se objeví pouze tehdy, kdy jsou příslušné
+    trasovací značky plně viditelné ze strany pozorovatele
+    (videokamery). Pokud je část značky zakryta, nelze ji rozpoznat.</li>
+<li>Správná detekce trasovacích značek ve videu je závislá na světelných
+    podmínkách ve scéně. Při špatném osvětlení nemusí být značky
+    v prahovaném obraze detekovány. Rušit mohou i odlesky světla na
+    značkách. Problémy se světlem lze částečně redukovat nastavením
+    vhodného prahu.</li>
+<li>Správná detekce značek je rovněž závislá na naklonění značek vůči
+    pozorovateli (videokameře). Čím více je značka nakloněna, tím hůře
+    se rozpoznává.</li>
+<li>Při tvorbě vlastních značek je důležité zvolit vhodné symboly.
+    Platí, že čím jednodušší, tím lepší a tím snadněji se správně
+    rozpozná. Nejvhodnější jsou značky s velkými černými a bílými místy
+    (s nízkou frekvencí). Komplexnější vzory jsou z větší dálky hůře
+    detekovány a můžou zkrátit rozlišovací vzdálenost až o polovinu.
+    V tabulce 1 jsou znázorněny přibližné rozlišovací vzdálenosti
+    trasovacích značek, které byly experimentálně zjištěny.</li>
+</ul>
+<table cellspacing="0" cellpadding="0">
+    <tbody>
+        <tr>
+            <td width="206" valign="top">Velikost značky [cm]</td>
+            <td width="212" valign="top">Max. použitelná vzdálenost [cm]</td>
+        </tr>
+        <tr>
+            <td width="206" valign="top">7.0</td>
+            <td width="212" valign="top">40.6</td>
+        </tr>
+        <tr>
+            <td width="206" valign="top">8.9</td>
+            <td width="212" valign="top">63.5</td>
+        </tr>
+        <tr>
+            <td width="206" valign="top">10.8</td>
+            <td width="212" valign="top">86.4</td>
+        </tr>
+        <tr>
+            <td width="206" valign="top">18.7</td>
+            <td width="212" valign="top">127</td>
+        </tr>
+    </tbody>
+</table>
+
+<p>Tabulka 1: Rozlišovací vzdálenost trasovacích značek o různé velikosti.</p>
+<h3 id="kalibrace-kamery">Kalibrace kamery</h3>
+<p>Nastavení a parametry videokamery jsou uloženy v binárním souboru
+camera_para.dat (v adresáři bin/Data). Konfigurace kamery se zpracuje
+při každém spuštění aplikace ARToolKit.</p>
+<p>ARToolKit používá implicitně soubor camera_para.dat s výchozím
+nastavením. Rovněž však umožňuje kalibraci jakékoliv kamery a vytvoření
+vlastního konfiguračního souboru. To je vhodné zejména pro kamery s
+atypickými objektivy (např. rybí oko). Kalibrace zajistí přesnější
+výpočty polohy videokamery pro vykreslení virtuální scény a redukuje
+zkreslení. Pro správné provedení kalibrace bude potřeba vytisknout vzory
+calib_dist a calib_cpara (z adresáře patterns), s kterými budeme
+pracovat podobně jako se značkami. K dispozici jsou dva kalibrační
+postupy.</p>
+<ul>
+<li>Dvoukroková kalibrace - složitější použití, ale lepší výsledky.
+    Vhodnější pro 3D měření.</li>
+<li>Jednokroková kalibrace - jednodušší použití, méně přesná.</li>
+</ul>
+<h3 id="presnost-trasovani-objektu">Přesnost trasování objektů</h3>
+<p>ARToolKit umí stabilizovat trasování objektů pomocí funkce historie.
+Tato stabilizace redukuje chvění virtuálních objektů, protože při
+výpočtu polohy objektu se využívá průměr několika předchozích poloh.
+Tímto je zajištěna větší stabilita, ale horší přesnost. Historii lze
+použít rovněž i při detekci značek. Výpočet je potom o něco rychlejší a
+stabilnější, ale opět méně přesný.</p>
+<h2 id="trasovaci-znacky">Trasovací značky</h2>
+<h3 id="metody-trasovani">Metody trasování</h3>
+<p>Trasovací značky jsou speciální vzory, obvykle vytištěné na papíru,
+pomocí kterých se trasují virtuální objekty rozšířené reality. Je to
+jedna z metod, jak lze trasovat vrstvu rozšířené reality. Tato metoda
+využívá počítačové vidění. Další možnou metodou trasování můžou být
+např. polohovací senzory (GPS, kompas, akcelerometr), které jsou
+dostupné zpravidla na moderních mobilních zařízeních.</p>
+<h3 id="podoba-trasovacich-znacek">Podoba trasovacích značek</h3>
+<p>Z polohy značek ve video obrazu se vypočítává pozice a rotace kamery.
+Značky v ARToolKit mají čtvercový tvar. Tvoří je černobílý symbol s
+černým okrajem o šířce, která je rovna polovině šířky vnitřní plochy se
+symbolem. Vnitřní symbol je černý na bílém podkladu a slouží k rozlišení
+více různých značek od sebe. Měl by být co nejjednodušší (viz kapitola
+4.3) a nesmí být středově souměrný, aby bylo možné rozlišit orientaci
+(natočení) značky ve scéně. Tedy např. značka s kruhem uprostřed je
+nevhodná. Pokud používáme více značek v aplikaci s rozšířenou realitou,
+tyto značky by neměly být vzájemně podobné, aby nedošlo k záměně. Značky
+je vhodné tisknout na tvrdý, nelesknoucí se papír a případně podlepit
+kartonem, aby se neohýbaly. Je potřeba zvolit vhodnou velikost značky
+podle použití. Na obrázku 3 jsou ukázány příklady trasovacích značek,
+které lze rovněž najít v adresáři patterns ve formátu PDF k vytisknutí.</p>
+<p><img alt="Obr. 3: Ukázky trasovacích značek ARToolKit." src="http://blog.petrnohejl.cz/images/artoolkit-03.jpg" /></p>
+<h3 id="konfiguracni-soubor">Konfigurační soubor</h3>
+<p>Seznam použitých značek je obvykle uložen v konfiguračním souboru
+object_data (v adresáři bin/Data), který se načítá při inicializaci
+aplikace ARToolKit.  V souboru je uložen počet použitých značek a ke
+každé značce její pojmenování, datový soubor, šířka značky na vytištěném
+papíru v milimetrech (včetně okrajů) a její střed.</p>
+<h3 id="tvorba-vlastnich-znacek">Tvorba vlastních značek</h3>
+<p>ARToolKit umožňuje tvorbu vlastních značek pomocí nástroje mk_patt.
+Tento program umožňuje vygenerovat datový soubor značky z natrénovaných
+dat z videokamery. Než spustíme trénování, je potřeba vhodně navrhnout
+symbol naší nové značky a následně značku vytisknout. Pro tvorbu značek
+lze použít šablonu, uloženou v souboru patterns/blankPatt.gif. Nakonec
+je potřeba vytvořit příslušný konfigurační soubor k vytvořeným značkám.</p>
+<h3 id="trasovani-pomoci-vice-znacek">Trasování pomocí více značek</h3>
+<p>ARToolKit umožňuje trasování jednoho objektu pomocí více značek. Pomocí
+sady několika značek s vzájemně neměnnou pozicí (např. značky nalepené
+na pevné podložce) lze určit jedinou polohu. To lze využít v případě,
+kdy některá značka je mimo zorný úhel pozorovatele (videokamery).
+V běžném případě by objekt zmizel, ale pomocí multi značek lze pozici
+dopočítat. Pokud je viditelná alespoň jedna značka z dané sady,
+ARToolKit dokáže dopočítat pozici zbylých značek, které jsou mimo zorný
+úhel. Sadu multi značek je potřeba nadefinovat v konfiguračním souboru
+marker.dat (v adresáři bin/Data/multi), obdobně jako běžné značky. Navíc
+je potřeba pro každou značku nastavit transformační matici, udávající
+přesnou polohu v souřadnicovém systému. Správné nastavení transformační
+matice může být v některých případech velmi obtížné.</p>
+<h2 id="vyvoj-aplikaci-v-artoolkit">Vývoj aplikací v ARToolKit</h2>
+<h3 id="artoolkit-framework">ARToolKit framework</h3>
+<p>ARToolKit poskytuje funkce, které se volají v určitém pořadí a tvoří tak
+program s rozšířenou realitou. Některé funkce je však možné používat
+samostatně. ARToolKit je multiplatformní, pro renderování virtuální
+vrstvy používá OpenGL a pro správu událostí a oken používá GLUT. API je
+napsáno v jazyce C.</p>
+<p>ARToolKit tvoří tři hlavní moduly:</p>
+<ul>
+<li>AR modul - jádro systému, zajišťující trasování značek a zpracování
+    parametrů kamery.</li>
+<li>Video modul - zajišťuje snímání video obrazu.</li>
+<li>Gsub modul - funkce zajišťující vykreslování 3D grafiky.</li>
+</ul>
+<p><img alt="Obr. 4: Architektura ARToolKit." src="http://blog.petrnohejl.cz/images/artoolkit-04.jpg" /></p>
+<h3 id="format-obrazovych-dat">Formát obrazových dat</h3>
+<p>Jednotlivé moduly ARToolKit používají odlišné formáty obrazových dat.</p>
+<p><img alt="Obr. 5: Formát dat při zpracování obrazu v ARToolKit." src="http://blog.petrnohejl.cz/images/artoolkit-05.jpg" /></p>
+<h3 id="kostra-zdrojoveho-kodu-aplikace">Kostra zdrojového kódu aplikace</h3>
+<ol>
+<li>Inicializace - inicializace a nastavení videokamery, zpracování
+    konfiguračního souboru značek.</li>
+<li>
+<p>Hlavní smyčka:</p>
+<ol>
+<li>Načtení snímku z videokamery.</li>
+<li>Detekce trasovacích značek a rozpoznání vzorů ve snímku.</li>
+<li>Výpočet pozice a rotace kamery vzhledem k rozpoznaným značkám.</li>
+<li>Vykreslení snímku a virtuálních objektů.</li>
+</ol>
+</li>
+<li>
+<p>Ukončení - ukončení snímání videokamery a vypnutí programu.</p>
+</li>
+</ol>
+<h2 id="instalace-artoolkit-pro-visual-studio">Instalace ARToolKit pro Visual Studio</h2>
+<h3 id="prerekvizity">Prerekvizity</h3>
+<ul>
+<li>Vývojové prostředí Microsoft Visual Studio, případně Cygwin.</li>
+<li>Knihovna DSVideoLib, zajišťující komunikaci s ovladači videokamery
+    (DSVideoLib je součástí instalačního balíčku ARToolKit).</li>
+<li>GLUT (OpenGL Utility Toolkit) runtime a SDK.</li>
+<li>DirectX 9.0b nebo novější.</li>
+<li>Videokamera nebo webkamera, podporující rozhraní USB nebo Firewire.</li>
+<li>OpenVRML knihovna (je součástí instalačního balíčku ARToolKit).</li>
+</ul>
+<h3 id="instalace">Instalace</h3>
+<ol>
+<li>Stáhneme instalační balíček z oficiálního webu
+    <a href="http://www.hitl.washington.edu/artoolkit/">http://www.hitl.washington.edu/artoolkit/</a>, případně balíček
+    ARToolKit-2.7.1-bin-book.zip z adresy
+    <a href="http://books.ascii.jp/9784048673617/">http://books.ascii.jp/9784048673617/</a>, kde jsou opraveny některé
+    zdrojové kódy, které v původní verzi způsobovaly chyby při kompilaci
+    programů, pracujících s OpenVRML.</li>
+<li>Rozbalíme instalační balíček do adresáře [ARToolKit].</li>
+<li>Rozbalíme knihovnu DSVideoLib do adresáře „DSVL“ v [ARToolKit].</li>
+<li>Zkopírujeme soubory DSVL.dll a DSVLd.dll z adresáře
+    [ARToolKit]\DSVL\bin do [ARToolKit]\bin.</li>
+<li>Nainstalujeme knihovny GLUT. Dll soubory zkopírujeme do systémové
+    složky Windows „System32“. Knihovny a hlavičkové soubory umístíme do
+    SDK adresáře Visual Studia.</li>
+<li>Spustíme skript [ARToolKit]\Configure.win32.bat, který vytvoří
+    soubor include\AR\config.h.</li>
+<li>Otevřeme ARToolKit.sln ve Visual Studiu a sestavíme solution
+    příkazem Build.</li>
+<li>Pro zprovoznění OpenVRML rozbalíme tento balíček do adresáře
+    [ARToolKit].</li>
+<li>Zkopírujeme soubor js32.dll z adresáře [ARToolKit]\OpenVRML\bin do
+    [ARToolKit]\bin.</li>
+<li>V konfiguračním manažeru Visual Studia povolíme projekty libARvrml a
+    simpleVRML a znovu sestavíme příkazem Build.</li>
+</ol>
+<h3 id="struktura-artoolkit">Struktura ARToolKit</h3>
+<p>ARToolKit obsahuje následující adresáře:</p>
+<ul>
+<li>bin - nástroje, příklady, kalibrační soubory videokamery,
+    konfigurační soubory značek a multi-značek, VRML modely a jejich
+    konfigurační soubory, spustitelné programy končící sufixem „d“ jsou
+    určeny pro ladění (debug)</li>
+<li>doc - dokumentace</li>
+<li>DSVL - soubory knihovny DSVideoLib</li>
+<li>examples - zdrojové soubory ukázkových aplikací</li>
+<li>include - hlavičkové soubory ARToolKit</li>
+<li>lib - knihovny a zdrojové kódy ARToolKit</li>
+<li>OpenVRML - soubory knihovny OpenVRML</li>
+<li>patterns - trasovací značky v PDF k vytisknutí</li>
+<li>util - zdrojové soubory nástrojů</li>
+</ul>
+<h3 id="testovaci-a-ukazkove-aplikace">Testovací a ukázkové aplikace</h3>
+<p>Po úspěšném sestavení solution bychom měli vyzkoušet testovací aplikace
+(v adresáři bin) a ověřit, zda vše správně funguje. Nejdříve bychom měli
+vyzkoušet grafický test graphicsTest, kterým ověříme správnou funkčnost
+OpenGL a GLUT. Na obrazovce by se měla po spuštění programu objevit
+modrá rotující konvička. Dále vyzkoušíme video test videoTest, kterým
+ověříme správnou funkčnost videokamery a zobrazování video výstupu na
+displeji. Na obrazovce by se mělo objevit okno s nastavením konfigurace
+kamery (podobně jako na obrázku 6) a po potvrzení a zvolení správného
+nastavení obraz z videokamery. Pokud oba tyto testy fungují správně,
+máte potvrzeno, že vaše kamera podporuje grafický modul a video modul
+ARToolKit.</p>
+<p><img alt="Obr. 6: Nastavení konfigurace videokamery." src="http://blog.petrnohejl.cz/images/artoolkit-06.jpg" /></p>
+<p>Pro spuštění ukázkových aplikací ARToolKit je potřeba mít k dispozici
+vytisknuté trasovací značky (z adresáře patterns). Některé ukázkové
+aplikace mají implementovaný debug mode, který se zapíná/vypíná
+tlačítkem „d“ a zobrazuje prahovaný obraz. U některých aplikací lze
+nastavit manuálně hodnotu prahu pomocí tlačítka „t“. Zdrojové kódy
+ukázkových aplikací nalezneme v adresáři examples.</p>
+<h2 id="priklady-vyuziti">Příklady využití</h2>
+<ul>
+<li>zábava, hry</li>
+<li>interaktivní průvodce v muzeu</li>
+<li>navigace v budově</li>
+<li>efekty ve filmu</li>
+<li>reklama na plakátu</li>
+</ul>
+<h2 id="zdroje">Zdroje</h2>
+<p>[1] OsgART [online]. 2009 [cit. 2010-11-04]. OsgART: Augmented Reality
+for OpenSceneGraph. Dostupné z WWW:
+http://osgart.org/wiki/File:Build_artoolkit_simpletest.jpg.</p>
+<p>[2] ARToolKit [online]. 2007 [cit. 2010-11-04]. ARToolKit
+Documentation - How does ARToolKit work. Dostupné z WWW:
+http://www.hitl.washington.edu/artoolkit/documentation/images/diagram.jpg.</p>
+<p>[3] ARToolKit [online]. 2007 [cit. 2010-11-04]. ARToolKit
+Documentation - ARToolKit framework. Dostupné z WWW:
+http://www.hitl.washington.edu/artoolkit/documentation/images/artarchitecture.jpg.</p>
+<p>[4] ARToolKit [online]. 2007 [cit. 2010-11-04]. ARToolKit
+Documentation - ARToolKit framework. Dostupné z WWW:
+http://www.hitl.washington.edu/artoolkit/documentation/images/formatpipeline.jpg.</p>
+<p>[5] ARToolKit [online]. 2007 [cit. 2010-11-04]. ARToolKit
+Documentation - First example. Dostupné z WWW:
+http://www.hitl.washington.edu/artoolkit/documentation/images/configCamWindows.jpg.</p>
+<p>[6] ARToolKit [online]. 2007 [cit. 2010-11-04]. Dostupné z WWW:
+http://www.hitl.washington.edu/artoolkit/.</p>
+<p>[7] ARToolKit. In Wikipedia : the free encyclopedia [online]. St.
+Petersburg (Florida) : Wikipedia Foundation, 16.1.2008, last modified on
+11.6.2010 [cit. 2010-11-04]. Dostupné z WWW:
+http://en.wikipedia.org/wiki/ARToolKit.</p>
+<p>[8] KATO, Hirokazu. Inside ARToolKit [online]. Japan : Hiroshima City
+University, 2002 [cit. 2010-11-04]. Dostupné z WWW:
+http://www.hitl.washington.edu/artoolkit/Papers/ART02-Tutorial.pdf.</p>
+<p>[9] KATO, Hirokazu; BILLINGHURST, Mark. Marker Tracking and HMD
+Calibration for a Video-based Augmented Reality Conferencing System
+[online]. Hiroshima City University and University of Washington :
+Faculty of Information Sciences and Human Interface Technology
+Laboratory, 1999 [cit. 2010-11-04]. Dostupné z WWW:
+http://www.hitl.washington.edu/artoolkit/Papers/IWAR99.kato.pdf.</p>
+<p>[10] ARToolworks support library [online]. 2010 [cit. 2010-11-04].
+ARToolKit Professional. Dostupné z WWW:
+http://www.artoolworks.com/support/library/ARToolKit_Professional.</p>
+            </div>
+            <!-- /.entry-content -->
+    <hr />
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'petrnohejl'; // required: replace example with your forum shortname
+            var disqus_identifier = 'artoolkit';
+            var disqus_url = 'http://blog.petrnohejl.cz/artoolkit';
+            var disqus_config = function () {
+                this.language = "cs";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3 well well-sm" id="sidebar">
+
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+                  <ul class="list-group" id="social">
+                    <li class="list-group-item"><a href="http://twitter.com/petrnohejl"><i
+                            class="fa fa-twitter-square fa-lg"></i> Twitter
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.linkedin.com/in/petrnohejl"><i
+                            class="fa fa-linkedin-square fa-lg"></i> LinkedIn
+                    </a></li>
+                    <li class="list-group-item"><a href="https://github.com/petrnohejl"><i
+                            class="fa fa-github-square fa-lg"></i> GitHub
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.facebook.com/petr.nohejl"><i
+                            class="fa fa-facebook-square fa-lg"></i> Facebook
+                    </a></li>
+                  </ul>
+                </li>
+
+
+
+                <li class="list-group-item"><a href="http://blog.petrnohejl.cz/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                    <ul class="list-group" id="tags">
+                    </ul>
+                </li>    
+    <li class="list-group-item"><h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+      <ul class="list-group" id="links">
+        <li class="list-group-item">
+            <a href="http://petrnohejl.cz/" target="_blank">
+                Petr Nohejl
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://janie.jestrab.net/" target="_blank">
+                Blog Janie Milíčové
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://honzajavorek.cz/blog" target="_blank">
+                Javorové lístky
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://jarmart.cz/" target="_blank">
+                JarmArt
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://terezka.8bit.cz/" target="_blank">
+                Terezčin BlogHýsek
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://pavca.8bit.cz/" target="_blank">
+                Pavčin blog
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.zuzikovakultura.blogspot.com/" target="_blank">
+                Zuzejkova kultura
+            </a>
+        </li>
+        <li class="list-group-item">
+            <a href="http://www.bakinovyzazitky.blogspot.com/" target="_blank">
+                Bakinovy zážitky
+            </a>
+        </li>
+      </ul>
+    </li>
+
+        </ul>
+    </section>
+
+</aside>        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2013 Petr Nohejl
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://code.jquery.com/jquery.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://blog.petrnohejl.cz/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://blog.petrnohejl.cz/theme/js/respond.min.js"></script>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'petrnohejl'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-XXXX-YYYY']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+</body>
+</html>
