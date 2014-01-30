@@ -1,0 +1,79 @@
+Title: Medical Fair 2009
+Date: 2009-10-22 12:00
+Author: peno
+Category: Akce
+Tags: výstava
+Slug: medical-fair-2009
+
+Ahoj! Tento týden jsem navštívil Medical Fair - veletrh zdravotnické
+techniky, rehabilitace a zdraví, a proto přicházím s krátkým reportem z
+této akce. Veletrh se konal na Brněnském výstavišti společně s veletrhy
+Gaudeamus (pomaturitní a celoživotní vzdělávání) a Wood-tec
+(dřevozpracující průmysl).
+
+Akce jsem se zúčastnil společně s Jančou a jejími rodiči, kterým jsem
+byl také poprvé oficiálně představen. Hned od začátku na nás začali
+útočit brigádníci se svými letáčky. Mně to však nevadilo, jelikož jsem
+využil svoji
+<abbr title="nechceš-li prospekt, dívej se do země a dej ruce do kapes">metodu
+očního (ne)kontaktu</abbr>. Na veletrhu bylo k vidění mnoho zajímavostí:
+různé rehabilitační a masážní nástroje, pomůcky pro tělesně postižené,
+vybavení pro ordinace a nemocnice, přírodní medicína a mnoho dalšího.
+Akce se zúčastnilo spoustu tělesně postižených lidí a vozíčkářů, pro
+které byl určen jeden celý pavilon. Zde byla předvedena nejrůznější
+zařízení, usnadňující život těmto lidem. Zaujalo mě například speciálně
+upravené auto pro vozíčkáře, nebo externí výtah. Dále byl také k vidění
+horkovzdušný balón se speciální sedačkou pro postižené.
+
+V dalším pavilónu nás už z dálky lákal
+<abbr title="takový ten typický reklamní televizní šašek">Helmut z
+Teleshopingu</abbr>, nabízející super skvělý přístroj na výrobu domácí
+majonézy a tatarky. Byl to opravdu mistr v rétorice a přilákal ke svému
+stánku nejednu naivní babičku. Měl spoustu skvělých a výhodných nabídek
+a k tomu nějaký ten dárek zdarma. Vyslechli jsme jeho velmi vtipný
+projev, ochutnali jeho skvělou majonézu a šli dál. U dalšího stánku nás
+zastavil mladík, nabízející speciální náplasti. Šlo o nový vynález, a
+mně se velmi líbil. Náplast je smotána do roličky jako izolepa a funguje
+na podobném principu jako suchý zip. Raněné místo se obmotá kolem do
+kola a páska se utrhne. Náplast potom sama drží podobně jako suchý zip.
+Výhoda je že nelepí a je vyrobena ze speciálního materiálu, který má
+savé vlastnosti. Mezitím se nám ztratili rodičové, ale Janča pravila, že
+je určitě najdem u masážních olejů. A taky že jo! Posilněni přírodním
+čínským bonbónem jsme pokračovali dál, kolem mastí z hadích toxinů, až
+ke kouzelnému [lehátku][], které spraví vaše bolavá záda. Zde jsme si
+vyslechli krátkou přednášku o tom, jak lehátko správně používat (protože
+rodičové ho doma mají) a Janča ho vyzkoušela v akci. Dále jsme se vydali
+pro ponožky na spaní, které si Janča přála a rodičové si mezitím koupili
+masážní olej a k tomu dostali voňavou svíčku. Poslední věc co mě zaujala
+byl [flexi bar][], tyčka se kterou se kmitá jak o život (vypadá to
+vcelku komicky) a spraví vám to záda.
+
+Poslední pavilon byl určen spíše pro profíky a byly zde k vidění různé
+speciální přístroje, ani jsem nevěděl k čemu přesně určené. Dále jsme
+viděli operační sál se spoustou kamer a moderní techniky, masážní vany a
+další vybavení pro nemocnice...
+
+Navštívili jsme také Gaudeamus. Zde měla stánek snad každá známá vysoká
+škola (VUT, MUNI, ČVUT, VŠE, VŠCHT atd.). Jelikož jsme měli šílený hlad,
+zakoupili jsme si bagetu a šli si sednout na židli v přednáškovém
+sektoru, kde jsme si vyslechli konec prezentace nějaké školy. Potom jsme
+si prošli několik stánků. U MUNI stánku jsme dostali samolepky, u ČVUT
+stánku jsem si zahrál Arkanoid naprogramovaný na FPGA destičce... Nejvíc
+jsem se však těšil na VUT stánky. VUT prezentovalo všechny své fakulty.
+Zastavili jsme se u FIT stánku, kde jsem dostal krásnou FIT placku na
+batoh. Janča zas dostala propagační letáček "FIT dívkám sluší". Také
+jsme se zastavili u FEKT stánku, kde zrovna probíhala soutěž o JOJO. Moc
+jsem to jojo chtěl vyhrát, a tak jsem se soutěže zúčastnil. Můj úkol
+zněl jasně: "Nakresli do grafu průběh nabíjení kondenzátoru." A to byl
+můj konec! Udělal jsem smutné oči a pravil, že tato otázka je na
+gympláka moc těžká, ale že mu můžu nakreslit nějakou funkci. Nakonec se
+nademnou smilovali a JOJO jsem dostal i tak za nic.
+
+Výstava se mi vcelku líbila. Nakonec jsem využil i možnost použít
+vstupenku jako lístek na MHD (když jsem ten den zjistil, že už skoro dva
+týdny jezdím nevědomky na černo s prošlou šalinkartou).
+
+#### Hodnocení: 4/10
+
+  [lehátku]: http://www.lehatko.cz/
+  [flexi bar]: http://www.flexi-bar.cz/
