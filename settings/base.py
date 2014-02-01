@@ -15,7 +15,7 @@ AUTHOR = u'Petr Nohejl'
 # Pelican paths
 PATH = '../content/'
 OUTPUT_PATH = '../output/'
-STATIC_PATHS = ['files', 'images', 'favicon.ico', 'robots.txt', 'CNAME']
+STATIC_PATHS = ('files', 'images', 'favicon.ico', 'robots.txt', 'CNAME')
 FILENAME_METADATA = r'(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
 DELETE_OUTPUT_DIRECTORY = True
 USE_FOLDER_AS_CATEGORY = False
@@ -33,7 +33,7 @@ DEFAULT_CATEGORY = u'Nezařazené'
 WITH_FUTURE_DATES = True
 DISPLAY_PAGES_ON_MENU = True
 DISPLAY_CATEGORIES_ON_MENU = True
-MD_EXTENSIONS = ['codehilite(css_class=highlight)', 'extra', 'headerid']
+MD_EXTENSIONS = ('codehilite(css_class=highlight)', 'extra', 'headerid')
 
 # URL and HTML file paths
 ARTICLE_URL = '{slug}'

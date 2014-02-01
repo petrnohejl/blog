@@ -3,13 +3,15 @@ Jestřáblog
 
 Jestřáblog is my personal blog. It is powered by [Python](http://www.python.org/), [Pelican](http://getpelican.com), [Markdown](http://daringfireball.net/projects/markdown/) and [Jinja2](http://jinja.pocoo.org/). Blog is hosted on [GitHub Pages](http://pages.github.com/) as a static website and is available at [blog.petrnohejl.cz](http://blog.petrnohejl.cz).
 
+Special thanks to [Honza](https://github.com/honzajavorek) for inspiration and discovering Pelican.
+
 
 TODO
 ====
 
 * Google Analytics
-* Disqus
-* Import comments from Wordpress to Disqus
+* ~~Disqus~~
+* ~~Import comments from Wordpress to Disqus~~
 * Custom theme
 * Jinja filters
 * Typography
