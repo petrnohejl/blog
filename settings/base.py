@@ -63,7 +63,7 @@ THEME = 'D:/GIT/3RDPARTY/pelican-themes/pelican-bootstrap3' # simple-bootstrap, 
 #THEME_STATIC_PATHS = ('static',)
 #JINJA_FILTERS = filters
 
-GOOGLE_ANALYTICS = 'UA-XXXX-YYYY'
+GOOGLE_ANALYTICS = 'UA-17930136-2'
 DISQUS_SITENAME = 'petrnohejl'
 TWITTER_USERNAME = 'petrnohejl'
 

@@ -9,7 +9,7 @@ Special thanks to [Honza](https://github.com/honzajavorek) for inspiration and d
 TODO
 ====
 
-* Google Analytics
+* ~~Google Analytics~~
 * ~~Disqus~~
 * ~~Import comments from Wordpress to Disqus~~
 * Custom theme
