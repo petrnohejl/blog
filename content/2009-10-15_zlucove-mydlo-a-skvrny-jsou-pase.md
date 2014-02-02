@@ -1,5 +1,5 @@
 Title: Žlučové mýdlo - a skvrny jsou pasé
-Category: Rady a nápady
+Category: Hobby
 
 Ahoj! Před nedávnem se mi stala nemilá věc. Koupil jsem si nové tričko a
 vzápětí jsem si ho pokecal červeným burčákem. Problém byl v tom, že jsem

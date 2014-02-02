@@ -1,5 +1,5 @@
 Title: Vánoční polévka z rybích vnitřností
-Category: Vaření
+Category: Recepty
 
 Vánoce jsou sice už pryč, ale to nevadí, protože polévka z rybích
 vnitřností se dá uvařit i v létě. Pravdou ale je, že nechutná tak

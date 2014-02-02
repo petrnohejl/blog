@@ -1,5 +1,5 @@
 Title: Kuřecí vývar
-Category: Vaření
+Category: Recepty
 
 Dneska jsme s Janie v Bille přemýšleli, co si uvaříme k večeři a napadlo
 mě, že bychom mohli zkusit nějakou polévku. Napadl mě kuřecí vývar. Jal

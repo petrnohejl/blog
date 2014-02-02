@@ -1,5 +1,5 @@
 Title: Závody v košíku
-Category: Akce
+Category: Zážitky
 
 Přináším vám krátkou reportáž z akce, kterou jsem pořádal minulý týden.
 Jednalo se o závody v nákupních košíkách. Ale nejdříve vám povím, jak to

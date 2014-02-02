@@ -1,5 +1,5 @@
 Title: Richard Müller - Best of Tour 2009
-Category: Kultura
+Category: Zážitky
 
 Ahoj! Minulý týden jsme s Jančou navštívili koncert Richarda Müllera, a
 proto je mou povinností zde napsat report z této vydařené akce. Koncert

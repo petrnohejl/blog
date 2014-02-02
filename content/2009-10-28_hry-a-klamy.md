@@ -1,5 +1,5 @@
 Title: Hry a klamy
-Category: Akce
+Category: Zážitky
 
 Jste hraví? Já ano, a proto jsem si nemohl nechat ujít interaktivní
 výstavu Hry a klamy, která se teď konala v Brně na Staré radnici. Tuto

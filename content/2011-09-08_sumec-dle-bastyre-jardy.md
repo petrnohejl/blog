@@ -1,5 +1,5 @@
 Title: Sumec dle baštýře Jardy
-Category: Vaření
+Category: Recepty
 
 Zdravím všechny čtenáře Jestřáblogu a především všechny kuchařky a
 kuchaře! Po dlouhé době jsem se opět dokopal něco napsat na blog. V

@@ -1,5 +1,5 @@
 Title: Pórková polévka
-Category: Vaření
+Category: Recepty
 
 Zdravím všechny kuchařky a kuchaře. Po delší době opět přicházím s novým
 nenáročným receptem na polévku, který jsem získal od sester Káti a Máti.

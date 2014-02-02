@@ -1,5 +1,5 @@
 Title: Gulášová polévka
-Category: Vaření
+Category: Recepty
 
 Před nedávnem jsem se rozhodl, že zase zkusím uvařit nějakou polévku.
 Jako obvykle jsem se tedy jal telefonu a zavolal mamince, aby mi

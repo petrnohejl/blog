@@ -1,5 +1,5 @@
 Title: Trojboký hranol neboli stříška
-Category: Vaření
+Category: Recepty
 
 Několik měsíců zpátky jsem přišel opilý domů (z informatické pitky) a v
 opilosti jsem Janie slíbil, že jí vyrobim dort. Aspoň to mi druhý den

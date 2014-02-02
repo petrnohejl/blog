@@ -1,5 +1,5 @@
 Title: Pštrosí vejce
-Category: Vaření
+Category: Recepty
 
 Zdravím všechny kuchaře a kuchařky. Opět přicházím s novým receptem.
 Před pár dny jsem zkoušel další kuchařský experiment - tentokrát pštrosí
