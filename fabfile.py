@@ -57,8 +57,8 @@ def build_production():
 	local('pelican -s settings/production.py')
 
 
-def push_master():
-	"""Push web sources to GitHub repo"""
+def commit_master():
+	"""Commit web sources to Git repo"""
 
 	with lcd(PROJECT_PATH):
 		local('git add -A .')
@@ -70,7 +70,7 @@ def push_master():
 	local('git clean -ndX')
 
 
-def push_ghp():
+def commit_ghp():
 	"""Build and deploy website to GitHub Pages"""
 
 	# build
@@ -88,8 +88,9 @@ def push_ghp():
 
 def publish():
 	"""Push web sources, build and deploy website"""
-	push_master()
-	push_ghp()
+	commit_master()
+	commit_ghp()
+	print u"Don't forget to push both branches!"
 
 
 def new(title=None):
