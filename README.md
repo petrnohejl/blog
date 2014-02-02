@@ -12,8 +12,10 @@ TODO
 * ~~Google Analytics~~
 * ~~Disqus~~
 * ~~Import comments from Wordpress to Disqus~~
-* Custom theme
-* Jinja filters
+* Facebook Like
+* Custom theme with Jinja filters
+* Better archives
+* Categories with link to the category page
 * Typography
 * Add title attribute for images (alt -> title)
 * Clickable headers in article

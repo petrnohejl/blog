@@ -15,7 +15,7 @@ AUTHOR = u'Petr Nohejl'
 # Pelican paths
 PATH = '../content/'
 OUTPUT_PATH = '../output/'
-STATIC_PATHS = ('files', 'images', 'favicon.ico', 'robots.txt', 'CNAME')
+STATIC_PATHS = ('files', 'images', 'static/custom.css', 'CNAME', 'favicon.ico', 'robots.txt')
 FILENAME_METADATA = r'(?P<date>\d{4}-\d{2}-\d{2})_(?P<slug>.*)'
 DELETE_OUTPUT_DIRECTORY = True
 USE_FOLDER_AS_CATEGORY = False
@@ -31,8 +31,8 @@ SUMMARY_MAX_LENGTH = 50
 DEFAULT_PAGINATION = 10
 DEFAULT_CATEGORY = u'Nezařazené'
 WITH_FUTURE_DATES = True
-DISPLAY_PAGES_ON_MENU = True
-DISPLAY_CATEGORIES_ON_MENU = True
+DISPLAY_PAGES_ON_MENU = False
+DISPLAY_CATEGORIES_ON_MENU = False
 MD_EXTENSIONS = ('codehilite(css_class=highlight)', 'extra', 'headerid')
 
 # URL and HTML file paths
@@ -59,10 +59,23 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Theme
-THEME = 'D:/GIT/3RDPARTY/pelican-themes/pelican-bootstrap3' # simple-bootstrap, crowsfoot, tuxlite_tbs, mnmlist
+THEME = 'D:/GIT/3RDPARTY/pelican-themes/pelican-bootstrap3'
 #THEME_STATIC_PATHS = ('static',)
 #JINJA_FILTERS = filters
+CUSTOM_CSS = 'static/custom.css'
+PYGMENTS_STYLE = 'monokai'
+SITELOGO = None
+DISPLAY_BREADCRUMBS = False
+DISPLAY_CATEGORY_IN_BREADCRUMBS = False
+BOOTSTRAP_NAVBAR_INVERSE = False
+FAVICON = 'favicon.ico'
+HIDE_SIDEBAR = True
+DISQUS_DISPLAY_COUNTS = False
+CC_LICENSE = 'CC-BY-NC-SA'
+CC_ATTR_MARKUP = False
+BOOTSTRAP_THEME = 'cosmo'
 
+# Services
 GOOGLE_ANALYTICS = 'UA-17930136-2'
 DISQUS_SITENAME = 'petrnohejl'
 TWITTER_USERNAME = 'petrnohejl'
@@ -84,4 +97,6 @@ SOCIAL =   (('Twitter', 'http://twitter.com/petrnohejl'),
             ('Facebook', 'http://www.facebook.com/petr.nohejl'),)
 
 # Menu
-MENUITEMS = ()
+MENUITEMS = (('Categories', '/categories.html'),
+            ('Feed', '/feed.xml'),
+            ('About me', 'http://petrnohejl.cz/'),)
