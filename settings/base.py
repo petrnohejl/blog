@@ -59,7 +59,7 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 
 # Theme
-THEME = 'D:/GIT/3RDPARTY/pelican-themes/pelican-bootstrap3'
+THEME = 'D:/GIT/3RDPARTY/pelican-bootstrap3'
 #THEME_STATIC_PATHS = ('static',)
 #JINJA_FILTERS = filters
 CUSTOM_CSS = 'static/custom.css'
@@ -73,6 +73,7 @@ HIDE_SIDEBAR = True
 DISQUS_DISPLAY_COUNTS = False
 CC_LICENSE = 'CC-BY-NC-SA'
 CC_ATTR_MARKUP = False
+USE_OPEN_GRAPH = True
 BOOTSTRAP_THEME = 'cosmo'
 
 # Services

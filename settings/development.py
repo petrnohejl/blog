@@ -23,3 +23,7 @@ PAGE_LANG_URL = 'pages/{slug}-{lang}.html'
 PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}.html'
 YEAR_ARCHIVE_URL = 'archive/{date:%Y}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/index.html'
+
+# Services
+GOOGLE_ANALYTICS = ''
+DISQUS_SITENAME = ''
