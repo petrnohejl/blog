@@ -80,6 +80,7 @@ BOOTSTRAP_THEME = 'cosmo'
 GOOGLE_ANALYTICS = 'UA-17930136-2'
 DISQUS_SITENAME = 'petrnohejl'
 TWITTER_USERNAME = 'petrnohejl'
+ADDTHIS_PROFILE = 'ra-530d2ad72de762c4'
 
 # Blogroll
 LINKS = (('Petr Nohejl', 'http://petrnohejl.cz/'),
