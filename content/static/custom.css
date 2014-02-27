@@ -8,3 +8,5 @@ blockquote { font-size: 17px; }
 article .entry-content .panel .panel-body { padding-left: 0; padding-right: 0; }
 article .entry-content .panel .panel-body .post-info .label { display: none; }
 article .entry-content p img { margin-top: 10.5px; margin-bottom: 10.5px; }
+
+footer small img { display: none; }
