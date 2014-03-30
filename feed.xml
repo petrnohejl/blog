@@ -1,5 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feed.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2014-03-04T00:00:00+01:00</updated><entry><title>Evidence osobních výdajů</title><link href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju" rel="alternate"></link><updated>2014-03-04T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-03-04:evidence-osobnich-vydaju</id><summary type="html">&lt;p&gt;Už nějakou dobu plánuju, že si začnu evidovat osobní výdaje. Je dobré mít základní přehled, kolik člověk utratí za jídlo, bydlení, dopravu atd. Existuje hromada mobilních aplikací na evidenci výdajů, ale používání takové aplikace je vcelku otravné - ťukat si do mobilu každý výdaj by mě fakt nebavilo. Navíc bych na to určitě i často zapomínal.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feed.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2014-03-28T00:00:00+01:00</updated><entry><title>Handling bundles in activities and fragments</title><link href="http://blog.petrnohejl.cz/handling-bundles-in-activities-and-fragments" rel="alternate"></link><updated>2014-03-28T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-03-28:handling-bundles-in-activities-and-fragments</id><summary type="html">&lt;p&gt;&lt;a href="http://developer.android.com/reference/android/os/Bundle.html"&gt;Bundle&lt;/a&gt; is a useful data holder, which maps String values to various &lt;a href="http://developer.android.com/reference/android/os/Parcelable.html"&gt;Parcelable&lt;/a&gt; types. So basically it is a heterogenous key/value map. Bundles are used in &lt;a href="http://developer.android.com/reference/android/content/Intent.html"&gt;Intents&lt;/a&gt;, &lt;a href="http://developer.android.com/reference/android/app/Activity.html"&gt;Activities&lt;/a&gt; and &lt;a href="http://developer.android.com/reference/android/app/Fragment.html"&gt;Fragments&lt;/a&gt; for transporting data. I would like to describe how I work with Bundles on Android and show you some good tips.&lt;/p&gt;
+&lt;h2 id="activity"&gt;Activity&lt;/h2&gt;
+&lt;p&gt;When you are creating a new instance of Activity via Intent, you can pass some extra data to the Activity. Data are stored in Bundle and can be retrieved by calling &lt;code&gt;getIntent().getExtras()&lt;/code&gt;. It's a good practise to implement static method &lt;code&gt;newIntent()&lt;/code&gt; which returns a new Intent that can be used to start the Activity. This way you have compile time checking for the arguments passed to the Activity. This pattern is suitable for Service and Broadcast as well.&lt;/p&gt;
+&lt;p&gt;Bundle is also used if the Activity is being re-initialized (e.g. because of configuration changes) for keeping the current state of the instance. You can supply some data in &lt;code&gt;onSaveInstanceState(Bundle)&lt;/code&gt; and retrieve them back in &lt;code&gt;onCreate(Bundle)&lt;/code&gt; method or &lt;code&gt;onRestoreInstanceState(Bundle)&lt;/code&gt;. Main difference between these methods is that &lt;code&gt;onRestoreInstanceState(Bundle)&lt;/code&gt; is called after &lt;code&gt;onStart()&lt;/code&gt;. Sometimes it's convenient to restore data here after all of the initialization has been done. Another purpose could be allowing subclasses to decide whether to use your default implementation.&lt;/p&gt;
+&lt;p&gt;See example code below. Note that &lt;code&gt;EXTRA_PRODUCT_ID&lt;/code&gt; constant is public. That's because we could need it in a Fragment encapsulated in this Activity.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleActivity&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Activity&lt;/span&gt;
+&lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;EXTRA_PRODUCT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_id&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;EXTRA_PRODUCT_TITLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_title&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;SAVED_PAGER_POSITION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;pager_position&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Intent&lt;/span&gt; &lt;span class="nf"&gt;newIntent&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Context&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productId&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productTitle&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;Intent&lt;/span&gt; &lt;span class="n"&gt;intent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Intent&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ExampleActivity&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// extras&lt;/span&gt;
+        &lt;span class="n"&gt;intent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;putExtra&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXTRA_PRODUCT_ID&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;productId&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;intent&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;putExtra&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;EXTRA_PRODUCT_TITLE&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;productTitle&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;intent&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;setContentView&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;activity_example&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// restore saved state&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// handle intent extras&lt;/span&gt;
+        &lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getIntent&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getExtras&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// save current instance state&lt;/span&gt;
+        &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// TODO&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onRestoreInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// restore saved state&lt;/span&gt;
+        &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onRestoreInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;{&lt;/span&gt;
+            &lt;span class="c1"&gt;// TODO&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// TODO&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// TODO&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2 id="fragment"&gt;Fragment&lt;/h2&gt;
+&lt;p&gt;When you are creating a new instance of Fragment, you can pass arguments through &lt;code&gt;setArguments(Bundle)&lt;/code&gt; method. Data can be retrieved with &lt;code&gt;getArguments()&lt;/code&gt; method. It would be a mistake to supply initialization data through an overloaded constructor. Fragment instance can be re-created (e.g. because of configuration changes) so you would lose data, because constructor with extra parameters is not called when re-initializing Fragment. Only empty constructor is called. Best way to solve this problem is implementing static creator method &lt;code&gt;newInstance()&lt;/code&gt; which returns a new instance of Fragment and sets the arguments via &lt;code&gt;setArguments(Bundle)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Fragment state can be saved using &lt;code&gt;onSaveInstanceState(Bundle)&lt;/code&gt; method. It is similar to the Activity. Data can be restored in &lt;code&gt;onCreate(Bundle)&lt;/code&gt;, &lt;code&gt;onCreateView(LayoutInflater, ViewGroup, Bundle)&lt;/code&gt;, &lt;code&gt;onActivityCreated(Bundle)&lt;/code&gt; or &lt;code&gt;onViewStateRestored(Bundle)&lt;/code&gt; methods.&lt;/p&gt;
+&lt;p&gt;Fragment has also access to the Intent extras which were passed during creating the Activity instance. You can get this extra data by calling &lt;code&gt;getActivity().getIntent().getExtras()&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;See example code below.&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleFragment&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Fragment&lt;/span&gt;
+&lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;ARGUMENT_PRODUCT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_id&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;SAVED_LIST_POSITION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;list_position&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;ExampleFragment&lt;/span&gt; &lt;span class="nf"&gt;newInstance&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productId&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="n"&gt;ExampleFragment&lt;/span&gt; &lt;span class="n"&gt;fragment&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ExampleFragment&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// arguments&lt;/span&gt;
+        &lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Bundle&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;putString&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ARGUMENT_PRODUCT_ID&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;productId&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="n"&gt;fragment&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;setArguments&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;fragment&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;ExampleFragment&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{}&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; 
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// handle fragment arguments&lt;/span&gt;
+        &lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getArguments&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;handleArguments&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// restore saved state&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// handle intent extras&lt;/span&gt;
+        &lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getActivity&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getIntent&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getExtras&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+        &lt;span class="o"&gt;{&lt;/span&gt;
+            &lt;span class="n"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+        &lt;span class="o"&gt;}&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="nd"&gt;@Override&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// save current instance state&lt;/span&gt;
+        &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+
+        &lt;span class="c1"&gt;// TODO&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleArguments&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// TODO&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// TODO&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="c1"&gt;// TODO&lt;/span&gt;
+    &lt;span class="o"&gt;}&lt;/span&gt;
+&lt;span class="o"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;You can find example code also on my GitHub in &lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities/tree/master/Src-Bundle"&gt;Android Templates and Utilities&lt;/a&gt; repo. This blogpost was inspired by &lt;a href="https://plus.google.com/u/0/+AndroidDevelopers/posts/bCD7Zvd945d"&gt;Nick Butcher's post&lt;/a&gt; on Google Plus. Gotta some questions or ideas about Bundles? Follow me on &lt;a href="https://twitter.com/petrnohejl"&gt;Twitter&lt;/a&gt; or &lt;a href="https://plus.google.com/113883771155661250237"&gt;Google Plus&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Evidence osobních výdajů</title><link href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju" rel="alternate"></link><updated>2014-03-04T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-03-04:evidence-osobnich-vydaju</id><summary type="html">&lt;p&gt;Už nějakou dobu plánuju, že si začnu evidovat osobní výdaje. Je dobré mít základní přehled, kolik člověk utratí za jídlo, bydlení, dopravu atd. Existuje hromada mobilních aplikací na evidenci výdajů, ale používání takové aplikace je vcelku otravné - ťukat si do mobilu každý výdaj by mě fakt nebavilo. Navíc bych na to určitě i často zapomínal.&lt;/p&gt;
 &lt;p&gt;Chci nějaký základní přehled výdajů za jednotlivé měsíce v roce. Položky by měly být kategorizované (jídlo, doprava, dovolená apod.). Výstupem by měla být tabulka a nějaké grafy. Evidence příjmů mě nezajímá - na to mám zase jiné &lt;a href="http://fakturoid.cz"&gt;nástroje&lt;/a&gt;. Navíc příjmy z podnikání mi tečou na podnikatelský účet, nikoliv osobní. Přemýšlel jsem, jak nejsnáze celý tento problém řešit a dospěl jsem k následujícímu.&lt;/p&gt;
 &lt;h2 id="expensespy"&gt;Expenses.py&lt;/h2&gt;
 &lt;p&gt;Vzhledem k tomu, že téměř všechno platím přes banku kartou nebo převodem (výjimkou jsou restaurace), využiju export transakcí z internetového bankovnictví. Fio banka podporuje CSV export, který půjde pro mé potřeby krásně použít. Mohl bych také použít &lt;a href="http://www.fio.cz/bankovni-sluzby/api-bankovnictvi"&gt;Fio API&lt;/a&gt; pro vývojáře a naprogramovat si na to nějakou vlastní aplikaci, ale nepotřebuju mít evidenci výdajů automatizovanou. Stačí mi statistiku udělat max. jednou za kvartál a sledovat, jak se vyvíjí trendy. Stáhnout 4x za rok CSV soubor z bankovnictví není pro mě přítěž. Preferuji jednoduché řešení, takže jsem Fio API prozatím zavrhl.&lt;/p&gt;
@@ -531,363 +686,4 @@ přidat strouhaný sýr.&lt;/p&gt;
 že nemá vůbec žádné kosti. Já jsem jídlo připravoval ve 2 zapékacích
 miskách a bylo z toho 6 regulérních porcí. Baštýř Jestřáb vám přeje
 dobrou chuť!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Sumeček na talíři" src="http://blog.petrnohejl.cz/images/sumec-dle-bastyre-jardy-02.jpg" /&gt;&lt;/p&gt;</summary></entry><entry><title>Apache a mod_python pro webový framework Django</title><link href="http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django" rel="alternate"></link><updated>2011-02-09T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-02-09:apache-a-mod_python-pro-webovy-framework-django</id><summary type="html">&lt;p&gt;Tento tutoriál stručně popisuje postup, jak nainstalovat, nastavit a
-zprovoznit webový server Apache 2.2 s modulem mod_python na systému
-GNU/Linux Ubuntu 9.10. Dále popisuje postup, jak nainstalovat databázi
-MySQL, webový framework Django a zprovoznit je na webovém serveru
-Apache. Na závěr je ukázán příklad vytvoření nového Django projektu a
-spuštění na serveru Apache. Tutoriál byl napsán v rámci 2. projektu do
-předmětu
-&lt;abbr title="Přenos dat, počítačové sítě a protokoly"&gt;PDS&lt;/abbr&gt;, který
-jsem absolvoval v letním semestru 2010.&lt;/p&gt;
-&lt;h2 id="uvod"&gt;Úvod&lt;/h2&gt;
-&lt;p&gt;&lt;a href="http://www.apache.org/"&gt;Apache HTTP Server&lt;/a&gt; je nejrozšířenější softwarový webový server s
-otevřeným kódem pro GNU/Linux, BSD, Solaris, Mac OS X, Microsoft Windows
-a další platformy. V současné době dodává prohlížečům na celém světě
-většinu internetových stránek. Výhody Apache: výkon a spolehlivost,
-široké možnosti, open source. [1]&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.modpython.org/"&gt;Mod_python&lt;/a&gt; je modul pro webový server Apache, který na serveru
-umožňuje spouštění skriptů, napsaných v jazyce Python.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://www.djangoproject.com/"&gt;Django&lt;/a&gt; je vyspělý webový framework napsaný v jazyce Python, který
-podporuje rychlý vývoj a čisté, pragmatické konstrukce.&lt;/p&gt;
-&lt;h2 id="instalace-apache"&gt;Instalace Apache&lt;/h2&gt;
-&lt;p&gt;Instalaci serveru Apache 2.2 provedeme spuštěním připraveného dávkového
-skriptu &lt;em&gt;install_apache.sh&lt;/em&gt;. Skript byl napsán pro operační systém
-GNU/Linux Ubuntu 9.10 a na jiných systémech není zaručena jeho
-funkčnost. Všechny skripty a příkazy je potřeba spouštět jako admin
-(příkazem sudo). Pro správnou instalaci je nutné mít na disku dostatek
-místa (minimálně 50 MB). Dále je potřeba mít správně nainstalován ANSI-C
-kompilátor, nástroj make a další potřebné utility, používané
-v instalačním skriptu.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#! /bin/bash&lt;/span&gt;
-&lt;span class="c"&gt;#skript: install_apache.sh&lt;/span&gt;
-&lt;span class="c"&gt;#popis: davkovy skript pro instalaci serveru Apache na OS GNU/Linux Ubuntu 9.10&lt;/span&gt;
-&lt;span class="c"&gt;#autor: Petr Nohejl (xnohej00)&lt;/span&gt;
-
-&lt;span class="c"&gt;#promenne&lt;/span&gt;
-&lt;span class="nv"&gt;MIRROR&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;http://ftp.sh.cvut.cz/MIRRORS/apache/httpd/httpd-2.2.15.tar.gz
-&lt;span class="nv"&gt;VERSION&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;httpd-2.2.15
-&lt;span class="nv"&gt;TEMP&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;APACHE_INSTALL &lt;span class="c"&gt;#pozor, tento adresar se nakonci skriptu maze!&lt;/span&gt;
-
-&lt;span class="nb"&gt;cd&lt;/span&gt;
-sudo mkdir &lt;span class="nv"&gt;$TEMP&lt;/span&gt;
-&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$TEMP&lt;/span&gt;
-sudo wget &lt;span class="nv"&gt;$MIRROR&lt;/span&gt;
-sudo gzip -d &lt;span class="nv"&gt;$VERSION&lt;/span&gt;.tar.gz
-sudo tar xvf &lt;span class="nv"&gt;$VERSION&lt;/span&gt;.tar
-&lt;span class="nb"&gt;cd&lt;/span&gt; &lt;span class="nv"&gt;$VERSION&lt;/span&gt;
-./configure --prefix&lt;span class="o"&gt;=&lt;/span&gt;/usr/local/apache2 --enable-rewrite&lt;span class="o"&gt;=&lt;/span&gt;shared --enable-speling&lt;span class="o"&gt;=&lt;/span&gt;shared --with-mpm&lt;span class="o"&gt;=&lt;/span&gt;prefork
-sudo make
-sudo make install
-&lt;span class="nb"&gt;cd&lt;/span&gt;
-sudo rm -rf &lt;span class="nv"&gt;$TEMP&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Skript nejdříve vytvoří pracovní adresář a do něj stáhne (z internetu)
-pomocí nástroje &lt;em&gt;wget&lt;/em&gt; zkomprimovaný instalační balíček. Ten rozbalí
-pomocí nástrojů &lt;em&gt;gzip&lt;/em&gt; a &lt;em&gt;tar&lt;/em&gt;. Dále spustí konfigurační skript
-&lt;em&gt;configure&lt;/em&gt;, který připraví projekt ke kompilaci a vytvoří soubor
-&lt;em&gt;Makefile&lt;/em&gt;. Konfigurace trvá delší dobu, a proto je třeba být trpělivý.
-Dále se projekt zkompiluje pomocí příkazu &lt;em&gt;make&lt;/em&gt; a nainstaluje pomocí
-příkazu &lt;em&gt;make install&lt;/em&gt;. Tyto operace rovněž trvají delší čas. Nakonec
-skript vymaže pracovní adresář. Pokud chcete mít nad vším vlastní
-kontrolu, je lepší instalovat server ručně (bez použití dávkového
-skriptu) a řídit se postupem, popsaným výše.&lt;/p&gt;
-&lt;p&gt;Při spouštění konfiguračního skriptu máme možnost nastavit mnoho
-parametrů. Pomocí přepínače &lt;em&gt;--prefix&lt;/em&gt; nastavíme adresář, kam bude
-server nainstalován. Pomocí přepínače &lt;em&gt;--enable&lt;/em&gt; můžeme nainstalovat
-volitelné moduly. Příznak &lt;em&gt;shared&lt;/em&gt; značí, že modul je dynamicky sdílený
-(DSO). Pokud nainstalujeme nějaký modul s příznakem &lt;em&gt;shared&lt;/em&gt;,
-automaticky se zapne podpora DSO (jinak ji musíme v případě potřeby
-explicitně zapnout příkazem &lt;em&gt;--enable-so&lt;/em&gt; při konfiguraci). Přepínač
-&lt;em&gt;--with-mpm&lt;/em&gt; nastavuje model procesů serveru. Parametrů existuje daleko
-více. Pro více informací o instalaci Apache navštivte dokumentaci:
-&lt;a href="http://httpd.apache.org/docs/2.2/install.html"&gt;http://httpd.apache.org/docs/2.2/install.html&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="konfigurace-apache"&gt;Konfigurace Apache&lt;/h2&gt;
-&lt;p&gt;Po úspěšné instalaci je potřeba Apache správně nakonfigurovat.
-Konfigurační soubor s nastavením serveru se nachází v adresáři
-/usr/local/apache2/conf/httpd.conf. Soubor otevřeme v libovolném
-textovém editoru:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo gedit /usr/local/apache2/conf/httpd.conf
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Nastavíme proměnnou &lt;em&gt;Listen&lt;/em&gt; (na jakém portu a IP se bude naslouchat),
-odkomentujeme řádek se &lt;em&gt;ServerName&lt;/em&gt; a nastavíme název serveru, nastavíme
-proměnnou DocumentRoot (kořenový adresář webových dokumentů). Dále
-můžeme nastavovat i další parametry serveru. Pro více informací o
-konfiguraci serveru navštivte dokumentaci:
-&lt;a href="http://httpd.apache.org/docs/2.2/mod/directives.html"&gt;http://httpd.apache.org/docs/2.2/mod/directives.html&lt;/a&gt;. Příklad změn v
-konfiguračním souboru pro základní nastavení:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;Listen 127.0.0.1:666
-ServerName www.example.com:80
-DocumentRoot &lt;span class="s2"&gt;&amp;quot;/usr/local/apache2/htdocs&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Po každé změně konfiguračního souboru je nutné server restartovat.&lt;/p&gt;
-&lt;h2 id="spusteni-serveru"&gt;Spuštění serveru&lt;/h2&gt;
-&lt;p&gt;Pokud jsme server správně nainstalovali a nakonfigurovali, můžeme jej
-spustit a otestovat správnou funkčnost:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo /usr/local/apache2/bin/apachectl –k start
-firefox http://127.0.0.1:666/
-sudo /usr/local/apache2/bin/apachectl –k restart
-sudo /usr/local/apache2/bin/apachectl –k stop
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat nápis "It
-works!".&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Spuštění serveru Apache" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-01.jpg" /&gt;&lt;/p&gt;
-&lt;h2 id="instalace-a-konfigurace-mod95python"&gt;Instalace a konfigurace mod_python&lt;/h2&gt;
-&lt;p&gt;Nyní nainstalujeme pro Apache modul mod_python. Před vlastní instalací
-modulu je potřeba mít správně nainstalován Python (minimálně verzi 2.3),
-balíček Python dev a samozřejmě Apache. Mod_python vyžaduje podporu DSO
-(Dynamic Shared Object), kterou lze nastavit při instalaci (konfiguraci)
-Apache. Instalaci mod_python můžeme provést buď pomocí utility
-&lt;em&gt;apt-get&lt;/em&gt;, nebo si můžeme modul stáhnout z internetu, sestavit a
-nainstalovat. Druhá možnost je poněkud komplikovaná a proto zvolíme
-jednodušší cestu s pomocí &lt;em&gt;apt-get&lt;/em&gt;, která udělá vše potřebné za nás.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install libapache2-mod-python
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Po úspěšné instalaci modulu budeme muset opět upravit konfigurační
-soubor serveru:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo gedit /usr/local/apache2/conf/httpd.conf
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Přidáme příkaz &lt;em&gt;LoadModule&lt;/em&gt; na správné místo v souboru (viz komentáře
-v konfiguračním souboru) pro načtení modulu a poté přidáme další příkazy
-pro nastavení handleru pro následné testování serveru (např. na konec
-konfiguračního souboru). Nezapomeneme provést restart serveru, aby se
-znovu načetl konfigurační soubor.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;LoadModule&lt;/span&gt; python_module &lt;span class="sx"&gt;/usr/lib/apache2/modules/mod_python.so&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="s"&gt;/mpinfo&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; mod_python
-    &lt;span class="nb"&gt;PythonHandler&lt;/span&gt; mod_python.testhandler
-&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class="s"&gt;/usr/local/apache2/htdocs/test&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; 
-    &lt;span class="nb"&gt;AddHandler&lt;/span&gt; mod_python .py
-    &lt;span class="nb"&gt;PythonHandler&lt;/span&gt; mptest 
-    &lt;span class="nb"&gt;PythonDebug&lt;/span&gt; &lt;span class="k"&gt;On&lt;/span&gt; 
-&lt;span class="nt"&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Nyní můžeme vyzkoušet ladící výpis serveru:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;firefox http://127.0.0.1:666/mpinfo
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat ladící výpis.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Ladící výpis mod_python" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-02.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;Dále si vytvoříme testovací skript &lt;em&gt;mptest.py&lt;/em&gt; v jazyce Python:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo mkdir /usr/local/apache2/htdocs/test
-sudo gedit /usr/local/apache2/htdocs/test/mptest.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Do skriptu &lt;em&gt;mptest.py&lt;/em&gt; uložíme následující kód:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;mod_python&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;apache&lt;/span&gt;
-&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;handler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;content_type&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;text/plain&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;write&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Hello World! I am Python.&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;apache&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;OK&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;A nakonec spustíme testovací skript:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;firefox http://127.0.0.1:666/test/mptest.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat nápis "Hello
-World! I am Python.".&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Hello Python" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-04.jpg" /&gt;&lt;/p&gt;
-&lt;h2 id="zakladni-konfigurace-publisher-handler"&gt;Základní konfigurace Publisher Handler&lt;/h2&gt;
-&lt;p&gt;Publisher Handler je standardní mod_python handler pro zobrazování
-webových stránek. V předchozí kapitole jsme si v konfiguračním souboru
-Apache nastavili jednoduchý handler, který odchytává URL končící na
-&lt;em&gt;.py&lt;/em&gt; ve složce &lt;em&gt;test&lt;/em&gt; a spouští skript (handler) &lt;em&gt;mptest.py&lt;/em&gt;. Pokud
-chceme mít více handlerů, použijeme pokročilejší handler Publisher.
-V konfiguračním souboru Apache nastavíme (předešlý handler z předchozí
-kapitoly zakomentujeme):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;Directory&lt;/span&gt; &lt;span class="s"&gt;/usr/local/apache2/htdocs&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; 
-    &lt;span class="nb"&gt;AddHandler&lt;/span&gt; mod_python .py
-    &lt;span class="nb"&gt;PythonHandler&lt;/span&gt; mod_python.publisher 
-    &lt;span class="nb"&gt;PythonDebug&lt;/span&gt; &lt;span class="k"&gt;On&lt;/span&gt; 
-&lt;span class="nt"&gt;&amp;lt;/Directory&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Restartujeme server pro znovunačtení konfigurace. Dále si vytvoříme
-jednoduchou dynamickou webovou stránku v Pythonu (jednoduchá
-kalkulačka). Vytvoříme si novou složku a dva zdrojové soubory:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo mkdir /usr/local/apache2/htdocs/form
-sudo gedit /usr/local/apache2/htdocs/form/index.html
-sudo gedit /usr/local/apache2/htdocs/form/form.py
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Do souboru &lt;em&gt;index.html&lt;/em&gt; uložíme následující kód:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;html&amp;gt;&lt;/span&gt;    
-    &lt;span class="nt"&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Calculator&lt;span class="nt"&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;    
-    &lt;span class="nt"&gt;&amp;lt;p&amp;gt;&lt;/span&gt;Enter two numbers:&lt;span class="nt"&gt;&amp;lt;/p&amp;gt;&lt;/span&gt;                  
-    &lt;span class="nt"&gt;&amp;lt;form&lt;/span&gt; &lt;span class="na"&gt;action=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;form.py/msg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;method=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;POST&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;num1&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; + 
-        &lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;num2&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt; =&lt;span class="nt"&gt;&amp;lt;br&amp;gt;&lt;/span&gt;
-        &lt;span class="nt"&gt;&amp;lt;input&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;submit&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;value=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;calculate&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nt"&gt;&amp;lt;/form&amp;gt;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Do skriptu &lt;em&gt;form.py&lt;/em&gt; uložíme následující kód:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="c"&gt;# make sure the user provided all the parameters&lt;/span&gt;
-    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="ow"&gt;not&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num1&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Result&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;Missing some parametre!&amp;lt;/p&amp;gt;&amp;lt;/html&amp;gt;&amp;quot;&lt;/span&gt;
-    &lt;span class="c"&gt;# provide feedback to the user&lt;/span&gt;
-    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="k"&gt;except&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Result&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;Invalid parametres!&amp;lt;/p&amp;gt;&amp;lt;/html&amp;gt;&amp;quot;&lt;/span&gt;    
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;html&amp;gt;&amp;lt;h1&amp;gt;Result&amp;lt;/h1&amp;gt;&amp;lt;p&amp;gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;&amp;lt;/p&amp;gt;&amp;lt;/html&amp;gt;&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Nakonec zobrazíme web v prohlížeči:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;firefox http://127.0.0.1:666/form/
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Pokud je vše v pořádku, měl by se nám v prohlížeči zobrazit formulář s
-nadpisem "Calculator".&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Calculator" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-03.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;Pro více informací o konfiguraci mod_python navštivte dokumentaci:
-&lt;a href="http://www.modpython.org/live/current/doc-html/modpython.html"&gt;http://www.modpython.org/live/current/doc-html/modpython.html&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id="instalace-mysql-serveru"&gt;Instalace MySQL serveru&lt;/h2&gt;
-&lt;p&gt;Pro práci s webovým frameworkem Django budeme potřebovat databázi.
-Nainstalujeme MySQL server pomocí nástroje &lt;em&gt;apt-get&lt;/em&gt; a podporu MySQL pro
-Python. Alternativně můžeme použít jiné databáze (např. SQLite).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install mysql-server python-mysqldb
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h2 id="instalace-frameworku-django-a-vytvoreni-projektu"&gt;Instalace frameworku Django a vytvoření projektu&lt;/h2&gt;
-&lt;p&gt;Pro instalaci budeme potřebovat program SVN. Ten můžeme případně
-nainstalovat pomocí programu &lt;em&gt;apt-get&lt;/em&gt;.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;sudo apt-get install subversion
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Nainstalujeme vývojovou verzi Djanga z SVN repozitáře:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;
-svn co http://code.djangoproject.com/svn/django/trunk/ django_src
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Nyní vytvoříme symbolický odkaz na Django, aby jej systém mohl najít a
-mohl s ním pracovat. Nejprve si zjistíme, kde se nachází adresář
-&lt;em&gt;site-packages&lt;/em&gt;, a potom vyvoříme samotný odkaz (místo "YOUR-DIR"
-doplňte řetězec z předchozího příkazu &lt;em&gt;python -c&lt;/em&gt;):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;python -c &lt;span class="s2"&gt;&amp;quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&amp;quot;&lt;/span&gt;
-sudo ln -s &lt;span class="sb"&gt;`&lt;/span&gt;&lt;span class="nb"&gt;pwd&lt;/span&gt;&lt;span class="sb"&gt;`&lt;/span&gt;/django_src/django YOUR-DIR/django
-sudo cp ~/django_src/django/bin/django-admin.py /usr/local/bin
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Dále si vytvoříme několik adresářů, které bude Django používat:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt;
-mkdir django_projects
-mkdir django_templates
-mkdir media
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Poté vytvoříme symbolické odkazy na media (css, javascript atd.):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; /usr/local/apache2/htdocs
-sudo ln -s  ~/media media
-sudo ln -s ~/django_src/django/contrib/admin/media admin_media
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Nyní už můžeme vytvořit nový Django projekt standardním způsobem
-(postup, jak vytvořit Django projekt není součástí tohoto tutoriálu).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ~/django_projects
-django-admin.py startproject mysite
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Django vyzkoušíme na projektu &lt;em&gt;Mysite&lt;/em&gt;, který zobrazuje ankety &lt;em&gt;Polls&lt;/em&gt;.
-Projekt najdete v tutoriálu na oficiálních stránkách Djanga:
-&lt;a href="http://docs.djangoproject.com/en/dev/intro/tutorial01/"&gt;http://docs.djangoproject.com/en/dev/intro/tutorial01/&lt;/a&gt;. Uložíme jej do
-složky &lt;em&gt;django_projects&lt;/em&gt; a následně vyzkoušíme, zda jej Apache zobrazí.
-Pokud v Django projektu používáme SQLite (jako v našem ukázkovém
-projektu &lt;em&gt;Mysite&lt;/em&gt;), musíme povolit zápis do souboru. V nastavení Django
-projektu &lt;em&gt;settings.py&lt;/em&gt; nezapomeneme správně nastavit připojení k
-databázi (případně cestu k sqlite), proměnnou &lt;em&gt;TEMPLATE_DIRS&lt;/em&gt; a media
-(místo "USER-NAME" doplňte vaše systémové uživatelské jméno).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;DATABASE_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/home/USER-NAME/django_projects/mysite/sqlite3.db&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;MEDIA_ROOT&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/media/&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;ADMIN_MEDIA_PREFIX&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/admin_media/&amp;#39;&lt;/span&gt;
-&lt;span class="n"&gt;TEMPLATE_DIRS&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/home/USER-NAME/django_projects/mysite/mytemplates&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Upravíme konfigurační soubor serveru a nastavíme handler pro Django
-(předešlý handler z předchozí kapitoly zakomentujeme, místo "USER-NAME"
-doplňte vaše systémové uživatelské jméno):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; python-program
-    &lt;span class="nb"&gt;PythonHandler&lt;/span&gt; django.core.handlers.modpython
-    &lt;span class="nb"&gt;SetEnv&lt;/span&gt; DJANGO_SETTINGS_MODULE mysite.settings
-    &lt;span class="nb"&gt;PythonDebug&lt;/span&gt; &lt;span class="k"&gt;On&lt;/span&gt;
-    &lt;span class="nb"&gt;PythonPath&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;[&amp;#39;/home/USER-NAME/django_projects&amp;#39;] + sys.path&amp;quot;&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;/media&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; &lt;span class="k"&gt;None&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;Location&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;/admin_media&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; &lt;span class="k"&gt;None&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/Location&amp;gt;&lt;/span&gt;
-
-&lt;span class="nt"&gt;&amp;lt;LocationMatch&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;\.(jpg|gif|png)$&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class="nb"&gt;SetHandler&lt;/span&gt; &lt;span class="k"&gt;None&lt;/span&gt;
-&lt;span class="nt"&gt;&amp;lt;/LocationMatch&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;Po provedení restartu serveru by měl Django projekt začít fungovat.
-Projekt zobrazíme v prohlížeči (login i heslo do administrace je
-"admin"):&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;firefox http://127.0.0.1:666/polls/
-firefox http://127.0.0.1:666/polls/1/
-firefox http://127.0.0.1:666/polls/1/results/
-firefox http://127.0.0.1:666/polls/1/vote/
-firefox http://127.0.0.1:666/admin/
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;img alt="Django admin" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-05.jpg" /&gt;&lt;/p&gt;
-&lt;h2 id="literatura"&gt;Literatura&lt;/h2&gt;
-&lt;p&gt;[1] Apache HTTP Server In Wikipedia : the free encyclopedia [online].
-St. Petersburg (Florida) : Wikipedia Foundation,\
- [cit. 2010-04-24]. Dostupné z WWW:
-http://cs.wikipedia.org/wiki/Apache_HTTP_Server.&lt;/p&gt;
-&lt;p&gt;[2] The Apache Software Foundation [online]. 2010-04-24 [cit.
-2010-04-24]. Apache HTTP Server Version 2.2 Documentation. Dostupné z
-WWW: http://httpd.apache.org/docs/2.2/.&lt;/p&gt;
-&lt;p&gt;[3] Mod_python Apache/Python Integration [online]. 2010-04-24 [cit.
-2010-04-24]. Mod_python Manual. Dostupné z WWW:
-http://www.modpython.org/live/current/doc-html/modpython.html.&lt;/p&gt;
-&lt;p&gt;[4] The Django framework [online]. 2010-04-24 [cit. 2010-04-24]. How
-to use Django with Apache and mod_python. Dostupné z WWW:
-http://docs.djangoproject.com/en/dev/howto/deployment/modpython/.&lt;/p&gt;
-&lt;p&gt;[5] Jeff Baier [online]. 2010-04-26 [cit. 2010-04-26]. Nstalling
-Django on an Ubuntu Linux Server. Dostupné z WWW:
-http://jeffbaier.com/articles/installing-django-on-an-ubuntu-linux-server/.&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;&lt;img alt="Sumeček na talíři" src="http://blog.petrnohejl.cz/images/sumec-dle-bastyre-jardy-02.jpg" /&gt;&lt;/p&gt;</summary></entry></feed>
