@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feed.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2014-03-30T00:00:00+01:00</updated><entry><title>Handling bundles in activities and fragments</title><link href="http://blog.petrnohejl.cz/handling-bundles-in-activities-and-fragments" rel="alternate"></link><updated>2014-03-30T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-03-30:handling-bundles-in-activities-and-fragments</id><summary type="html">&lt;p&gt;&lt;a href="http://developer.android.com/reference/android/os/Bundle.html"&gt;Bundle&lt;/a&gt; is a useful data holder, which maps String values to various &lt;a href="http://developer.android.com/reference/android/os/Parcelable.html"&gt;Parcelable&lt;/a&gt; types. So basically it is a heterogenous key/value map. Bundles are used in &lt;a href="http://developer.android.com/reference/android/content/Intent.html"&gt;Intents&lt;/a&gt;, &lt;a href="http://developer.android.com/reference/android/app/Activity.html"&gt;Activities&lt;/a&gt; and &lt;a href="http://developer.android.com/reference/android/app/Fragment.html"&gt;Fragments&lt;/a&gt; for transporting data. I would like to describe how I work with Bundles on Android and show you some good tips.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feed.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2014-04-05T00:00:00+02:00</updated><entry><title>Neférový Vodafone</title><link href="http://blog.petrnohejl.cz/neferovy-vodafone" rel="alternate"></link><updated>2014-04-05T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-04-05:neferovy-vodafone</id><summary type="html">&lt;p&gt;Vodafone se chlubí svými férovými tarify. Ke mně se ale moc férově nezachoval.&lt;/p&gt;
+&lt;p&gt;Byl jsem u Vodafonu 6 let a letos v březnu jsem přešel k jinému operátorovi. Měl jsem tarif Odepiš za 12 Kč/měsíc + Internet v mobilu za 178 Kč/měsíc. Podal jsem u Vodafonu výpověď 14. února a k samotnému převodu došlo až 5. března. Zúčtovací období mi začínalo 4. den v měsíci. Když jsem se 2. března dozvěděl datum převodu, uvědomil jsem si, že budu ještě zkasírován za ten jeden den (4. března). Šel jsem tedy do online samoobsluhy, abych si zrušil Internet v mobilu a neplatil zbytečně za ten jeden den 178 Kč. V samoobsluze to ale nešlo změnit, protože ty checkboxy byly disabled (zašedlé). Napsal jsem tedy obratem na support a následující den dostal vysvětlení, že změny není možné provádět během dvou pracovních dnů před přenosem čísla. To mě trochu znepokojilo a byl jsem zvědavý, jak se k tomu "férový" operátor postaví. Schválně jsem toho 4. března nezapnul mobilní internet, nepsal SMS, ani nevolal. Operátor se bohužel zachoval neférově a dnes mi přišla faktura za březen na částku 191 Kč. Tuto částku zaplatím za jeden den u Vodafonu, kdy jsem odeslal 0 SMS, provolal 0 sekund a prosurfoval 0 bytů. Trošku nefér, ne? Nechápu, jak mi může Vodafone vyúčtovat něco (ten Internet v mobilu), co jsem už dopředu nechtěl a neměl možnost to nijak ovlivnit (zrušit tu službu). Pak bych aspoň očekával, že férový operátor vyúčtuje poměrnou částku, kdy jsem byl jejich klientem. V mém případě za jeden den v březnu 1/31 ze 191 Kč.&lt;/p&gt;
+&lt;p&gt;Druhá nefér záležitost je ta, že Vodafone v samoobsluze nabízí dva internetové tarify za stejnou cenu (viz screenshot):&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Internet v mobilu (150 MB) za 178 Kč&lt;/li&gt;
+&lt;li&gt;Připojení pro mobil - STANDARD (250 MB) za 178 Kč&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img alt="Neférový Vodafone" src="http://blog.petrnohejl.cz/images/neferovy-vodafone.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Rozdíl je zřejmě pouze v tom, že ten druhý internetový tarif je novější a za stejnou cenu nabízí vyšší FUP. Já ale celou dobu používal ten horší tarif a o tom, že za stejnou cenu můžu mít vyšší FUP, jsem se dozvěděl náhodou až nyní. Málokdo asi pravidelně kontroluje, jestli se nevyskytl nový internetový tarif s lepším FUP za stejnou cenu. Férový operátor by na tuto skutečnost zákazníka upozornil, nebo by ten FUP automaticky navýšil. Alespoň většina poskytovatelů "domácího internetu" to tak dělá.&lt;/p&gt;
+&lt;p&gt;Nechci jen kritizovat. S Vodafonem jsem byl vcelku spokojený, ale tyto věci mě trochu zamrzely.&lt;/p&gt;</summary></entry><entry><title>Handling bundles in activities and fragments</title><link href="http://blog.petrnohejl.cz/handling-bundles-in-activities-and-fragments" rel="alternate"></link><updated>2014-03-30T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-03-30:handling-bundles-in-activities-and-fragments</id><summary type="html">&lt;p&gt;&lt;a href="http://developer.android.com/reference/android/os/Bundle.html"&gt;Bundle&lt;/a&gt; is a useful data holder, which maps String values to various &lt;a href="http://developer.android.com/reference/android/os/Parcelable.html"&gt;Parcelable&lt;/a&gt; types. So basically it is a heterogenous key/value map. Bundles are used in &lt;a href="http://developer.android.com/reference/android/content/Intent.html"&gt;Intents&lt;/a&gt;, &lt;a href="http://developer.android.com/reference/android/app/Activity.html"&gt;Activities&lt;/a&gt; and &lt;a href="http://developer.android.com/reference/android/app/Fragment.html"&gt;Fragments&lt;/a&gt; for transporting data. I would like to describe how I work with Bundles on Android and show you some good tips.&lt;/p&gt;
 &lt;h2 id="activity"&gt;Activity&lt;/h2&gt;
 &lt;p&gt;When you are creating a new instance of Activity via Intent, you can pass some extra data to the Activity. Data are stored in Bundle and can be retrieved by calling &lt;code&gt;getIntent().getExtras()&lt;/code&gt;. It's a good practise to implement static method &lt;code&gt;newIntent()&lt;/code&gt; which returns a new Intent that can be used to start the Activity. This way you have compile time checking for the arguments passed to the Activity. This pattern is suitable for Service and Broadcast as well.&lt;/p&gt;
 &lt;p&gt;Bundle is also used if the Activity is being re-initialized (e.g. because of configuration changes) for keeping the current state of the instance. You can supply some data in &lt;code&gt;onSaveInstanceState(Bundle)&lt;/code&gt; and retrieve them back in &lt;code&gt;onCreate(Bundle)&lt;/code&gt; method or &lt;code&gt;onRestoreInstanceState(Bundle)&lt;/code&gt;. Main difference between these methods is that &lt;code&gt;onRestoreInstanceState(Bundle)&lt;/code&gt; is called after &lt;code&gt;onStart()&lt;/code&gt;. Sometimes it's convenient to restore data here after all of the initialization has been done. Another purpose could be allowing subclasses to decide whether to use your default implementation.&lt;/p&gt;
@@ -644,46 +653,4 @@ co vás zaujme a co jste neznali.&lt;/p&gt;</summary></entry><entry><title>Co p�
 &lt;li&gt;S Jančou jsme se naučili zacházet s FIMEM a &lt;a href="http://janie.jestrab.net/nausnice-s-androidem-aneb-prvni-fimo-pokus/"&gt;vyrobili jsme Androidí náušnice&lt;/a&gt;. Poslali jsme je do &lt;a href="http://www.svetandroida.cz/vyhlaseni-vitezu-velke-narozeninove-souteze-s-lg-201102"&gt;soutěže na Svět Androida&lt;/a&gt; a
     umístili se na 7. místě. Úkolem bylo ztvárnit originálním způsobem
     "Androida". Vyhráli jsme kapacitní stylus.&lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>Sumec dle baštýře Jardy</title><link href="http://blog.petrnohejl.cz/sumec-dle-bastyre-jardy" rel="alternate"></link><updated>2011-09-08T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-09-08:sumec-dle-bastyre-jardy</id><summary type="html">&lt;p&gt;Zdravím všechny čtenáře Jestřáblogu a především všechny kuchařky a
-kuchaře! Po dlouhé době jsem se opět dokopal něco napsat na blog. V
-letním semestru jsem neměl tolik času kvůli diplomce a státnicím, tak se
-to pokusím teď napravit. Jelikož teď mám zase více času, pustil jsem se
-do vaření. Vyrazil jsem na ryby k panu &lt;a href="http://www.rybarna.cz/"&gt;Šopíkovi&lt;/a&gt; a ulovil krásný kus
-sumečka. Janie vygooglila dobrý recept, tak jsem nakoupil suroviny a jal
-se vaření. Ještě bych rád upozornil, že baštýř není člověk, který rád
-baští, nýbrž člověk, starající se o rybníky. Bohužel žádného baštýře
-Jardu neznám, tak jsem si recept pracovně přejmenoval na "Sumec dle
-baštýře Jestřába".&lt;/p&gt;
-&lt;p&gt;Budeme potřebovat následující ingredience:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;3/4 kg sumce&lt;/li&gt;
-&lt;li&gt;10 dkg slaniny&lt;/li&gt;
-&lt;li&gt;2 dl smetany&lt;/li&gt;
-&lt;li&gt;máslo&lt;/li&gt;
-&lt;li&gt;4 rajčata&lt;/li&gt;
-&lt;li&gt;2 papriky&lt;/li&gt;
-&lt;li&gt;2 cibule&lt;/li&gt;
-&lt;li&gt;10 středních brambor&lt;/li&gt;
-&lt;li&gt;koření na ryby&lt;/li&gt;
-&lt;li&gt;bylinky a další koření dle fantazie (provensál, šalvěj, bazalka)&lt;/li&gt;
-&lt;li&gt;mletá paprika&lt;/li&gt;
-&lt;li&gt;mouka&lt;/li&gt;
-&lt;li&gt;sůl&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Nejdříve oloupeme brambory a vcelku je uvaříme do poloměkka. Mezitím
-vymažeme pekáč či zapékací misku máslem. Dále si nakrájíme na kolečka
-rajčata, cibuli a uvařené brambory. Papriku nakrájíme na proužky. Na
-pekáč pokládáme kolečka brambor a na ně místy nějakou zeleninu. Na
-zeleninu položíme naporcované a okořeněné kousky ryby, zabalené v
-anglické slanině. Rybu také nezapomeneme posypat mletou paprikou a
-případně osolíme (není nezbytně nutné, protože koření na ryby je již
-slané). Navrch ještě položíme zbylou zeleninu, lístky šalvěje a kousky
-másla. Sumce pečeme v troubě asi 3/4 hodiny na střední výkon. Před
-koncem pečení zalijeme smetanou, kterou můžeme zahustit moukou. Můžeme
-přidat strouhaný sýr.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Sumec dle baštýře Jardy na pekáči" src="http://blog.petrnohejl.cz/images/sumec-dle-bastyre-jardy-01.jpg" /&gt;&lt;/p&gt;
-&lt;p&gt;Recept je poměrně jednoduchý a jídlo chutná výborně. Výhodou sumce je,
-že nemá vůbec žádné kosti. Já jsem jídlo připravoval ve 2 zapékacích
-miskách a bylo z toho 6 regulérních porcí. Baštýř Jestřáb vám přeje
-dobrou chuť!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Sumeček na talíři" src="http://blog.petrnohejl.cz/images/sumec-dle-bastyre-jardy-02.jpg" /&gt;&lt;/p&gt;</summary></entry></feed>
+&lt;/ul&gt;</summary></entry></feed>
