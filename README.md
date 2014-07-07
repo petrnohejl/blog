@@ -12,7 +12,7 @@ TODO
 * ~~Google Analytics~~
 * ~~Disqus~~
 * ~~Import comments from Wordpress to Disqus~~
-* Facebook Like
+* ~~Facebook Like~~
 * Custom theme with Jinja filters
 * Better archives
 * Categories with link to the category page
