@@ -1,5 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feed.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2014-07-06T00:00:00+02:00</updated><entry><title>Slávky v rajčatové omáčce</title><link href="http://blog.petrnohejl.cz/slavky-v-rajcatove-omacce" rel="alternate"></link><updated>2014-07-06T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-07-06:slavky-v-rajcatove-omacce</id><summary type="html">&lt;p&gt;Na dovolené ve Španělsku jsem zkoušel vařit mušle. Docela se to povedlo, takže zde uvádím recept, který jsem získal od mámy. Je to velmi jednoduché. Až budete někdy u moře, určitě to vyzkoušejte. Je to delikatesa. Kdo slávky nikdy nejedl - chutná to trochu podobně jako houby. Já jsem slávky koupil v Barceloně na slavném tržišti La Boqueria. Kilo stálo 3€, v ČR to bude asi o něco dražší. Kilogram vychází zhruba na 3-4 osoby. Co všechno budeme potřebovat?&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feed.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2014-09-10T00:00:00+02:00</updated><entry><title>Styling the Action Bar</title><link href="http://blog.petrnohejl.cz/styling-the-action-bar" rel="alternate"></link><updated>2014-09-10T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-09-10:styling-the-action-bar</id><summary type="html">&lt;p&gt;Styling the Action Bar is complicated. There are a lot of attributes you can customize and it can take some time to set it up as you need. In this article I am going to show you how to create custom style of the Action Bar within 5 minutes.&lt;/p&gt;
+&lt;p&gt;There is a great tool &lt;a href="http://jgilfelt.github.io/android-actionbarstylegenerator/"&gt;Android Action Bar Style Generator&lt;/a&gt; from Jeff Gilfelt. This web utility allows you to create a simple Action Bar style including nine patch PNG assets, XML drawables and XML styles. This is perfect but the generated XML theme is quite simple and there are some unresolved issues (e.g. indeterminate progress bar size). Also the naming convention of the assets and styles is inconsistent and little confusing for me. So I've created &lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities/tree/master/Res-Style"&gt;Action Bar style template&lt;/a&gt;, which is more elaborated. I use this template in all my Android projects.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities/tree/master/Res-Style"&gt;Action Bar style template&lt;/a&gt; contains all necessary files - PNG assets, XML drawables, colors, dimens, styles. It is based on &lt;a href="https://developer.android.com/tools/support-library/features.html"&gt;AppCompat library&lt;/a&gt;. Custom Action Bar style covers almost all customizable attributes. You can easily change the attributes, colors, dimens as you need. To colorize UI elements you can generate PNG assets using Android Action Bar Style Generator and copy them into the project.&lt;/p&gt;
+&lt;p&gt;Instructions how to use my Action Bar style template:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Copy &amp;amp; paste all files in &lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities/tree/master/Res-Style"&gt;Res-Style&lt;/a&gt; into your project (exclude _extras directory).&lt;/li&gt;
+&lt;li&gt;Open values/styles.xml, values-v11/styles.xml, values-v14/styles.xml and replace all occurences of "Example" to your own style name.&lt;/li&gt;
+&lt;li&gt;Visit &lt;a href="http://jgilfelt.github.io/android-actionbarstylegenerator/"&gt;Android Action Bar Style Generator&lt;/a&gt; and generate colorized PNG assets.&lt;/li&gt;
+&lt;li&gt;Copy &amp;amp; paste _extras/rename.bat into all drawable directories (which contains PNG files) generated via Android Action Bar Style Generator.&lt;/li&gt;
+&lt;li&gt;Run rename.bat scripts. It will just rename PNG files to make file names more clear and consistent. All assets are prefixed with "ab" (means Action Bar).&lt;/li&gt;
+&lt;li&gt;Copy &amp;amp; paste all PNG drawable files into your project. Some files are not necessary.&lt;/li&gt;
+&lt;li&gt;Done. Now you can customize and edit styles.xml, colors.xml, dimens.xml as you need.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;See example screenshots:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Action Bar with indeterminate progress bar" src="http://blog.petrnohejl.cz/images/styling-action-bar-01.png" /&gt;
+&lt;img alt="Tab navigation" src="http://blog.petrnohejl.cz/images/styling-action-bar-02.png" /&gt;
+&lt;img alt="List navigation" src="http://blog.petrnohejl.cz/images/styling-action-bar-03.png" /&gt;
+&lt;img alt="Action mode" src="http://blog.petrnohejl.cz/images/styling-action-bar-04.png" /&gt;&lt;/p&gt;
+&lt;p&gt;You can find source code on my GitHub in &lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities/tree/master/Res-Style"&gt;Android Templates and Utilities&lt;/a&gt; repo. Gotta some questions or ideas about styling the Action Bar? Follow me on &lt;a href="https://twitter.com/petrnohejl"&gt;Twitter&lt;/a&gt; or &lt;a href="https://plus.google.com/113883771155661250237"&gt;Google Plus&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Slávky v rajčatové omáčce</title><link href="http://blog.petrnohejl.cz/slavky-v-rajcatove-omacce" rel="alternate"></link><updated>2014-07-06T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-07-06:slavky-v-rajcatove-omacce</id><summary type="html">&lt;p&gt;Na dovolené ve Španělsku jsem zkoušel vařit mušle. Docela se to povedlo, takže zde uvádím recept, který jsem získal od mámy. Je to velmi jednoduché. Až budete někdy u moře, určitě to vyzkoušejte. Je to delikatesa. Kdo slávky nikdy nejedl - chutná to trochu podobně jako houby. Já jsem slávky koupil v Barceloně na slavném tržišti La Boqueria. Kilo stálo 3€, v ČR to bude asi o něco dražší. Kilogram vychází zhruba na 3-4 osoby. Co všechno budeme potřebovat?&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;1 kg slávek&lt;/li&gt;
 &lt;li&gt;4 rajčata&lt;/li&gt;
@@ -588,16 +606,4 @@ layout u Facebook tlačítka:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nf"&gt;#Facebook_Counter&lt;/span&gt; &lt;span class="nt"&gt;iframe&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
     &lt;span class="k"&gt;width&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="m"&gt;128px&lt;/span&gt; &lt;span class="cp"&gt;!important&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
 &lt;span class="p"&gt;}&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Katalog českých mobilních aplikací</title><link href="http://blog.petrnohejl.cz/katalog-ceskych-mobilnich-aplikaci" rel="alternate"></link><updated>2012-05-22T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2012-05-22:katalog-ceskych-mobilnich-aplikaci</id><summary type="html">&lt;p&gt;Na Android Marketu neustále přibývají nové aplikace. Někdy je docela
-těžké v té záplavě najít kvalitní a funkční kousek. Pro tento účel
-vznikl webový projekt &lt;a href="http://katalogaplikaci.cz/"&gt;Katalog aplikací&lt;/a&gt;. Jedná se o databázi
-mobilních aplikací různých platforem od českých a slovenských vývojářů.
-Díky tomuto webu můžete narazit na zajímavé české projekty, o kterých
-jste třeba vůbec nevěděli.&lt;/p&gt;
-&lt;p&gt;Aplikace jsou v katalogu třízeny podle kategorií, platforem nebo
-oblíbenosti. Jednotlivé aplikace lze komentovat a hodnotit. Velkou
-výhodou pro vývojáře je možnost přidávat do katalogu vlastní aplikace a
-upravovat popis či screenshoty.&lt;/p&gt;
-&lt;p&gt;Díky &lt;a href="http://katalogaplikaci.cz/"&gt;Katalogu aplikací&lt;/a&gt; jsem objevil několik hodně
-zajímavých programů z českých luhů a hájů. Určitě tam také najdete něco,
-co vás zaujme a co jste neznali.&lt;/p&gt;</summary></entry></feed>
+&lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>
