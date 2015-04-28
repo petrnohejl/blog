@@ -75,7 +75,7 @@ def commit_ghp():
 
 	# build
 	with lcd(PROJECT_PATH):
-		local('touch content') # prevent caching
+		#local('touch content') # prevent caching
 		build_production()
 
 	# deploy
