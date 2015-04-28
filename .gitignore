@@ -40,3 +40,6 @@ output
 
 # Sass
 .sass-cache
+
+# Cache
+settings/cache
