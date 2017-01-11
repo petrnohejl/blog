@@ -80,7 +80,7 @@ Jestřáblog            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2011-02-09T00:00:00+01:00"> 9.2.2011</time>
+        <i class="fa fa-calendar"></i><time datetime="2011-02-09T00:00:00+01:00"> 09.02.2011</time>
     </span>
 
 
@@ -116,15 +116,15 @@ funkčnost. Všechny skripty a příkazy je potřeba spouštět jako admin
 místa (minimálně 50 MB). Dále je potřeba mít správně nainstalován ANSI-C
 kompilátor, nástroj make a další potřebné utility, používané
 v instalačním skriptu.</p>
-<div class="highlight"><pre><span class="c">#! /bin/bash</span>
-<span class="c">#skript: install_apache.sh</span>
-<span class="c">#popis: davkovy skript pro instalaci serveru Apache na OS GNU/Linux Ubuntu 9.10</span>
-<span class="c">#autor: Petr Nohejl (xnohej00)</span>
+<div class="highlight"><pre><span></span><span class="ch">#! /bin/bash</span>
+<span class="c1">#skript: install_apache.sh</span>
+<span class="c1">#popis: davkovy skript pro instalaci serveru Apache na OS GNU/Linux Ubuntu 9.10</span>
+<span class="c1">#autor: Petr Nohejl (xnohej00)</span>
 
-<span class="c">#promenne</span>
+<span class="c1">#promenne</span>
 <span class="nv">MIRROR</span><span class="o">=</span>http://ftp.sh.cvut.cz/MIRRORS/apache/httpd/httpd-2.2.15.tar.gz
 <span class="nv">VERSION</span><span class="o">=</span>httpd-2.2.15
-<span class="nv">TEMP</span><span class="o">=</span>APACHE_INSTALL <span class="c">#pozor, tento adresar se nakonci skriptu maze!</span>
+<span class="nv">TEMP</span><span class="o">=</span>APACHE_INSTALL <span class="c1">#pozor, tento adresar se nakonci skriptu maze!</span>
 
 <span class="nb">cd</span>
 sudo mkdir <span class="nv">$TEMP</span>
@@ -166,7 +166,7 @@ více. Pro více informací o instalaci Apache navštivte dokumentaci:
 Konfigurační soubor s nastavením serveru se nachází v adresáři
 /usr/local/apache2/conf/httpd.conf. Soubor otevřeme v libovolném
 textovém editoru:</p>
-<div class="highlight"><pre>sudo gedit /usr/local/apache2/conf/httpd.conf
+<div class="highlight"><pre><span></span>sudo gedit /usr/local/apache2/conf/httpd.conf
 </pre></div>
 
 
@@ -177,7 +177,7 @@ můžeme nastavovat i další parametry serveru. Pro více informací o
 konfiguraci serveru navštivte dokumentaci:
 <a href="http://httpd.apache.org/docs/2.2/mod/directives.html">http://httpd.apache.org/docs/2.2/mod/directives.html</a>. Příklad změn v
 konfiguračním souboru pro základní nastavení:</p>
-<div class="highlight"><pre>Listen 127.0.0.1:666
+<div class="highlight"><pre><span></span>Listen 127.0.0.1:666
 ServerName www.example.com:80
 DocumentRoot <span class="s2">&quot;/usr/local/apache2/htdocs&quot;</span>
 </pre></div>
@@ -187,7 +187,7 @@ DocumentRoot <span class="s2">&quot;/usr/local/apache2/htdocs&quot;</span>
 <h2 id="spusteni-serveru">Spuštění serveru</h2>
 <p>Pokud jsme server správně nainstalovali a nakonfigurovali, můžeme jej
 spustit a otestovat správnou funkčnost:</p>
-<div class="highlight"><pre>sudo /usr/local/apache2/bin/apachectl –k start
+<div class="highlight"><pre><span></span>sudo /usr/local/apache2/bin/apachectl –k start
 firefox http://127.0.0.1:666/
 sudo /usr/local/apache2/bin/apachectl –k restart
 sudo /usr/local/apache2/bin/apachectl –k stop
@@ -206,13 +206,13 @@ Apache. Instalaci mod_python můžeme provést buď pomocí utility
 <em>apt-get</em>, nebo si můžeme modul stáhnout z internetu, sestavit a
 nainstalovat. Druhá možnost je poněkud komplikovaná a proto zvolíme
 jednodušší cestu s pomocí <em>apt-get</em>, která udělá vše potřebné za nás.</p>
-<div class="highlight"><pre>sudo apt-get install libapache2-mod-python
+<div class="highlight"><pre><span></span>sudo apt-get install libapache2-mod-python
 </pre></div>
 
 
 <p>Po úspěšné instalaci modulu budeme muset opět upravit konfigurační
 soubor serveru:</p>
-<div class="highlight"><pre>sudo gedit /usr/local/apache2/conf/httpd.conf
+<div class="highlight"><pre><span></span>sudo gedit /usr/local/apache2/conf/httpd.conf
 </pre></div>
 
 
@@ -221,7 +221,7 @@ v konfiguračním souboru) pro načtení modulu a poté přidáme další pří
 pro nastavení handleru pro následné testování serveru (např. na konec
 konfiguračního souboru). Nezapomeneme provést restart serveru, aby se
 znovu načetl konfigurační soubor.</p>
-<div class="highlight"><pre><span class="nb">LoadModule</span> python_module <span class="sx">/usr/lib/apache2/modules/mod_python.so</span>
+<div class="highlight"><pre><span></span><span class="nb">LoadModule</span> python_module <span class="sx">/usr/lib/apache2/modules/mod_python.so</span>
 
 <span class="nt">&lt;Location</span> <span class="s">/mpinfo</span><span class="nt">&gt;</span>
     <span class="nb">SetHandler</span> mod_python
@@ -237,29 +237,29 @@ znovu načetl konfigurační soubor.</p>
 
 
 <p>Nyní můžeme vyzkoušet ladící výpis serveru:</p>
-<div class="highlight"><pre>firefox http://127.0.0.1:666/mpinfo
+<div class="highlight"><pre><span></span>firefox http://127.0.0.1:666/mpinfo
 </pre></div>
 
 
 <p>Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat ladící výpis.</p>
 <p><img alt="Ladící výpis mod_python" src="http://blog.petrnohejl.cz/images/apache-a-mod_python-pro-webovy-framework-django-02.jpg" /></p>
 <p>Dále si vytvoříme testovací skript <em>mptest.py</em> v jazyce Python:</p>
-<div class="highlight"><pre>sudo mkdir /usr/local/apache2/htdocs/test
+<div class="highlight"><pre><span></span>sudo mkdir /usr/local/apache2/htdocs/test
 sudo gedit /usr/local/apache2/htdocs/test/mptest.py
 </pre></div>
 
 
 <p>Do skriptu <em>mptest.py</em> uložíme následující kód:</p>
-<div class="highlight"><pre><span class="kn">from</span> <span class="nn">mod_python</span> <span class="kn">import</span> <span class="n">apache</span>
+<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">mod_python</span> <span class="kn">import</span> <span class="n">apache</span>
 <span class="k">def</span> <span class="nf">handler</span><span class="p">(</span><span class="n">req</span><span class="p">):</span>
-    <span class="n">req</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s">&#39;text/plain&#39;</span>
-    <span class="n">req</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Hello World! I am Python.&quot;</span><span class="p">)</span>
+    <span class="n">req</span><span class="o">.</span><span class="n">content_type</span> <span class="o">=</span> <span class="s1">&#39;text/plain&#39;</span>
+    <span class="n">req</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Hello World! I am Python.&quot;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">apache</span><span class="o">.</span><span class="n">OK</span>
 </pre></div>
 
 
 <p>A nakonec spustíme testovací skript:</p>
-<div class="highlight"><pre>firefox http://127.0.0.1:666/test/mptest.py
+<div class="highlight"><pre><span></span>firefox http://127.0.0.1:666/test/mptest.py
 </pre></div>
 
 
@@ -274,7 +274,7 @@ Apache nastavili jednoduchý handler, který odchytává URL končící na
 chceme mít více handlerů, použijeme pokročilejší handler Publisher.
 V konfiguračním souboru Apache nastavíme (předešlý handler z předchozí
 kapitoly zakomentujeme):</p>
-<div class="highlight"><pre><span class="nt">&lt;Directory</span> <span class="s">/usr/local/apache2/htdocs</span><span class="nt">&gt;</span> 
+<div class="highlight"><pre><span></span><span class="nt">&lt;Directory</span> <span class="s">/usr/local/apache2/htdocs</span><span class="nt">&gt;</span> 
     <span class="nb">AddHandler</span> mod_python .py
     <span class="nb">PythonHandler</span> mod_python.publisher 
     <span class="nb">PythonDebug</span> <span class="k">On</span> 
@@ -285,38 +285,38 @@ kapitoly zakomentujeme):</p>
 <p>Restartujeme server pro znovunačtení konfigurace. Dále si vytvoříme
 jednoduchou dynamickou webovou stránku v Pythonu (jednoduchá
 kalkulačka). Vytvoříme si novou složku a dva zdrojové soubory:</p>
-<div class="highlight"><pre>sudo mkdir /usr/local/apache2/htdocs/form
+<div class="highlight"><pre><span></span>sudo mkdir /usr/local/apache2/htdocs/form
 sudo gedit /usr/local/apache2/htdocs/form/index.html
 sudo gedit /usr/local/apache2/htdocs/form/form.py
 </pre></div>
 
 
 <p>Do souboru <em>index.html</em> uložíme následující kód:</p>
-<div class="highlight"><pre><span class="nt">&lt;html&gt;</span>    
-    <span class="nt">&lt;h1&gt;</span>Calculator<span class="nt">&lt;/h1&gt;</span>    
-    <span class="nt">&lt;p&gt;</span>Enter two numbers:<span class="nt">&lt;/p&gt;</span>                  
-    <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">&quot;form.py/msg&quot;</span> <span class="na">method=</span><span class="s">&quot;POST&quot;</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;num1&quot;</span><span class="nt">&gt;</span> + 
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;text&quot;</span> <span class="na">name=</span><span class="s">&quot;num2&quot;</span><span class="nt">&gt;</span> =<span class="nt">&lt;br&gt;</span>
-        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span> <span class="na">value=</span><span class="s">&quot;calculate&quot;</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;/form&gt;</span>
-<span class="nt">&lt;/html&gt;</span>
+<div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>    
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Calculator<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>    
+    <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Enter two numbers:<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>                  
+    <span class="p">&lt;</span><span class="nt">form</span> <span class="na">action</span><span class="o">=</span><span class="s">&quot;form.py/msg&quot;</span> <span class="na">method</span><span class="o">=</span><span class="s">&quot;POST&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;num1&quot;</span><span class="p">&gt;</span> + 
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;num2&quot;</span><span class="p">&gt;</span> =<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;submit&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;calculate&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </pre></div>
 
 
 <p>Do skriptu <em>form.py</em> uložíme následující kód:</p>
-<div class="highlight"><pre><span class="k">def</span> <span class="nf">msg</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
-    <span class="c"># make sure the user provided all the parameters</span>
-    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">num1</span> <span class="ow">and</span> <span class="n">num2</span><span class="p">):</span> <span class="k">return</span> <span class="s">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;Missing some parametre!&lt;/p&gt;&lt;/html&gt;&quot;</span>
-    <span class="c"># provide feedback to the user</span>
+<div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">msg</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">):</span>
+    <span class="c1"># make sure the user provided all the parameters</span>
+    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="n">num1</span> <span class="ow">and</span> <span class="n">num2</span><span class="p">):</span> <span class="k">return</span> <span class="s2">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;Missing some parametre!&lt;/p&gt;&lt;/html&gt;&quot;</span>
+    <span class="c1"># provide feedback to the user</span>
     <span class="k">try</span><span class="p">:</span> <span class="n">result</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">num1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">num2</span><span class="p">)</span>
-    <span class="k">except</span><span class="p">:</span> <span class="k">return</span> <span class="s">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;Invalid parametres!&lt;/p&gt;&lt;/html&gt;&quot;</span>    
-    <span class="k">return</span> <span class="s">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s">&quot;&lt;/p&gt;&lt;/html&gt;&quot;</span>
+    <span class="k">except</span><span class="p">:</span> <span class="k">return</span> <span class="s2">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;Invalid parametres!&lt;/p&gt;&lt;/html&gt;&quot;</span>    
+    <span class="k">return</span> <span class="s2">&quot;&lt;html&gt;&lt;h1&gt;Result&lt;/h1&gt;&lt;p&gt;&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;&lt;/p&gt;&lt;/html&gt;&quot;</span>
 </pre></div>
 
 
 <p>Nakonec zobrazíme web v prohlížeči:</p>
-<div class="highlight"><pre>firefox http://127.0.0.1:666/form/
+<div class="highlight"><pre><span></span>firefox http://127.0.0.1:666/form/
 </pre></div>
 
 
@@ -329,19 +329,19 @@ nadpisem "Calculator".</p>
 <p>Pro práci s webovým frameworkem Django budeme potřebovat databázi.
 Nainstalujeme MySQL server pomocí nástroje <em>apt-get</em> a podporu MySQL pro
 Python. Alternativně můžeme použít jiné databáze (např. SQLite).</p>
-<div class="highlight"><pre>sudo apt-get install mysql-server python-mysqldb
+<div class="highlight"><pre><span></span>sudo apt-get install mysql-server python-mysqldb
 </pre></div>
 
 
 <h2 id="instalace-frameworku-django-a-vytvoreni-projektu">Instalace frameworku Django a vytvoření projektu</h2>
 <p>Pro instalaci budeme potřebovat program SVN. Ten můžeme případně
 nainstalovat pomocí programu <em>apt-get</em>.</p>
-<div class="highlight"><pre>sudo apt-get install subversion
+<div class="highlight"><pre><span></span>sudo apt-get install subversion
 </pre></div>
 
 
 <p>Nainstalujeme vývojovou verzi Djanga z SVN repozitáře:</p>
-<div class="highlight"><pre><span class="nb">cd</span>
+<div class="highlight"><pre><span></span><span class="nb">cd</span>
 svn co http://code.djangoproject.com/svn/django/trunk/ django_src
 </pre></div>
 
@@ -350,14 +350,14 @@ svn co http://code.djangoproject.com/svn/django/trunk/ django_src
 mohl s ním pracovat. Nejprve si zjistíme, kde se nachází adresář
 <em>site-packages</em>, a potom vyvoříme samotný odkaz (místo "YOUR-DIR"
 doplňte řetězec z předchozího příkazu <em>python -c</em>):</p>
-<div class="highlight"><pre>python -c <span class="s2">&quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&quot;</span>
+<div class="highlight"><pre><span></span>python -c <span class="s2">&quot;from distutils.sysconfig import get_python_lib; print get_python_lib()&quot;</span>
 sudo ln -s <span class="sb">`</span><span class="nb">pwd</span><span class="sb">`</span>/django_src/django YOUR-DIR/django
 sudo cp ~/django_src/django/bin/django-admin.py /usr/local/bin
 </pre></div>
 
 
 <p>Dále si vytvoříme několik adresářů, které bude Django používat:</p>
-<div class="highlight"><pre><span class="nb">cd</span>
+<div class="highlight"><pre><span></span><span class="nb">cd</span>
 mkdir django_projects
 mkdir django_templates
 mkdir media
@@ -365,7 +365,7 @@ mkdir media
 
 
 <p>Poté vytvoříme symbolické odkazy na media (css, javascript atd.):</p>
-<div class="highlight"><pre><span class="nb">cd</span> /usr/local/apache2/htdocs
+<div class="highlight"><pre><span></span><span class="nb">cd</span> /usr/local/apache2/htdocs
 sudo ln -s  ~/media media
 sudo ln -s ~/django_src/django/contrib/admin/media admin_media
 </pre></div>
@@ -373,7 +373,7 @@ sudo ln -s ~/django_src/django/contrib/admin/media admin_media
 
 <p>Nyní už můžeme vytvořit nový Django projekt standardním způsobem
 (postup, jak vytvořit Django projekt není součástí tohoto tutoriálu).</p>
-<div class="highlight"><pre><span class="nb">cd</span> ~/django_projects
+<div class="highlight"><pre><span></span><span class="nb">cd</span> ~/django_projects
 django-admin.py startproject mysite
 </pre></div>
 
@@ -387,17 +387,17 @@ projektu <em>Mysite</em>), musíme povolit zápis do souboru. V nastavení Djan
 projektu <em>settings.py</em> nezapomeneme správně nastavit připojení k
 databázi (případně cestu k sqlite), proměnnou <em>TEMPLATE_DIRS</em> a media
 (místo "USER-NAME" doplňte vaše systémové uživatelské jméno).</p>
-<div class="highlight"><pre><span class="n">DATABASE_NAME</span> <span class="o">=</span> <span class="s">&#39;/home/USER-NAME/django_projects/mysite/sqlite3.db&#39;</span>
-<span class="n">MEDIA_ROOT</span> <span class="o">=</span> <span class="s">&#39;/media/&#39;</span>
-<span class="n">ADMIN_MEDIA_PREFIX</span> <span class="o">=</span> <span class="s">&#39;/admin_media/&#39;</span>
-<span class="n">TEMPLATE_DIRS</span> <span class="o">=</span> <span class="p">(</span> <span class="s">&#39;/home/USER-NAME/django_projects/mysite/mytemplates&#39;</span> <span class="p">)</span>
+<div class="highlight"><pre><span></span><span class="n">DATABASE_NAME</span> <span class="o">=</span> <span class="s1">&#39;/home/USER-NAME/django_projects/mysite/sqlite3.db&#39;</span>
+<span class="n">MEDIA_ROOT</span> <span class="o">=</span> <span class="s1">&#39;/media/&#39;</span>
+<span class="n">ADMIN_MEDIA_PREFIX</span> <span class="o">=</span> <span class="s1">&#39;/admin_media/&#39;</span>
+<span class="n">TEMPLATE_DIRS</span> <span class="o">=</span> <span class="p">(</span> <span class="s1">&#39;/home/USER-NAME/django_projects/mysite/mytemplates&#39;</span> <span class="p">)</span>
 </pre></div>
 
 
 <p>Upravíme konfigurační soubor serveru a nastavíme handler pro Django
 (předešlý handler z předchozí kapitoly zakomentujeme, místo "USER-NAME"
 doplňte vaše systémové uživatelské jméno):</p>
-<div class="highlight"><pre><span class="nt">&lt;Location</span> <span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+<div class="highlight"><pre><span></span><span class="nt">&lt;Location</span> <span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
     <span class="nb">SetHandler</span> python-program
     <span class="nb">PythonHandler</span> django.core.handlers.modpython
     <span class="nb">SetEnv</span> DJANGO_SETTINGS_MODULE mysite.settings
@@ -422,7 +422,7 @@ doplňte vaše systémové uživatelské jméno):</p>
 <p>Po provedení restartu serveru by měl Django projekt začít fungovat.
 Projekt zobrazíme v prohlížeči (login i heslo do administrace je
 "admin"):</p>
-<div class="highlight"><pre>firefox http://127.0.0.1:666/polls/
+<div class="highlight"><pre><span></span>firefox http://127.0.0.1:666/polls/
 firefox http://127.0.0.1:666/polls/1/
 firefox http://127.0.0.1:666/polls/1/results/
 firefox http://127.0.0.1:666/polls/1/vote/
@@ -499,7 +499,7 @@ http://jeffbaier.com/articles/installing-django-on-an-ubuntu-linux-server/.</p>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 Petr Nohejl
+         <div class="col-xs-10">&copy; 2017 Petr Nohejl
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>

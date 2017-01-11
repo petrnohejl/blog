@@ -1,5 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feeds%5Cpetr-nohejl.atom.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2015-04-28T00:00:00+02:00</updated><entry><title>Rok 2014</title><link href="http://blog.petrnohejl.cz/rok-2014" rel="alternate"></link><updated>2015-04-28T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2015-04-28:rok-2014</id><summary type="html">&lt;ul&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Jestřáblog</title><link href="http://blog.petrnohejl.cz/" rel="alternate"></link><link href="http://blog.petrnohejl.cz/feeds/petr-nohejl.atom.xml" rel="self"></link><id>http://blog.petrnohejl.cz/</id><updated>2017-01-11T00:00:00+01:00</updated><entry><title>Rok 2016</title><link href="http://blog.petrnohejl.cz/rok-2016" rel="alternate"></link><updated>2017-01-11T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2017-01-11:rok-2016</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Tož jsem se oženil s nejlepší ženuškou na světě a stal se dvojnásobným strýcem a kmotrem Marušky a Barušky.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Opět jsem zkracoval dready, jelikož už byly neúnosně těžké a dlouhé.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Investoval jsem do fondů Jána Hájka. Měl jsem smůlu, protože se fondy hned po nákupu hluboce propadly, ale ke konci roku už se zase vrátily na původní hodnoty.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Měli jsme incident s naší Jestřábií. Na dálnici v plné rychlosti a za deště se porouchal alternátor a vypadla veškerá elektronika včetně stěračů a blinkrů. K tomu všemu jsem najel v odstavném pruhu na pohozenou lopatu. Naštěstí se nám nic nestalo a odtahli nás domů.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V našem domě proběhly rozsáhlé rekonstrukce teras a izolací.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Začal jsem hledat stavební pozemek v okolí Brna, jelikož bychom chtěli postavit domek. Není to vůbec jednoduché, protože poptávka značně převyšuje nabídku a ceny jsou vyšroubovány hodně vysoko.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ke konci roku jsme přestěhovali náš STRV office do nových prostor v Magnum Palace.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V zimě jsem vyrazil lyžovat do Alp do střediska Bormio. Na jaře jsme navštívili lamí farmu na Hádech. Byli jsme na výletě v &lt;a href="http://janie.8bit.cz/na-skok-v-praze/"&gt;Pečkách a Kutné Hoře&lt;/a&gt;. Byl jsem na měsíc v US, kde jsem se zúčastnil Google IO konference. Byl jsem v San Franciscu, Los Angeles, Sequoia parku a Kings Canyon parku. V létě jsme byli na dovolené v &lt;a href="http://janie.8bit.cz/beskyde-beskyde/"&gt;Beskydech&lt;/a&gt; na Horní Bečvě. Na podzim jsme vyrazili na svatební cestu do &lt;a href="http://janie.8bit.cz/category/cesty-po-indonesii/"&gt;Indonésie&lt;/a&gt;. Navštívili jsme Bali, Gili islands a Jávu.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem řadu kulturních i nekulturních akcí: promítání filmu Prach a Broky, filmový festival Jeden svět, muzikál &lt;a href="http://janie.8bit.cz/na-skok-v-praze/"&gt;Mýdlový princ&lt;/a&gt; v Praze, Ignis Brunensis, festival Uprising, koncert Alborosie, Exit game Semtex v Praze.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zúčastnil jsem se několika skvělých oslav a zábav: svatba Jirky a Ivanky v Pardubicích, deskovky v STRV, narozeniny Pavči a Miry v Chropyni, narozeninová večeře v Monte Bú, &lt;a href="http://janie.8bit.cz/podzim-v-obrazech-2/"&gt;Ivety 50tiny&lt;/a&gt; na Starém pivovaru v Kroměříži, Míšovi 30tiny v Krsoňově, &lt;a href="http://janie.8bit.cz/podzim-v-obrazech-2/"&gt;křtiny&lt;/a&gt; neteří, STRV Christmas party a naše první společné Vánoce v Brně.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Byl jsem na několika IT akcích: Google IO, mDevCamp, Silicon Valley Insights: Kemar Newell a Pavel Maček, STRV Android meetup, kde jsem přednášel o MVVM.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pracoval jsem na aplikaci Flip a začal tvořit knihovnu Alfonz.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mám nové IT hračky: notebook HP ProBook 650, monitor Dell a telefon Google Pixel. Také jsme dostali nový vysavač Dyson.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Rok 2015</title><link href="http://blog.petrnohejl.cz/rok-2015" rel="alternate"></link><updated>2016-12-31T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2016-12-31:rok-2015</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Začal jsem se zajímat o investování a docela mě to chytlo. Přihlásil jsem se na kurz Tomáše Tatranského "Dividendové akcie jako ideální zdroj pasivního příjmu" na &lt;a href="https://www.naucmese.cz/"&gt;Naučmese.cz&lt;/a&gt;. Začal jsem studovat hodnotovou investiční strategii. Přečetl jsem knížky od Daniela Gladiše. Shlédnul jsem a navštívil několik přednášek. Začal jsem sledovat Jána Hájka. Koupil jsem několik amerických akcií a začal si budovat akciové portfolio. Snažím se neustále vzdělávat v oblasti investování.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Změnil jsem banku - z mBank jsem přešel k AirBank a zatím jsem velmi spokojen.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Založili jsme &lt;a href="http://zvut.cz/lide/lide-f38102/dobrych-vyvojaru-je-malo-cesko-je-ale-velmoc-tvrdi-nohejl-z-strv-d127126"&gt;brněnskou pobočku STRV&lt;/a&gt;. Sídlíme v Titaniu na Nových sadech.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V létě jsme malovali byt (kromě obýváku) a pořídili jsme nový kotel do koupelny.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;V zimě jsem byl lyžovat v Alpách ve středisku Paganella, stejně jako loni. Na jaře jsme byli v &lt;a href="http://janie.8bit.cz/buda/"&gt;Buda&lt;/a&gt;&lt;a href="http://janie.8bit.cz/pest/"&gt;pešti&lt;/a&gt;, která se mi moc líbila. V létě jsme byli na několika výletech: v &lt;a href="http://janie.8bit.cz/vylet-do-moravskeho-krumlova/"&gt;Moravském Krumlově&lt;/a&gt;, ve &lt;a href="http://janie.8bit.cz/znovu-na-jihu/"&gt;Znojmě&lt;/a&gt;, v Otrokovicích. Navštívili jsme filmový festival v Uherském Hradišti. Na podzim nás navštívila &lt;a href="http://janie.8bit.cz/mendy-v-brne/"&gt;Mendy v Brně&lt;/a&gt; a pár týdnů potom jsme my jeli navštívit jí spolu s Julií na &lt;a href="http://janie.8bit.cz/category/ila-formosa/"&gt;Taiwan&lt;/a&gt;. Byli jsme i v &lt;a href="http://janie.8bit.cz/category/ila-formosa/"&gt;Hong Kongu&lt;/a&gt;, kde jsme se potkali s Phyllis a na Lantau Island jsme se s Jančou zasnoubili.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem několik kulturních akcí: ples v Příbrami, Exit game (chemická laboratoř), koncert &lt;a href="http://janie.8bit.cz/korajunglejazz-11-6-2015-cafe-atlas/"&gt;KoraJungleJazz&lt;/a&gt;, festival &lt;a href="http://janie.8bit.cz/festival-jeden-svet-16-24-3-2015-brno/"&gt;Jeden svět&lt;/a&gt;, vystoupení naší djembe skupiny pod vedením Jirky Boudy, festival &lt;a href="http://janie.8bit.cz/hudebni-leto-2015/"&gt;České hrady&lt;/a&gt; na Veveří a reggae festival &lt;a href="http://janie.8bit.cz/hudebni-leto-2015/"&gt;Uprising&lt;/a&gt; v Bratislavě.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zúčastnil jsem se několika úžasných párty: Benyho svatba, rozlučková párty v Budějovicích (bratranec Jirka se stěhuje do Oxfordu), táborák na Palačáku, Káti svatba, Tep Faktor, team building ve Žlutých lázních, kolaudačka u Míši, Ládi promoce, oslava Silvestra v Titaniu. &lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Byl jsem na několika IT akcích: BrMo sraz, mDevCamp, STRV Watch hackathon. Také jsem mentoroval na Czechitas workshopu.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pracoval jsem na aplikacích ChristianMingle a jDate.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dostal jsem nový telefon Nexus 5X.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Rok 2014</title><link href="http://blog.petrnohejl.cz/rok-2014" rel="alternate"></link><updated>2015-04-28T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2015-04-28:rok-2014</id><summary type="html">&lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Oblíbil jsem si vlaky. Jsou mnohem pohodlnější než autobusy, člověk má více místa a nový RailJet je super! Ve vlaku můžu pohodlně pracovat, protože tam jsou zásuvky a stolky, nebo jídelní vůz. V létě jsem si pořídil In Kartu a začal jezdit do Prahy výhradně vlakem. Cesta trvá 2:40 a stojí 175 Kč (Student Agency jezdí 2:30 a stojí 165 Kč). Nevýhoda vlaku je, že je na trase špatný mobilní signál a občas to bývá dost narvané.&lt;/p&gt;
 &lt;/li&gt;
@@ -103,7 +174,7 @@
 &lt;p&gt;When you are creating a new instance of Activity via Intent, you can pass some extra data to the Activity. Data are stored in Bundle and can be retrieved by calling &lt;code&gt;getIntent().getExtras()&lt;/code&gt;. It's a good practise to implement static method &lt;code&gt;newIntent()&lt;/code&gt; which returns a new Intent that can be used to start the Activity. This way you have compile time checking for the arguments passed to the Activity. This pattern is suitable for Service and Broadcast as well.&lt;/p&gt;
 &lt;p&gt;Bundle is also used if the Activity is being re-initialized (e.g. because of configuration changes) for keeping the current state of the instance. You can supply some data in &lt;code&gt;onSaveInstanceState(Bundle)&lt;/code&gt; and retrieve them back in &lt;code&gt;onCreate(Bundle)&lt;/code&gt; method or &lt;code&gt;onRestoreInstanceState(Bundle)&lt;/code&gt;. Main difference between these methods is that &lt;code&gt;onRestoreInstanceState(Bundle)&lt;/code&gt; is called after &lt;code&gt;onStart()&lt;/code&gt;. Sometimes it's convenient to restore data here after all of the initialization has been done. Another purpose could be allowing subclasses to decide whether to use your default implementation.&lt;/p&gt;
 &lt;p&gt;See example code below. Note that &lt;code&gt;EXTRA_PRODUCT_ID&lt;/code&gt; constant is public. That's because we could need it in a Fragment encapsulated in this Activity.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleActivity&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Activity&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleActivity&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Activity&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;EXTRA_PRODUCT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_id&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;EXTRA_PRODUCT_TITLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_title&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
@@ -180,7 +251,7 @@
 &lt;p&gt;Fragment state can be saved using &lt;code&gt;onSaveInstanceState(Bundle)&lt;/code&gt; method. It is similar to the Activity. Data can be restored in &lt;code&gt;onCreate(Bundle)&lt;/code&gt;, &lt;code&gt;onCreateView(LayoutInflater, ViewGroup, Bundle)&lt;/code&gt;, &lt;code&gt;onActivityCreated(Bundle)&lt;/code&gt; or &lt;code&gt;onViewStateRestored(Bundle)&lt;/code&gt; methods.&lt;/p&gt;
 &lt;p&gt;Fragment has also access to the Intent extras which were passed during creating the Activity instance. You can get this extra data by calling &lt;code&gt;getActivity().getIntent().getExtras()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;See example code below.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleFragment&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Fragment&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleFragment&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Fragment&lt;/span&gt;
 &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;ARGUMENT_PRODUCT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_id&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
@@ -319,16 +390,16 @@
 &lt;p&gt;Zhlédnul jsem řadu seriálů: HIMYM, Pobřežní lýtka, Game of Thrones, Misfits, Walking Dead, Dexter. Často sleduju seriály po cestě do Prahy. S Jančou jsme začali koukat na &lt;a href="http://cs.wikipedia.org/wiki/James_Bond"&gt;Bondovky&lt;/a&gt; od prvního dílu.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Konečně jsem měl možnost vyzkoušet nové lyže. Užil jsem je pořádně, protože jsem byl hned na 3 lyžovačkách: na Monínci s Jančou, Káťou, tátou &amp;amp; školou; na &lt;a href="http://janie.jestrab.net/v-nizkych-tatrach/"&gt;Jasné v Tatrách&lt;/a&gt; s brněnskou partou; s rodinou na Sella Rondě v Alpách, kde jsem byl lyžovat prvně.&lt;/p&gt;
+&lt;p&gt;Konečně jsem měl možnost vyzkoušet nové lyže. Užil jsem je pořádně, protože jsem byl hned na 3 lyžovačkách: na Monínci s Jančou, Káťou, tátou &amp;amp; školou; na &lt;a href="http://janie.8bit.cz/v-nizkych-tatrach/"&gt;Jasné v Tatrách&lt;/a&gt; s brněnskou partou; s rodinou na Sella Rondě v Alpách, kde jsem byl lyžovat prvně.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;S Jančou jsme byli na &lt;a href="http://janie.jestrab.net/category/london-calling/"&gt;dovolené v Londýně&lt;/a&gt;. Poprvé v životě jsem letěl letadlem. Na podzim jsme navštívili Rakousko - &lt;a href="http://janie.jestrab.net/prvni-obrazky-z-rakouska/"&gt;Lunz am See&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/po-rakouskem-grand-canyonu/"&gt;Ötscher&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/po-rakouskem-grand-canyonu/"&gt;Mariazel&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/vystup-na-hochkar/"&gt;Hochkar&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/wasserlochklamm/"&gt;Wasserloch Klamm Palfau&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/zpatky-v-civilizaci/"&gt;Melk&lt;/a&gt; a &lt;a href="http://janie.jestrab.net/naschmarkt/"&gt;Vídeň&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;S Jančou jsme byli na &lt;a href="http://janie.8bit.cz/category/london-calling/"&gt;dovolené v Londýně&lt;/a&gt;. Poprvé v životě jsem letěl letadlem. Na podzim jsme navštívili Rakousko - &lt;a href="http://janie.8bit.cz/prvni-obrazky-z-rakouska/"&gt;Lunz am See&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/po-rakouskem-grand-canyonu/"&gt;Ötscher&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/po-rakouskem-grand-canyonu/"&gt;Mariazel&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/vystup-na-hochkar/"&gt;Hochkar&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/wasserlochklamm/"&gt;Wasserloch Klamm Palfau&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/zpatky-v-civilizaci/"&gt;Melk&lt;/a&gt; a &lt;a href="http://janie.8bit.cz/naschmarkt/"&gt;Vídeň&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Navštívil jsem řadu kulturních i nekulturních akcí: promítání filmu &lt;a href="http://www.youtube.com/watch?v=VC23qU4OpLc"&gt;Chodíval Matúšek&lt;/a&gt;, koncert &lt;a href="http://janie.jestrab.net/combo-reneho-sindelky-7-2-2013-brno/"&gt;Combo Reného Šindelky&lt;/a&gt;, Ples MČ Žabovřesky, &lt;a href="http://janie.jestrab.net/ohlednuti-za-brnenskym-jazz-festem/"&gt;JazzFest Brno&lt;/a&gt;, film &lt;a href="http://janie.jestrab.net/nekulturni-kveten/"&gt;Šmejdi&lt;/a&gt;, Filmový festival FI MUNI, &lt;a href="http://janie.jestrab.net/nekulturni-kveten/"&gt;Muzejní noc&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/nekulturni-cerven/"&gt;Ignis Brunensis&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/nekulturni-cerven/"&gt;sběr jahod&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/nekulturni-cerven/"&gt;Kamenka Open&lt;/a&gt; festival, promítání fotek &lt;a href="http://janie.jestrab.net/nekulturni-cerven/"&gt;Trabantem Jižní Amerikou&lt;/a&gt;, výlet na &lt;a href="http://janie.jestrab.net/vylet-na-babi-lom/"&gt;Babí lom&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/nejlepsi-cervencovy-vikend/"&gt;Letní filmová škola&lt;/a&gt; v Uherském Hradišti + výlet na &lt;a href="http://janie.jestrab.net/nejlepsi-cervencovy-vikend/"&gt;Velehrad a Buchlov&lt;/a&gt;, výlet na &lt;a href="http://janie.jestrab.net/nekulturni-cervenec/"&gt;Orlík&lt;/a&gt;, výlet do &lt;a href="http://janie.jestrab.net/kde-to-mame-nejradsi/"&gt;Mikulova&lt;/a&gt;, výlet na Hády, Festival On the Road v Lázních Bohdaneč, &lt;a href="http://www.nakoleon.cz/"&gt;Nakoleon&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/burcakovy-pochod-v-mutenicich/"&gt;burčákový pochod&lt;/a&gt; v Mutěnicích, Královopolka na Semilasse, geocachingový lov Substance, výlet na Holednou, kvalifikace Tmou, koncert Tubabu, výstava betlémů a Moravská vesnička u Kapucínů.&lt;/p&gt;
+&lt;p&gt;Navštívil jsem řadu kulturních i nekulturních akcí: promítání filmu &lt;a href="http://www.youtube.com/watch?v=VC23qU4OpLc"&gt;Chodíval Matúšek&lt;/a&gt;, koncert &lt;a href="http://janie.8bit.cz/combo-reneho-sindelky-7-2-2013-brno/"&gt;Combo Reného Šindelky&lt;/a&gt;, Ples MČ Žabovřesky, &lt;a href="http://janie.8bit.cz/ohlednuti-za-brnenskym-jazz-festem/"&gt;JazzFest Brno&lt;/a&gt;, film &lt;a href="http://janie.8bit.cz/nekulturni-kveten/"&gt;Šmejdi&lt;/a&gt;, Filmový festival FI MUNI, &lt;a href="http://janie.8bit.cz/nekulturni-kveten/"&gt;Muzejní noc&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/nekulturni-cerven/"&gt;Ignis Brunensis&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/nekulturni-cerven/"&gt;sběr jahod&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/nekulturni-cerven/"&gt;Kamenka Open&lt;/a&gt; festival, promítání fotek &lt;a href="http://janie.8bit.cz/nekulturni-cerven/"&gt;Trabantem Jižní Amerikou&lt;/a&gt;, výlet na &lt;a href="http://janie.8bit.cz/vylet-na-babi-lom/"&gt;Babí lom&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/nejlepsi-cervencovy-vikend/"&gt;Letní filmová škola&lt;/a&gt; v Uherském Hradišti + výlet na &lt;a href="http://janie.8bit.cz/nejlepsi-cervencovy-vikend/"&gt;Velehrad a Buchlov&lt;/a&gt;, výlet na &lt;a href="http://janie.8bit.cz/nekulturni-cervenec/"&gt;Orlík&lt;/a&gt;, výlet do &lt;a href="http://janie.8bit.cz/kde-to-mame-nejradsi/"&gt;Mikulova&lt;/a&gt;, výlet na Hády, Festival On the Road v Lázních Bohdaneč, &lt;a href="http://www.nakoleon.cz/"&gt;Nakoleon&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/burcakovy-pochod-v-mutenicich/"&gt;burčákový pochod&lt;/a&gt; v Mutěnicích, Královopolka na Semilasse, geocachingový lov Substance, výlet na Holednou, kvalifikace Tmou, koncert Tubabu, výstava betlémů a Moravská vesnička u Kapucínů.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Zúčastnil jsem se několika legendárních párty: L'Colaudación da Plevíneux, &lt;a href="http://janie.jestrab.net/nekulturni-duben/"&gt;kolaudačka u Míši&lt;/a&gt; na Provazníkové, &lt;a href="http://janie.jestrab.net/nekulturni-duben/"&gt;Jarní interaktivní piknik&lt;/a&gt; na Kraví hoře, &lt;a href="http://janie.jestrab.net/nekulturni-cerven/"&gt;párty v Pubu&lt;/a&gt;, &lt;a href="http://janie.jestrab.net/nekulturni-cervenec/"&gt;Fondue párty&lt;/a&gt;, promoce bratranců Ládi a Honzy, Vánoční besídka u Milíčů, Vánoční večírek uLikeIT, Silvestr na Provazníkové.&lt;/p&gt;
+&lt;p&gt;Zúčastnil jsem se několika legendárních párty: L'Colaudación da Plevíneux, &lt;a href="http://janie.8bit.cz/nekulturni-duben/"&gt;kolaudačka u Míši&lt;/a&gt; na Provazníkové, &lt;a href="http://janie.8bit.cz/nekulturni-duben/"&gt;Jarní interaktivní piknik&lt;/a&gt; na Kraví hoře, &lt;a href="http://janie.8bit.cz/nekulturni-cerven/"&gt;párty v Pubu&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/nekulturni-cervenec/"&gt;Fondue párty&lt;/a&gt;, promoce bratranců Ládi a Honzy, Vánoční besídka u Milíčů, Vánoční večírek uLikeIT, Silvestr na Provazníkové.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Navštívil jsem také nějaké IT konference a setkání: sraz mobilních vývojářů &lt;a href="https://twitter.com/zitbrmo"&gt;BrMo&lt;/a&gt;, Pythoní sraz &lt;a href="http://python.cz/#pyvo"&gt;PyVo&lt;/a&gt;, startupovou akci &lt;a href="http://www.starcubeshow.cz/"&gt;Starcube Show&lt;/a&gt;, Google festival &lt;a href="http://www.devfest.cz/"&gt;DevFest&lt;/a&gt; a přehlídku mobilních aplikací &lt;a href="http://www.mediar.cz/appparade/"&gt;AppParade&lt;/a&gt;. Jedenáctou AppParade vyhrála aplikace Qool Mini, kterou jsem vyvíjel.&lt;/p&gt;
@@ -354,100 +425,4 @@
 &lt;/ul&gt;</summary></entry><entry><title>Znovuzrození Jestřáblogu</title><link href="http://blog.petrnohejl.cz/znovuzrozeni-jestrablogu" rel="alternate"></link><updated>2014-02-02T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2014-02-02:znovuzrozeni-jestrablogu</id><summary type="html">&lt;p&gt;Před nedávnem jsem narazil na geniální nástroj &lt;a href="http://getpelican.com"&gt;Pelican&lt;/a&gt;. Navedl mě na něj kamarád, který ho používá na &lt;a href="http://honzajavorek.cz/blog/"&gt;svém blogu&lt;/a&gt;. Tenhleten Pelikán mě natolik uchvátil, že jsem se rozhodl ho použít také pro svůj blog. Odteďka tedy můj blog pohání dva ptáci! Pelikán + Jestřáb = Jestřáblog.&lt;/p&gt;
 &lt;p&gt;Pelikán je open-source blogovací systém pro geeky a je napsán v Pythonu. Můj blog je vlastně taková malá zoo - máme tady hroznýše, jestřába a pelikána. Pelikán umí skoro všechno co běžné blogy: kategorie, tagy, komentáře, stránky, Atom/RSS, zvýraznění syntaxe atd. Celé to funguje na jednoduchém principu - napíšu článek do textového souboru, zavolám Pelikána, ten mi vyrobí statické HTML stránky a já ty stránky nahraju na webový hosting. Pelikán ve spojení s technologiemi &lt;a href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;, &lt;a href="http://jinja.pocoo.org/"&gt;Jinja2&lt;/a&gt; a &lt;a href="http://pages.github.com/"&gt;GitHub Pages&lt;/a&gt; utváří krásný a elegantní blogovací systém. Sbohem Wordpresse!&lt;/p&gt;
 &lt;p&gt;Pelikán má jednu slabinu - nemá žádnou &lt;a href="https://github.com/getpelican/pelican-themes"&gt;existující šablonu&lt;/a&gt;, která by mi 100% vyhovovala. Nyní používám &lt;a href="https://github.com/DandyDev/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt;, ale časem bych si chtěl napsat vlastní.&lt;/p&gt;
-&lt;p&gt;Spolu s přechodem na Pelikána jsem změnil i adresu blogu z původní blog.jestrab.net na blog.petrnohejl.cz. Zdrojáky Jestřáblogu jsou na &lt;a href="https://github.com/petrnohejl/Blog"&gt;GitHubu&lt;/a&gt;.&lt;/p&gt;</summary></entry><entry><title>Rok 2012</title><link href="http://blog.petrnohejl.cz/rok-2012" rel="alternate"></link><updated>2013-03-22T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2013-03-22:rok-2012</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;Stal jsem se OSVČ, zřídil si živnost a začal se profesionálně
-    věnovat vývoji mobilních aplikací. Ukončil jsem doktorské studium na
-    &lt;a href="http://www.fit.vutbr.cz/"&gt;FIT&lt;/a&gt; &lt;a href="http://www.vutbr.cz/"&gt;VUT&lt;/a&gt;, jelikož mě to nebavilo. Ukončil jsem po 3.5 letech
-    spolupráci se společností &lt;a href="https://www.avito.cz/"&gt;Avito&lt;/a&gt; a navázal novou spolupráci s
-    firmou &lt;a href="http://www.ulikeit.cz"&gt;uLikeIT&lt;/a&gt;. Nechal jsem si vyrobit nové logo a vizitky.&lt;/li&gt;
-&lt;li&gt;Ve spolupráci s APM Company jsme rozjeli zbrusu novou verzi
-    &lt;a href="http://slevolapka.cz"&gt;Slevolapky&lt;/a&gt;, kterou pohání vlastní agregátor. Během několika
-    měsíců jsme společně s ostatními kolegy vyprodukovali nové mobilní
-    aplikace pro Android, iOS, Windows Phone, Symbian/Meego. Se
-    Slevolapkou jsme se zúčastnili několika soutěží a vyhráli jsme první
-    místo na GUG Camp Google IO Extended Prague 2012 a další první místo
-    na soutěži &lt;a href="http://www.mediar.cz/osmou-prehlidku-mobilnich-aplikaci-appparade-vyhral-inteligentni-lapac-slev-slevolapka/"&gt;AppParade #8&lt;/a&gt;, kterou pořádá Médiář.cz.&lt;/li&gt;
-&lt;li&gt;Vyprodukoval jsem několik nových mobilních appek: &lt;a href="https://play.google.com/store/apps/details?id=net.jestrab.slevolapka"&gt;Slevolapka&lt;/a&gt;
-    (inteligentní lapač slev), &lt;a href="https://github.com/petrnohejl/Zitkino-Android"&gt;Žít Kino&lt;/a&gt; (program kin), &lt;a href="https://play.google.com/store/apps/details?id=cz.axunet.bazartip"&gt;Bazar Tip&lt;/a&gt;
-    (vyhledávač inzerátů, pro firmu Axunet), &lt;a href="https://play.google.com/store/apps/details?id=cz.itesco.tesco"&gt;Tesco&lt;/a&gt; (nabídka produktů
-    a služeb, pro firmu uLikeIT s.r.o), &lt;a href="https://play.google.com/store/apps/details?id=com.gamedatingapp.thegame"&gt;The Game&lt;/a&gt; (seznamování formou
-    hry, pro firmu uLikeIT s.r.o), &lt;a href="https://play.google.com/store/apps/details?id=cz.slevomat"&gt;Slevomat&lt;/a&gt; (slevový server, pro
-    firmu uLikeIT s.r.o), Alimpex (komplexní e-shop v tabletu, pro firmu
-    uLikeIT s.r.o).&lt;/li&gt;
-&lt;li&gt;Začal jsem si tvořit sadu šablon a nástrojů pro Android vývoj:
-    &lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities"&gt;Android Templates And Utilities&lt;/a&gt;. Jedná se o open source projekt.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://speakerdeck.com/petrnohejl/jak-vyrobit-aplikaci-pro-android"&gt;Přednášel&lt;/a&gt; jsem na Android hackatonu (Android Dev Camp 2012).&lt;/li&gt;
-&lt;li&gt;Navštívil jsem několik IT konferencí. Účastnil jsem se setkání
-    mobilních vývojářů &lt;a href="https://twitter.com/zitbrmo"&gt;BrMo&lt;/a&gt;, Pythoní sraz &lt;a href="https://twitter.com/naPyVo"&gt;PyVo&lt;/a&gt;, &lt;a href="http://www.starcubeshow.cz/"&gt;Starcube Show&lt;/a&gt;, &lt;a href="http://www.mdevcamp.cz/"&gt;mDevCamp&lt;/a&gt;, Google IO Extended, &lt;a href="http://www.devfest.cz/"&gt;DevFest&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Oslavili jsme &lt;a href="http://janie.jestrab.net/gaudeamus-igitur/"&gt;Janči promoci&lt;/a&gt; u Orla v Kroměříži. Afterpárty byla
-    u tetičky na zahradě.&lt;/li&gt;
-&lt;li&gt;Účastnil jsem se několika mega párty: Káti 30tiny, grilování na
-    Lesné, Míši narozky v Krasoňově, FIT sraz, Vánoční besídka u Milíčů,
-    &lt;a href="http://janie.jestrab.net/silvestr-v-ostrave/"&gt;Silvestr v Ostravě&lt;/a&gt; a několik herních sessions. S uLikeIT jsem
-    byl v lanovém centru, na letní gril párty a akci sněz a vypij co
-    můžeš za 3 hodiny.&lt;/li&gt;
-&lt;li&gt;Zúčastnil jsem se Společenského večera (plesu) v Příbrami a &lt;a href="http://janie.jestrab.net/ples-esf-3-3-2012-divadlo-husa-na-provazku/"&gt;plesu ESF&lt;/a&gt; v Brně v divadle Husa na provázku. Navštívili jsme tradiční
-    &lt;a href="http://janie.jestrab.net/filmovy-festival-fi-17-5-2012-brno/"&gt;filmový festival FI MUNI&lt;/a&gt;. Také jsme byli na &lt;a href="http://janie.jestrab.net/muzejni-noc-19-5-2012-brno/"&gt;Brněnské muzejní noci&lt;/a&gt; a Ignis Brunensis. Na podzim jsme opět zkoušeli kvalifikaci
-    do šifrovací hry Tmou, ale bohužel jsme se nedostali dál.&lt;/li&gt;
-&lt;li&gt;Navštívil jsem několik koncertů: Poletíme na Musilce, &lt;a href="http://janie.jestrab.net/robert-balzar-trio-28-10-2012-brno/"&gt;Robert Balzar Trio&lt;/a&gt; v Alterně, &lt;a href="http://janie.jestrab.net/rudy-linka-trio-18-11-2012-brno/"&gt;Rudy Linka Trio&lt;/a&gt; v Alterně, Štěpán Rak,
-    &lt;a href="http://janie.jestrab.net/javory-8-12-2012-brno/"&gt;Javory&lt;/a&gt; na Vánočních trzích na výstavišti.&lt;/li&gt;
-&lt;li&gt;Byli jsme s Jančou na &lt;a href="http://janie.jestrab.net/pojd-ukazu-ti-cestu-rajem-vol-1/"&gt;dovolené v Českém Ráji&lt;/a&gt;. Navštívili jsme
-    nejromantičtější město světa &lt;a href="http://janie.jestrab.net/category/francouzske-toulky/"&gt;Paříž&lt;/a&gt;. Byli jsme si &lt;a href="http://janie.jestrab.net/lyzovacka-na-moninci/"&gt;zalyžovat na Monínci&lt;/a&gt;. Dále jsme uspořádali několik menších výletů: na
-    &lt;a href="http://janie.jestrab.net/prvni-jarni-vylet-na-babu/"&gt;Babu&lt;/a&gt;, do &lt;a href="http://janie.jestrab.net/cyklovylet-do-rajhradu/"&gt;Rajhradu na kole&lt;/a&gt;, do &lt;a href="http://janie.jestrab.net/vylet-do-lednice/"&gt;Lednice&lt;/a&gt; vlakem, &lt;a href="http://janie.jestrab.net/v-korycanech/"&gt;do Koryčan za Frantou&lt;/a&gt;, do &lt;a href="http://janie.jestrab.net/vylet-do-tisnova/"&gt;Tišnova na rozhlednu a klášter&lt;/a&gt; a do
-    &lt;a href="http://janie.jestrab.net/po-stopach-bitvy-u-slavkova/"&gt;Slavkova na muzeum&lt;/a&gt; o té slavné bitvě.&lt;/li&gt;
-&lt;li&gt;Také jsme navštívili nově zrekonstruovanou &lt;a href="http://janie.jestrab.net/ve-vile-tugendhat/"&gt;vilu Tugendhat&lt;/a&gt; a
-    veletrh Mobitex, kde jsme si vyhlídli nový &lt;a href="http://www.meuble.sk/"&gt;nábytek&lt;/a&gt; do obýváku.&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://janie.jestrab.net/kterak-jsme-malovali-zed/"&gt;Namalovali jsme zeď&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Pořídil jsem si novou zrcadlovku, o kterou jsme málem přišli v
-    pařížském metru. Máme novou &lt;a href="http://www.sedackyphase.cz/"&gt;sedačku&lt;/a&gt;, sedací pytel a koberec v
-    obýváku. Rovněž jsem si pořídil nové lyže a židli &lt;a href="http://www.zdravotni-zidle.cz"&gt;Spinalis&lt;/a&gt; pro
-    zdravé sezení.&lt;/li&gt;
-&lt;li&gt;Těsně před dovolenou nám odtahli auto kvůli blokovému čištění.&lt;/li&gt;
-&lt;li&gt;Dosáhl jsem jubilea 400 kešek.&lt;/li&gt;
-&lt;li&gt;Začali jsme cvičit Milíčjógu s Péťou.&lt;/li&gt;
-&lt;li&gt;Objevil jsem nový seriál a knihu Game of Thrones.&lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>Vánoční polévka z rybích vnitřností</title><link href="http://blog.petrnohejl.cz/vanocni-polevka-z-rybich-vnitrnosti" rel="alternate"></link><updated>2013-01-15T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2013-01-15:vanocni-polevka-z-rybich-vnitrnosti</id><summary type="html">&lt;p&gt;Vánoce jsou sice už pryč, ale to nevadí, protože polévka z rybích
-vnitřností se dá uvařit i v létě. Pravdou ale je, že nechutná tak
-výborně jako o těch Vánocích. Recept na tuto polévku jsem získal od
-maminky, která jí má zase od babičky. Takže je to takový rodinný recept.
-Polévku vaříme pravidelně vždy na Štědrý den a řadím jí mezi svoje
-nejoblíbenější. Poprvé jsem jí vařil o loňských Vánocích, ale nebyla
-stoprocentní, protože v ní chybělo mlíčí. Letos už jsem jí uvařil se
-vším všudy a docela se povedla. Měli jsme štěstí na vnitřnosti. &lt;a href="http://www.rybarna.cz/"&gt;Paní Šopíková&lt;/a&gt; s neznámým myslivcem nám nabídli podpultové zboží, které
-bylo určeno k zamražení. Pojďme si tedy říct, co budeme při vaření
-potřebovat na 4 porce polévky:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;1 mrkev&lt;/li&gt;
-&lt;li&gt;1 kořenová petržel&lt;/li&gt;
-&lt;li&gt;1 cibule&lt;/li&gt;
-&lt;li&gt;1 menší kousek celeru&lt;/li&gt;
-&lt;li&gt;1 menší kousek póru&lt;/li&gt;
-&lt;li&gt;kadeřavá petržel&lt;/li&gt;
-&lt;li&gt;200-400 g kapřích vnitřností - jikry a mlíčí&lt;/li&gt;
-&lt;li&gt;veka&lt;/li&gt;
-&lt;li&gt;hladká mouka&lt;/li&gt;
-&lt;li&gt;máslo&lt;/li&gt;
-&lt;li&gt;voda&lt;/li&gt;
-&lt;li&gt;sůl&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Nejprve nadrobno pokrájíme všechnu zeleninu, tedy mrkev, petržel,
-cibuli, celer a pórek. Vložíme do hrnce, přilijeme trochu vody, aby byla
-zelenina ponořená, osolíme a dáme vařit. Vody nalijeme opravdu málo,
-protože jí později ještě budeme dolévat spolu s vnitřnostmi. Polévka se
-celkem bude vařit cca 30-45 minut. Během vaření je dobré hrnec občas
-promíchat.&lt;/p&gt;
-&lt;p&gt;Ve zvlášť kastrůlku několikrát opereme rybí vnitřnosti. Poté přidáme
-vodu, osolíme, dáme vařit cca na 10 minut a mícháme, aby se nám
-vnitřnosti nepřipálily. Vnitřnosti se při vaření srazí a voda zbělá.
-Mlíčí zbělá a jikry zežloutnou. Když jsou vnitřnosti uvařené, lehce
-ochutnáme, jestli není voda hořká kvůli vyteklé žluči. Pokud je to v
-pořádku, nalijeme vnitřnosti i s vodou do polévky a rozdrtíme hrudky s
-mlíčím a jikrami lžící. Nejlepší je rozdrtit to ještě v tom kastrůlku.&lt;/p&gt;
-&lt;p&gt;Připravíme si na pánvi jíšku. Smícháme kus másla s cca 2-4 lžícemi
-mouky. Následně přidáme jíšku do polévky, převaříme a promícháme.
-Ochutnáme výsledný pokrm a případně ještě dochutíme běžnými kuchyňskými
-ochucovadly. Nakonec osmažíme nakrájenou veku na pánvičce s máslem.
-Dáváme zvýšený pozor, aby se nespálila. Vznikne nám křupavá houstička.&lt;/p&gt;
-&lt;p&gt;Polévka je hotová a my můžeme servírovat s osmaženou houstičkou a trsem
-kadeřavé petrželky. Až se polévka uleží, bude ještě lepší. Dobrou chuť!&lt;/p&gt;
-&lt;p&gt;&lt;img alt="Vánoční polévka z rybích vnitřností" src="http://blog.petrnohejl.cz/images/vanocni-polevka-z-rybich-vnitrnosti.jpg" /&gt;&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;Spolu s přechodem na Pelikána jsem změnil i adresu blogu z původní blog.jestrab.net na blog.petrnohejl.cz. Zdrojáky Jestřáblogu jsou na &lt;a href="https://github.com/petrnohejl/Blog"&gt;GitHubu&lt;/a&gt;.&lt;/p&gt;</summary></entry></feed>

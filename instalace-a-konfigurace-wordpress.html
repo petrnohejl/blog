@@ -169,14 +169,14 @@ potřeby - určitě se ještě bude v budoucnu hodit.</p>
 <li>Vytvoříme základní strukturu webu: kategorie, stránky, homepage, články.</li>
 </ol>
 <h2 id="konfiguracni-soubor-wp-configphp">Konfigurační soubor wp-config.php</h2>
-<div class="highlight"><pre><span class="x">define(&#39;WPLANG&#39;, &#39;cs_CZ&#39;); // language</span>
+<div class="highlight"><pre><span></span><span class="x">define(&#39;WPLANG&#39;, &#39;cs_CZ&#39;); // language</span>
 <span class="x">define(&#39;WP_POST_REVISIONS&#39;, 0); // disable revisions</span>
 <span class="x">define(&#39;AUTOSAVE_INTERVAL&#39;, 86400 ); // disable autosave by long interval (in seconds)</span>
 </pre></div>
 
 
 <h2 id="odstraneni-revizi-z-databaze">Odstranění revizí z databáze</h2>
-<div class="highlight"><pre><span class="k">DELETE</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span>
+<div class="highlight"><pre><span></span><span class="k">DELETE</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span>
 <span class="k">FROM</span> <span class="n">wp_posts</span> <span class="n">a</span>
 <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">wp_term_relationships</span> <span class="n">b</span> <span class="k">ON</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">ID</span> <span class="o">=</span> <span class="n">b</span><span class="p">.</span><span class="n">object_id</span><span class="p">)</span>
 <span class="k">LEFT</span> <span class="k">JOIN</span> <span class="n">wp_postmeta</span> <span class="n">c</span> <span class="k">ON</span> <span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="n">ID</span> <span class="o">=</span> <span class="n">c</span><span class="p">.</span><span class="n">post_id</span><span class="p">)</span>
@@ -185,7 +185,7 @@ potřeby - určitě se ještě bude v budoucnu hodit.</p>
 
 
 <h2 id="soubor-htaccess">Soubor .htaccess</h2>
-<div class="highlight"><pre><span class="nb">Options</span> -Indexes
+<div class="highlight"><pre><span></span><span class="nb">Options</span> -Indexes
 
 <span class="nb">RewriteEngine</span> <span class="k">On</span>
 <span class="nb">RewriteBase</span> /
@@ -198,7 +198,7 @@ potřeby - určitě se ještě bude v budoucnu hodit.</p>
 
 <h2 id="soubor-htaccess-pro-adresar-admin">Soubor .htaccess pro adresář admin</h2>
 <p>Soubor <em>.htaccess</em>:</p>
-<div class="highlight"><pre><span class="nb">AuthUserFile</span> <span class="sx">/home/www/com_example/www/wp-admin/.htpasswd</span>
+<div class="highlight"><pre><span></span><span class="nb">AuthUserFile</span> <span class="sx">/home/www/com_example/www/wp-admin/.htpasswd</span>
 <span class="nb">AuthType</span> Basic
 <span class="nb">AuthName</span> <span class="s2">&quot;Access to Wordpress admin&quot;</span>
 <span class="nb">Order</span> Deny,Allow
@@ -209,7 +209,7 @@ potřeby - určitě se ještě bude v budoucnu hodit.</p>
 
 
 <p>Soubor <em>.htpasswd</em>, obsahující login "test", heslo "test":</p>
-<div class="highlight"><pre>test:$apr1$YGH0twy8$JeDHWGMP41wXRaxTFgqtr1
+<div class="highlight"><pre><span></span>test:$apr1$YGH0twy8$JeDHWGMP41wXRaxTFgqtr1
 </pre></div>
 
 
@@ -217,7 +217,7 @@ potřeby - určitě se ještě bude v budoucnu hodit.</p>
 <p>Úprava souboru <em>functions.php</em> v šabloně twentyeleven, která odstraní z
 hlavního menu v administraci některé položky pro redaktory (pro admina
 jsou zachovány):</p>
-<div class="highlight"><pre><span class="x">// remove unnecessary menus</span>
+<div class="highlight"><pre><span></span><span class="x">// remove unnecessary menus</span>
 <span class="x">// http://wordpress.stackexchange.com/questions/9505/hide-admin-menus-per-role-in-wordpress#answer-9581</span>
 <span class="x">function remove_menus()</span>
 <span class="x">{</span>
@@ -248,43 +248,43 @@ jsou zachovány):</p>
 
 <p>Úprava souboru <em>style.css</em> v šabloně twentyeleven, která zmenší a
 přeuspořádá hlavičku webu:</p>
-<div class="highlight"><pre><span class="nf">#page</span> <span class="p">{</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">1em</span> <span class="k">auto</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="nn">#page</span> <span class="p">{</span>
+    <span class="nb">margin</span><span class="o">:</span> <span class="m">1em</span> <span class="nb">auto</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#site-title</span> <span class="p">{</span>
-    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="m">20px</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
+<span class="nn">#site-title</span> <span class="p">{</span>
+    <span class="nb">float</span><span class="o">:</span> <span class="nb">left</span><span class="p">;</span>
+    <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nb">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="m">20px</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#site-description</span> <span class="p">{</span>
-    <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
-    <span class="k">clear</span><span class="o">:</span> <span class="k">none</span><span class="p">;</span>
-    <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
-    <span class="k">font-weight</span><span class="o">:</span> <span class="k">bold</span><span class="p">;</span>
-    <span class="k">line-height</span><span class="o">:</span> <span class="m">36px</span><span class="p">;</span>
-    <span class="k">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
-    <span class="k">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="m">0</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
+<span class="nn">#site-description</span> <span class="p">{</span>
+    <span class="nb">float</span><span class="o">:</span> <span class="nb">left</span><span class="p">;</span>
+    <span class="nb">clear</span><span class="o">:</span> <span class="nb">none</span><span class="p">;</span>
+    <span class="nb">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
+    <span class="nb">font-weight</span><span class="o">:</span> <span class="nb">bold</span><span class="p">;</span>
+    <span class="nb">line-height</span><span class="o">:</span> <span class="m">36px</span><span class="p">;</span>
+    <span class="nb">padding</span><span class="o">:</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nb">margin</span><span class="o">:</span> <span class="m">20px</span> <span class="m">0</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
 
 <span class="p">}</span>
-<span class="nf">#site-title</span> <span class="nt">a</span> <span class="p">{</span>
-    <span class="k">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
+<span class="nn">#site-title</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="nb">font-size</span><span class="o">:</span> <span class="m">24px</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#branding</span> <span class="nf">#searchform</span> <span class="p">{</span>
-    <span class="k">top</span><span class="o">:</span> <span class="m">22px</span><span class="p">;</span>
+<span class="nn">#branding</span> <span class="nn">#searchform</span> <span class="p">{</span>
+    <span class="nb">top</span><span class="o">:</span> <span class="m">22px</span><span class="p">;</span>
 <span class="p">}</span>
-<span class="nf">#branding</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="k">clear</span><span class="o">:</span> <span class="k">both</span><span class="p">;</span>
+<span class="nn">#branding</span> <span class="nt">img</span> <span class="p">{</span>
+    <span class="nb">clear</span><span class="o">:</span> <span class="nb">both</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 
 
 <p>Úprava souboru <em>comment-reply-notification.php</em> v pluginu Comment Reply
 Notification, která počeští checkbox ve formuláři:</p>
-<div class="highlight"><pre>function addreplyidformfield(){
+<div class="highlight"><pre><span></span>function addreplyidformfield(){
     if($this-&gt;options[&#39;mail_notify&#39;] === &#39;parent_check&#39;)
-        echo &#39;<span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">id=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">value=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">checked=</span><span class="s">&quot;checked&quot;</span> <span class="na">style=</span><span class="s">&quot;width: auto;&quot;</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">&quot;comment_mail_notify&quot;</span><span class="nt">&gt;</span>&#39; . __(&#39;Upozornit e-mailem, pokud sem někdo přidá nový komentář&#39;, &#39;comment-reply-notification&#39;) . &#39;<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>&#39;;
+        echo &#39;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">checked</span><span class="o">=</span><span class="s">&quot;checked&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: auto;&quot;</span> <span class="p">/&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;comment_mail_notify&quot;</span><span class="p">&gt;</span>&#39; . __(&#39;Upozornit e-mailem, pokud sem někdo přidá nový komentář&#39;, &#39;comment-reply-notification&#39;) . &#39;<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&#39;;
     elseif($this-&gt;options[&#39;mail_notify&#39;] === &#39;parent_uncheck&#39;)
-        echo &#39;<span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">id=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">value=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">style=</span><span class="s">&quot;width: auto;&quot;</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">&quot;comment_mail_notify&quot;</span><span class="nt">&gt;</span>&#39; . __(&#39;Upozornit e-mailem, pokud sem někdo přidá nový komentář&#39;, &#39;comment-reply-notification&#39;) . &#39;<span class="nt">&lt;/label&gt;&lt;/p&gt;</span>&#39;;
+        echo &#39;<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;checkbox&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">value</span><span class="o">=</span><span class="s">&quot;comment_mail_notify&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: auto;&quot;</span> <span class="p">/&gt;&lt;</span><span class="nt">label</span> <span class="na">for</span><span class="o">=</span><span class="s">&quot;comment_mail_notify&quot;</span><span class="p">&gt;</span>&#39; . __(&#39;Upozornit e-mailem, pokud sem někdo přidá nový komentář&#39;, &#39;comment-reply-notification&#39;) . &#39;<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>&#39;;
     else{}
 }
 </pre></div>
@@ -292,15 +292,15 @@ Notification, která počeští checkbox ve formuláři:</p>
 
 <p>Úprava souboru <em>class.resize.php</em> v pluginu Resize Image After Upload,
 která změní kompresní poměr obrázků:</p>
-<div class="highlight"><pre><span class="x">function saveImage($numQuality = 75){</span>
+<div class="highlight"><pre><span></span><span class="x">function saveImage($numQuality = 75){</span>
 <span class="x">...</span>
 </pre></div>
 
 
 <p>Úprava souboru <em>sociable.css</em> v pluginu Sociable, která opraví rozhozený
 layout u Facebook tlačítka:</p>
-<div class="highlight"><pre><span class="nf">#Facebook_Counter</span> <span class="nt">iframe</span> <span class="p">{</span>
-    <span class="k">width</span><span class="o">:</span><span class="m">128px</span> <span class="cp">!important</span><span class="p">;</span>
+<div class="highlight"><pre><span></span><span class="nn">#Facebook_Counter</span> <span class="nt">iframe</span> <span class="p">{</span>
+    <span class="nb">width</span><span class="o">:</span><span class="m">128px</span> <span class="cp">!important</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
             </div>
@@ -354,7 +354,7 @@ layout u Facebook tlačítka:</p>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 Petr Nohejl
+         <div class="col-xs-10">&copy; 2017 Petr Nohejl
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>

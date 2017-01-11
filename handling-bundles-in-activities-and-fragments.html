@@ -80,7 +80,7 @@ Jestřáblog            </a>
 <footer class="post-info">
     <span class="label label-default">Date</span>
     <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-03-30T00:00:00+01:00"> 30.3.2014</time>
+        <i class="fa fa-calendar"></i><time datetime="2014-03-30T00:00:00+01:00"> 30.03.2014</time>
     </span>
 
 
@@ -93,7 +93,7 @@ Jestřáblog            </a>
 <p>When you are creating a new instance of Activity via Intent, you can pass some extra data to the Activity. Data are stored in Bundle and can be retrieved by calling <code>getIntent().getExtras()</code>. It's a good practise to implement static method <code>newIntent()</code> which returns a new Intent that can be used to start the Activity. This way you have compile time checking for the arguments passed to the Activity. This pattern is suitable for Service and Broadcast as well.</p>
 <p>Bundle is also used if the Activity is being re-initialized (e.g. because of configuration changes) for keeping the current state of the instance. You can supply some data in <code>onSaveInstanceState(Bundle)</code> and retrieve them back in <code>onCreate(Bundle)</code> method or <code>onRestoreInstanceState(Bundle)</code>. Main difference between these methods is that <code>onRestoreInstanceState(Bundle)</code> is called after <code>onStart()</code>. Sometimes it's convenient to restore data here after all of the initialization has been done. Another purpose could be allowing subclasses to decide whether to use your default implementation.</p>
 <p>See example code below. Note that <code>EXTRA_PRODUCT_ID</code> constant is public. That's because we could need it in a Fragment encapsulated in this Activity.</p>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleActivity</span> <span class="kd">extends</span> <span class="n">Activity</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleActivity</span> <span class="kd">extends</span> <span class="n">Activity</span>
 <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">EXTRA_PRODUCT_ID</span> <span class="o">=</span> <span class="s">&quot;product_id&quot;</span><span class="o">;</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">EXTRA_PRODUCT_TITLE</span> <span class="o">=</span> <span class="s">&quot;product_title&quot;</span><span class="o">;</span>
@@ -170,7 +170,7 @@ Jestřáblog            </a>
 <p>Fragment state can be saved using <code>onSaveInstanceState(Bundle)</code> method. It is similar to the Activity. Data can be restored in <code>onCreate(Bundle)</code>, <code>onCreateView(LayoutInflater, ViewGroup, Bundle)</code>, <code>onActivityCreated(Bundle)</code> or <code>onViewStateRestored(Bundle)</code> methods.</p>
 <p>Fragment has also access to the Intent extras which were passed during creating the Activity instance. You can get this extra data by calling <code>getActivity().getIntent().getExtras()</code>.</p>
 <p>See example code below.</p>
-<div class="highlight"><pre><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleFragment</span> <span class="kd">extends</span> <span class="n">Fragment</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleFragment</span> <span class="kd">extends</span> <span class="n">Fragment</span>
 <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">ARGUMENT_PRODUCT_ID</span> <span class="o">=</span> <span class="s">&quot;product_id&quot;</span><span class="o">;</span>
 
@@ -295,7 +295,7 @@ Jestřáblog            </a>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 Petr Nohejl
+         <div class="col-xs-10">&copy; 2017 Petr Nohejl
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
