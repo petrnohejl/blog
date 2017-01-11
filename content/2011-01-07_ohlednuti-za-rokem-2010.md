@@ -36,13 +36,13 @@ Category: Jestřábí svět
     oblíbeného spisovatele :D.
 -   Získal jsem nové kamarádky z Taiwanu a Hong-Kongu. Po studiích bych
     tam chtěl vycestovat.
--   Byl jsem s rodinou a Janie v [Itálii](http://janie.jestrab.net/prazdniny-v-italii/). Nejdřív u moře v Rosolina
+-   Byl jsem s rodinou a Janie v [Itálii](http://janie.8bit.cz/prazdniny-v-italii/). Nejdřív u moře v Rosolina
     Mare, pak v Benátkách, Roveretu a Lago di Garda.
 -   Splul jsem Vltavu na pálavě s Janie a kamarádama.
 -   Účastnil jsem se několika výletů: do Mikulova za vínem, do
-    [Obřan](http://janie.jestrab.net/mezinarodni-vylet-do-obran/), na Hády, na Macochu, do Kroměříže, do Rožnova a na
+    [Obřan](http://janie.8bit.cz/mezinarodni-vylet-do-obran/), na Hády, na Macochu, do Kroměříže, do Rožnova a na
     promoce bratrance Jirky na Hluboké.
--   Pořádal jsem [Velikonoční](http://janie.jestrab.net/velikonocni-piknik-v-luzankach-vol-2/) a Burčákový piknik a dále [Závody v košíku]({filename}2010-04-03_zavody-v-kosiku.md), které se nakonec kvůli návštěvě policajtů nekonaly.
+-   Pořádal jsem [Velikonoční](http://janie.8bit.cz/velikonocni-piknik-v-luzankach-vol-2/) a Burčákový piknik a dále [Závody v košíku]({filename}2010-04-03_zavody-v-kosiku.md), které se nakonec kvůli návštěvě policajtů nekonaly.
 -   Účastnil jsem se několika legendárních párty: předloňský Silvestr na
     téma oldies, loňský Silvestr na téma léto, PenoFercoBration v
     Lékárně, Péťovy narozeniny, Janie narozeniny na Nerudově v crazy
@@ -50,13 +50,13 @@ Category: Jestřábí svět
     Žankovy a Cínovy narozky na Palačáku.
 -   Navštívil jsem řadu koncertů: Švihadlo, Xavier Baumaxa a Honza
     Homola, Tokamak, Joe Bar Blues Street, Poletíme?, Cowhill, Louis
-    Pasteur, Panenka vyzutá a další. [Joe Bar Blues Street](http://janie.jestrab.net/joe-bar-blues-street-stara-pekarna-brno-2-9-2010/) mi dokonce
+    Pasteur, Panenka vyzutá a další. [Joe Bar Blues Street](http://janie.8bit.cz/joe-bar-blues-street-stara-pekarna-brno-2-9-2010/) mi dokonce
     osobně věnovali písničku 'Prašivej pes'.
 -   Navštívil jsem několik hudebních festivalů: Čarodějáles v Brně,
-    Realbeat v Žízníkově a [České Hrady v Rožmberku](http://janie.jestrab.net/ceske-hrady-cz-rozmberk-nad-vltavou-30-31-7/).
+    Realbeat v Žízníkově a [České Hrady v Rožmberku](http://janie.8bit.cz/ceske-hrady-cz-rozmberk-nad-vltavou-30-31-7/).
 -   Navštívil jsem Muzejní noc v Brně a Praze, Noc vědců v Brně,
     tradiční festival ohňostrojů [Ignis Brunensis](http://www.ignisbrunensis.cz/) v Brně, [filmový
-    festival na FI MUNI](http://festival.fi.muni.cz/), [Medical fair](http://janie.jestrab.net/medical-fair-19-22-10-brno/), výstavu [Designblok](http://janie.jestrab.net/designblok-praha-5-10-10-2010/) v
+    festival na FI MUNI](http://festival.fi.muni.cz/), [Medical fair](http://janie.8bit.cz/medical-fair-19-22-10-brno/), výstavu [Designblok](http://janie.8bit.cz/designblok-praha-5-10-10-2010/) v
     Praze a výstavu [Šangri-la]({filename}2010-11-13_sangri-la.md).
 -   Účastnil jsem se Maturitního plesu bratrance Ládi v Praze v Národním
     domě, Plesu SU FIT na Semilasse, Plesu Gymnázia Kroměříž a několika
