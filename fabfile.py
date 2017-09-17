@@ -42,7 +42,7 @@ def regenerate():
 
 def serve():
 	"""Run server"""
-	print 'Serving website on http://localhost:8000/'
+	fastprint('Serving website on http://localhost:8000/', end='\n')
 	local('cd {deploy_path} && python -m SimpleHTTPServer 8000'.format(**env))
 
 
@@ -66,7 +66,7 @@ def commit_master():
 			local('git commit -m "Publish"')
 		#local('git push origin master')
 
-	print '\n\nIgnored files:'
+	fastprint('\n\nIgnored files:', end='\n')
 	local('git clean -ndX')
 
 
@@ -90,14 +90,15 @@ def publish():
 	"""Push web sources, build and deploy website"""
 	commit_master()
 	commit_ghp()
-	print u"Don't forget to push both branches!"
+	fastprint(u"Don't forget to push both branches!", end='\n')
 
 
 def new(title=None):
 	"""Create new article template"""
 
 	if not title:
-		title = raw_input('>>> Enter title: ')
+		fastprint('>>> Enter title: ')
+		title = prompt('')
 		title = title.decode('cp852')
 	else:
 		title = title.decode('cp1250')
@@ -111,8 +112,8 @@ def new(title=None):
 	with open(path, 'w') as f:
 		f.write(content.encode('utf8'))
 
-	print u'Successfully created new article "{0}" in "{1}"'.format(title, path)
-	
+	fastprint(u'Successfully created new article "{0}" in "{1}"'.format(title, path), end='\n')
+
 
 def __slugify(string, underscore=False):
 	if not isinstance(string, unicode):
