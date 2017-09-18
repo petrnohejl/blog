@@ -52,8 +52,12 @@ PAGE_URL = 'pages/{slug}'
 PAGE_SAVE_AS = 'pages/{slug}.html'
 PAGE_LANG_URL = 'pages/{slug}-{lang}'
 PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}.html'
+CATEGORY_URL = 'category/{slug}'
+CATEGORY_SAVE_AS = 'category/{slug}.html'
 YEAR_ARCHIVE_URL = 'archive/{date:%Y}/index'
 YEAR_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/index.html'
+ARCHIVES_SAVE_AS = 'archive.html'
+CATEGORIES_SAVE_AS = 'categories.html'
 TAG_SAVE_AS = False
 TAGS_SAVE_AS = False
 AUTHOR_SAVE_AS = False
@@ -103,6 +107,6 @@ SOCIAL = (
 
 # Menu
 MENUITEMS = (
-    ('Categories', '/categories.html'),
-    ('Archive', '/archives.html'),
+    ('Categories', CATEGORIES_SAVE_AS),
+    ('Archive', ARCHIVES_SAVE_AS),
 )

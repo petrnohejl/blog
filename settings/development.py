@@ -21,6 +21,8 @@ PAGE_URL = 'pages/{slug}.html'
 PAGE_SAVE_AS = 'pages/{slug}.html'
 PAGE_LANG_URL = 'pages/{slug}-{lang}.html'
 PAGE_LANG_SAVE_AS = 'pages/{slug}-{lang}.html'
+CATEGORY_URL = 'category/{slug}.html'
+CATEGORY_SAVE_AS = 'category/{slug}.html'
 YEAR_ARCHIVE_URL = 'archive/{date:%Y}/index.html'
 YEAR_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/index.html'
 
