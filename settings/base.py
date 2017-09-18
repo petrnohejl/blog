@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 
 import os
 import sys
+from datetime import date
 sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 
 
@@ -23,17 +24,24 @@ USE_FOLDER_AS_CATEGORY = False
 # Language and time
 TIMEZONE = 'Europe/Prague'
 LOCALE = 'czech'
-DEFAULT_LANG = u'cs'
+DEFAULT_LANG = 'cs'
 DEFAULT_DATE_FORMAT = '%x'
 
 # Blog settings
 SUMMARY_MAX_LENGTH = 50
 DEFAULT_PAGINATION = 10
-DEFAULT_CATEGORY = u'Nezařazené'
+DEFAULT_CATEGORY = u'Blog'
 WITH_FUTURE_DATES = True
 DISPLAY_PAGES_ON_MENU = False
 DISPLAY_CATEGORIES_ON_MENU = False
-MD_EXTENSIONS = ('codehilite(css_class=highlight)', 'extra', 'headerid')
+MARKDOWN = {
+    'extension_configs': {
+        'markdown.extensions.codehilite': {'css_class': 'highlight'},
+        'markdown.extensions.headerid': {},
+        'markdown.extensions.extra': {},
+    },
+    'output_format': 'html5',
+}
 
 # URL and HTML file paths
 ARTICLE_URL = '{slug}'
@@ -52,57 +60,49 @@ AUTHOR_SAVE_AS = False
 AUTHORS_SAVE_AS = False
 
 # Feed
-FEED_ATOM = 'feed.xml'
-FEED_MAX_ITEMS = 10
-FEED_ALL_ATOM  = None
+FEED_ALL_ATOM  = 'feed.xml'
+FEED_MAX_ITEMS = 100
 CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
+AUTHOR_FEED_ATOM = None
+AUTHOR_FEED_RSS = None
 
 # Theme
-THEME = 'D:/GIT/FORKED/pelican-bootstrap3'
-#THEME_STATIC_PATHS = ('static',)
-#JINJA_FILTERS = filters
-CUSTOM_CSS = 'static/custom.css'
-PYGMENTS_STYLE = 'monokai'
-SITELOGO = None
-DISPLAY_BREADCRUMBS = False
-DISPLAY_CATEGORY_IN_BREADCRUMBS = False
-BOOTSTRAP_NAVBAR_INVERSE = False
-FAVICON = 'favicon.ico'
-HIDE_SIDEBAR = True
-DISQUS_DISPLAY_COUNTS = False
-CC_LICENSE = 'CC-BY-NC-SA'
-CC_ATTR_MARKUP = False
-USE_OPEN_GRAPH = True
-BOOTSTRAP_THEME = 'cosmo'
+THEME = 'D:/GIT/FORKED/Blog-MinimalX'
+
+# Theme customizations
+MINIMALX_CUSTOM_CSS = 'static/custom.css'
+MINIMALX_FAVICON = 'favicon.ico'
+MINIMALX_START_YEAR = 2009
+MINIMALX_CURRENT_YEAR = date.today().year
+
+# Author
+AUTHOR_INTRO = u'Hi! I’m Petr – an Android engineer living in Brno, Czech Republic.'
+AUTHOR_DESCRIPTION = u'Hi! I’m Petr – an Android engineer living in Brno, Czech Republic. I’m passionate about code, software architecture and technology. I studied at the Brno University of Technology and currently I work at STRV as team lead of the Android department. I’ve been developing mobile apps since 2009. I like #android #coffee #reggae #photography #djembe #asianculture #valueinvesting #myfamily.'
+AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/8fafd9d1a430a1e843478f00c3da924a?s=240'
+AUTHOR_WEB = 'http://petrnohejl.cz'
+
+# Services
+GOOGLE_ANALYTICS = 'UA-17930136-2'
+DISQUS_SITENAME = 'petrnohejl'
+
+# AddThis (not used)
+ADDTHIS_PROFILE = 'ra-530d2ad72de762c4'
 ADDTHIS_DATA_TRACK_ADDRESSBAR = False
 ADDTHIS_FACEBOOK_LIKE = True
 ADDTHIS_TWEET = True
 ADDTHIS_GOOGLE_PLUSONE = True
 
-# Services
-GOOGLE_ANALYTICS = 'UA-17930136-2'
-DISQUS_SITENAME = 'petrnohejl'
-TWITTER_USERNAME = 'petrnohejl'
-ADDTHIS_PROFILE = 'ra-530d2ad72de762c4'
-
-# Blogroll
-LINKS = (('Petr Nohejl', 'http://petrnohejl.cz/'),
-        ('Blog Janie Milíčové', 'http://janie.jestrab.net/'),
-        ('Javorové lístky', 'http://honzajavorek.cz/blog'),
-        ('JarmArt', 'http://jarmart.cz/'),
-        ('Terezčin BlogHýsek', 'http://terezka.8bit.cz/'),
-        ('Pavčin blog', 'http://pavca.8bit.cz/'),
-        ('Zuzejkova kultura', 'http://www.zuzikovakultura.blogspot.com/'),
-        ('Bakinovy zážitky', 'http://www.bakinovyzazitky.blogspot.com/'),)
-
-# Social widget
-SOCIAL =   (('Twitter', 'http://twitter.com/petrnohejl'),
-            ('LinkedIn', 'http://www.linkedin.com/in/petrnohejl'),
-            ('GitHub', 'https://github.com/petrnohejl'),
-            ('Facebook', 'http://www.facebook.com/petr.nohejl'),)
+# Social
+SOCIAL = (
+    ('facebook', 'http://www.facebook.com/petr.nohejl'),
+    ('twitter', 'http://twitter.com/petrnohejl'),
+    ('github', 'https://github.com/petrnohejl'),
+    ('linkedin', 'http://www.linkedin.com/in/petrnohejl'),
+)
 
 # Menu
-MENUITEMS = (('Categories', '/categories.html'),
-            ('Feed', '/feed.xml'),
-            ('About me', 'http://petrnohejl.cz/'),)
+MENUITEMS = (
+    ('Categories', '/categories.html'),
+    ('Archive', '/archives.html'),
+)
