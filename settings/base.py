@@ -72,13 +72,13 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Theme
-THEME = 'D:/GIT/FORKED/Blog-MinimalX'
+THEME = 'D:/GIT/FORKED/MinimalXY'
 
 # Theme customizations
-MINIMALX_CUSTOM_CSS = 'static/custom.css'
-MINIMALX_FAVICON = 'favicon.ico'
-MINIMALX_START_YEAR = 2009
-MINIMALX_CURRENT_YEAR = date.today().year
+MINIMALXY_CUSTOM_CSS = 'static/custom.css'
+MINIMALXY_FAVICON = 'favicon.ico'
+MINIMALXY_START_YEAR = 2009
+MINIMALXY_CURRENT_YEAR = date.today().year
 
 # Author
 AUTHOR_INTRO = u'Hi! I’m Petr – an Android engineer living in Brno, Czech Republic.'
