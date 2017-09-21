@@ -1,222 +1,323 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
-<head>
-    <title>Jestřáblog</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="cs">
+  <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Jestřáblog</title>
+
+    <!-- Meta -->
+    <meta name="description" content="Jestřáblog &ndash; Život z ptačí perspektivy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="http://blog.petrnohejl.cz/favicon.ico" rel="icon">
 
-    <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Jestřáblog" />
-            <meta property="og:type" content="website"/>
-            <meta property="og:title" content="Jestřáblog"/>
-            <meta property="og:url" content="http://blog.petrnohejl.cz"/>
-            <meta property="og:description" content="Jestřáblog"/>
+    <!-- Social -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Jestřáblog"/>
+    <meta property="og:description" content="Život z ptačí perspektivy"/>
+    <meta property="og:site_name" content="Jestřáblog" />
+    <meta property="og:url" content="http://blog.petrnohejl.cz"/>
+    <meta property="og:image" content="http://www.gravatar.com/avatar/8fafd9d1a430a1e843478f00c3da924a?s=240"/>
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
-    <link href="http://blog.petrnohejl.cz/theme/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jestřáblog">
+    <meta name="twitter:description" content="Život z ptačí perspektivy">
+    <meta name="twitter:url" content="http://blog.petrnohejl.cz">
+    <meta name="twitter:image" content="http://www.gravatar.com/avatar/8fafd9d1a430a1e843478f00c3da924a?s=240">
 
-    <link href="http://blog.petrnohejl.cz/theme/css/pygments/monokai.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/style.css" type="text/css"/>
-        <link href="http://blog.petrnohejl.cz/static/custom.css" rel="stylesheet">
+    <!-- Feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://blog.petrnohejl.cz/feed.xml" title="Jestřáblog Atom Feed" />
+    <link rel="alternate" type="application/rss+xml" href="http://petrnohejl.disqus.com/latest.rss" title="Jestřáblog Comments RSS Feed">
 
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/pygments-highlight-github.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/static/custom.css">
 
-</head>
-<body>
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://blog.petrnohejl.cz/favicon.ico">
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="http://blog.petrnohejl.cz/" class="navbar-brand">
-Jestřáblog            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <li><a href="/categories.html">Categories</a></li>
-                    <li><a href="/feed.xml">Feed</a></li>
-                    <li><a href="http://petrnohejl.cz/">About me</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://blog.petrnohejl.cz/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://blog.petrnohejl.cz/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+        <a href="http://blog.petrnohejl.cz" id="header-logo" title="Home">PN</a>
+        <nav id="header-menu">
+          <ul>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/categories.html">Categories</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/archive.html">Archive</a></li>
+          </ul>
+        </nav>
+      </header>
     </div>
-</div> <!-- /.navbar -->
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
+    <div class="w3-row w3-light-grey w3-border-bottom">
+      <aside id="intro" class="w3-container w3-center w3-padding-32">
+        <div>
+          <span id="intro-description">Hi! I’m Petr – an Android engineer living in Brno, Czech Republic.</span>
+          <ul class="social" style="margin: 0; margin-top: 10px; padding: 0;">
+            <li><a class="sc-facebook" href="http://www.facebook.com/petr.nohejl" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li><a class="sc-twitter" href="http://twitter.com/petrnohejl" target="_blank"><i class="fa fa-twitter"></i></a></li>
+            <li><a class="sc-github" href="https://github.com/petrnohejl" target="_blank"><i class="fa fa-github"></i></a></li>
+            <li><a class="sc-linkedin" href="http://www.linkedin.com/in/petrnohejl" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          </ul>
+        </div>
+        <div style="line-height: 180px;">
+          <a href="http://petrnohejl.cz" target="_blank"><img class="avatar" alt="Avatar" src="http://www.gravatar.com/avatar/8fafd9d1a430a1e843478f00c3da924a?s=240" onerror="this.src='theme/images/avatar.png'"></a>
+        </div>
+      </aside>
+    </div>
 
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/rok-2016">Rok 2016</a></h2>
-                <div class="summary"><ul>
-<li>
-<p>Tož jsem se oženil s nejlepší ženuškou na světě a stal se dvojnásobným strýcem a kmotrem Marušky a Barušky.</p>
-</li>
-<li>
-<p>Opět jsem zkracoval dready, jelikož už byly neúnosně těžké a dlouhé.</p>
-</li>
-<li>
-<p>Investoval jsem do fondů Jána Hájka. Měl jsem smůlu, protože se fondy hned po nákupu hluboce propadly, ale ke konci ...</p></li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/rok-2016">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/rok-2015">Rok 2015</a></h2>
-                <div class="summary"><ul>
-<li>
-<p>Začal jsem se zajímat o investování a docela mě to chytlo. Přihlásil jsem se na kurz Tomáše Tatranského "Dividendové akcie jako ideální zdroj pasivního příjmu" na <a href="https://www.naucmese.cz/">Naučmese.cz</a>. Začal jsem studovat hodnotovou investiční strategii. Přečetl jsem knížky od Daniela Gladiše. Shlédnul jsem a navštívil několik přednášek. Začal jsem sledovat Jána ...</p></li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/rok-2015">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/rok-2014">Rok 2014</a></h2>
-                <div class="summary"><ul>
-<li>
-<p>Oblíbil jsem si vlaky. Jsou mnohem pohodlnější než autobusy, člověk má více místa a nový RailJet je super! Ve vlaku můžu pohodlně pracovat, protože tam jsou zásuvky a stolky, nebo jídelní vůz. V létě jsem si pořídil In Kartu a začal jezdit do Prahy výhradně vlakem. Cesta trvá 2:40 ...</p></li></ul>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/rok-2014">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/styling-the-action-bar">Styling the Action Bar</a></h2>
-                <div class="summary"><p>Styling the Action Bar is complicated. There are a lot of attributes you can customize and it can take some time to set it up as you need. In this article I am going to show you how to create custom style of the Action Bar within 5 minutes.</p>
-<p>There ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/styling-the-action-bar">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/slavky-v-rajcatove-omacce">Slávky v rajčatové omáčce</a></h2>
-                <div class="summary"><p>Na dovolené ve Španělsku jsem zkoušel vařit mušle. Docela se to povedlo, takže zde uvádím recept, který jsem získal od mámy. Je to velmi jednoduché. Až budete někdy u moře, určitě to vyzkoušejte. Je to delikatesa. Kdo slávky nikdy nejedl - chutná to trochu podobně jako houby. Já jsem slávky koupil ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/slavky-v-rajcatove-omacce">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/neferovy-vodafone">Neférový Vodafone</a></h2>
-                <div class="summary"><p>Vodafone se chlubí svými férovými tarify. Ke mně se ale moc férově nezachoval.</p>
-<p>Byl jsem u Vodafonu 6 let a letos v březnu jsem přešel k jinému operátorovi. Měl jsem tarif Odepiš za 12 Kč/měsíc + Internet v mobilu za 178 Kč/měsíc. Podal jsem u Vodafonu výpověď 14. února ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/neferovy-vodafone">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/handling-bundles-in-activities-and-fragments">Handling bundles in activities and fragments</a></h2>
-                <div class="summary"><p><a href="http://developer.android.com/reference/android/os/Bundle.html">Bundle</a> is a useful data holder, which maps String values to various <a href="http://developer.android.com/reference/android/os/Parcelable.html">Parcelable</a> types. So basically it is a heterogenous key/value map. Bundles are used in <a href="http://developer.android.com/reference/android/content/Intent.html">Intents</a>, <a href="http://developer.android.com/reference/android/app/Activity.html">Activities</a> and <a href="http://developer.android.com/reference/android/app/Fragment.html">Fragments</a> for transporting data. I would like to describe how I work with Bundles on Android and show you some ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/handling-bundles-in-activities-and-fragments">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju">Evidence osobních výdajů</a></h2>
-                <div class="summary"><p>Už nějakou dobu plánuju, že si začnu evidovat osobní výdaje. Je dobré mít základní přehled, kolik člověk utratí za jídlo, bydlení, dopravu atd. Existuje hromada mobilních aplikací na evidenci výdajů, ale používání takové aplikace je vcelku otravné - ťukat si do mobilu každý výdaj by mě fakt nebavilo. Navíc bych na ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/rok-2013">Rok 2013</a></h2>
-                <div class="summary"><p>Pravidelně každý rok píšu takové stručné shrnutí událostí za minulý rok - co zajímavého se stalo v mém životě. Vždycky si projdu fotky, kalendář, sociální sítě <abbr title="Twitter, Facebook, Last.fm, Janči blog, shrnutí z předchozích let...">atd.</abbr> a snažím se sepsat to nejdůležitější. Až budu jednou v důchodu a budu se válet na pláži někde v Karibiku, budu si číst tyhle ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/rok-2013">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/znovuzrozeni-jestrablogu">Znovuzrození Jestřáblogu</a></h2>
-                <div class="summary"><p>Před nedávnem jsem narazil na geniální nástroj <a href="http://getpelican.com">Pelican</a>. Navedl mě na něj kamarád, který ho používá na <a href="http://honzajavorek.cz/blog/">svém blogu</a>. Tenhleten Pelikán mě natolik uchvátil, že jsem se rozhodl ho použít také pro svůj blog. Odteďka tedy můj blog pohání dva ptáci! Pelikán + Jestřáb = Jestřáblog.</p>
-<p>Pelikán je open-source blogovací systém pro ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/znovuzrozeni-jestrablogu">more ...</a>
-                </div>
-            </article>
-            <hr/>
+    <br><br><br>
 
-        <ul class="pagination">
-                <li class="prev disabled"><a href="#">&laquo;</a></li>
-                    <li class="active"><a
-                            href="http://blog.petrnohejl.cz/index.html">1</a></li>
-                    <li class=""><a
-                            href="http://blog.petrnohejl.cz/index2.html">2</a></li>
-                    <li class=""><a
-                            href="http://blog.petrnohejl.cz/index3.html">3</a></li>
-                    <li class=""><a
-                            href="http://blog.petrnohejl.cz/index4.html">4</a></li>
-                <li class="next"><a
-                        href="http://blog.petrnohejl.cz/index2.html">&raquo;</a></li>
+    <section id="listing">
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/rok-2016">Rok 2016</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2017-01-11T00:00:00+01:00">11.01.2017</time> in <a href="http://blog.petrnohejl.cz/category/jestrabi-svet" title="All articles in category Jestřábí svět">Jestřábí svět</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Tož jsem se oženil s nejlepší ženuškou na světě a stal se dvojnásobným strýcem a kmotrem Marušky a Barušky. Opět jsem zkracoval dready, jelikož už byly neúnosně těžké a dlouhé. Investoval jsem do fondů Jána Hájka. Měl jsem smůlu, protože se fondy hned po nákupu hluboce propadly, ale ke konci …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/rok-2016">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/rok-2015">Rok 2015</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2016-12-31T00:00:00+01:00">31.12.2016</time> in <a href="http://blog.petrnohejl.cz/category/jestrabi-svet" title="All articles in category Jestřábí svět">Jestřábí svět</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Začal jsem se zajímat o investování a docela mě to chytlo. Přihlásil jsem se na kurz Tomáše Tatranského "Dividendové akcie jako ideální zdroj pasivního příjmu" na Naučmese.cz. Začal jsem studovat hodnotovou investiční strategii. Přečetl jsem knížky od Daniela Gladiše. Shlédnul jsem a navštívil několik přednášek. Začal jsem sledovat Jána …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/rok-2015">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/rok-2014">Rok 2014</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2015-04-28T00:00:00+02:00">28.04.2015</time> in <a href="http://blog.petrnohejl.cz/category/jestrabi-svet" title="All articles in category Jestřábí svět">Jestřábí svět</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Oblíbil jsem si vlaky. Jsou mnohem pohodlnější než autobusy, člověk má více místa a nový RailJet je super! Ve vlaku můžu pohodlně pracovat, protože tam jsou zásuvky a stolky, nebo jídelní vůz. V létě jsem si pořídil In Kartu a začal jezdit do Prahy výhradně vlakem. Cesta trvá 2:40 …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/rok-2014">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/styling-the-action-bar">Styling the Action Bar</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2014-09-10T00:00:00+02:00">10.09.2014</time> in <a href="http://blog.petrnohejl.cz/category/android" title="All articles in category Android">Android</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Styling the Action Bar is complicated. There are a lot of attributes you can customize and it can take some time to set it up as you need. In this article I am going to show you how to create custom style of the Action Bar within 5 minutes. There …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/styling-the-action-bar">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/slavky-v-rajcatove-omacce">Slávky v rajčatové omáčce</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2014-07-06T00:00:00+02:00">06.07.2014</time> in <a href="http://blog.petrnohejl.cz/category/recepty" title="All articles in category Recepty">Recepty</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Na dovolené ve Španělsku jsem zkoušel vařit mušle. Docela se to povedlo, takže zde uvádím recept, který jsem získal od mámy. Je to velmi jednoduché. Až budete někdy u moře, určitě to vyzkoušejte. Je to delikatesa. Kdo slávky nikdy nejedl - chutná to trochu podobně jako houby. Já jsem slávky koupil …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/slavky-v-rajcatove-omacce">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/neferovy-vodafone">Neférový Vodafone</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2014-04-05T00:00:00+02:00">05.04.2014</time> in <a href="http://blog.petrnohejl.cz/category/nazory" title="All articles in category Názory">Názory</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Vodafone se chlubí svými férovými tarify. Ke mně se ale moc férově nezachoval. Byl jsem u Vodafonu 6 let a letos v březnu jsem přešel k jinému operátorovi. Měl jsem tarif Odepiš za 12 Kč/měsíc + Internet v mobilu za 178 Kč/měsíc. Podal jsem u Vodafonu výpověď 14. února …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/neferovy-vodafone">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/handling-bundles-in-activities-and-fragments">Handling bundles in activities and fragments</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2014-03-30T00:00:00+01:00">30.03.2014</time> in <a href="http://blog.petrnohejl.cz/category/android" title="All articles in category Android">Android</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Bundle is a useful data holder, which maps String values to various Parcelable types. So basically it is a heterogenous key/value map. Bundles are used in Intents, Activities and Fragments for transporting data. I would like to describe how I work with Bundles on Android and show you some …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/handling-bundles-in-activities-and-fragments">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju">Evidence osobních výdajů</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2014-03-04T00:00:00+01:00">04.03.2014</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Už nějakou dobu plánuju, že si začnu evidovat osobní výdaje. Je dobré mít základní přehled, kolik člověk utratí za jídlo, bydlení, dopravu atd. Existuje hromada mobilních aplikací na evidenci výdajů, ale používání takové aplikace je vcelku otravné - ťukat si do mobilu každý výdaj by mě fakt nebavilo. Navíc bych na …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/rok-2013">Rok 2013</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2014-02-27T00:00:00+01:00">27.02.2014</time> in <a href="http://blog.petrnohejl.cz/category/jestrabi-svet" title="All articles in category Jestřábí svět">Jestřábí svět</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Pravidelně každý rok píšu takové stručné shrnutí událostí za minulý rok - co zajímavého se stalo v mém životě. Vždycky si projdu fotky, kalendář, sociální sítě atd. a snažím se sepsat to nejdůležitější. Až budu jednou v důchodu a budu se válet na pláži někde v Karibiku, budu si číst tyhle …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/rok-2013">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/znovuzrozeni-jestrablogu">Znovuzrození Jestřáblogu</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2014-02-02T00:00:00+01:00">02.02.2014</time> in <a href="http://blog.petrnohejl.cz/category/ostatni" title="All articles in category Ostatní">Ostatní</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Před nedávnem jsem narazil na geniální nástroj Pelican. Navedl mě na něj kamarád, který ho používá na svém blogu. Tenhleten Pelikán mě natolik uchvátil, že jsem se rozhodl ho použít také pro svůj blog. Odteďka tedy můj blog pohání dva ptáci! Pelikán + Jestřáb = Jestřáblog. Pelikán je open-source blogovací systém pro …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/znovuzrozeni-jestrablogu">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+
+      <div class="w3-center">
+        <ul class="w3-pagination">
+          <li><a class="w3-green" href="http://blog.petrnohejl.cz/index.html">1</a></li>
+          <li><a class="" href="http://blog.petrnohejl.cz/index2.html">2</a></li>
+          <li><a class="" href="http://blog.petrnohejl.cz/index3.html">3</a></li>
+          <li><a class="" href="http://blog.petrnohejl.cz/index4.html">4</a></li>
+          <li><a href="http://blog.petrnohejl.cz/index2.html">&#10095;</a></li>
         </ul>
-        </div>
-    </div>
-</div>
-<footer>
-   <div class="container">
-      <hr>
-      <div class="row">
-         <div class="col-xs-10">&copy; 2017 Petr Nohejl
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
-            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-    Content
-  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
-</small></p>
-         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
       </div>
-   </div>
-</footer>
-<script src="http://blog.petrnohejl.cz/theme/js/jquery.min.js"></script>
+      <br><br><br>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://blog.petrnohejl.cz/theme/js/bootstrap.min.js"></script>
+    </section>
 
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://blog.petrnohejl.cz/theme/js/respond.min.js"></script>
 
-    <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'petrnohejl'; // required: replace example with your forum shortname
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>&copy; 2009-2017 Petr Nohejl  | <a href="http://blog.petrnohejl.cz/feed.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
+      </div>
+    </footer>
 
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <!-- End Disqus Code -->
     <!-- Google Analytics -->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-17930136-2']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-17930136-2', 'auto');
+      ga('send', 'pageview');
     </script>
-    <!-- End Google Analytics Code -->
-</body>
+
+  </body>
 </html>

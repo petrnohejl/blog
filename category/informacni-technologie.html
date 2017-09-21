@@ -1,236 +1,305 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:og="http://ogp.me/ns#"
-      xmlns:fb="https://www.facebook.com/2008/fbml">
-<head>
-    <title>Informační technologie - Jestřáblog</title>
-    <!-- Using the latest rendering mode for IE -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<html lang="cs">
+  <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Informační technologie &ndash; Jestřáblog</title>
+
+    <!-- Meta -->
+    <meta name="description" content="Jestřáblog &ndash; Život z ptačí perspektivy">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link href="http://blog.petrnohejl.cz/favicon.ico" rel="icon">
 
-    <!-- Open Graph tags -->
-        <meta property="og:site_name" content="Jestřáblog" />
-            <meta property="og:type" content="website"/>
-            <meta property="og:title" content="Jestřáblog"/>
-            <meta property="og:url" content="http://blog.petrnohejl.cz"/>
-            <meta property="og:description" content="Jestřáblog"/>
+    <!-- Social -->
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Jestřáblog"/>
+    <meta property="og:description" content="Život z ptačí perspektivy"/>
+    <meta property="og:site_name" content="Jestřáblog" />
+    <meta property="og:url" content="http://blog.petrnohejl.cz"/>
+    <meta property="og:image" content="http://www.gravatar.com/avatar/8fafd9d1a430a1e843478f00c3da924a?s=240"/>
 
-    <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/bootstrap.cosmo.min.css" type="text/css"/>
-    <link href="http://blog.petrnohejl.cz/theme/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Jestřáblog">
+    <meta name="twitter:description" content="Život z ptačí perspektivy">
+    <meta name="twitter:url" content="http://blog.petrnohejl.cz">
+    <meta name="twitter:image" content="http://www.gravatar.com/avatar/8fafd9d1a430a1e843478f00c3da924a?s=240">
 
-    <link href="http://blog.petrnohejl.cz/theme/css/pygments/monokai.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://blog.petrnohejl.cz/theme/css/style.css" type="text/css"/>
-        <link href="http://blog.petrnohejl.cz/static/custom.css" rel="stylesheet">
+    <!-- Feed -->
+    <link rel="alternate" type="application/atom+xml" href="http://blog.petrnohejl.cz/feed.xml" title="Jestřáblog Atom Feed" />
+    <link rel="alternate" type="application/rss+xml" href="http://petrnohejl.disqus.com/latest.rss" title="Jestřáblog Comments RSS Feed">
 
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:regular,bold">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/w3.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/style.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/jqcloud.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/theme/css/pygments-highlight-github.css">
+    <link rel="stylesheet" type="text/css" href="http://blog.petrnohejl.cz/static/custom.css">
 
-</head>
-<body>
+    <!-- Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="http://blog.petrnohejl.cz/favicon.ico">
 
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a href="http://blog.petrnohejl.cz/" class="navbar-brand">
-Jestřáblog            </a>
-        </div>
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-            <ul class="nav navbar-nav">
-                    <li><a href="/categories.html">Categories</a></li>
-                    <li><a href="/feed.xml">Feed</a></li>
-                    <li><a href="http://petrnohejl.cz/">About me</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="http://blog.petrnohejl.cz/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
-            </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+    <!-- JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://blog.petrnohejl.cz/theme/js/jqcloud.min.js"></script>
+  </head>
+
+  <body>
+    <div class="w3-row w3-card w3-white">
+      <header id="header">
+        <a href="http://blog.petrnohejl.cz" id="header-logo" title="Home">PN</a>
+        <nav id="header-menu">
+          <ul>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/categories.html">Categories</a></li>
+            <li class="w3-bottombar w3-border-white w3-hover-border-green"><a href="/archive.html">Archive</a></li>
+          </ul>
+        </nav>
+      </header>
     </div>
-</div> <!-- /.navbar -->
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
 
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju">Evidence osobních výdajů</a></h2>
-                <div class="summary"><p>Už nějakou dobu plánuju, že si začnu evidovat osobní výdaje. Je dobré mít základní přehled, kolik člověk utratí za jídlo, bydlení, dopravu atd. Existuje hromada mobilních aplikací na evidenci výdajů, ale používání takové aplikace je vcelku otravné - ťukat si do mobilu každý výdaj by mě fakt nebavilo. Navíc bych na ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/instalace-a-konfigurace-wordpress">Instalace a konfigurace Wordpress</a></h2>
-                <div class="summary"><p>Jedna známá potřebovala vyrobit web a požádala mě o jeho realizaci. Pro
-její potřeby se skvěle hodí blogovací systém. Zvolil jsem Wordpress,
-protože už s ním mám nějaké zkušenosti. Myslím, že to je pěkně udělaný
-software a jeho výhoda je, že je open source. Rozhodl jsem se sepsat
-podrobný návod ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/instalace-a-konfigurace-wordpress">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/katalog-ceskych-mobilnich-aplikaci">Katalog českých mobilních aplikací</a></h2>
-                <div class="summary"><p>Na Android Marketu neustále přibývají nové aplikace. Někdy je docela
-těžké v té záplavě najít kvalitní a funkční kousek. Pro tento účel
-vznikl webový projekt <a href="http://katalogaplikaci.cz/">Katalog aplikací</a>. Jedná se o databázi
-mobilních aplikací různých platforem od českých a slovenských vývojářů.
-Díky tomuto webu můžete narazit na zajímavé české projekty, o ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/katalog-ceskych-mobilnich-aplikaci">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django">Apache a mod_python pro webový framework Django</a></h2>
-                <div class="summary"><p>Tento tutoriál stručně popisuje postup, jak nainstalovat, nastavit a
-zprovoznit webový server Apache 2.2 s modulem mod_python na systému
-GNU/Linux Ubuntu 9.10. Dále popisuje postup, jak nainstalovat databázi
-MySQL, webový framework Django a zprovoznit je na webovém serveru
-Apache. Na závěr je ukázán příklad vytvoření nového Django ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/nerealisticke-videoefekty">Nerealistické videoefekty</a></h2>
-                <div class="summary"><p>V tomto článku bych chtěl popsat projekt, na kterém jsem pracoval v
-zimním semestru 2010 spolu s Petrem Panáčkem. Projekt se zabývá
-nerealistickými videoefekty. Text článku je převzat z dokumentace
-projektu pro předmět
-<abbr title="Pokročilá počítačová grafika">PGP</abbr>.</p>
-<h2 id="uvod">Úvod</h2>
-<p>Cílem práce bylo nastudovat metody používané v nerealistickém
-zobrazování videa. Hlavním úkolem pak bylo navrhnout ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/nerealisticke-videoefekty">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/projekt-mimikry">Projekt Mimikry - rozšířená realita</a></h2>
-                <div class="summary"><p>V tomto článku bych chtěl stručně popsat projekt Mimikry, na kterém jsem
-se podílel v zimním semestru 2010. Článek je upravenou částí
-dokumentace, kterou jsem odevzdával v rámci školního projektu pro
-předmět <abbr title="Počítačové vidění">POV</abbr>. K projektu jsem se
-dostal víceméně náhodou přes mého vedoucího diplomové práce, kterého
-kontaktovali studenti Akademie výtvarných ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/projekt-mimikry">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/nejlepsi-aplikace-pro-android">Nejlepší aplikace pro Android</a></h2>
-                <div class="summary"><p>Mobilní telefon s OS Android používám už více než půl roku (přešel jsem
-z Windows Mobile) a jsem s ním jsem velmi spokojený. Rozhodl jsem se
-sepsat seznam aplikací, které mi přijdou užitečné, zajímavé, vtipné...
-Seznam budu nejspíš v budoucnu aktualizovat. Většina aplikací je free
-nebo s reklamou. Budu rád ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/nejlepsi-aplikace-pro-android">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/artoolkit">ARToolKit – rozšířená realita</a></h2>
-                <div class="summary"><p>V tomto článku bych chtěl popsat, co je ARToolKit, jak funguje, co umí,
-jak se v něm programuje a jak se instaluje. Obsah článku je převzat z
-mého školního projektu do předmětu
-<abbr title="Grafická a zvuková rozhraní a normy">GZN</abbr>. Více o
-ARToolKit se můžete dozvědět na <a href="http://www.hitl.washington.edu/artoolkit/">oficiálních stránkách projektu</a>.</p>
-<h2 id="uvod">Úvod</h2>
-<p>ARToolKit je knihovna, která umožňuje programovat ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/artoolkit">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/instalace-windows-xp-z-usb-flash-acer-aspire-one">Instalace Windows XP z USB flash (Acer Aspire One)</a></h2>
-                <div class="summary"><p>V tomto tutoriálu bych chtěl popsat, jak úspěšně nainstalovat OS Windows
-XP na netbook Acer Aspire One pomocí USB flashky. Návod by měl však bez
-problému fungovat pro všechny počítače obecně.</p>
-<p>Před pár dny jsem potřeboval přeinstalovat operační systém Windows XP,
-protože systém byl naposled instalován před dvěma roky a ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/instalace-windows-xp-z-usb-flash-acer-aspire-one">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="http://blog.petrnohejl.cz/zabezpeceni-e-mailove-adresy-proti-botum">Zabezpečení e-mailové adresy proti botům</a></h2>
-                <div class="summary"><p>Ahoj! Dneska jsem programoval můj nový web a narazil jsem na
-problematiku antispamové ochrany e-mailové adresy na stránkách.
-Potřeboval jsem vypsat na web klasický e-mailový odkaz a nechtěl jsem
-pro to používat žádné speciální nástroje jako např. generování obrázku,
-captcha apod. Přečetl jsem si několik diskuzí a podařilo se mi ...</p>
-                    <a class="btn btn-default btn-xs" href="http://blog.petrnohejl.cz/zabezpeceni-e-mailove-adresy-proti-botum">more ...</a>
-                </div>
-            </article>
-            <hr/>
+    <br><br><br>
 
-        </div>
+    <div class="w3-container col-main w3-center">
+      <h2>Informační technologie</h2>
     </div>
-</div>
-<footer>
-   <div class="container">
-      <hr>
-      <div class="row">
-         <div class="col-xs-10">&copy; 2014 Petr Nohejl
-            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
-            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
-            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>              <p><small>  <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="//i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
-    Content
-  licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution 4.0 International License</a>, except where indicated otherwise.
-</small></p>
-         </div>
-         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+
+
+
+    <br><br><br>
+
+    <section id="listing">
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju">Evidence osobních výdajů</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2014-03-04T00:00:00+01:00">04.03.2014</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Už nějakou dobu plánuju, že si začnu evidovat osobní výdaje. Je dobré mít základní přehled, kolik člověk utratí za jídlo, bydlení, dopravu atd. Existuje hromada mobilních aplikací na evidenci výdajů, ale používání takové aplikace je vcelku otravné - ťukat si do mobilu každý výdaj by mě fakt nebavilo. Navíc bych na …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/evidence-osobnich-vydaju">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/instalace-a-konfigurace-wordpress">Instalace a konfigurace Wordpress</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2012-12-16T00:00:00+01:00">16.12.2012</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Jedna známá potřebovala vyrobit web a požádala mě o jeho realizaci. Pro její potřeby se skvěle hodí blogovací systém. Zvolil jsem Wordpress, protože už s ním mám nějaké zkušenosti. Myslím, že to je pěkně udělaný software a jeho výhoda je, že je open source. Rozhodl jsem se sepsat podrobný návod …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/instalace-a-konfigurace-wordpress">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/katalog-ceskych-mobilnich-aplikaci">Katalog českých mobilních aplikací</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2012-05-22T00:00:00+02:00">22.05.2012</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Na Android Marketu neustále přibývají nové aplikace. Někdy je docela těžké v té záplavě najít kvalitní a funkční kousek. Pro tento účel vznikl webový projekt Katalog aplikací. Jedná se o databázi mobilních aplikací různých platforem od českých a slovenských vývojářů. Díky tomuto webu můžete narazit na zajímavé české projekty, o …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/katalog-ceskych-mobilnich-aplikaci">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django">Apache a mod_python pro webový framework Django</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2011-02-09T00:00:00+01:00">09.02.2011</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Tento tutoriál stručně popisuje postup, jak nainstalovat, nastavit a zprovoznit webový server Apache 2.2 s modulem mod_python na systému GNU/Linux Ubuntu 9.10. Dále popisuje postup, jak nainstalovat databázi MySQL, webový framework Django a zprovoznit je na webovém serveru Apache. Na závěr je ukázán příklad vytvoření nového Django …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/apache-a-mod_python-pro-webovy-framework-django">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/nerealisticke-videoefekty">Nerealistické videoefekty</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2011-01-05T00:00:00+01:00">05.01.2011</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          V tomto článku bych chtěl popsat projekt, na kterém jsem pracoval v zimním semestru 2010 spolu s Petrem Panáčkem. Projekt se zabývá nerealistickými videoefekty. Text článku je převzat z dokumentace projektu pro předmět PGP. Úvod Cílem práce bylo nastudovat metody používané v nerealistickém zobrazování videa. Hlavním úkolem pak bylo navrhnout …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/nerealisticke-videoefekty">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/projekt-mimikry">Projekt Mimikry - rozšířená realita</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2011-01-04T00:00:00+01:00">04.01.2011</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          V tomto článku bych chtěl stručně popsat projekt Mimikry, na kterém jsem se podílel v zimním semestru 2010. Článek je upravenou částí dokumentace, kterou jsem odevzdával v rámci školního projektu pro předmět POV. K projektu jsem se dostal víceméně náhodou přes mého vedoucího diplomové práce, kterého kontaktovali studenti Akademie výtvarných …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/projekt-mimikry">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/nejlepsi-aplikace-pro-android">Nejlepší aplikace pro Android</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2010-12-21T00:00:00+01:00">21.12.2010</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Mobilní telefon s OS Android používám už více než půl roku (přešel jsem z Windows Mobile) a jsem s ním jsem velmi spokojený. Rozhodl jsem se sepsat seznam aplikací, které mi přijdou užitečné, zajímavé, vtipné... Seznam budu nejspíš v budoucnu aktualizovat. Většina aplikací je free nebo s reklamou. Budu rád …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/nejlepsi-aplikace-pro-android">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/artoolkit">ARToolKit – rozšířená realita</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2010-11-15T00:00:00+01:00">15.11.2010</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          V tomto článku bych chtěl popsat, co je ARToolKit, jak funguje, co umí, jak se v něm programuje a jak se instaluje. Obsah článku je převzat z mého školního projektu do předmětu GZN. Více o ARToolKit se můžete dozvědět na oficiálních stránkách projektu. Úvod ARToolKit je knihovna, která umožňuje programovat …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/artoolkit">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/instalace-windows-xp-z-usb-flash-acer-aspire-one">Instalace Windows XP z USB flash (Acer Aspire One)</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2010-09-14T00:00:00+02:00">14.09.2010</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          V tomto tutoriálu bych chtěl popsat, jak úspěšně nainstalovat OS Windows XP na netbook Acer Aspire One pomocí USB flashky. Návod by měl však bez problému fungovat pro všechny počítače obecně. Před pár dny jsem potřeboval přeinstalovat operační systém Windows XP, protože systém byl naposled instalován před dvěma roky a …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/instalace-windows-xp-z-usb-flash-acer-aspire-one">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+      <article class="w3-container w3-card-2 w3-white col-main">
+        <header>
+          <h2><a href="http://blog.petrnohejl.cz/zabezpeceni-e-mailove-adresy-proti-botum">Zabezpečení e-mailové adresy proti botům</a></h2>
+          <div class="post-info">
+            <div class="w3-opacity w3-margin-right w3-margin-bottom" style="flex-grow: 1;">
+              <span><time datetime="2009-10-15T00:00:00+02:00">15.10.2009</time> in <a href="http://blog.petrnohejl.cz/category/informacni-technologie" title="All articles in category Informační technologie">Informační technologie</a></span>
+            </div>
+          </div>
+        </header>
+
+        <div class="entry-content">
+          Ahoj! Dneska jsem programoval můj nový web a narazil jsem na problematiku antispamové ochrany e-mailové adresy na stránkách. Potřeboval jsem vypsat na web klasický e-mailový odkaz a nechtěl jsem pro to používat žádné speciální nástroje jako např. generování obrázku, captcha apod. Přečetl jsem si několik diskuzí a podařilo se mi …
+        </div>
+
+        <footer>
+          <a class="w3-btn w3-green w3-right" href="http://blog.petrnohejl.cz/zabezpeceni-e-mailove-adresy-proti-botum">Read &#10093;</a>
+        </footer>
+      </article>
+
+      <br><br><br>
+
+
+
+    </section>
+
+
+    <footer id="footer">
+      <div id="footer-copyright" class="w3-center w3-small w3-text-grey w3-padding-48">
+        <span>&copy; 2009-2017 Petr Nohejl  | <a href="http://blog.petrnohejl.cz/feed.xml">Atom feed <i class="fa fa-rss" aria-hidden="true"></i></a></span>
       </div>
-   </div>
-</footer>
-<script src="http://blog.petrnohejl.cz/theme/js/jquery.min.js"></script>
+    </footer>
 
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://blog.petrnohejl.cz/theme/js/bootstrap.min.js"></script>
-
-<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://blog.petrnohejl.cz/theme/js/respond.min.js"></script>
-
-    <!-- Disqus -->
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'petrnohejl'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function () {
-            var s = document.createElement('script');
-            s.async = true;
-            s.type = 'text/javascript';
-            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-        }());
-    </script>
-    <!-- End Disqus Code -->
     <!-- Google Analytics -->
-    <script type="text/javascript">
-
-        var _gaq = _gaq || [];
-        _gaq.push(['_setAccount', 'UA-17930136-2']);
-        _gaq.push(['_trackPageview']);
-
-        (function () {
-            var ga = document.createElement('script');
-            ga.type = 'text/javascript';
-            ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(ga, s);
-        })();
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-17930136-2', 'auto');
+      ga('send', 'pageview');
     </script>
-    <!-- End Google Analytics Code -->
-</body>
+
+  </body>
 </html>
