@@ -6,31 +6,48 @@ Jestřáblog is my personal blog. It is powered by [Python](http://www.python.or
 Special thanks to [Honza](https://github.com/honzajavorek) for inspiration and discovering Pelican.
 
 
-TODO
-====
+How to use
+----------
 
-* ~~Google Analytics~~
-* ~~Disqus~~
-* ~~Import comments from Wordpress to Disqus~~
-* ~~Facebook Like~~
-* Custom theme with Jinja filters
-* Better archives
-* Categories with link to the category page
-* Typography
-* Add title attribute for images (alt -> title)
-* Clickable headers in article
-* Read time info in each article (my average rate is 1200 cpm, see [Reading rate](http://en.wikipedia.org/wiki/Reading_%28process%29#Reading_rate))
+Python dependencies:
+
+- [Pelican](https://pypi.python.org/pypi/pelican/)
+- [Markdown](https://pypi.python.org/pypi/Markdown)
+- [MS Visual C++ Compiler for Python](http://aka.ms/vcpython27)
+- [Fabric](https://pypi.python.org/pypi/Fabric)
+- [GitHub Pages Import](https://pypi.python.org/pypi/ghp-import)
+
+Use Fabric commands to build and publish Pelican blog:
+
+```
+fab build             Build website with development settings
+fab build_production  Build website with production settings
+fab clean             Clean output
+fab commit_ghp        Build and deploy website to GitHub Pages
+fab commit_master     Commit web sources to Git repo
+fab new               Create new article template
+fab publish           Push web sources, build and deploy website
+fab rebuild           Clean and build
+fab regenerate        Autoreloading building of website with development settings
+fab reserve           Build and run server
+fab serve             Run server
+```
+
+TLDR:
+
+- Create a new article with `fab new`
+- Check article preview locally with `fab reserve`
+- Publish the article with `fab publish`
+- Push master and gh-pages branches
 
 
 Written by
-==========
+----------
 
-* [Petr Nohejl](http://petrnohejl.cz)
+[Petr Nohejl](http://petrnohejl.cz)
 
 
 License
-=======
+-------
 
 Copyright 2014 Petr Nohejl
-
-This work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-nc-sa/4.0/)
