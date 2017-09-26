@@ -72,7 +72,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Theme
-THEME = 'D:/GIT/FORKED/MinimalXY'
+THEME = 'D:/GIT/GITHUB/MinimalXY'
 
 # Theme customizations
 MINIMALXY_CUSTOM_CSS = 'static/custom.css'
