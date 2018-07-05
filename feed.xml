@@ -242,15 +242,13 @@
 &lt;p&gt;When you are creating a new instance of Activity via Intent, you can pass some extra data to the Activity. Data are stored in Bundle and can be retrieved by calling &lt;code&gt;getIntent().getExtras()&lt;/code&gt;. It's a good practise to implement static method &lt;code&gt;newIntent()&lt;/code&gt; which returns a new Intent that can be used to start the Activity. This way you have compile time checking for the arguments passed to the Activity. This pattern is suitable for Service and Broadcast as well.&lt;/p&gt;
 &lt;p&gt;Bundle is also used if the Activity is being re-initialized (e.g. because of configuration changes) for keeping the current state of the instance. You can supply some data in &lt;code&gt;onSaveInstanceState(Bundle)&lt;/code&gt; and retrieve them back in &lt;code&gt;onCreate(Bundle)&lt;/code&gt; method or &lt;code&gt;onRestoreInstanceState(Bundle)&lt;/code&gt;. Main difference between these methods is that &lt;code&gt;onRestoreInstanceState(Bundle)&lt;/code&gt; is called after &lt;code&gt;onStart()&lt;/code&gt;. Sometimes it's convenient to restore data here after all of the initialization has been done. Another purpose could be allowing subclasses to decide whether to use your default implementation.&lt;/p&gt;
 &lt;p&gt;See example code below. Note that &lt;code&gt;EXTRA_PRODUCT_ID&lt;/code&gt; constant is public. That's because we could need it in a Fragment encapsulated in this Activity.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleActivity&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Activity&lt;/span&gt;
-&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleActivity&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Activity&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;EXTRA_PRODUCT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_id&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;EXTRA_PRODUCT_TITLE&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_title&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;SAVED_PAGER_POSITION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;pager_position&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Intent&lt;/span&gt; &lt;span class="nf"&gt;newIntent&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Context&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productId&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productTitle&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;Intent&lt;/span&gt; &lt;span class="nf"&gt;newIntent&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Context&lt;/span&gt; &lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productId&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productTitle&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="n"&gt;Intent&lt;/span&gt; &lt;span class="n"&gt;intent&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;Intent&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;context&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;ExampleActivity&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
         &lt;span class="c1"&gt;// extras&lt;/span&gt;
@@ -261,28 +259,24 @@
     &lt;span class="o"&gt;}&lt;/span&gt;
 
     &lt;span class="nd"&gt;@Override&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="n"&gt;setContentView&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;R&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;layout&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;activity_example&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
         &lt;span class="c1"&gt;// restore saved state&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-        &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
             &lt;span class="n"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="o"&gt;}&lt;/span&gt;
 
         &lt;span class="c1"&gt;// handle intent extras&lt;/span&gt;
         &lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getIntent&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getExtras&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-        &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
             &lt;span class="n"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="o"&gt;}&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 
     &lt;span class="nd"&gt;@Override&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// save current instance state&lt;/span&gt;
         &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
@@ -290,24 +284,20 @@
     &lt;span class="o"&gt;}&lt;/span&gt;
 
     &lt;span class="nd"&gt;@Override&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onRestoreInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onRestoreInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// restore saved state&lt;/span&gt;
         &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onRestoreInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-        &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
             &lt;span class="c1"&gt;// TODO&lt;/span&gt;
         &lt;span class="o"&gt;}&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 
-    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// TODO&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 
-    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// TODO&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
@@ -319,14 +309,12 @@
 &lt;p&gt;Fragment state can be saved using &lt;code&gt;onSaveInstanceState(Bundle)&lt;/code&gt; method. It is similar to the Activity. Data can be restored in &lt;code&gt;onCreate(Bundle)&lt;/code&gt;, &lt;code&gt;onCreateView(LayoutInflater, ViewGroup, Bundle)&lt;/code&gt;, &lt;code&gt;onActivityCreated(Bundle)&lt;/code&gt; or &lt;code&gt;onViewStateRestored(Bundle)&lt;/code&gt; methods.&lt;/p&gt;
 &lt;p&gt;Fragment has also access to the Intent extras which were passed during creating the Activity instance. You can get this extra data by calling &lt;code&gt;getActivity().getIntent().getExtras()&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;See example code below.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleFragment&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Fragment&lt;/span&gt;
-&lt;span class="o"&gt;{&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;ExampleFragment&lt;/span&gt; &lt;span class="kd"&gt;extends&lt;/span&gt; &lt;span class="n"&gt;Fragment&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;ARGUMENT_PRODUCT_ID&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;product_id&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
     &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="kd"&gt;final&lt;/span&gt; &lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;SAVED_LIST_POSITION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;list_position&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
 
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;ExampleFragment&lt;/span&gt; &lt;span class="nf"&gt;newInstance&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productId&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kd"&gt;static&lt;/span&gt; &lt;span class="n"&gt;ExampleFragment&lt;/span&gt; &lt;span class="nf"&gt;newInstance&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;String&lt;/span&gt; &lt;span class="n"&gt;productId&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="n"&gt;ExampleFragment&lt;/span&gt; &lt;span class="n"&gt;fragment&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="n"&gt;ExampleFragment&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
 
         &lt;span class="c1"&gt;// arguments&lt;/span&gt;
@@ -340,52 +328,44 @@
     &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="nf"&gt;ExampleFragment&lt;/span&gt;&lt;span class="o"&gt;()&lt;/span&gt; &lt;span class="o"&gt;{}&lt;/span&gt;
 
     &lt;span class="nd"&gt;@Override&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; 
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onCreate&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
         &lt;span class="c1"&gt;// handle fragment arguments&lt;/span&gt;
         &lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getArguments&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-        &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arguments&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
             &lt;span class="n"&gt;handleArguments&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="o"&gt;}&lt;/span&gt;
 
         &lt;span class="c1"&gt;// restore saved state&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-        &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
             &lt;span class="n"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="o"&gt;}&lt;/span&gt;
 
         &lt;span class="c1"&gt;// handle intent extras&lt;/span&gt;
         &lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;getActivity&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getIntent&lt;/span&gt;&lt;span class="o"&gt;().&lt;/span&gt;&lt;span class="na"&gt;getExtras&lt;/span&gt;&lt;span class="o"&gt;();&lt;/span&gt;
-        &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-        &lt;span class="o"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
             &lt;span class="n"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
         &lt;span class="o"&gt;}&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 
     &lt;span class="nd"&gt;@Override&lt;/span&gt;
-    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;public&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// save current instance state&lt;/span&gt;
         &lt;span class="kd"&gt;super&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="na"&gt;onSaveInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;outState&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
 
         &lt;span class="c1"&gt;// TODO&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 
-    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleArguments&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleArguments&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;arguments&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// TODO&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 
-    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleSavedInstanceState&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;savedInstanceState&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// TODO&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 
-    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
-    &lt;span class="o"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;private&lt;/span&gt; &lt;span class="kt"&gt;void&lt;/span&gt; &lt;span class="nf"&gt;handleExtras&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="n"&gt;Bundle&lt;/span&gt; &lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="o"&gt;{&lt;/span&gt;
         &lt;span class="c1"&gt;// TODO&lt;/span&gt;
     &lt;span class="o"&gt;}&lt;/span&gt;
 &lt;span class="o"&gt;}&lt;/span&gt;
@@ -495,62 +475,99 @@
 &lt;p&gt;Pelikán je open-source blogovací systém pro geeky a je napsán v Pythonu. Můj blog je vlastně taková malá zoo - máme tady hroznýše, jestřába a pelikána. Pelikán umí skoro všechno co běžné blogy: kategorie, tagy, komentáře, stránky, Atom/RSS, zvýraznění syntaxe atd. Celé to funguje na jednoduchém principu - napíšu článek do textového souboru, zavolám Pelikána, ten mi vyrobí statické HTML stránky a já ty stránky nahraju na webový hosting. Pelikán ve spojení s technologiemi &lt;a href="http://daringfireball.net/projects/markdown/"&gt;Markdown&lt;/a&gt;, &lt;a href="http://jinja.pocoo.org/"&gt;Jinja2&lt;/a&gt; a &lt;a href="http://pages.github.com/"&gt;GitHub Pages&lt;/a&gt; utváří krásný a elegantní blogovací systém. Sbohem Wordpresse!&lt;/p&gt;
 &lt;p&gt;Pelikán má jednu slabinu - nemá žádnou &lt;a href="https://github.com/getpelican/pelican-themes"&gt;existující šablonu&lt;/a&gt;, která by mi 100% vyhovovala. Nyní používám &lt;a href="https://github.com/DandyDev/pelican-bootstrap3"&gt;pelican-bootstrap3&lt;/a&gt;, ale časem bych si chtěl napsat vlastní.&lt;/p&gt;
 &lt;p&gt;Spolu s přechodem na Pelikána jsem změnil i adresu blogu z původní blog.jestrab.net na blog.petrnohejl.cz. Zdrojáky Jestřáblogu jsou na &lt;a href="https://github.com/petrnohejl/Blog"&gt;GitHubu&lt;/a&gt;.&lt;/p&gt;</content></entry><entry><title>Rok 2012</title><link href="http://blog.petrnohejl.cz/rok-2012" rel="alternate"></link><published>2013-03-22T00:00:00+01:00</published><updated>2013-03-22T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2013-03-22:/rok-2012</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;Stal jsem se OSVČ, zřídil si živnost a začal se profesionálně
+&lt;li&gt;
+&lt;p&gt;Stal jsem se OSVČ, zřídil si živnost a začal se profesionálně
     věnovat vývoji mobilních aplikací. Ukončil jsem doktorské studium na
     &lt;a href="http://www.fit.vutbr.cz/"&gt;FIT&lt;/a&gt; &lt;a href="http://www.vutbr.cz/"&gt;VUT&lt;/a&gt;, jelikož mě to nebavilo. Ukončil jsem po 3.5 letech
     spolupráci se společností &lt;a href="https://www.avito.cz/"&gt;Avito&lt;/a&gt; a navázal novou spolupráci s
-    firmou &lt;a href="http://www.ulikeit.cz"&gt;uLikeIT&lt;/a&gt;. Nechal jsem si vyrobit nové logo a …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
-&lt;li&gt;Stal jsem se OSVČ, zřídil si živnost a začal se profesionálně
+    firmou &lt;a href="http://www.ulikeit.cz"&gt;uLikeIT&lt;/a&gt;. Nechal jsem si vyrobit nové logo a …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Stal jsem se OSVČ, zřídil si živnost a začal se profesionálně
     věnovat vývoji mobilních aplikací. Ukončil jsem doktorské studium na
     &lt;a href="http://www.fit.vutbr.cz/"&gt;FIT&lt;/a&gt; &lt;a href="http://www.vutbr.cz/"&gt;VUT&lt;/a&gt;, jelikož mě to nebavilo. Ukončil jsem po 3.5 letech
     spolupráci se společností &lt;a href="https://www.avito.cz/"&gt;Avito&lt;/a&gt; a navázal novou spolupráci s
-    firmou &lt;a href="http://www.ulikeit.cz"&gt;uLikeIT&lt;/a&gt;. Nechal jsem si vyrobit nové logo a vizitky.&lt;/li&gt;
-&lt;li&gt;Ve spolupráci s APM Company jsme rozjeli zbrusu novou verzi
+    firmou &lt;a href="http://www.ulikeit.cz"&gt;uLikeIT&lt;/a&gt;. Nechal jsem si vyrobit nové logo a vizitky.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ve spolupráci s APM Company jsme rozjeli zbrusu novou verzi
     &lt;a href="http://slevolapka.cz"&gt;Slevolapky&lt;/a&gt;, kterou pohání vlastní agregátor. Během několika
     měsíců jsme společně s ostatními kolegy vyprodukovali nové mobilní
     aplikace pro Android, iOS, Windows Phone, Symbian/Meego. Se
     Slevolapkou jsme se zúčastnili několika soutěží a vyhráli jsme první
     místo na GUG Camp Google IO Extended Prague 2012 a další první místo
-    na soutěži &lt;a href="http://www.mediar.cz/osmou-prehlidku-mobilnich-aplikaci-appparade-vyhral-inteligentni-lapac-slev-slevolapka/"&gt;AppParade #8&lt;/a&gt;, kterou pořádá Médiář.cz.&lt;/li&gt;
-&lt;li&gt;Vyprodukoval jsem několik nových mobilních appek: &lt;a href="https://play.google.com/store/apps/details?id=net.jestrab.slevolapka"&gt;Slevolapka&lt;/a&gt;
+    na soutěži &lt;a href="http://www.mediar.cz/osmou-prehlidku-mobilnich-aplikaci-appparade-vyhral-inteligentni-lapac-slev-slevolapka/"&gt;AppParade #8&lt;/a&gt;, kterou pořádá Médiář.cz.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vyprodukoval jsem několik nových mobilních appek: &lt;a href="https://play.google.com/store/apps/details?id=net.jestrab.slevolapka"&gt;Slevolapka&lt;/a&gt;
     (inteligentní lapač slev), &lt;a href="https://github.com/petrnohejl/Zitkino-Android"&gt;Žít Kino&lt;/a&gt; (program kin), &lt;a href="https://play.google.com/store/apps/details?id=cz.axunet.bazartip"&gt;Bazar Tip&lt;/a&gt;
     (vyhledávač inzerátů, pro firmu Axunet), &lt;a href="https://play.google.com/store/apps/details?id=cz.itesco.tesco"&gt;Tesco&lt;/a&gt; (nabídka produktů
     a služeb, pro firmu uLikeIT s.r.o), &lt;a href="https://play.google.com/store/apps/details?id=com.gamedatingapp.thegame"&gt;The Game&lt;/a&gt; (seznamování formou
     hry, pro firmu uLikeIT s.r.o), &lt;a href="https://play.google.com/store/apps/details?id=cz.slevomat"&gt;Slevomat&lt;/a&gt; (slevový server, pro
     firmu uLikeIT s.r.o), Alimpex (komplexní e-shop v tabletu, pro firmu
-    uLikeIT s.r.o).&lt;/li&gt;
-&lt;li&gt;Začal jsem si tvořit sadu šablon a nástrojů pro Android vývoj:
-    &lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities"&gt;Android Templates And Utilities&lt;/a&gt;. Jedná se o open source projekt.&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://speakerdeck.com/petrnohejl/jak-vyrobit-aplikaci-pro-android"&gt;Přednášel&lt;/a&gt; jsem na Android hackatonu (Android Dev Camp 2012).&lt;/li&gt;
-&lt;li&gt;Navštívil jsem několik IT konferencí. Účastnil jsem se setkání
-    mobilních vývojářů &lt;a href="https://twitter.com/zitbrmo"&gt;BrMo&lt;/a&gt;, Pythoní sraz &lt;a href="https://twitter.com/naPyVo"&gt;PyVo&lt;/a&gt;, &lt;a href="http://www.starcubeshow.cz/"&gt;Starcube Show&lt;/a&gt;, &lt;a href="http://www.mdevcamp.cz/"&gt;mDevCamp&lt;/a&gt;, Google IO Extended, &lt;a href="http://www.devfest.cz/"&gt;DevFest&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Oslavili jsme &lt;a href="http://janie.8bit.cz/gaudeamus-igitur/"&gt;Janči promoci&lt;/a&gt; u Orla v Kroměříži. Afterpárty byla
-    u tetičky na zahradě.&lt;/li&gt;
-&lt;li&gt;Účastnil jsem se několika mega párty: Káti 30tiny, grilování na
+    uLikeIT s.r.o).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Začal jsem si tvořit sadu šablon a nástrojů pro Android vývoj:
+    &lt;a href="https://github.com/petrnohejl/Android-Templates-And-Utilities"&gt;Android Templates And Utilities&lt;/a&gt;. Jedná se o open source projekt.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://speakerdeck.com/petrnohejl/jak-vyrobit-aplikaci-pro-android"&gt;Přednášel&lt;/a&gt; jsem na Android hackatonu (Android Dev Camp 2012).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem několik IT konferencí. Účastnil jsem se setkání
+    mobilních vývojářů &lt;a href="https://twitter.com/zitbrmo"&gt;BrMo&lt;/a&gt;, Pythoní sraz &lt;a href="https://twitter.com/naPyVo"&gt;PyVo&lt;/a&gt;, &lt;a href="http://www.starcubeshow.cz/"&gt;Starcube Show&lt;/a&gt;, &lt;a href="http://www.mdevcamp.cz/"&gt;mDevCamp&lt;/a&gt;, Google IO Extended, &lt;a href="http://www.devfest.cz/"&gt;DevFest&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Oslavili jsme &lt;a href="http://janie.8bit.cz/gaudeamus-igitur/"&gt;Janči promoci&lt;/a&gt; u Orla v Kroměříži. Afterpárty byla
+    u tetičky na zahradě.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Účastnil jsem se několika mega párty: Káti 30tiny, grilování na
     Lesné, Míši narozky v Krasoňově, FIT sraz, Vánoční besídka u Milíčů,
     &lt;a href="http://janie.8bit.cz/silvestr-v-ostrave/"&gt;Silvestr v Ostravě&lt;/a&gt; a několik herních sessions. S uLikeIT jsem
     byl v lanovém centru, na letní gril párty a akci sněz a vypij co
-    můžeš za 3 hodiny.&lt;/li&gt;
-&lt;li&gt;Zúčastnil jsem se Společenského večera (plesu) v Příbrami a &lt;a href="http://janie.8bit.cz/ples-esf-3-3-2012-divadlo-husa-na-provazku/"&gt;plesu ESF&lt;/a&gt; v Brně v divadle Husa na provázku. Navštívili jsme tradiční
+    můžeš za 3 hodiny.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zúčastnil jsem se Společenského večera (plesu) v Příbrami a &lt;a href="http://janie.8bit.cz/ples-esf-3-3-2012-divadlo-husa-na-provazku/"&gt;plesu ESF&lt;/a&gt; v Brně v divadle Husa na provázku. Navštívili jsme tradiční
     &lt;a href="http://janie.8bit.cz/filmovy-festival-fi-17-5-2012-brno/"&gt;filmový festival FI MUNI&lt;/a&gt;. Také jsme byli na &lt;a href="http://janie.8bit.cz/muzejni-noc-19-5-2012-brno/"&gt;Brněnské muzejní noci&lt;/a&gt; a Ignis Brunensis. Na podzim jsme opět zkoušeli kvalifikaci
-    do šifrovací hry Tmou, ale bohužel jsme se nedostali dál.&lt;/li&gt;
-&lt;li&gt;Navštívil jsem několik koncertů: Poletíme na Musilce, &lt;a href="http://janie.8bit.cz/robert-balzar-trio-28-10-2012-brno/"&gt;Robert Balzar Trio&lt;/a&gt; v Alterně, &lt;a href="http://janie.8bit.cz/rudy-linka-trio-18-11-2012-brno/"&gt;Rudy Linka Trio&lt;/a&gt; v Alterně, Štěpán Rak,
-    &lt;a href="http://janie.8bit.cz/javory-8-12-2012-brno/"&gt;Javory&lt;/a&gt; na Vánočních trzích na výstavišti.&lt;/li&gt;
-&lt;li&gt;Byli jsme s Jančou na &lt;a href="http://janie.8bit.cz/pojd-ukazu-ti-cestu-rajem-vol-1/"&gt;dovolené v Českém Ráji&lt;/a&gt;. Navštívili jsme
+    do šifrovací hry Tmou, ale bohužel jsme se nedostali dál.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem několik koncertů: Poletíme na Musilce, &lt;a href="http://janie.8bit.cz/robert-balzar-trio-28-10-2012-brno/"&gt;Robert Balzar Trio&lt;/a&gt; v Alterně, &lt;a href="http://janie.8bit.cz/rudy-linka-trio-18-11-2012-brno/"&gt;Rudy Linka Trio&lt;/a&gt; v Alterně, Štěpán Rak,
+    &lt;a href="http://janie.8bit.cz/javory-8-12-2012-brno/"&gt;Javory&lt;/a&gt; na Vánočních trzích na výstavišti.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Byli jsme s Jančou na &lt;a href="http://janie.8bit.cz/pojd-ukazu-ti-cestu-rajem-vol-1/"&gt;dovolené v Českém Ráji&lt;/a&gt;. Navštívili jsme
     nejromantičtější město světa &lt;a href="http://janie.8bit.cz/category/francouzske-toulky/"&gt;Paříž&lt;/a&gt;. Byli jsme si &lt;a href="http://janie.8bit.cz/lyzovacka-na-moninci/"&gt;zalyžovat na Monínci&lt;/a&gt;. Dále jsme uspořádali několik menších výletů: na
     &lt;a href="http://janie.8bit.cz/prvni-jarni-vylet-na-babu/"&gt;Babu&lt;/a&gt;, do &lt;a href="http://janie.8bit.cz/cyklovylet-do-rajhradu/"&gt;Rajhradu na kole&lt;/a&gt;, do &lt;a href="http://janie.8bit.cz/vylet-do-lednice/"&gt;Lednice&lt;/a&gt; vlakem, &lt;a href="http://janie.8bit.cz/v-korycanech/"&gt;do Koryčan za Frantou&lt;/a&gt;, do &lt;a href="http://janie.8bit.cz/vylet-do-tisnova/"&gt;Tišnova na rozhlednu a klášter&lt;/a&gt; a do
-    &lt;a href="http://janie.8bit.cz/po-stopach-bitvy-u-slavkova/"&gt;Slavkova na muzeum&lt;/a&gt; o té slavné bitvě.&lt;/li&gt;
-&lt;li&gt;Také jsme navštívili nově zrekonstruovanou &lt;a href="http://janie.8bit.cz/ve-vile-tugendhat/"&gt;vilu Tugendhat&lt;/a&gt; a
-    veletrh Mobitex, kde jsme si vyhlídli nový &lt;a href="http://www.meuble.sk/"&gt;nábytek&lt;/a&gt; do obýváku.&lt;/li&gt;
-&lt;li&gt;&lt;a href="http://janie.8bit.cz/kterak-jsme-malovali-zed/"&gt;Namalovali jsme zeď&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Pořídil jsem si novou zrcadlovku, o kterou jsme málem přišli v
+    &lt;a href="http://janie.8bit.cz/po-stopach-bitvy-u-slavkova/"&gt;Slavkova na muzeum&lt;/a&gt; o té slavné bitvě.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Také jsme navštívili nově zrekonstruovanou &lt;a href="http://janie.8bit.cz/ve-vile-tugendhat/"&gt;vilu Tugendhat&lt;/a&gt; a
+    veletrh Mobitex, kde jsme si vyhlídli nový &lt;a href="http://www.meuble.sk/"&gt;nábytek&lt;/a&gt; do obýváku.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="http://janie.8bit.cz/kterak-jsme-malovali-zed/"&gt;Namalovali jsme zeď&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pořídil jsem si novou zrcadlovku, o kterou jsme málem přišli v
     pařížském metru. Máme novou &lt;a href="http://www.sedackyphase.cz/"&gt;sedačku&lt;/a&gt;, sedací pytel a koberec v
     obýváku. Rovněž jsem si pořídil nové lyže a židli &lt;a href="http://www.zdravotni-zidle.cz"&gt;Spinalis&lt;/a&gt; pro
-    zdravé sezení.&lt;/li&gt;
-&lt;li&gt;Těsně před dovolenou nám odtahli auto kvůli blokovému čištění.&lt;/li&gt;
-&lt;li&gt;Dosáhl jsem jubilea 400 kešek.&lt;/li&gt;
-&lt;li&gt;Začali jsme cvičit Milíčjógu s Péťou.&lt;/li&gt;
-&lt;li&gt;Objevil jsem nový seriál a knihu Game of Thrones.&lt;/li&gt;
+    zdravé sezení.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Těsně před dovolenou nám odtahli auto kvůli blokovému čištění.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dosáhl jsem jubilea 400 kešek.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Začali jsme cvičit Milíčjógu s Péťou.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Objevil jsem nový seriál a knihu Game of Thrones.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content></entry><entry><title>Vánoční polévka z rybích vnitřností</title><link href="http://blog.petrnohejl.cz/vanocni-polevka-z-rybich-vnitrnosti" rel="alternate"></link><published>2013-01-15T00:00:00+01:00</published><updated>2013-01-15T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2013-01-15:/vanocni-polevka-z-rybich-vnitrnosti</id><summary type="html">&lt;p&gt;Vánoce jsou sice už pryč, ale to nevadí, protože polévka z rybích
 vnitřností se dá uvařit i v létě. Pravdou ale je, že nechutná tak
 výborně jako o těch Vánocích. Recept na tuto polévku jsem získal od
@@ -833,49 +850,71 @@ upravovat popis či screenshoty.&lt;/p&gt;
 &lt;p&gt;Díky &lt;a href="http://katalogaplikaci.cz/"&gt;Katalogu aplikací&lt;/a&gt; jsem objevil několik hodně
 zajímavých programů z českých luhů a hájů. Určitě tam také najdete něco,
 co vás zaujme a co jste neznali.&lt;/p&gt;</content></entry><entry><title>Co přinesl rok 2011</title><link href="http://blog.petrnohejl.cz/co-prinesl-rok-2011" rel="alternate"></link><published>2012-02-26T00:00:00+01:00</published><updated>2012-02-26T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2012-02-26:/co-prinesl-rok-2011</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;Po těžké pětileté dřině jsem získal &lt;abbr title="Ing."&gt;tři
+&lt;li&gt;
+&lt;p&gt;Po těžké pětileté dřině jsem získal &lt;abbr title="Ing."&gt;tři
     písmenka&lt;/abbr&gt; před jméno. Úspěšně jsem obhájil svoji &lt;a href="https://market.android.com/details?id=net.jestrab.caramelle"&gt;diplomovou práci&lt;/a&gt; a zakončil magisterské
     studium na &lt;a href="http://www.fit.vutbr.cz/"&gt;FIT&lt;/a&gt; &lt;a href="http://www.vutbr.cz/"&gt;VUT&lt;/a&gt; v Brně.
-    Promoci jsem oslavil s rodinou u &lt;a href="http://www.cerny-medved.cz/"&gt;Černého medvěda&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Získal jsem několik ocenění za svoji diplomku na téma &lt;em&gt;Rozšířená
-    realita pro platformu Android&lt;/em&gt;. Vyhrál jsem 1 …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
-&lt;li&gt;Po těžké pětileté dřině jsem získal &lt;abbr title="Ing."&gt;tři
+    Promoci jsem oslavil s rodinou u &lt;a href="http://www.cerny-medved.cz/"&gt;Černého medvěda&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Získal jsem několik ocenění za svoji diplomku na téma &lt;em&gt;Rozšířená
+    realita pro platformu Android&lt;/em&gt;. Vyhrál jsem 1 …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Po těžké pětileté dřině jsem získal &lt;abbr title="Ing."&gt;tři
     písmenka&lt;/abbr&gt; před jméno. Úspěšně jsem obhájil svoji &lt;a href="https://market.android.com/details?id=net.jestrab.caramelle"&gt;diplomovou práci&lt;/a&gt; a zakončil magisterské
     studium na &lt;a href="http://www.fit.vutbr.cz/"&gt;FIT&lt;/a&gt; &lt;a href="http://www.vutbr.cz/"&gt;VUT&lt;/a&gt; v Brně.
-    Promoci jsem oslavil s rodinou u &lt;a href="http://www.cerny-medved.cz/"&gt;Černého medvěda&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Získal jsem několik ocenění za svoji diplomku na téma &lt;em&gt;Rozšířená
+    Promoci jsem oslavil s rodinou u &lt;a href="http://www.cerny-medved.cz/"&gt;Černého medvěda&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Získal jsem několik ocenění za svoji diplomku na téma &lt;em&gt;Rozšířená
     realita pro platformu Android&lt;/em&gt;. Vyhrál jsem 1. místo na studentské
     konferenci &lt;a href="http://www.feec.vutbr.cz/EEICT/"&gt;EEICT 2011&lt;/a&gt; v kategorii posterové sekce. Dále jsem
     získal 3. místo odborné poroty a 5. místo při hlasování veřejnosti
     na soutěži &lt;a href="http://www.fit.vutbr.cz/events/McFIT/MediaDemo/2011/"&gt;MediaContest Multimedia Demo 2011&lt;/a&gt;. Svoji práci jsem
-    také prezentoval na konferenci &lt;a href="http://www.openmobility.cz/"&gt;Openmobility&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Byl jsem přijat na doktorské studium. Vybral jsem si disertační téma
+    také prezentoval na konferenci &lt;a href="http://www.openmobility.cz/"&gt;Openmobility&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Byl jsem přijat na doktorské studium. Vybral jsem si disertační téma
     &lt;em&gt;Uživatelská rozhraní se zaměřením na 3D&lt;/em&gt;. Vyzkoušel jsem si, jaké
     to je vést bakalářskou práci, vést semestrální projekt řeckého
     studenta, hlídat na půlsemestrální zkoušce, nebo přednášet cvika z
-    Assembleru.&lt;/li&gt;
-&lt;li&gt;Opět jsme se s Jančou stěhovali. Z privátu u výstaviště jsme se
+    Assembleru.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Opět jsme se s Jančou stěhovali. Z privátu u výstaviště jsme se
     přesunuli opodál a snad už na delší dobu. Dostali jsme taky pračku,
-    takže už nebudu muset vozit hadry domů na vyprání :D&lt;/li&gt;
-&lt;li&gt;Navštívil jsem &lt;a href="http://www.google.com/events/developerday/2011/prague/"&gt;Google Developer Day 2011&lt;/a&gt; - velmi zajímavé
+    takže už nebudu muset vozit hadry domů na vyprání :D&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem &lt;a href="http://www.google.com/events/developerday/2011/prague/"&gt;Google Developer Day 2011&lt;/a&gt; - velmi zajímavé
     přednášky nejen o Androidu a luxusní pohoštění. Dále jsem navštívil
     &lt;a href="http://gds2011.ceske-hry.cz/"&gt;Game Developers Session 2011&lt;/a&gt; - poutavé přednášky o vývoji her.
     Zúčastnil jsem se několika setkání u &lt;a href="https://twitter.com/#!/napyvo"&gt;Pyva&lt;/a&gt;, jež organizuje Honza
-    Javorek.&lt;/li&gt;
-&lt;li&gt;Nabral jsem mnoho nových zkušeností ve vývoji mobilních aplikací pro
+    Javorek.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nabral jsem mnoho nových zkušeností ve vývoji mobilních aplikací pro
     Android. Vyvinul jsem &lt;a href="https://market.android.com/details?id=net.jestrab.slevolapka"&gt;Slevolapku&lt;/a&gt; (agregátor slev), &lt;a href="https://market.android.com/details?id=net.jestrab.caramelle"&gt;Caramelle
     Augmented Reality&lt;/a&gt; (prohlížeč rozšířené reality),
     &lt;a href="https://market.android.com/details?id=net.skimap"&gt;Ski Map&lt;/a&gt; (lyžařský průvodce, ve spolupráci s Honzou Liškou), GTD
     (úkolníček napojený na IS Evidio, pro firmu Avito s.r.o), Kenvelo
-    (katalog oblečení, pro firmu Avito s.r.o).&lt;/li&gt;
-&lt;li&gt;Pořídil jsem si nové domény. Jedna z nich je petrnohejl.cz, na které
+    (katalog oblečení, pro firmu Avito s.r.o).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pořídil jsem si nové domény. Jedna z nich je petrnohejl.cz, na které
     budu mít v budoucnu vlastní "business" prezentaci. Taky jsme se
     přestěhovali z amerického Hostmonster hostingu zpět do ČR na vlastní
-    VPS.&lt;/li&gt;
-&lt;li&gt;Pořídil jsem si nový penobook, penodisk a dostal jsem (zapůjčen)
-    svůj první tablet.&lt;/li&gt;
-&lt;li&gt;Postavil jsem vesmírnou loď &lt;a href="http://fav.me/d3dqjy4"&gt;Enterprise&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Byli jsme s Jančou na báječné &lt;a href="http://janie.8bit.cz/dovolena-v-krkonosich/"&gt;dovolené v Krkonoších&lt;/a&gt; a pokořili
+    VPS.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pořídil jsem si nový penobook, penodisk a dostal jsem (zapůjčen)
+    svůj první tablet.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Postavil jsem vesmírnou loď &lt;a href="http://fav.me/d3dqjy4"&gt;Enterprise&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Byli jsme s Jančou na báječné &lt;a href="http://janie.8bit.cz/dovolena-v-krkonosich/"&gt;dovolené v Krkonoších&lt;/a&gt; a pokořili
     jsme Sněžku. Vyrazili jsme na &lt;a href="http://janie.8bit.cz/v-meste-na-dunaji/"&gt;výlet do Bratislavy&lt;/a&gt;, kde jsem byl
     prvně. Účasnil jsem se společně s peno clanem lyžovačky v Koutech
     nad Desnou, s Lázeňákem. Tradičně již potřetí jsme &lt;a href="http://kajolinka.rajce.idnes.cz/31.7.-4.8.2011%2C_Vltava/"&gt;spluli Vltavu&lt;/a&gt;, tentokrát na raftech. V největších hicech jsme vyrazili
@@ -884,27 +923,40 @@ co vás zaujme a co jste neznali.&lt;/p&gt;</content></entry><entry><title>Co p�
     kámoškou Mendy. Na podzim jsme vyrazili do Valtic na &lt;a href="http://janie.8bit.cz/slavnosti-burcaku-ve-valticich/"&gt;burčákové slavnosti&lt;/a&gt; a cimbál. Janča našla moji vlastní kešku na Makové,
     když jsme byli na &lt;a href="http://janie.8bit.cz/prazdniny-v-pribrami-v-bodech/"&gt;dovolené v Příbrami&lt;/a&gt;. Uzřel jsem Květnou
     zahradu na &lt;a href="http://janie.8bit.cz/prazdniny-v-kromerizi-v-bodech/"&gt;prázdninách v Kroměříži&lt;/a&gt;. Navštívil jsem s rodinou
-    pražskou ZOO.&lt;/li&gt;
-&lt;li&gt;Hudební kultura byla velmi slabá. Navštívili jsme jen jeden koncert - &lt;a href="http://janie.8bit.cz/joe-bar-blues-street-hudebni-sklep-brno-30-9-2011/"&gt;Joe Bar Blues Street Band&lt;/a&gt;, ale bylo to super.&lt;/li&gt;
-&lt;li&gt;Taneční kultura byla lepší. Zúčastnili jsme se plesu SU FIT na
+    pražskou ZOO.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Hudební kultura byla velmi slabá. Navštívili jsme jen jeden koncert - &lt;a href="http://janie.8bit.cz/joe-bar-blues-street-hudebni-sklep-brno-30-9-2011/"&gt;Joe Bar Blues Street Band&lt;/a&gt;, ale bylo to super.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Taneční kultura byla lepší. Zúčastnili jsme se plesu SU FIT na
     Semilasse a dechovky v Dělnickém domě, kde tentokrát nebyl Mýdlový
     děda. Zato jsme našli nového kámoše - leteckého inženýra, který nás
-    pochválil za účast a koupil nám brambůrky.&lt;/li&gt;
-&lt;li&gt;Účastnil jsem se několika oslav, megapárty a akcí různého druhu:
+    pochválil za účast a koupil nám brambůrky.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Účastnil jsem se několika oslav, megapárty a akcí různého druhu:
     PenoFercoBration, Žánkovy narozky na Palačáku, Rychlá rota slaví
     narozky, Džem session, &lt;a href="http://janie.8bit.cz/sushi-party/"&gt;Sushi párty&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/taje-taje/"&gt;Gurmánský večer v Taji&lt;/a&gt;,
     kolaudačka u Bakiho, &lt;a href="http://janie.8bit.cz/jak-jsme-vitali-novy-rok/"&gt;Hororový Silvestr&lt;/a&gt;, promoce bratrance Jana
-    Sebastiana.&lt;/li&gt;
-&lt;li&gt;S klukama ze školy jsme se přihlásili do šifrovací hry &lt;a href="http://www.tmou.cz/2011/index"&gt;Tmou&lt;/a&gt;.
+    Sebastiana.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;S klukama ze školy jsme se přihlásili do šifrovací hry &lt;a href="http://www.tmou.cz/2011/index"&gt;Tmou&lt;/a&gt;.
     Kvalifikací jsme prošli na divokou kartu a hru jsme skončili na 5.
-    stage z 16ti, což je myslím úspěch. Ale možná jsme neměli tolik pít.&lt;/li&gt;
-&lt;li&gt;Navštívil jsem interaktivní výstavu &lt;a href="http://janie.8bit.cz/poznavej-se-30-3-2011-brno/"&gt;Poznávej se&lt;/a&gt;, jež organizoval
+    stage z 16ti, což je myslím úspěch. Ale možná jsme neměli tolik pít.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem interaktivní výstavu &lt;a href="http://janie.8bit.cz/poznavej-se-30-3-2011-brno/"&gt;Poznávej se&lt;/a&gt;, jež organizoval
     IQ park Liberec. Dále jsem byl na &lt;a href="http://janie.8bit.cz/cetnicke-humoresky-17-12-2011-brno/"&gt;výstavě o Četnických humoreskách&lt;/a&gt;. Navštívil jsem festival cestovatelských filmů Go
     Kamera a &lt;a href="http://janie.8bit.cz/sport-life-12-11-2011-brno-vystaviste/"&gt;festival Cyklocestování&lt;/a&gt;, kde měli úžasnou přednášku
-    manželé Hervéovi, kteří objeli celou zeměkouli na kole.&lt;/li&gt;
-&lt;li&gt;S Jančou jsme se naučili zacházet s FIMEM a &lt;a href="http://janie.8bit.cz/nausnice-s-androidem-aneb-prvni-fimo-pokus/"&gt;vyrobili jsme Androidí náušnice&lt;/a&gt;. Poslali jsme je do &lt;a href="http://www.svetandroida.cz/vyhlaseni-vitezu-velke-narozeninove-souteze-s-lg-201102"&gt;soutěže na Svět Androida&lt;/a&gt; a
+    manželé Hervéovi, kteří objeli celou zeměkouli na kole.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;S Jančou jsme se naučili zacházet s FIMEM a &lt;a href="http://janie.8bit.cz/nausnice-s-androidem-aneb-prvni-fimo-pokus/"&gt;vyrobili jsme Androidí náušnice&lt;/a&gt;. Poslali jsme je do &lt;a href="http://www.svetandroida.cz/vyhlaseni-vitezu-velke-narozeninove-souteze-s-lg-201102"&gt;soutěže na Svět Androida&lt;/a&gt; a
     umístili se na 7. místě. Úkolem bylo ztvárnit originálním způsobem
-    "Androida". Vyhráli jsme kapacitní stylus.&lt;/li&gt;
+    "Androida". Vyhráli jsme kapacitní stylus.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content></entry><entry><title>Sumec dle baštýře Jardy</title><link href="http://blog.petrnohejl.cz/sumec-dle-bastyre-jardy" rel="alternate"></link><published>2011-09-08T00:00:00+02:00</published><updated>2011-09-08T00:00:00+02:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-09-08:/sumec-dle-bastyre-jardy</id><summary type="html">&lt;p&gt;Zdravím všechny čtenáře Jestřáblogu a především všechny kuchařky a
 kuchaře! Po dlouhé době jsem se opět dokopal něco napsat na blog. V
 letním semestru jsem neměl tolik času kvůli diplomce a státnicím, tak se
@@ -1354,73 +1406,132 @@ pokud je vše OK, můžeme podávat.&lt;/p&gt;
 &lt;p&gt;Jako obvykle nezapomeneme polévku uchovávat v chladu – v lednici,
 případně v zimě na balkóně, aby se nám nezkazila. Přeji dobré chutnání!&lt;/p&gt;
 &lt;p&gt;&lt;img alt="Pórková polévka" src="http://blog.petrnohejl.cz/images/porkova-polevka.jpg"&gt;&lt;/p&gt;</content></entry><entry><title>Ohlédnutí za rokem 2010</title><link href="http://blog.petrnohejl.cz/ohlednuti-za-rokem-2010" rel="alternate"></link><published>2011-01-07T00:00:00+01:00</published><updated>2011-01-07T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-01-07:/ohlednuti-za-rokem-2010</id><summary type="html">&lt;ul&gt;
-&lt;li&gt;Přestěhoval jsem se z koleje Pod Palackého vrchem (kde jsem žil
+&lt;li&gt;
+&lt;p&gt;Přestěhoval jsem se z koleje Pod Palackého vrchem (kde jsem žil
     skoro 4 roky) na privát na Nerudově. Po 3 měsících potom spolu s
-    Janie na privát u výstaviště.&lt;/li&gt;
-&lt;li&gt;Pořídil jsem si &lt;a href="http://www.android.com/"&gt;Androida&lt;/a&gt; a začal se pro něj učit programovat
-    aplikace.&lt;/li&gt;
-&lt;li&gt;Dostal jsem &lt;a href="http://irokodjembe.com/bubny.htm"&gt;Djembe&lt;/a&gt; a začal se učit na něj …&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
-&lt;li&gt;Přestěhoval jsem se z koleje Pod Palackého vrchem (kde jsem žil
+    Janie na privát u výstaviště.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pořídil jsem si &lt;a href="http://www.android.com/"&gt;Androida&lt;/a&gt; a začal se pro něj učit programovat
+    aplikace.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dostal jsem &lt;a href="http://irokodjembe.com/bubny.htm"&gt;Djembe&lt;/a&gt; a začal se učit na něj …&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;</summary><content type="html">&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Přestěhoval jsem se z koleje Pod Palackého vrchem (kde jsem žil
     skoro 4 roky) na privát na Nerudově. Po 3 měsících potom spolu s
-    Janie na privát u výstaviště.&lt;/li&gt;
-&lt;li&gt;Pořídil jsem si &lt;a href="http://www.android.com/"&gt;Androida&lt;/a&gt; a začal se pro něj učit programovat
-    aplikace.&lt;/li&gt;
-&lt;li&gt;Dostal jsem &lt;a href="http://irokodjembe.com/bubny.htm"&gt;Djembe&lt;/a&gt; a začal se učit na něj hrát.&lt;/li&gt;
-&lt;li&gt;Dostal jsem novou přilbu (největší velikost), ale na kolo nebyl
-    skoro žádný čas.&lt;/li&gt;
-&lt;li&gt;Pořídili jsme si s Janie čajový set na čajové obřady (Kung Fu Cha
-    :)).&lt;/li&gt;
-&lt;li&gt;Zavedl jsem si Penogram - osobní týdenní harmonogram, kde si
+    Janie na privát u výstaviště.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pořídil jsem si &lt;a href="http://www.android.com/"&gt;Androida&lt;/a&gt; a začal se pro něj učit programovat
+    aplikace.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dostal jsem &lt;a href="http://irokodjembe.com/bubny.htm"&gt;Djembe&lt;/a&gt; a začal se učit na něj hrát.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dostal jsem novou přilbu (největší velikost), ale na kolo nebyl
+    skoro žádný čas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pořídili jsme si s Janie čajový set na čajové obřady (Kung Fu Cha
+    :)).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Zavedl jsem si Penogram - osobní týdenní harmonogram, kde si
     odškrtávám činnosti, které často nedodržuju a chci dodržovat (např.
-    sport, úklid nebo psaní na blog).&lt;/li&gt;
-&lt;li&gt;Koupil jsem si novou doménu Jestřáb.net a vydal nové penovizitky.&lt;/li&gt;
-&lt;li&gt;Složil jsem zkoušku z
+    sport, úklid nebo psaní na blog).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Koupil jsem si novou doménu Jestřáb.net a vydal nové penovizitky.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Složil jsem zkoušku z
     &lt;abbr title="Teoretická informatika"&gt;TIN&lt;/abbr&gt;, jednoho z
     nejtěžších předmětů na FIT. Naopak jsem neudělal
-    &lt;abbr title="Funkcionální a logické programování"&gt;FPR&lt;/abbr&gt;.&lt;/li&gt;
-&lt;li&gt;Podílel jsem se na projektu &lt;a href="http://blog.petrnohejl.cz/projekt-mimikry"&gt;Mimikry&lt;/a&gt;, který se prezentoval na
-    mezinárodní výstavě designu &lt;a href="http://www.designblok.cz"&gt;Designblok&lt;/a&gt; 2010 v Praze.&lt;/li&gt;
-&lt;li&gt;Vybral jsem si diplomovou práci na téma: Rozšířená realita pro
-    platformu Android, zaměřená na leteckou navigaci.&lt;/li&gt;
-&lt;li&gt;Navštívil jsem &lt;a href="http://vyvojari.seznam.cz"&gt;Seznam.cz developers&lt;/a&gt; day - zajímavé přednášky a
-    dobré občerstvení.&lt;/li&gt;
-&lt;li&gt;Účastnil jsem se komparzu při natáčení filmu &lt;a href="http://www.facebook.com/pages/Nezavisly-film-Park/101182066605462"&gt;Park&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Získal jsem novou práci v &lt;a href="http://www.sovanet.cz/"&gt;Sovanet&lt;/a&gt;, kterou jsem po měsíci opustil
-    hlavně kvůli nedostatku času.&lt;/li&gt;
-&lt;li&gt;Přesvědčil jsem se na vlastní kůži, že &lt;a href="http://www.nejnabytek.cz/asko/"&gt;Asko je nejhorší prodejce nábytku&lt;/a&gt;. Vymyslel jsem SOAN (Svaz odpůrců Asko nábytek) a
+    &lt;abbr title="Funkcionální a logické programování"&gt;FPR&lt;/abbr&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Podílel jsem se na projektu &lt;a href="http://blog.petrnohejl.cz/projekt-mimikry"&gt;Mimikry&lt;/a&gt;, který se prezentoval na
+    mezinárodní výstavě designu &lt;a href="http://www.designblok.cz"&gt;Designblok&lt;/a&gt; 2010 v Praze.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Vybral jsem si diplomovou práci na téma: Rozšířená realita pro
+    platformu Android, zaměřená na leteckou navigaci.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem &lt;a href="http://vyvojari.seznam.cz"&gt;Seznam.cz developers&lt;/a&gt; day - zajímavé přednášky a
+    dobré občerstvení.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Účastnil jsem se komparzu při natáčení filmu &lt;a href="http://www.facebook.com/pages/Nezavisly-film-Park/101182066605462"&gt;Park&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Získal jsem novou práci v &lt;a href="http://www.sovanet.cz/"&gt;Sovanet&lt;/a&gt;, kterou jsem po měsíci opustil
+    hlavně kvůli nedostatku času.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Přesvědčil jsem se na vlastní kůži, že &lt;a href="http://www.nejnabytek.cz/asko/"&gt;Asko je nejhorší prodejce nábytku&lt;/a&gt;. Vymyslel jsem SOAN (Svaz odpůrců Asko nábytek) a
     vytvořil web. Posléze jsem musel web včetně domény úplně zrušit pod
-    pohružkou žaloby.&lt;/li&gt;
-&lt;li&gt;Ulovil jsem spoustu kešek a dosáhl jubilea 300 kousků.&lt;/li&gt;
-&lt;li&gt;Objevil jsem svého oblíbeného spisovatele, Roalda Dahla. Jediného
-    oblíbeného spisovatele :D.&lt;/li&gt;
-&lt;li&gt;Získal jsem nové kamarádky z Taiwanu a Hong-Kongu. Po studiích bych
-    tam chtěl vycestovat.&lt;/li&gt;
-&lt;li&gt;Byl jsem s rodinou a Janie v &lt;a href="http://janie.8bit.cz/prazdniny-v-italii/"&gt;Itálii&lt;/a&gt;. Nejdřív u moře v Rosolina
-    Mare, pak v Benátkách, Roveretu a Lago di Garda.&lt;/li&gt;
-&lt;li&gt;Splul jsem Vltavu na pálavě s Janie a kamarádama.&lt;/li&gt;
-&lt;li&gt;Účastnil jsem se několika výletů: do Mikulova za vínem, do
+    pohružkou žaloby.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ulovil jsem spoustu kešek a dosáhl jubilea 300 kousků.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Objevil jsem svého oblíbeného spisovatele, Roalda Dahla. Jediného
+    oblíbeného spisovatele :D.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Získal jsem nové kamarádky z Taiwanu a Hong-Kongu. Po studiích bych
+    tam chtěl vycestovat.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Byl jsem s rodinou a Janie v &lt;a href="http://janie.8bit.cz/prazdniny-v-italii/"&gt;Itálii&lt;/a&gt;. Nejdřív u moře v Rosolina
+    Mare, pak v Benátkách, Roveretu a Lago di Garda.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Splul jsem Vltavu na pálavě s Janie a kamarádama.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Účastnil jsem se několika výletů: do Mikulova za vínem, do
     &lt;a href="http://janie.8bit.cz/mezinarodni-vylet-do-obran/"&gt;Obřan&lt;/a&gt;, na Hády, na Macochu, do Kroměříže, do Rožnova a na
-    promoce bratrance Jirky na Hluboké.&lt;/li&gt;
-&lt;li&gt;Pořádal jsem &lt;a href="http://janie.8bit.cz/velikonocni-piknik-v-luzankach-vol-2/"&gt;Velikonoční&lt;/a&gt; a Burčákový piknik a dále &lt;a href="http://blog.petrnohejl.cz/zavody-v-kosiku"&gt;Závody v košíku&lt;/a&gt;, které se nakonec kvůli návštěvě policajtů nekonaly.&lt;/li&gt;
-&lt;li&gt;Účastnil jsem se několika legendárních párty: předloňský Silvestr na
+    promoce bratrance Jirky na Hluboké.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Pořádal jsem &lt;a href="http://janie.8bit.cz/velikonocni-piknik-v-luzankach-vol-2/"&gt;Velikonoční&lt;/a&gt; a Burčákový piknik a dále &lt;a href="http://blog.petrnohejl.cz/zavody-v-kosiku"&gt;Závody v košíku&lt;/a&gt;, které se nakonec kvůli návštěvě policajtů nekonaly.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Účastnil jsem se několika legendárních párty: předloňský Silvestr na
     téma oldies, loňský Silvestr na téma léto, PenoFercoBration v
     Lékárně, Péťovy narozeniny, Janie narozeniny na Nerudově v crazy
     oblečení, Míšovy a Zuzejkovy narozeniny s karaoke a bruslením,
-    Žankovy a Cínovy narozky na Palačáku.&lt;/li&gt;
-&lt;li&gt;Navštívil jsem řadu koncertů: Švihadlo, Xavier Baumaxa a Honza
+    Žankovy a Cínovy narozky na Palačáku.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem řadu koncertů: Švihadlo, Xavier Baumaxa a Honza
     Homola, Tokamak, Joe Bar Blues Street, Poletíme?, Cowhill, Louis
     Pasteur, Panenka vyzutá a další. &lt;a href="http://janie.8bit.cz/joe-bar-blues-street-stara-pekarna-brno-2-9-2010/"&gt;Joe Bar Blues Street&lt;/a&gt; mi dokonce
-    osobně věnovali písničku 'Prašivej pes'.&lt;/li&gt;
-&lt;li&gt;Navštívil jsem několik hudebních festivalů: Čarodějáles v Brně,
-    Realbeat v Žízníkově a &lt;a href="http://janie.8bit.cz/ceske-hrady-cz-rozmberk-nad-vltavou-30-31-7/"&gt;České Hrady v Rožmberku&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Navštívil jsem Muzejní noc v Brně a Praze, Noc vědců v Brně,
+    osobně věnovali písničku 'Prašivej pes'.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem několik hudebních festivalů: Čarodějáles v Brně,
+    Realbeat v Žízníkově a &lt;a href="http://janie.8bit.cz/ceske-hrady-cz-rozmberk-nad-vltavou-30-31-7/"&gt;České Hrady v Rožmberku&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Navštívil jsem Muzejní noc v Brně a Praze, Noc vědců v Brně,
     tradiční festival ohňostrojů &lt;a href="http://www.ignisbrunensis.cz/"&gt;Ignis Brunensis&lt;/a&gt; v Brně, &lt;a href="http://festival.fi.muni.cz/"&gt;filmový
     festival na FI MUNI&lt;/a&gt;, &lt;a href="http://janie.8bit.cz/medical-fair-19-22-10-brno/"&gt;Medical fair&lt;/a&gt;, výstavu &lt;a href="http://janie.8bit.cz/designblok-praha-5-10-10-2010/"&gt;Designblok&lt;/a&gt; v
-    Praze a výstavu &lt;a href="http://blog.petrnohejl.cz/sangri-la"&gt;Šangri-la&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Účastnil jsem se Maturitního plesu bratrance Ládi v Praze v Národním
+    Praze a výstavu &lt;a href="http://blog.petrnohejl.cz/sangri-la"&gt;Šangri-la&lt;/a&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Účastnil jsem se Maturitního plesu bratrance Ládi v Praze v Národním
     domě, Plesu SU FIT na Semilasse, Plesu Gymnázia Kroměříž a několika
-    Dechovek s Královopolkou.&lt;/li&gt;
-&lt;li&gt;Byl jsem v kině na trháku roku - &lt;a href="http://www.csfd.cz/film/228329-avatar/"&gt;Avatar&lt;/a&gt; ve 3D.&lt;/li&gt;
+    Dechovek s Královopolkou.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Byl jsem v kině na trháku roku - &lt;a href="http://www.csfd.cz/film/228329-avatar/"&gt;Avatar&lt;/a&gt; ve 3D.&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</content></entry><entry><title>Nerealistické videoefekty</title><link href="http://blog.petrnohejl.cz/nerealisticke-videoefekty" rel="alternate"></link><published>2011-01-05T00:00:00+01:00</published><updated>2011-01-05T00:00:00+01:00</updated><author><name>Petr Nohejl</name></author><id>tag:blog.petrnohejl.cz,2011-01-05:/nerealisticke-videoefekty</id><summary type="html">&lt;p&gt;V tomto článku bych chtěl popsat projekt, na kterém jsem pracoval v
 zimním semestru 2010 spolu s Petrem Panáčkem. Projekt se zabývá
 nerealistickými videoefekty. Text článku je převzat z dokumentace

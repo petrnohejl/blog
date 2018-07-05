@@ -84,15 +84,13 @@
 <p>When you are creating a new instance of Activity via Intent, you can pass some extra data to the Activity. Data are stored in Bundle and can be retrieved by calling <code>getIntent().getExtras()</code>. It's a good practise to implement static method <code>newIntent()</code> which returns a new Intent that can be used to start the Activity. This way you have compile time checking for the arguments passed to the Activity. This pattern is suitable for Service and Broadcast as well.</p>
 <p>Bundle is also used if the Activity is being re-initialized (e.g. because of configuration changes) for keeping the current state of the instance. You can supply some data in <code>onSaveInstanceState(Bundle)</code> and retrieve them back in <code>onCreate(Bundle)</code> method or <code>onRestoreInstanceState(Bundle)</code>. Main difference between these methods is that <code>onRestoreInstanceState(Bundle)</code> is called after <code>onStart()</code>. Sometimes it's convenient to restore data here after all of the initialization has been done. Another purpose could be allowing subclasses to decide whether to use your default implementation.</p>
 <p>See example code below. Note that <code>EXTRA_PRODUCT_ID</code> constant is public. That's because we could need it in a Fragment encapsulated in this Activity.</p>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleActivity</span> <span class="kd">extends</span> <span class="n">Activity</span>
-<span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleActivity</span> <span class="kd">extends</span> <span class="n">Activity</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">EXTRA_PRODUCT_ID</span> <span class="o">=</span> <span class="s">&quot;product_id&quot;</span><span class="o">;</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">EXTRA_PRODUCT_TITLE</span> <span class="o">=</span> <span class="s">&quot;product_title&quot;</span><span class="o">;</span>
 
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">SAVED_PAGER_POSITION</span> <span class="o">=</span> <span class="s">&quot;pager_position&quot;</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Intent</span> <span class="nf">newIntent</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">productId</span><span class="o">,</span> <span class="n">String</span> <span class="n">productTitle</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">Intent</span> <span class="nf">newIntent</span><span class="o">(</span><span class="n">Context</span> <span class="n">context</span><span class="o">,</span> <span class="n">String</span> <span class="n">productId</span><span class="o">,</span> <span class="n">String</span> <span class="n">productTitle</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">Intent</span> <span class="n">intent</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Intent</span><span class="o">(</span><span class="n">context</span><span class="o">,</span> <span class="n">ExampleActivity</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
 
         <span class="c1">// extras</span>
@@ -103,28 +101,24 @@
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
         <span class="n">setContentView</span><span class="o">(</span><span class="n">R</span><span class="o">.</span><span class="na">layout</span><span class="o">.</span><span class="na">activity_example</span><span class="o">);</span>
 
         <span class="c1">// restore saved state</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-        <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">handleSavedInstanceState</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
         <span class="o">}</span>
 
         <span class="c1">// handle intent extras</span>
         <span class="n">Bundle</span> <span class="n">extras</span> <span class="o">=</span> <span class="n">getIntent</span><span class="o">().</span><span class="na">getExtras</span><span class="o">();</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">extras</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-        <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">extras</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">handleExtras</span><span class="o">(</span><span class="n">extras</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSaveInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">outState</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSaveInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">outState</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// save current instance state</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onSaveInstanceState</span><span class="o">(</span><span class="n">outState</span><span class="o">);</span>
 
@@ -132,24 +126,20 @@
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRestoreInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onRestoreInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// restore saved state</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onRestoreInstanceState</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
 
-        <span class="k">if</span><span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-        <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="c1">// TODO</span>
         <span class="o">}</span>
     <span class="o">}</span>
 
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleSavedInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleSavedInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// TODO</span>
     <span class="o">}</span>
 
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleExtras</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">extras</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleExtras</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">extras</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// TODO</span>
     <span class="o">}</span>
 <span class="o">}</span>
@@ -161,14 +151,12 @@
 <p>Fragment state can be saved using <code>onSaveInstanceState(Bundle)</code> method. It is similar to the Activity. Data can be restored in <code>onCreate(Bundle)</code>, <code>onCreateView(LayoutInflater, ViewGroup, Bundle)</code>, <code>onActivityCreated(Bundle)</code> or <code>onViewStateRestored(Bundle)</code> methods.</p>
 <p>Fragment has also access to the Intent extras which were passed during creating the Activity instance. You can get this extra data by calling <code>getActivity().getIntent().getExtras()</code>.</p>
 <p>See example code below.</p>
-<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleFragment</span> <span class="kd">extends</span> <span class="n">Fragment</span>
-<span class="o">{</span>
+<div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleFragment</span> <span class="kd">extends</span> <span class="n">Fragment</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">ARGUMENT_PRODUCT_ID</span> <span class="o">=</span> <span class="s">&quot;product_id&quot;</span><span class="o">;</span>
 
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">SAVED_LIST_POSITION</span> <span class="o">=</span> <span class="s">&quot;list_position&quot;</span><span class="o">;</span>
 
-    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ExampleFragment</span> <span class="nf">newInstance</span><span class="o">(</span><span class="n">String</span> <span class="n">productId</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">public</span> <span class="kd">static</span> <span class="n">ExampleFragment</span> <span class="nf">newInstance</span><span class="o">(</span><span class="n">String</span> <span class="n">productId</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">ExampleFragment</span> <span class="n">fragment</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ExampleFragment</span><span class="o">();</span>
 
         <span class="c1">// arguments</span>
@@ -182,52 +170,44 @@
     <span class="kd">public</span> <span class="nf">ExampleFragment</span><span class="o">()</span> <span class="o">{}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> 
-    <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onCreate</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onCreate</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
 
         <span class="c1">// handle fragment arguments</span>
         <span class="n">Bundle</span> <span class="n">arguments</span> <span class="o">=</span> <span class="n">getArguments</span><span class="o">();</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">arguments</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-        <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">arguments</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">handleArguments</span><span class="o">(</span><span class="n">arguments</span><span class="o">);</span>
         <span class="o">}</span>
 
         <span class="c1">// restore saved state</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-        <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">savedInstanceState</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">handleSavedInstanceState</span><span class="o">(</span><span class="n">savedInstanceState</span><span class="o">);</span>
         <span class="o">}</span>
 
         <span class="c1">// handle intent extras</span>
         <span class="n">Bundle</span> <span class="n">extras</span> <span class="o">=</span> <span class="n">getActivity</span><span class="o">().</span><span class="na">getIntent</span><span class="o">().</span><span class="na">getExtras</span><span class="o">();</span>
-        <span class="k">if</span><span class="o">(</span><span class="n">extras</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span>
-        <span class="o">{</span>
+        <span class="k">if</span> <span class="o">(</span><span class="n">extras</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
             <span class="n">handleExtras</span><span class="o">(</span><span class="n">extras</span><span class="o">);</span>
         <span class="o">}</span>
     <span class="o">}</span>
 
     <span class="nd">@Override</span>
-    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSaveInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">outState</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onSaveInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">outState</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// save current instance state</span>
         <span class="kd">super</span><span class="o">.</span><span class="na">onSaveInstanceState</span><span class="o">(</span><span class="n">outState</span><span class="o">);</span>
 
         <span class="c1">// TODO</span>
     <span class="o">}</span>
 
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleArguments</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">arguments</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleArguments</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">arguments</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// TODO</span>
     <span class="o">}</span>
 
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleSavedInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleSavedInstanceState</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">savedInstanceState</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// TODO</span>
     <span class="o">}</span>
 
-    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleExtras</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">extras</span><span class="o">)</span>
-    <span class="o">{</span>
+    <span class="kd">private</span> <span class="kt">void</span> <span class="nf">handleExtras</span><span class="o">(</span><span class="n">Bundle</span> <span class="n">extras</span><span class="o">)</span> <span class="o">{</span>
         <span class="c1">// TODO</span>
     <span class="o">}</span>
 <span class="o">}</span>
