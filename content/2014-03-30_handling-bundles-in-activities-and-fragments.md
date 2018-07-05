@@ -12,15 +12,13 @@ Bundle is also used if the Activity is being re-initialized (e.g. because of con
 See example code below. Note that `EXTRA_PRODUCT_ID` constant is public. That's because we could need it in a Fragment encapsulated in this Activity.
 
     :::java
-    public class ExampleActivity extends Activity
-	{
+    public class ExampleActivity extends Activity {
 		public static final String EXTRA_PRODUCT_ID = "product_id";
 		public static final String EXTRA_PRODUCT_TITLE = "product_title";
 
 		private static final String SAVED_PAGER_POSITION = "pager_position";
 
-		public static Intent newIntent(Context context, String productId, String productTitle)
-		{
+		public static Intent newIntent(Context context, String productId, String productTitle) {
 			Intent intent = new Intent(context, ExampleActivity.class);
 
 			// extras
@@ -31,28 +29,24 @@ See example code below. Note that `EXTRA_PRODUCT_ID` constant is public. That's 
 		}
 
 		@Override
-		public void onCreate(Bundle savedInstanceState)
-		{
+		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 			setContentView(R.layout.activity_example);
 
 			// restore saved state
-			if(savedInstanceState != null)
-			{
+			if (savedInstanceState != null) {
 				handleSavedInstanceState(savedInstanceState);
 			}
 
 			// handle intent extras
 			Bundle extras = getIntent().getExtras();
-			if(extras != null)
-			{
+			if (extras != null) {
 				handleExtras(extras);
 			}
 		}
 
 		@Override
-		public void onSaveInstanceState(Bundle outState)
-		{
+		public void onSaveInstanceState(Bundle outState) {
 			// save current instance state
 			super.onSaveInstanceState(outState);
 
@@ -60,24 +54,20 @@ See example code below. Note that `EXTRA_PRODUCT_ID` constant is public. That's 
 		}
 
 		@Override
-		public void onRestoreInstanceState(Bundle savedInstanceState)
-		{
+		public void onRestoreInstanceState(Bundle savedInstanceState) {
 			// restore saved state
 			super.onRestoreInstanceState(savedInstanceState);
 
-			if(savedInstanceState != null)
-			{
+			if (savedInstanceState != null) {
 				// TODO
 			}
 		}
 
-		private void handleSavedInstanceState(Bundle savedInstanceState)
-		{
+		private void handleSavedInstanceState(Bundle savedInstanceState) {
 			// TODO
 		}
 
-		private void handleExtras(Bundle extras)
-		{
+		private void handleExtras(Bundle extras) {
 			// TODO
 		}
 	}
@@ -93,14 +83,12 @@ Fragment has also access to the Intent extras which were passed during creating 
 See example code below.
 
 	:::java
-	public class ExampleFragment extends Fragment
-	{
+	public class ExampleFragment extends Fragment {
 		private static final String ARGUMENT_PRODUCT_ID = "product_id";
 
 		private static final String SAVED_LIST_POSITION = "list_position";
 
-		public static ExampleFragment newInstance(String productId)
-		{
+		public static ExampleFragment newInstance(String productId) {
 			ExampleFragment fragment = new ExampleFragment();
 
 			// arguments
@@ -114,52 +102,44 @@ See example code below.
 		public ExampleFragment() {}
 
 		@Override
-		public void onCreate(Bundle savedInstanceState) 
-		{
+		public void onCreate(Bundle savedInstanceState) {
 			super.onCreate(savedInstanceState);
 
 			// handle fragment arguments
 			Bundle arguments = getArguments();
-			if(arguments != null)
-			{
+			if (arguments != null) {
 				handleArguments(arguments);
 			}
 
 			// restore saved state
-			if(savedInstanceState != null)
-			{
+			if (savedInstanceState != null) {
 				handleSavedInstanceState(savedInstanceState);
 			}
 			
 			// handle intent extras
 			Bundle extras = getActivity().getIntent().getExtras();
-			if(extras != null)
-			{
+			if (extras != null) {
 				handleExtras(extras);
 			}
 		}
 
 		@Override
-		public void onSaveInstanceState(Bundle outState)
-		{
+		public void onSaveInstanceState(Bundle outState) {
 			// save current instance state
 			super.onSaveInstanceState(outState);
 
 			// TODO
 		}
 
-		private void handleArguments(Bundle arguments)
-		{
+		private void handleArguments(Bundle arguments) {
 			// TODO
 		}
 
-		private void handleSavedInstanceState(Bundle savedInstanceState)
-		{
+		private void handleSavedInstanceState(Bundle savedInstanceState) {
 			// TODO
 		}
 		
-		private void handleExtras(Bundle extras)
-		{
+		private void handleExtras(Bundle extras) {
 			// TODO
 		}
 	}
