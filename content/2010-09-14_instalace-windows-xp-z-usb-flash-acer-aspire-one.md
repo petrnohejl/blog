@@ -19,7 +19,7 @@ mi nefungovala. Program vracel nepochopitelné errory ("E: has NOT FAT
 FAT32 or NTFS Format and is NOT Valid"), ačkoliv byla flashka
 zformátována do FAT32 a měla velikost 1 GB (systém souborů FAT32
 nepodporuje soubory větší než 4 GiB). Nakonec jsem narazil v jedné
-[diskuzi](http://duncsweb.com/2009/07/17/e-has-not-fat-fat32-or-ntfs-format-and-is-not-valid/) na velmi jednoduché a funkční řešení.
+[diskuzi](https://duncsweb.com/threads/e-has-not-fat-fat32-or-ntfs-format-and-is-not-valid.6519/) na velmi jednoduché a funkční řešení.
 
 ## Postup
 
@@ -30,7 +30,7 @@ nepodporuje soubory větší než 4 GiB). Nakonec jsem narazil v jedné
    souborů FAT32 nebo NTFS. Pozor! Při formátu ztratíte všechna vaše
    data na USB disku!
 2. Připravíme si instalační CD OS Windows XP, případně můžeme použít
-   virtuální mechaniku např. pomocí [Daemon Tools](http://www.daemon-tools.cc) a načíst CD z ISO
+   virtuální mechaniku např. pomocí [Daemon Tools](https://www.daemon-tools.cc) a načíst CD z ISO
    souboru.
 3. Stáhneme si z internetu program WinSetupFromUSB a spustíme jej. V
    sekci "USB disk selection" vybereme náš flash disk. V sekci "Add to

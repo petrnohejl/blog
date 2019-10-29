@@ -32,7 +32,7 @@ vymyšlená adresa mail@mail.cz.
 
 ## Vysvětlení
 
-Znaky e-mailové adresy převedeme pomocí [převodníku](http://textmod.pavucina.com/prevod-html-entity) na HTML entity
+Znaky e-mailové adresy převedeme pomocí [převodníku](https://textmod.pavucina.com/prevod-html-entity) na HTML entity
 (můžeme zkombinovat normální znaky s HTML entitami). Znak zavináče
 obalíme do značky `<span>` a to celé vložíme do značky `<a>`, která
 ovšem nebude mít parametr `href`. Mezi znaky navíc vložíme několik
@@ -55,4 +55,4 @@ příliš náročné. Dalšími překážkami pro bota jsou kódované znaky do 
 entit, vložené komentáře a značky `<span>`, zřetězené podřetězce.
 Podobných překážek pro spamboty lze vymyslet ještě více, např.
 zalamování sekvence kódu na více řádků apod. Více o této problematice se
-můžete dozvědět například na [security-portal.cz](http://www.security-portal.cz/clanky/jak-skr%C3%BDt-emailovou-adresu-p%C5%99ed-spammery).
+můžete dozvědět například na [security-portal.cz](https://www.security-portal.cz/clanky/jak-skr%C3%BDt-emailovou-adresu-p%C5%99ed-spammery).

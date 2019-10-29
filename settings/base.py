@@ -83,8 +83,8 @@ MINIMALXY_CURRENT_YEAR = date.today().year
 # Author
 AUTHOR_INTRO = u'Hi! I’m Petr – an Android developer living in Brno, Czech Republic.'
 AUTHOR_DESCRIPTION = u'Hi! I’m Petr – an Android developer living in Brno, Czech Republic. I’m passionate about code, software architecture and technology. I studied at the Brno University of Technology and currently I work at STRV as team lead of the Android department. I’ve been developing mobile apps since 2009. I like #android #coffee #reggae #photography #djembe #traveling #valueinvesting #myfamily.'
-AUTHOR_AVATAR = 'http://www.gravatar.com/avatar/8fafd9d1a430a1e843478f00c3da924a?s=240'
-AUTHOR_WEB = 'http://petrnohejl.cz'
+AUTHOR_AVATAR = 'https://www.gravatar.com/avatar/8fafd9d1a430a1e843478f00c3da924a?s=240'
+AUTHOR_WEB = 'https://petrnohejl.cz'
 
 # Services
 GOOGLE_ANALYTICS = 'UA-17930136-2'
@@ -98,11 +98,11 @@ ADDTHIS_TWEET = True
 
 # Social
 SOCIAL = (
-    ('facebook', 'http://www.facebook.com/petr.nohejl'),
+    ('facebook', 'https://www.facebook.com/petr.nohejl'),
     ('instagram', 'https://www.instagram.com/petr.nohejl/'),
-    ('twitter', 'http://twitter.com/petrnohejl'),
+    ('twitter', 'https://twitter.com/petrnohejl'),
     ('github', 'https://github.com/petrnohejl'),
-    ('linkedin', 'http://www.linkedin.com/in/petrnohejl'),
+    ('linkedin', 'https://www.linkedin.com/in/petrnohejl'),
 )
 
 # Menu

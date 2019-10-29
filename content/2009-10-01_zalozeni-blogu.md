@@ -6,7 +6,7 @@ blog. Uvědomil jsem si, že bych si měl někam zaznamenávat svoje zážitky
 ze života a různé postřehy. Tento blog s názvem 'Jestřáblog' je určen
 hlavně pro moji vlastní potřebu a pro mé blízké.
 
-Rozhodl jsem se pro redakční systém [Wordpress](http://wordpress.org/), protože se mi líbí
+Rozhodl jsem se pro redakční systém [Wordpress](https://wordpress.org/), protože se mi líbí
 jeho funkčnost a použitelnost. Uvidíme časem, jak se osvědčí. Použil
 jsem skin 'Quadro', který ještě hodlám dále tunit (do komentářů můžete
 psát jak se Vám skin líbí/nelíbí, případně co byste vylepšili :).

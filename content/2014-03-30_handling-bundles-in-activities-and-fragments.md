@@ -1,7 +1,7 @@
 Title: Handling bundles in activities and fragments
 Category: Android
 
-[Bundle](http://developer.android.com/reference/android/os/Bundle.html) is a useful data holder, which maps String values to various [Parcelable](http://developer.android.com/reference/android/os/Parcelable.html) types. So basically it is a heterogenous key/value map. Bundles are used in [Intents](http://developer.android.com/reference/android/content/Intent.html), [Activities](http://developer.android.com/reference/android/app/Activity.html) and [Fragments](http://developer.android.com/reference/android/app/Fragment.html) for transporting data. I would like to describe how I work with Bundles on Android and show you some good tips.
+[Bundle](https://developer.android.com/reference/android/os/Bundle.html) is a useful data holder, which maps String values to various [Parcelable](https://developer.android.com/reference/android/os/Parcelable.html) types. So basically it is a heterogenous key/value map. Bundles are used in [Intents](https://developer.android.com/reference/android/content/Intent.html), [Activities](https://developer.android.com/reference/android/app/Activity.html) and [Fragments](https://developer.android.com/reference/android/app/Fragment.html) for transporting data. I would like to describe how I work with Bundles on Android and show you some good tips.
 
 ## Activity
 

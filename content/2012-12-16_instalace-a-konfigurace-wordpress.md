@@ -11,7 +11,7 @@ potřeby - určitě se ještě bude v budoucnu hodit.
 
 ## Instalace krok za krokem
 
- 1. [Stáhneme](http://wordpress.org/download/) nejnovější originální verzi Wordpress (bez překladů).
+ 1. [Stáhneme](https://wordpress.org/download/) nejnovější originální verzi Wordpress (bez překladů).
  2. Zkopírujeme všechny soubory na server.
  3. Vytvoříme novou databázi v phpMyAdmin. Zvolíme porovnání
     *utf8\_general\_ci*.
@@ -56,14 +56,14 @@ potřeby - určitě se ještě bude v budoucnu hodit.
     2x zaheslován. Soubor *.htpasswd* lze vygenerovat [zde](http://www.htaccesstools.com/htpasswd-generator/). Více na
     [websitedefender.com](http://www.websitedefender.com/wordpress-security/htaccess-files-wordpress-security/).
 16. Nainstalujeme, aktivujeme a nastavíme pluginy:
-    1.  [Akismet](http://wordpress.org/extend/plugins/akismet/)
-    2.  [Bad Behavior](http://wordpress.org/extend/plugins/bad-behavior/)
-    3.  [Simple Google Analytics](http://wordpress.org/extend/plugins/simple-google-analytics/)
-    4.  [Sociable](http://wordpress.org/extend/plugins/sociable/)
-    5.  [Comment Reply Notification](http://wordpress.org/extend/plugins/comment-reply-notification/)
-    6.  [Resize Image After Upload](http://wordpress.org/extend/plugins/resize-image-after-upload/)
-    7.  Případně místo předchozího [Resize images before upload](http://wordpress.org/extend/plugins/resize-images-before-upload/)
-    8.  [Simple Lightbox](http://wordpress.org/extend/plugins/simple-lightbox/)
+    1.  [Akismet](https://wordpress.org/extend/plugins/akismet/)
+    2.  [Bad Behavior](https://wordpress.org/extend/plugins/bad-behavior/)
+    3.  [Simple Google Analytics](https://wordpress.org/extend/plugins/simple-google-analytics/)
+    4.  [Sociable](https://wordpress.org/extend/plugins/sociable/)
+    5.  [Comment Reply Notification](https://wordpress.org/extend/plugins/comment-reply-notification/)
+    6.  [Resize Image After Upload](https://wordpress.org/extend/plugins/resize-image-after-upload/)
+    7.  Případně místo předchozího [Resize images before upload](https://wordpress.org/extend/plugins/resize-images-before-upload/)
+    8.  [Simple Lightbox](https://wordpress.org/extend/plugins/simple-lightbox/)
 17. Vytvoříme účet na Google Analytics a nastavíme v pluginu UA kód.
 18. Vytvoříme na serveru adresář */wp-content/uploads*.
 19. Nastavíme práva souborů a složek webu na serveru pomocí příkazů *chmod*,
@@ -71,7 +71,7 @@ potřeby - určitě se ještě bude v budoucnu hodit.
 20. V případě potřeby [ručně upravíme](#manualni-upravy-wordpressu) šablony/pluginy a uložíme si
     provedené změny pro případ aktualizace na novější verze dané
     šablony/pluginu.
-21. V případě vydání aktualizace Wordpressu postupujeme podle [instrukcí](http://codex.wordpress.org/Upgrading_WordPress).
+21. V případě vydání aktualizace Wordpressu postupujeme podle [instrukcí](https://wordpress.org/support/article/updating-wordpress/).
 22. Vytvoříme základní strukturu webu: kategorie, stránky, homepage, články.
 
 ## Konfigurační soubor wp-config.php

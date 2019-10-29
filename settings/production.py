@@ -9,5 +9,5 @@ from base import *
 
 
 # Site URL
-SITEURL = 'http://blog.petrnohejl.cz'
+SITEURL = 'https://blog.petrnohejl.cz'
 RELATIVE_URLS = False
