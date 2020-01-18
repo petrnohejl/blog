@@ -1497,7 +1497,7 @@ případně v zimě na balkóně, aby se nám nezkazila. Přeji dobré chutnán�
     &lt;abbr title="Funkcionální a logické programování"&gt;FPR&lt;/abbr&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Podílel jsem se na projektu &lt;a href="https://blog.petrnohejl.cz/projekt-mimikry"&gt;Mimikry&lt;/a&gt;, který se prezentoval na
+&lt;p&gt;Podílel jsem se na projektu &lt;a href="https://blog.petrnohejl.cz/2011-01-04_projekt-mimikry.md"&gt;Mimikry&lt;/a&gt;, který se prezentoval na
     mezinárodní výstavě designu &lt;a href="https://www.designblok.cz"&gt;Designblok&lt;/a&gt; 2010 v Praze.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1544,7 +1544,7 @@ případně v zimě na balkóně, aby se nám nezkazila. Přeji dobré chutnán�
     promoce bratrance Jirky na Hluboké.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;Pořádal jsem &lt;a href="https://janie.8bit.cz/velikonocni-piknik-v-luzankach-vol-2/"&gt;Velikonoční&lt;/a&gt; a Burčákový piknik a dále &lt;a href="https://blog.petrnohejl.cz/zavody-v-kosiku"&gt;Závody v košíku&lt;/a&gt;, které se nakonec kvůli návštěvě policajtů nekonaly.&lt;/p&gt;
+&lt;p&gt;Pořádal jsem &lt;a href="https://janie.8bit.cz/velikonocni-piknik-v-luzankach-vol-2/"&gt;Velikonoční&lt;/a&gt; a Burčákový piknik a dále &lt;a href="https://blog.petrnohejl.cz/2010-04-03_zavody-v-kosiku.md"&gt;Závody v košíku&lt;/a&gt;, které se nakonec kvůli návštěvě policajtů nekonaly.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Účastnil jsem se několika legendárních párty: předloňský Silvestr na
@@ -1567,7 +1567,7 @@ případně v zimě na balkóně, aby se nám nezkazila. Přeji dobré chutnán�
 &lt;p&gt;Navštívil jsem Muzejní noc v Brně a Praze, Noc vědců v Brně,
     tradiční festival ohňostrojů &lt;a href="http://www.ignisbrunensis.cz/"&gt;Ignis Brunensis&lt;/a&gt; v Brně, &lt;a href="http://festival.fi.muni.cz/"&gt;filmový
     festival na FI MUNI&lt;/a&gt;, &lt;a href="https://janie.8bit.cz/medical-fair-19-22-10-brno/"&gt;Medical fair&lt;/a&gt;, výstavu &lt;a href="https://janie.8bit.cz/designblok-praha-5-10-10-2010/"&gt;Designblok&lt;/a&gt; v
-    Praze a výstavu &lt;a href="https://blog.petrnohejl.cz/sangri-la"&gt;Šangri-la&lt;/a&gt;.&lt;/p&gt;
+    Praze a výstavu &lt;a href="https://blog.petrnohejl.cz/2010-11-13_sangri-la.md"&gt;Šangri-la&lt;/a&gt;.&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;Účastnil jsem se Maturitního plesu bratrance Ládi v Praze v Národním
@@ -1776,7 +1776,7 @@ kontaktovali studenti Akademie výtvarných umění v Praze, že by
 potřebovali programátora pro svůj projekt. Další informace lze nalézt na
 &lt;a href="http://www.projectmodul.com/"&gt;stránkách studentů&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="uvod"&gt;Úvod&lt;/h2&gt;
-&lt;p&gt;Cílem práce bylo nastudovat možnosti knihovny &lt;a href="https://blog.petrnohejl.cz/artoolkit"&gt;ARToolKit&lt;/a&gt; a vytvořit
+&lt;p&gt;Cílem práce bylo nastudovat možnosti knihovny &lt;a href="https://blog.petrnohejl.cz/2010-11-15_artoolkit.md"&gt;ARToolKit&lt;/a&gt; a vytvořit
 aplikaci pro rozšířenou realitu využívající tuto knihovnu. Výsledná
 aplikace byla určena pro projekt Mimikry, který se prezentoval na
 výstavě Designblok 2010. Výstava se konala 5. - 10. 10. 2010 v Praze.
@@ -1829,7 +1829,7 @@ blízka se potom vykreslovaly modely kudlanky s většími detaily.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="3D model kudlanky" src="https://blog.petrnohejl.cz/images/projekt-mimikry-04.jpg"&gt;&lt;/p&gt;
 &lt;h2 id="implementace-aplikace"&gt;Implementace aplikace&lt;/h2&gt;
 &lt;p&gt;Aplikace je implementována v jazyce C/C++, ve vývojovém prostředí
-Microsoft Visual Studio 2008 s využitím knihovny &lt;a href="https://blog.petrnohejl.cz/artoolkit"&gt;ARToolKit&lt;/a&gt;. Pro
+Microsoft Visual Studio 2008 s využitím knihovny &lt;a href="https://blog.petrnohejl.cz/2010-11-15_artoolkit.md"&gt;ARToolKit&lt;/a&gt;. Pro
 vykreslování 3D modelů potom byly použity knihovny OpenGL a OpenVRML.&lt;/p&gt;
 &lt;p&gt;Parametry trasovacích značek (název, datový soubor, fyzické rozměry v
 mm, střed značky) a seznam VRML modelů jsou uloženy v konfiguračních
@@ -2884,7 +2884,7 @@ na to!&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Recept je dimenzován přibližně na 5 porcí. Postup je následující.
 Nejdříve si uvaříme 5 vajec natvrdo (postup jsem uváděl v receptu na
-&lt;a href="https://blog.petrnohejl.cz/kulajda"&gt;Kulajdu&lt;/a&gt;). Mezitím si do mísy vložíme mleté maso a prohněteme. Na
+&lt;a href="https://blog.petrnohejl.cz/2010-02-08_kulajda.md"&gt;Kulajdu&lt;/a&gt;). Mezitím si do mísy vložíme mleté maso a prohněteme. Na
 prkýnku si nakrájíme nadrobno cibuli a vložíme do mísy. Dále přidáme
 nastrouhaný česnek, hrstku soli, pepře a majoránku dle oka. Řádně
 prohněteme. Přidáme 2-3 vejce, aby nám hmota držela pohromadě. Opět
