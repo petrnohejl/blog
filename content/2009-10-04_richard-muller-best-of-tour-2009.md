@@ -28,7 +28,7 @@ propásli předkapelu, ale to nám zas tolik nevadilo. Hlad jsem rychle
 zahnal, předkapela dohrála a my jsme šli hledat nejvýhodnější pozici,
 odkud bude dobře vidět a slyšet.
 
-![Richard Müller]({filename}images/richard-muller-best-of-tour-2009.jpg)
+![Richard Müller]({static}images/richard-muller-best-of-tour-2009.jpg)
 
 Richard nastoupil s kapelou a začali hrát. Když nepočítám asi 20 min.
 pauzu, tak hráli i s přídavky cca 2 hodiny. A hráli hodně dobře! Richard

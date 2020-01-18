@@ -49,4 +49,4 @@ Dáváme zvýšený pozor, aby se nespálila. Vznikne nám křupavá houstička.
 Polévka je hotová a my můžeme servírovat s osmaženou houstičkou a trsem
 kadeřavé petrželky. Až se polévka uleží, bude ještě lepší. Dobrou chuť!
 
-![Vánoční polévka z rybích vnitřností]({filename}images/vanocni-polevka-z-rybich-vnitrnosti.jpg)
+![Vánoční polévka z rybích vnitřností]({static}images/vanocni-polevka-z-rybich-vnitrnosti.jpg)

@@ -12,7 +12,7 @@ potřebovali programátora pro svůj projekt. Další informace lze nalézt na
 
 ## Úvod
 
-Cílem práce bylo nastudovat možnosti knihovny [ARToolKit]({filename}2010-11-15_artoolkit.md) a vytvořit
+Cílem práce bylo nastudovat možnosti knihovny [ARToolKit]({static}2010-11-15_artoolkit.md) a vytvořit
 aplikaci pro rozšířenou realitu využívající tuto knihovnu. Výsledná
 aplikace byla určena pro projekt Mimikry, který se prezentoval na
 výstavě Designblok 2010. Výstava se konala 5. - 10. 10. 2010 v Praze.
@@ -45,7 +45,7 @@ jedna značka. Značky byly rozmístěny tak, aby bylo možné prohlížet model
 pomocí kamery i z velmi krátké vzdálenosti. Trasovací značky měly více
 velikostí (20 cm a 15 cm).
 
-![Prezentace projektu na výstavě Designblok 2010]({filename}images/projekt-mimikry-01.jpg)
+![Prezentace projektu na výstavě Designblok 2010]({static}images/projekt-mimikry-01.jpg)
 
 Celá plastika byla osvícena projektorem, který promítal jednoduchou
 texturu (bílá barva s růžovým nádechem). Textura měla připomínat, že se
@@ -64,20 +64,20 @@ plazma obrazovku umístěnou na stěně. Uprostřed místnosti byl umístěn
 dřevěný podstavec, na kterém byla položena kamera, se kterou mohli
 návštěvníci výstavy hýbat a vyzkoušet si tak aplikaci na vlastní kůži.
 
-![Instrukce pro návštěvníka výstavy]({filename}images/projekt-mimikry-02.jpg)
+![Instrukce pro návštěvníka výstavy]({static}images/projekt-mimikry-02.jpg)
 
 Aplikace rovněž umožnila určitou míru interakce uživatele s modelem. Z
 větší dálky se vykreslovaly 3D modely více podobné květu orchideje. Z
 blízka se potom vykreslovaly modely kudlanky s většími detaily.
 
-![Papírový model květu orchideje]({filename}images/projekt-mimikry-03.jpg)
+![Papírový model květu orchideje]({static}images/projekt-mimikry-03.jpg)
 
-![3D model kudlanky]({filename}images/projekt-mimikry-04.jpg)
+![3D model kudlanky]({static}images/projekt-mimikry-04.jpg)
 
 ## Implementace aplikace
 
 Aplikace je implementována v jazyce C/C++, ve vývojovém prostředí
-Microsoft Visual Studio 2008 s využitím knihovny [ARToolKit]({filename}2010-11-15_artoolkit.md). Pro
+Microsoft Visual Studio 2008 s využitím knihovny [ARToolKit]({static}2010-11-15_artoolkit.md). Pro
 vykreslování 3D modelů potom byly použity knihovny OpenGL a OpenVRML.
 
 Parametry trasovacích značek (název, datový soubor, fyzické rozměry v
@@ -128,7 +128,7 @@ informace o pozici a rotaci modelu. Tento postup se opakoval pro všechny
 trasovací značky. Tímto jsme získali transformační matice, potřebné pro
 použití multipatterns.
 
-![Ukázka plastiky s trasovacími značkami]({filename}images/projekt-mimikry-05.jpg)
+![Ukázka plastiky s trasovacími značkami]({static}images/projekt-mimikry-05.jpg)
 
 Dále bylo během instalace nutné provést kalibraci kamery a vhodně
 nastavit nasvícení plastiky projektorem.
@@ -174,22 +174,22 @@ Zdrojové soubory projektu na [github.com](https://github.com/petrnohejl/Mimesis
 
 Na závěr ještě přikládám několik fotografií...
 
-![Vystřihování trasovacích značek, které se stejně nepoužily]({filename}images/projekt-mimikry-06.jpg)
+![Vystřihování trasovacích značek, které se stejně nepoužily]({static}images/projekt-mimikry-06.jpg)
 
-![Instalace nesprávných značek]({filename}images/projekt-mimikry-07.jpg)
+![Instalace nesprávných značek]({static}images/projekt-mimikry-07.jpg)
 
-![Testování]({filename}images/projekt-mimikry-08.jpg)
+![Testování]({static}images/projekt-mimikry-08.jpg)
 
-![Úklid a úprava ateliéru]({filename}images/projekt-mimikry-09.jpg)
+![Úklid a úprava ateliéru]({static}images/projekt-mimikry-09.jpg)
 
-![Prezentace projektu na výstavě]({filename}images/projekt-mimikry-10.jpg)
+![Prezentace projektu na výstavě]({static}images/projekt-mimikry-10.jpg)
 
-![Prezentace projektu na výstavě]({filename}images/projekt-mimikry-11.jpg)
+![Prezentace projektu na výstavě]({static}images/projekt-mimikry-11.jpg)
 
-![Plakát]({filename}images/projekt-mimikry-12.jpg)
+![Plakát]({static}images/projekt-mimikry-12.jpg)
 
-![Prezentace projektu na výstavě]({filename}images/projekt-mimikry-13.jpg)
+![Prezentace projektu na výstavě]({static}images/projekt-mimikry-13.jpg)
 
-![Prezentace projektu na výstavě]({filename}images/projekt-mimikry-14.jpg)
+![Prezentace projektu na výstavě]({static}images/projekt-mimikry-14.jpg)
 
-![Prezentace projektu na výstavě]({filename}images/projekt-mimikry-15.jpg)
+![Prezentace projektu na výstavě]({static}images/projekt-mimikry-15.jpg)

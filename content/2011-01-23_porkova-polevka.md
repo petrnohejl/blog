@@ -34,4 +34,4 @@ pokud je vše OK, můžeme podávat.
 Jako obvykle nezapomeneme polévku uchovávat v chladu – v lednici,
 případně v zimě na balkóně, aby se nám nezkazila. Přeji dobré chutnání!
 
-![Pórková polévka]({filename}images/porkova-polevka.jpg)
+![Pórková polévka]({static}images/porkova-polevka.jpg)

@@ -17,4 +17,4 @@ Slávky nejprve očistíme, vyhodíme rozbité kousky a necháme odstát ve stud
 
 Slávky podáváme s bílou bagetou. Z první mušle vyjmeme maso a skořápku použijeme jako pinzetu, kterou budeme konzumovat další mušle. Dobrou chuť!
 
-![Slávky]({filename}images/slavky-v-rajcatove-omacce.jpg)
+![Slávky]({static}images/slavky-v-rajcatove-omacce.jpg)

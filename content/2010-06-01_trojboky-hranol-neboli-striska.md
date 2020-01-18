@@ -40,7 +40,7 @@ dalšího prkénka, nebo čehokoliv (viz fotka). Hlavně aby se to
 neposouvalo a dobře se to mazalo. Na první nátěr použijeme polovinu
 celkového množství krému, protože nátěry budou celkem dva.
 
-![Sušenky, krém a banán]({filename}images/trojboky-hranol-neboli-striska-01.jpg)
+![Sušenky, krém a banán]({static}images/trojboky-hranol-neboli-striska-01.jpg)
 
 Poté co jsme řádně a rovnoměrně rozetřeli krém, vytvoříme druhou vrstvu
 sušenek, tzn. další matici. Vzniká nám tedy trojrozměrné pole, neboli
@@ -59,7 +59,7 @@ opačné konce alobalu na krajích přibližně v místě prostředku řádku a
 tyto konce opatrně přiklopíme k sobě tak, aby se krajní řádky objektu
 zvedly a spojily se do hranolu. Vše opět znázorňuje fotka.
 
-![Trojboký hranol]({filename}images/trojboky-hranol-neboli-striska-02.jpg)
+![Trojboký hranol]({static}images/trojboky-hranol-neboli-striska-02.jpg)
 
 Výsledkem je jeden velký trojboký hranol, který se posléze nožem nakrájí
 na `k` zákusků, podle sloupců matice. Hranol je dobré uchovávat v chladu
@@ -68,4 +68,4 @@ nasákly krémem a změkly. Hranol je dále možné vylepšovat, např.
 čokoládovou polevou apod. Doufám, že je tento poněkud matematický recept
 pochopitelný :) Přeji dobrou chuť.
 
-![Zákusek]({filename}images/trojboky-hranol-neboli-striska-03.jpg)
+![Zákusek]({static}images/trojboky-hranol-neboli-striska-03.jpg)

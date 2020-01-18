@@ -99,15 +99,15 @@ použila na lokty podprsenku :D). Vše bylo nachystáno a mohl začít
 trénink. Všechny týmy se rozjezdily a rozhodčí Víťa mezitím přichystal
 branky z lahváčů pro první soutěžní disciplínu - drag race.
 
-![Tým Dravci]({filename}images/zavody-v-kosiku-08.jpg)
+![Tým Dravci]({static}images/zavody-v-kosiku-08.jpg)
 
-![Tým Iron Lions from Zion]({filename}images/zavody-v-kosiku-04.jpg)
+![Tým Iron Lions from Zion]({static}images/zavody-v-kosiku-04.jpg)
 
-![Tým Česko a Zuzejk se svými chrániči loktů]({filename}images/zavody-v-kosiku-02.jpg)
+![Tým Česko a Zuzejk se svými chrániči loktů]({static}images/zavody-v-kosiku-02.jpg)
 
-![Krasojízda]({filename}images/zavody-v-kosiku-03.jpg)
+![Krasojízda]({static}images/zavody-v-kosiku-03.jpg)
 
-![Janie ve skafandru]({filename}images/zavody-v-kosiku-01.jpg)
+![Janie ve skafandru]({static}images/zavody-v-kosiku-01.jpg)
 
 Shromáždili jsme se u startovní čáry, když v tu chvíli jsme v dálce
 zahlédli modrá blikající světla. Benga přijely! A všechnu tu srandu nám
@@ -127,7 +127,7 @@ tak jsme si vyndaly několik košíků a vlajky si vzali domů na památku.
 Přesto mi přišlo, že to policajtí brali s humorem a v klidu a přijeli
 jen kvuli bonzákovi securiťákovi, který je přivolal.
 
-![Benga přijely!]({filename}images/zavody-v-kosiku-05.jpg)
+![Benga přijely!]({static}images/zavody-v-kosiku-05.jpg)
 
 Jelikož byl Víťa jediný člověk (ač rozhodčí), který projel závodní trasu
 (ač na zkoušku), byl odměněn hlavní výhrou - Tesco pivem od hlavního
@@ -143,11 +143,11 @@ překazili, ještě než jsme začali pořádně závodit. Doufám, že akci zas
 někdy zopakujem při vyšší opatrnosti a na lepším místě, třeba někde ve
 Zlíně.
 
-![Vítěz vyhrál pivo značky Tesco]({filename}images/zavody-v-kosiku-06.jpg)
+![Vítěz vyhrál pivo značky Tesco]({static}images/zavody-v-kosiku-06.jpg)
 
-![Účastníci závodu]({filename}images/zavody-v-kosiku-07.jpg)
+![Účastníci závodu]({static}images/zavody-v-kosiku-07.jpg)
 
-![Městská policie Brno]({filename}images/zavody-v-kosiku-09.jpg)
+![Městská policie Brno]({static}images/zavody-v-kosiku-09.jpg)
 
 Na závěr uvádím vítěznou listinu:
 
@@ -166,4 +166,4 @@ Na závěr uvádím vítěznou listinu:
 A na úplný závěr bych chtěl všem účastníkům závodu věnovat písničku,
 která se sem skvěle hodí:
 
-[Uraggan Andrew & Reggae Orthodox: Benga přijedou]({filename}files/zavody-v-kosiku.mp3)
+[Uraggan Andrew & Reggae Orthodox: Benga přijedou]({static}files/zavody-v-kosiku.mp3)

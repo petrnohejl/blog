@@ -24,7 +24,7 @@ Potřebovat budeme následující suroviny:
 
 Recept je dimenzován přibližně na 5 porcí. Postup je následující.
 Nejdříve si uvaříme 5 vajec natvrdo (postup jsem uváděl v receptu na
-[Kulajdu]({filename}2010-02-08_kulajda.md)). Mezitím si do mísy vložíme mleté maso a prohněteme. Na
+[Kulajdu]({static}2010-02-08_kulajda.md)). Mezitím si do mísy vložíme mleté maso a prohněteme. Na
 prkýnku si nakrájíme nadrobno cibuli a vložíme do mísy. Dále přidáme
 nastrouhaný česnek, hrstku soli, pepře a majoránku dle oka. Řádně
 prohněteme. Přidáme 2-3 vejce, aby nám hmota držela pohromadě. Opět
@@ -48,4 +48,4 @@ pánvi a ochutit nějakým kořením dle fantazie, nebo jen tak uvařit. Tento
 recept je poměrně časově náročný, ale výsledek opravdu stojí za to.
 Dobrou chuť!
 
-![Pštrosí vejce]({filename}images/pstrosi-vejce.jpg)
+![Pštrosí vejce]({static}images/pstrosi-vejce.jpg)

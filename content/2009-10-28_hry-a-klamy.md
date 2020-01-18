@@ -19,178 +19,178 @@ Strávili jsme tam skvělé 4 hodiny a ani chvilku jsme se nenudili. V
 následujícím textu bych rád popsal (pomocí fotek a krátkého popisu)
 nejzajímavější exponáty z výstavy.
 
-![Kvízové tabule]({filename}images/hry-a-klamy-01.jpg)
+![Kvízové tabule]({static}images/hry-a-klamy-01.jpg)
 
 Téměř všude visely na zdech různé kvízové a hádankové tabule.
 
-![Trojúhelníky]({filename}images/hry-a-klamy-02.jpg)
+![Trojúhelníky]({static}images/hry-a-klamy-02.jpg)
 
 Například tento trojúhelníkový rébus nám dlouho vrtal hlavou, ale
 nakonec jsme na to přišli.
 
-![Hřebíky]({filename}images/hry-a-klamy-03.jpg)
+![Hřebíky]({static}images/hry-a-klamy-03.jpg)
 
 Zde bylo za úkol umístit 7 hřebíků na jeden připevněný hřebík tak, aby
 se oněch 7 hřebíků nedotýkalo země. Řešení vidíte na obrázku. Přisli
 byste na to?
 
-![Metr]({filename}images/hry-a-klamy-04.jpg)
+![Metr]({static}images/hry-a-klamy-04.jpg)
 
 Tady bylo cílem umístit skládací metr na hřebík tak, aby se metr
 nedotýkal země. Bylo tedy potřeba metr dobře vyvážit.
 
-![Most]({filename}images/hry-a-klamy-05.jpg)
+![Most]({static}images/hry-a-klamy-05.jpg)
 
 Mohli jsme se projít po dřevěném můstku, který byl sestaven z klínů,
 tvořících oblouk. Most perfektně držel a nezhroutil se.
 
-![Kroužení]({filename}images/hry-a-klamy-06.jpg)
+![Kroužení]({static}images/hry-a-klamy-06.jpg)
 
 Zuzejk si vyzkoušela test koordinace těla. Měla za úkol kroužit pravou
 nohou a při tom nakreslit číslo šest. Bylo to docela obtížné.
 
-![Skládanka]({filename}images/hry-a-klamy-07.jpg)
+![Skládanka]({static}images/hry-a-klamy-07.jpg)
 
 Na výstavě bylo spoustu skládanek. Z této jsme si složili labuť.
 
-![Košík]({filename}images/hry-a-klamy-08.jpg)
+![Košík]({static}images/hry-a-klamy-08.jpg)
 
 Toto byl test trpělivosti. Úkolem bylo umístit kroužek, přivázaný na
 provázku, na hřebík na dně košíku. Toto bylo vcelku snadné, ale chtělo
 to tu trpělivost.
 
-![Obtisk]({filename}images/hry-a-klamy-09.jpg)
+![Obtisk]({static}images/hry-a-klamy-09.jpg)
 
 Toto bylo jedno z nejzábavnějších zažízení. Na jednu stranu stěny
 obtiskl člověk své tělo a na druhé straně pak vznikla plastická silueta
 postavy. Stěna byla tvořena z malých posuvných tyčinek.
 
-![Buben]({filename}images/hry-a-klamy-10.jpg)
+![Buben]({static}images/hry-a-klamy-10.jpg)
 
 Zde bylo cílem uhodit přiměřenou silou do bubnu. Na druhé straně bubnu
 byla umístěna na podstavci polystyrenová kulička a terč. Proud vzduchu,
 vytvořený úhozem, foukl do kuličky a naším cílem bylo trefit se do
 terče.
 
-![Závaží]({filename}images/hry-a-klamy-11.jpg)
+![Závaží]({static}images/hry-a-klamy-11.jpg)
 
 U tohoto zařízení jsme měli za úkol vyrovnat závaží tak, aby byla tyč ve
 svislé poloze.
 
-![Stavba]({filename}images/hry-a-klamy-12.jpg)
+![Stavba]({static}images/hry-a-klamy-12.jpg)
 
 Zde bylo za úkol vhodně podepřít tyčemi přístřešek, aby nespadl. Nakonec
 se nám to povedlo, ale nestihli jsme to bohužel vyfotit.
 
-![Kreslítko]({filename}images/hry-a-klamy-13.jpg)
+![Kreslítko]({static}images/hry-a-klamy-13.jpg)
 
 Vyzkoušeli jsme si také toto speciální kreslítko. Pomocí dvou otáčecích
 páček se mi podařilo nakreslit domeček.
 
-![Kruhy]({filename}images/hry-a-klamy-14.jpg)
+![Kruhy]({static}images/hry-a-klamy-14.jpg)
 
 Další z mnoha skládaček.
 
-![Kostky]({filename}images/hry-a-klamy-15.jpg)
+![Kostky]({static}images/hry-a-klamy-15.jpg)
 
 Tady si Janie pohrála s kostkama. Úkolem bylo naskládat je všechny
 zpátky do krabice, aby se tam vešly.
 
-![Telefon]({filename}images/hry-a-klamy-16.jpg)
+![Telefon]({static}images/hry-a-klamy-16.jpg)
 
 Toto byla další skvělá věc. Jednalo se o takový telefon - trubku. Na
 jedné straně se mluvilo, na druhé straně se poslouchalo. Fungovalo to
 skvěle a bylo dobře slyšet!
 
-![Telefonní rozvody]({filename}images/hry-a-klamy-17.jpg)
+![Telefonní rozvody]({static}images/hry-a-klamy-17.jpg)
 
 Zde je ukázka rozvodu telefonní trubky. Byla dlouhá několik desítek
 metrů.
 
-![Labyrint]({filename}images/hry-a-klamy-18.jpg)
+![Labyrint]({static}images/hry-a-klamy-18.jpg)
 
 Tady se Pavel se Zuzejkem snažili dostat kuličku z jedné strany
 labyrintu na druhou.
 
-![Prolínání obličejů]({filename}images/hry-a-klamy-19.jpg)
+![Prolínání obličejů]({static}images/hry-a-klamy-19.jpg)
 
 Zde jsme si vyzkoušeli prolínaní obličejů pomocí zrcadla. Občas nám
 vznikly velmi komické obličeje.
 
-![Výtah]({filename}images/hry-a-klamy-20.jpg)
+![Výtah]({static}images/hry-a-klamy-20.jpg)
 
 V této hře bylo cílem vytáhnout kuličku pomocí dvou provázků až nahoru a
 vyhnout se dírám.
 
-![Solitér]({filename}images/hry-a-klamy-21.jpg)
+![Solitér]({static}images/hry-a-klamy-21.jpg)
 
 Pavel si zahrál solitér. Měl za úkol odstranit co nejvíce hracích
 kamenů. Kamen se odstraní, když je přeskočen jiným kamenem. Nakonec mu
 ve hře zbylo 5 kamenů.
 
-![Koule]({filename}images/hry-a-klamy-22.jpg)
+![Koule]({static}images/hry-a-klamy-22.jpg)
 
 V této plazmatické kouli se vytvářel elektrický výboj, který dělal
 zajímavé efekty.
 
-![Boty]({filename}images/hry-a-klamy-23.jpg)
+![Boty]({static}images/hry-a-klamy-23.jpg)
 
 Zuzejk se pokoušela zavázat tkaničky od bot pomocí kleští.
 
-![Srdce]({filename}images/hry-a-klamy-24.jpg)
+![Srdce]({static}images/hry-a-klamy-24.jpg)
 
 Janie se snažila rozmotat provázky a dostat dvě dřevěná srdce k sobě a
 potom zase od sebe.
 
-![Čichání]({filename}images/hry-a-klamy-25.jpg)
+![Čichání]({static}images/hry-a-klamy-25.jpg)
 
 Také jsme si vyzkoušeli čichací poznávací test. V lahvičkách byly
 nejrůznější roztoky.
 
-![Satelit]({filename}images/hry-a-klamy-26.jpg)
+![Satelit]({static}images/hry-a-klamy-26.jpg)
 
 Vyzkoušeli jsme si přenos zvuku vzduchem pomocí satelitů. V místnosti
 byly umístěny dva satelity naproti sobě. Do jednoho satelitu se mluvilo
 a zvuk se skvěle přenášel do druhého satelitu na poměrně velkou
 vzdálenost.
 
-![Kolo]({filename}images/hry-a-klamy-27.jpg)
+![Kolo]({static}images/hry-a-klamy-27.jpg)
 
 Tento experiment spočíval v tom, že člověk si sedl na točící židli a
 držel v rukou roztočené kolo. Když kolo otočil do vodorovné polohy,
 začal se sám otáčet na točící židli.
 
-![Jeřáb]({filename}images/hry-a-klamy-28.jpg)
+![Jeřáb]({static}images/hry-a-klamy-28.jpg)
 
 Tady jsme si vyzkoušeli jeřáb ovládaný 4 provázky. Naším úkolem bylo
 zvednout dřevěný kvádr.
 
-![Kulička]({filename}images/hry-a-klamy-29.jpg)
+![Kulička]({static}images/hry-a-klamy-29.jpg)
 
 V této hře bylo cílem spustit kuličku po kolejnici, která se dala
 roztahovat, propustit míček dolů a trefit se do díry. Díry byly různě
 bodově hodnocené.
 
-![Tlačítkový souboj]({filename}images/hry-a-klamy-30.jpg)
+![Tlačítkový souboj]({static}images/hry-a-klamy-30.jpg)
 
 Zde jsme si vyzkoušeli bystrost. V tomto tlačítkovém duelu bylo cílem
 zmáčknout co nejdříve rozsvícené tlačítko a získat co nejvíce bodů.
 
-![Periferní vidění]({filename}images/hry-a-klamy-31.jpg)
+![Periferní vidění]({static}images/hry-a-klamy-31.jpg)
 
 Toto byl test periferního vidění. Pozorovatel musel sledovat kuličku
 uprostřed a snažil se rozpoznat písmenko nakreslené na ukazovátku.
 
-![Nářadí]({filename}images/hry-a-klamy-32.jpg)
+![Nářadí]({static}images/hry-a-klamy-32.jpg)
 
 Vyzkoušeli jsme si práci s nářadím v rukavicích.
 
-![Obrácený text]({filename}images/hry-a-klamy-33.jpg)
+![Obrácený text]({static}images/hry-a-klamy-33.jpg)
 
 Tento klam si nedokážu vysvětlit. Červený text vlevo se zobrazuje přes
 skleněnou trubku normálně, ale modrý text je převrácený.
 
-![Deformace obrazu]({filename}images/hry-a-klamy-34.jpg)
+![Deformace obrazu]({static}images/hry-a-klamy-34.jpg)
 
 Viděli jsme také zajímavé deformace obrazu.
 

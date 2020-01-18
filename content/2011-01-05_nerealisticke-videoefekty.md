@@ -64,7 +64,7 @@ hran (viz kapitola Algoritmy pro zpracování efektů). Ten najde v obraze
 hrany, rozšíří je pomocí dilatace o určitou velikost a odpovídající
 pixely ve výsledném obraze potom ztmaví o danou hodnotu.
 
-![Obr. 1: Ukázka komiksového efektu]({filename}images/nerealisticke-videoefekty-01.jpg)
+![Obr. 1: Ukázka komiksového efektu]({static}images/nerealisticke-videoefekty-01.jpg)
 
 ### Malířský efekt
 
@@ -95,11 +95,11 @@ je vypočítána jako průměrná hodnota mezi počátečním a koncovým bodem
 čáry, přičemž hodnota těchto bodů je brána z původního rozmazaného
 obrazu. [2]
 
-![Obr. 2: Vykreslení čáry]({filename}images/nerealisticke-videoefekty-02.jpg)
+![Obr. 2: Vykreslení čáry]({static}images/nerealisticke-videoefekty-02.jpg)
 
-![Obr. 3: Vykreslování čar v jednotlivých průchodech (postupně zleva doprava)]({filename}images/nerealisticke-videoefekty-03.jpg)
+![Obr. 3: Vykreslování čar v jednotlivých průchodech (postupně zleva doprava)]({static}images/nerealisticke-videoefekty-03.jpg)
 
-![Obr. 4: Ukázka malířského efektu]({filename}images/nerealisticke-videoefekty-04.jpg)
+![Obr. 4: Ukázka malířského efektu]({static}images/nerealisticke-videoefekty-04.jpg)
 
 ### Mozaikový efekt
 
@@ -111,7 +111,7 @@ Algoritmus rozděluje obraz na čtvercové oblasti o určité velikosti. Tyto
 oblasti jsou potom obarveny jednou barvou, vypočtenou z průměru barev
 všech pixelů původní oblasti.
 
-![Obr. 5: Ukázka efektu mozaiky]({filename}images/nerealisticke-videoefekty-05.jpg)
+![Obr. 5: Ukázka efektu mozaiky]({static}images/nerealisticke-videoefekty-05.jpg)
 
 ## Algoritmy pro zpracování efektů
 
@@ -122,7 +122,7 @@ regionů a každý pixel je klasifikován do jednoho z regionu. Každý region
 je reprezentován středem μi. Pixel je klasifikován do regionu, jehož
 střed je nejblíže (obr. 6).
 
-![Obr. 6: Ukázka segmentace podle K-means ve 2D (kříže znázorňují středy regionů μi)]({filename}images/nerealisticke-videoefekty-06.jpg)
+![Obr. 6: Ukázka segmentace podle K-means ve 2D (kříže znázorňují středy regionů μi)]({static}images/nerealisticke-videoefekty-06.jpg)
 
 Algoritmus K-means:
 
@@ -143,21 +143,21 @@ aproximaci gradientu intenzity obrazu. Je založen na konvoluci obrazu
 pomocí filtru v horizontálním a vertikálním směru. Zpravidla používá
 konvoluční matice o velikosti 3x3 (vzorec 1).
 
-![Vzorec 1: Konvoluční matice Sobelova filtru (A je zdrojový obraz, G je výsledný gradient)]({filename}images/nerealisticke-videoefekty-07.jpg)
+![Vzorec 1: Konvoluční matice Sobelova filtru (A je zdrojový obraz, G je výsledný gradient)]({static}images/nerealisticke-videoefekty-07.jpg)
 
 Potlačení nemaximálních hodnot (Non-maximum suppression) funguje tak, že
 ve směru gradientu se potlačí pixely, které nejsou lokálním maximem
 (obr. 7). Výsledkem je ztenčení tlustých hran potlačením nemaximálních
 hodnot v černobílém obraze.
 
-![Obr. 7: Znázornění pixelů ve směru gradientu]({filename}images/nerealisticke-videoefekty-08.jpg)
+![Obr. 7: Znázornění pixelů ve směru gradientu]({static}images/nerealisticke-videoefekty-08.jpg)
 
 Prahování s histerezí funguje tak, že silné hrany (větší než *High*)
 jsou ponechány. Slabé jsou ponechány, pouze pokud jsou spojeny s nějakou
 silnější hranou (obr. 8). Velmi slabé hrany jsou potlačeny (nižší než
 *Low*). Obvykle platí: *High* = 2-3 \* *Low*.
 
-![Obr. 8: Prahování s histerezí]({filename}images/nerealisticke-videoefekty-09.jpg)
+![Obr. 8: Prahování s histerezí]({static}images/nerealisticke-videoefekty-09.jpg)
 
 ### Gaussian blur
 
@@ -165,7 +165,7 @@ Gaussian blur je často používaný algoritmus v počítačové grafice pro
 redukci šumu a detailů. Funguje na principu konvoluce pomocí Gaussovské
 funkce (vzorec 2). Gaussian blur je filtr s dolní propustí.
 
-![Vzorec 2: Dvou dimenzionální Gaussovská funkce]({filename}images/nerealisticke-videoefekty-10.jpg)
+![Vzorec 2: Dvou dimenzionální Gaussovská funkce]({static}images/nerealisticke-videoefekty-10.jpg)
 
 ## Implementace aplikace
 

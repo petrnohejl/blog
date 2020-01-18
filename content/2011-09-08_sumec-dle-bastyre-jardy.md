@@ -40,11 +40,11 @@ másla. Sumce pečeme v troubě asi 3/4 hodiny na střední výkon. Před
 koncem pečení zalijeme smetanou, kterou můžeme zahustit moukou. Můžeme
 přidat strouhaný sýr.
 
-![Sumec dle baštýře Jardy na pekáči]({filename}images/sumec-dle-bastyre-jardy-01.jpg)
+![Sumec dle baštýře Jardy na pekáči]({static}images/sumec-dle-bastyre-jardy-01.jpg)
 
 Recept je poměrně jednoduchý a jídlo chutná výborně. Výhodou sumce je,
 že nemá vůbec žádné kosti. Já jsem jídlo připravoval ve 2 zapékacích
 miskách a bylo z toho 6 regulérních porcí. Baštýř Jestřáb vám přeje
 dobrou chuť!
 
-![Sumeček na talíři]({filename}images/sumec-dle-bastyre-jardy-02.jpg)
+![Sumeček na talíři]({static}images/sumec-dle-bastyre-jardy-02.jpg)

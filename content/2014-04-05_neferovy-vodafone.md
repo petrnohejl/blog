@@ -10,7 +10,7 @@ Druhá nefér záležitost je ta, že Vodafone v samoobsluze nabízí dva intern
 - Internet v mobilu (150 MB) za 178 Kč
 - Připojení pro mobil - STANDARD (250 MB) za 178 Kč
 
-![Neférový Vodafone]({filename}images/neferovy-vodafone.png)
+![Neférový Vodafone]({static}images/neferovy-vodafone.png)
 
 Rozdíl je zřejmě pouze v tom, že ten druhý internetový tarif je novější a za stejnou cenu nabízí vyšší FUP. Já ale celou dobu používal ten horší tarif a o tom, že za stejnou cenu můžu mít vyšší FUP, jsem se dozvěděl náhodou až nyní. Málokdo asi pravidelně kontroluje, jestli se nevyskytl nový internetový tarif s lepším FUP za stejnou cenu. Férový operátor by na tuto skutečnost zákazníka upozornil, nebo by ten FUP automaticky navýšil. Alespoň většina poskytovatelů "domácího internetu" to tak dělá.
 

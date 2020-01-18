@@ -19,9 +19,9 @@ Instructions how to use my Action Bar style template:
 
 See example screenshots:
 
-![Action Bar with indeterminate progress bar]({filename}images/styling-action-bar-01.png)
-![Tab navigation]({filename}images/styling-action-bar-02.png)
-![List navigation]({filename}images/styling-action-bar-03.png)
-![Action mode]({filename}images/styling-action-bar-04.png)
+![Action Bar with indeterminate progress bar]({static}images/styling-action-bar-01.png)
+![Tab navigation]({static}images/styling-action-bar-02.png)
+![List navigation]({static}images/styling-action-bar-03.png)
+![Action mode]({static}images/styling-action-bar-04.png)
 
 You can find source code on my GitHub in [Android Templates and Utilities](https://github.com/petrnohejl/Android-Templates-And-Utilities/tree/master/Res-Style) repo. Gotta some questions or ideas about styling the Action Bar? Follow me on [Twitter](https://twitter.com/petrnohejl) or [Google Plus](https://plus.google.com/113883771155661250237).

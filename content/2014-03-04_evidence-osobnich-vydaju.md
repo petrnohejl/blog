@@ -35,15 +35,15 @@ Zde uvádím podrobný návod, jak si pomocí mého skriptu rychle vytvořit pě
 
 Výsledný dokument má 5 listů: CSV data, kontingenční tabulka a 3 grafy. Následuje ukázka výstupů. Použitá data jsou smyšlená.
 
-![CSV data]({filename}images/evidence-osobnich-vydaju-01.png)
+![CSV data]({static}images/evidence-osobnich-vydaju-01.png)
 
-![Kontingenční tabulka]({filename}images/evidence-osobnich-vydaju-02.png)
+![Kontingenční tabulka]({static}images/evidence-osobnich-vydaju-02.png)
 
-![Sloupcový graf]({filename}images/evidence-osobnich-vydaju-03.png)
+![Sloupcový graf]({static}images/evidence-osobnich-vydaju-03.png)
 
-![Skládaný pruhový graf]({filename}images/evidence-osobnich-vydaju-04.png)
+![Skládaný pruhový graf]({static}images/evidence-osobnich-vydaju-04.png)
 
-![Výsečový graf]({filename}images/evidence-osobnich-vydaju-05.png)
+![Výsečový graf]({static}images/evidence-osobnich-vydaju-05.png)
 
 ## Jiné alternativy
 

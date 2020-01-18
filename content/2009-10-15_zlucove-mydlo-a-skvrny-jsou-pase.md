@@ -27,7 +27,7 @@ aplikováním ještě bylo potřeba otestovat (na málo viditelném místě), zd
 mýdlo nenaruší původní barvu textílie. To by ovšem nemělo, protože mýdlo
 neobsahuje barviva, parfém ani žádné konzervační látky.
 
-![Žlučové mýdlo Dr. Beckmann]({filename}images/zlucove-mydlo-a-skvrny-jsou-pase.jpg)
+![Žlučové mýdlo Dr. Beckmann]({static}images/zlucove-mydlo-a-skvrny-jsou-pase.jpg)
 
 Žlučové mýdlo je efektivní nástroj pro odstranění různých nečistot
 (vhodné i na pleny). Odstraní skvrny dřív než řeknete švec, navíc je

@@ -56,4 +56,4 @@ Polévku podáváme s trochou nadrobno nakrájené zelené petrželky na
 hladině. Nezapomeneme polévku uchovávat v chladu - v lednici, případně v
 zimě na balkóně, aby se nám nezkazila. Dobrou chuť!
 
-![Kuřecí vývar]({filename}images/kureci-vyvar.jpg)
+![Kuřecí vývar]({static}images/kureci-vyvar.jpg)

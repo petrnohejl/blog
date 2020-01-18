@@ -57,7 +57,7 @@ nepodporuje soubory větší než 4 GiB). Nakonec jsem narazil v jedné
    Instalační USB disk si můžeme uschovat pro pozdější možnou
    reinstalaci.
 
-![WinSetupFromUSB]({filename}images/instalace-windows-xp-z-usb-flash-acer-aspire-one.jpg)
+![WinSetupFromUSB]({static}images/instalace-windows-xp-z-usb-flash-acer-aspire-one.jpg)
 
 Budu rád, když někomu tento návod pomůže. Případné dotazy rád zodpovím v
 diskuzi.

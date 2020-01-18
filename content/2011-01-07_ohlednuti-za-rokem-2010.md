@@ -27,7 +27,7 @@ Category: Jestřábí svět
     nejtěžších předmětů na FIT. Naopak jsem neudělal
     <abbr title="Funkcionální a logické programování">FPR</abbr>.
 
--   Podílel jsem se na projektu [Mimikry]({filename}2011-01-04_projekt-mimikry.md), který se prezentoval na
+-   Podílel jsem se na projektu [Mimikry]({static}2011-01-04_projekt-mimikry.md), který se prezentoval na
     mezinárodní výstavě designu [Designblok](https://www.designblok.cz) 2010 v Praze.
 
 -   Vybral jsem si diplomovou práci na téma: Rozšířená realita pro
@@ -62,7 +62,7 @@ Category: Jestřábí svět
     [Obřan](https://janie.8bit.cz/mezinarodni-vylet-do-obran/), na Hády, na Macochu, do Kroměříže, do Rožnova a na
     promoce bratrance Jirky na Hluboké.
 
--   Pořádal jsem [Velikonoční](https://janie.8bit.cz/velikonocni-piknik-v-luzankach-vol-2/) a Burčákový piknik a dále [Závody v košíku]({filename}2010-04-03_zavody-v-kosiku.md), které se nakonec kvůli návštěvě policajtů nekonaly.
+-   Pořádal jsem [Velikonoční](https://janie.8bit.cz/velikonocni-piknik-v-luzankach-vol-2/) a Burčákový piknik a dále [Závody v košíku]({static}2010-04-03_zavody-v-kosiku.md), které se nakonec kvůli návštěvě policajtů nekonaly.
 
 -   Účastnil jsem se několika legendárních párty: předloňský Silvestr na
     téma oldies, loňský Silvestr na téma léto, PenoFercoBration v
@@ -81,7 +81,7 @@ Category: Jestřábí svět
 -   Navštívil jsem Muzejní noc v Brně a Praze, Noc vědců v Brně,
     tradiční festival ohňostrojů [Ignis Brunensis](http://www.ignisbrunensis.cz/) v Brně, [filmový
     festival na FI MUNI](http://festival.fi.muni.cz/), [Medical fair](https://janie.8bit.cz/medical-fair-19-22-10-brno/), výstavu [Designblok](https://janie.8bit.cz/designblok-praha-5-10-10-2010/) v
-    Praze a výstavu [Šangri-la]({filename}2010-11-13_sangri-la.md).
+    Praze a výstavu [Šangri-la]({static}2010-11-13_sangri-la.md).
 
 -   Účastnil jsem se Maturitního plesu bratrance Ládi v Praze v Národním
     domě, Plesu SU FIT na Semilasse, Plesu Gymnázia Kroměříž a několika

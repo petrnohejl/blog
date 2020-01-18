@@ -58,4 +58,4 @@ přibližne dvojnásobné množství jíšky co pro polévku. Polévku
 nezapomeneme uchovávat v chladu – v lednici, případně v zimě na balkóně,
 aby se nám nezkazila. Přeji dobré chutnání.
 
-![Gulášová polévka]({filename}images/gulasova-polevka.jpg)
+![Gulášová polévka]({static}images/gulasova-polevka.jpg)

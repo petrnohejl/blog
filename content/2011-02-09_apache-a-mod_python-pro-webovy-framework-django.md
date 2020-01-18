@@ -121,7 +121,7 @@ spustit a otestovat správnou funkčnost:
 Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat nápis "It
 works!".
 
-![Spuštění serveru Apache]({filename}images/apache-a-mod_python-pro-webovy-framework-django-01.jpg)
+![Spuštění serveru Apache]({static}images/apache-a-mod_python-pro-webovy-framework-django-01.jpg)
 
 ## Instalace a konfigurace mod\_python
 
@@ -170,7 +170,7 @@ Nyní můžeme vyzkoušet ladící výpis serveru:
 
 Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat ladící výpis.
 
-![Ladící výpis mod\_python]({filename}images/apache-a-mod_python-pro-webovy-framework-django-02.jpg)
+![Ladící výpis mod\_python]({static}images/apache-a-mod_python-pro-webovy-framework-django-02.jpg)
 
 Dále si vytvoříme testovací skript *mptest.py* v jazyce Python:
 
@@ -195,7 +195,7 @@ A nakonec spustíme testovací skript:
 Pokud je vše v pořádku, měl by se nám v prohlížeči vypsat nápis "Hello
 World! I am Python.".
 
-![Hello Python]({filename}images/apache-a-mod_python-pro-webovy-framework-django-04.jpg)
+![Hello Python]({static}images/apache-a-mod_python-pro-webovy-framework-django-04.jpg)
 
 ## Základní konfigurace Publisher Handler
 
@@ -255,7 +255,7 @@ Nakonec zobrazíme web v prohlížeči:
 Pokud je vše v pořádku, měl by se nám v prohlížeči zobrazit formulář s
 nadpisem "Calculator".
 
-![Calculator]({filename}images/apache-a-mod_python-pro-webovy-framework-django-03.jpg)
+![Calculator]({static}images/apache-a-mod_python-pro-webovy-framework-django-03.jpg)
 
 Pro více informací o konfiguraci mod\_python navštivte dokumentaci:
 <http://www.modpython.org/live/current/doc-html/modpython.html>.
@@ -367,7 +367,7 @@ Projekt zobrazíme v prohlížeči (login i heslo do administrace je
     firefox http://127.0.0.1:666/polls/1/vote/
     firefox http://127.0.0.1:666/admin/
 
-![Django admin]({filename}images/apache-a-mod_python-pro-webovy-framework-django-05.jpg)
+![Django admin]({static}images/apache-a-mod_python-pro-webovy-framework-django-05.jpg)
 
 ## Literatura
 

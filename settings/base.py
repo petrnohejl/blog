@@ -58,10 +58,10 @@ YEAR_ARCHIVE_URL = 'archive/{date:%Y}/index'
 YEAR_ARCHIVE_SAVE_AS = 'archive/{date:%Y}/index.html'
 ARCHIVES_SAVE_AS = 'archive.html'
 CATEGORIES_SAVE_AS = 'categories.html'
-TAG_SAVE_AS = False
-TAGS_SAVE_AS = False
-AUTHOR_SAVE_AS = False
-AUTHORS_SAVE_AS = False
+TAG_SAVE_AS = ''
+TAGS_SAVE_AS = ''
+AUTHOR_SAVE_AS = ''
+AUTHORS_SAVE_AS = ''
 
 # Feed
 FEED_ALL_ATOM  = 'feed.xml'

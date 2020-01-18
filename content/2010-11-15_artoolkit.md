@@ -25,7 +25,7 @@ snímá v reálném čase kamera. Když uživatel posune či otočí značku,
 krychle se pohne s ní. Když uživatel posune značku mimo zorný úhel
 kamery, krychle zmizí.
 
-![Obr. 1: Modrá krychle se v reálném čase vykresluje na trasovací značku ve skutečném obraze.]({filename}images/artoolkit-01.jpg)
+![Obr. 1: Modrá krychle se v reálném čase vykresluje na trasovací značku ve skutečném obraze.]({static}images/artoolkit-01.jpg)
 
 V následujícím textu se některé uvedené názvy/cesty k souborům ARToolKit
 vztahují k ukázkovým příkladům pro OS Windows (Visual Basic).
@@ -82,7 +82,7 @@ však závislé na použitém hardware a videokameře.
 5.  Virtuální grafika je vykreslena přes reálný snímek z videokamery a
     objekty se zobrazí přesně na místa trasovacích značek.
 
-![Obr. 2: Fáze zpracování obrazu ARToolKit v reálném čase.]({filename}images/artoolkit-02.jpg)
+![Obr. 2: Fáze zpracování obrazu ARToolKit v reálném čase.]({static}images/artoolkit-02.jpg)
 
 ### Omezení
 
@@ -191,7 +191,7 @@ kartonem, aby se neohýbaly. Je potřeba zvolit vhodnou velikost značky
 podle použití. Na obrázku 3 jsou ukázány příklady trasovacích značek,
 které lze rovněž najít v adresáři patterns ve formátu PDF k vytisknutí.
 
-![Obr. 3: Ukázky trasovacích značek ARToolKit.]({filename}images/artoolkit-03.jpg)
+![Obr. 3: Ukázky trasovacích značek ARToolKit.]({static}images/artoolkit-03.jpg)
 
 ### Konfigurační soubor
 
@@ -242,13 +242,13 @@ ARToolKit tvoří tři hlavní moduly:
 -   Video modul - zajišťuje snímání video obrazu.
 -   Gsub modul - funkce zajišťující vykreslování 3D grafiky.
 
-![Obr. 4: Architektura ARToolKit.]({filename}images/artoolkit-04.jpg)
+![Obr. 4: Architektura ARToolKit.]({static}images/artoolkit-04.jpg)
 
 ### Formát obrazových dat
 
 Jednotlivé moduly ARToolKit používají odlišné formáty obrazových dat.
 
-![Obr. 5: Formát dat při zpracování obrazu v ARToolKit.]({filename}images/artoolkit-05.jpg)
+![Obr. 5: Formát dat při zpracování obrazu v ARToolKit.]({static}images/artoolkit-05.jpg)
 
 ### Kostra zdrojového kódu aplikace
 
@@ -331,7 +331,7 @@ nastavení obraz z videokamery. Pokud oba tyto testy fungují správně,
 máte potvrzeno, že vaše kamera podporuje grafický modul a video modul
 ARToolKit.
 
-![Obr. 6: Nastavení konfigurace videokamery.]({filename}images/artoolkit-06.jpg)
+![Obr. 6: Nastavení konfigurace videokamery.]({static}images/artoolkit-06.jpg)
 
 Pro spuštění ukázkových aplikací ARToolKit je potřeba mít k dispozici
 vytisknuté trasovací značky (z adresáře patterns). Některé ukázkové
